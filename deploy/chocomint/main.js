@@ -2885,7 +2885,7 @@ var cydj = (function (exports) {
   }
 
 
-   /*const applyVipColor = `
+   /* const applyVipColor = `
    chat-msg-${username} {
      color: orange;
    }`;
@@ -2902,7 +2902,7 @@ var cydj = (function (exports) {
 
   class Xqc {
     static SUB_0_MONTHS_T1 =
-        'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/0-Month_Subscriber.png';*/
+        'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/0-Month_Subscriber.png'; */
 
 
   const USER_BADGES = {
