@@ -3580,13 +3580,13 @@ var cydj = (function (exports) {
 
   // TODO: Move all these into a file.
 
-  const Favicon_URL = 'https://cdn.7tv.app/emote/614e8c0b20eaf897465a4c9d/1x.webp';
+  const Favicon_URL = 'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/master/images/PeachyRoom.gif';
 
-  const MiniLogo_URL = 'https://cdn.7tv.app/emote/614e8c0b20eaf897465a4c9d/1x.webp';
+  const MiniLogo_URL = 'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/master/images/PeachyRoom.gif';
 
-  const ChannelName_Caption = 'CyDJ';
+  const ChannelName_Caption = 'PeachyRoom';
 
-  const Version_Now = 'CyDJEdge4.2.24.0';
+  const Version_Now = 'PeachyRoomEdge4.2.24.0';
 
   const HeaderDropMenu_Title = 'Information';
 
@@ -3598,7 +3598,7 @@ var cydj = (function (exports) {
 
   const TitleBarDescription_Caption = 'Now Playing:';
 
-  const JoinText_Message = 'hello!';
+  const JoinText_Message = 'howdy!';
 
   const UsernameMark_Char = '‎';
 
