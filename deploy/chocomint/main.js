@@ -2885,24 +2885,24 @@ var cydj = (function (exports) {
   }
 
 
-  // const applyVipColor = `
-  // chat-msg-${username} {
-  //   color: orange;
-  // }`;
+   /*const applyVipColor = `
+   chat-msg-${username} {
+     color: orange;
+   }`;
 
-  // if (document.getElementById('apply-vip') == null) {
-  //   const style = document.createElement('style');
-  //   style.id = 'apply-vip';
-  //   style.textContent = applyVipColor;
-  //   document.getElementsByTagName('head')[0].appendChild(style);
-  // }
+  if (document.getElementById('apply-vip') == null) {
+     const style = document.createElement('style');
+     style.id = 'apply-vip';
+     style.textContent = applyVipColor;
+     document.getElementsByTagName('head')[0].appendChild(style);
+   }
 
 
-  //  function GiveVIPColor() {}
+    function GiveVIPColor() {}
 
-  //class Xqc {
-  //  static SUB_0_MONTHS_T1 =
-  //      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/0-Month_Subscriber.png';
+  class Xqc {
+    static SUB_0_MONTHS_T1 =
+        'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/0-Month_Subscriber.png';*/
 
 
   const USER_BADGES = {
