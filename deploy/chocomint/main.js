@@ -2884,12 +2884,6 @@ var cydj = (function (exports) {
     return `<span class="avatar"><img src="${url}" /></span>`;
   }
 
-  // pls note this is placeholder
-  //class VIP {
-  //  static VIPBADGE =
-  //      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/placeholder.png';
-  //}
-
 
   // const applyVipColor = `
   // chat-msg-${username} {
