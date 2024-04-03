@@ -2911,7 +2911,7 @@ var cydj = (function (exports) {
       'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/guitar%20time.gif',
     ],
     'JohnRG123': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/die2.gif',
+      'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/idiot.webp',
       'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/small.png',
     ],
     'mrfart2323': [
@@ -2921,7 +2921,6 @@ var cydj = (function (exports) {
       'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/CTJoS3c.png',
     ],
     'Xsogon': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/danse.gif',
       'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/Porcellio_Expansus_PFP.png',
     ],
     'airforce2700': [
@@ -2931,15 +2930,10 @@ var cydj = (function (exports) {
       'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/elij.gif',
     ],
     'PeepoGlad': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/ezgif-2-b39e272ae5.png',
       'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/1xend.gif',
     ],
     'Loi_561': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/ezgif-2-b39e272ae5.png',
       'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/loi.gif',
-    ],
-    'deblankyy': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/555555.png',
     ],
   };
 
@@ -3041,7 +3035,7 @@ var cydj = (function (exports) {
       } else if (msg.startsWith('!add ') && hasPermission('playlistadd')) {
         const parsed = parseMediaLink(msg.split('!add ')[1]);
         if (parsed['id'] === null) {
-          msg = 'error: invalid link, item has not been added';
+        msg = 'error: invalid link, item has not been added';
         } else {
           socket.emit('queue', {
             id: parsed['id'],
@@ -3070,31 +3064,6 @@ var cydj = (function (exports) {
       } else if (msg.startsWith('!media')) {
         const item = $(`.queue_active`).data('media');
         msg = `Heres the link: ${formatURL(item)}`;
-      } else if (msg.startsWith('!crash')) {
-        msg = '[mqr] GOOOOOOO xqcTECHNO FEELSWAYTOOGOOD xqcDisco [/mqr]';
-        fastestCrash();
-      } else if (msg.startsWith('!gluegun')) {
-        msg = '[mqr] GOOOOOOO xqcTechno FEELSWAYTOOGOOD AlienPls3 [/mqr]';
-        glueGun();
-      } else if (msg.startsWith('!inba')) {
-        IMBA.volume = 0.6;
-        IMBA.play();
-        mutePlayer();
-        const inbaFlash = setInterval(() => inba(), 200);
-        setTimeout(() => {
-          unmutePlayer();
-          BGCHANGE = 0;
-          clearInterval(inbaFlash);
-
-          const userlistthing = document.getElementById('userlist');
-          const elems = [userlistthing];
-
-          elems.forEach((elem) => elem.style.backgroundImage = '');
-          elems.forEach((elem) => elem.style.backgroundColor = '');
-
-          setUserCSS();
-        }, 12000);
-        msg = ' FEELSWAYTOOGOOD JP2GMD ';
       } else {
         COMMAND = false;
       }
@@ -3121,108 +3090,9 @@ var cydj = (function (exports) {
     $('#chatline').val('');
   }
 
-  const IMBA = new Audio('https://dl.dropboxusercontent.com/s/xdnpynq643ziq9o/inba.ogg');
-  const FASTEST = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/fastestcrashegg.wav');
-  const GGUN = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/gluegun.wav');
-
-
-  // number of background changes for the easter egg function
-  let BGCHANGE = 1;
-  // number of background changes for fastest crash
-  let FASTESTBGCHANGE = 1;
-  // number of bg changes for glue gun command
-  let GLUEGUNBGCHANGE = 1;
-
-  /**
-   * Easter eggs in the commands.
-   */
-  function inba() {
-    const userlistthing = document.getElementById('userlist');
-    const elems = [userlistthing];
-
-    elems.forEach((elem) => elem.style.backgroundImage = 'none');
-    BGCHANGE++;
-
-    const newColor = BGCHANGE % 2 === 0 ? 'gold' : 'blue';
-    elems.forEach((elem) => elem.style.backgroundColor = newColor);
-  }
-
-  // Fastest Crash easter egg bg changes
-  function dropthefast() {
-    const userlistthing = document.getElementById('userlist');
-    const elems = [userlistthing];
-
-    elems.forEach((elem) => elem.style.backgroundImage = 'none');
-    FASTESTBGCHANGE++;
-
-    const newColor = FASTESTBGCHANGE % 2 === 0 ? 'blue' : 'black';
-    elems.forEach((elem) => elem.style.backgroundColor = newColor);
-  }
-
-  // glue gun easter egg bg changes
-  function droptheglue() {
-    const userlistthing = document.getElementById('userlist');
-    const elems = [userlistthing];
-
-    elems.forEach((elem) => elem.style.backgroundImage = 'none');
-    GLUEGUNBGCHANGE++;
-
-    const newColor = GLUEGUNBGCHANGE % 2 === 0 ? 'blue' : 'limegreen';
-    elems.forEach((elem) => elem.style.backgroundColor = newColor);
-  }
-
-  // fastest crash function
-  function fastestCrash() {
-    FASTEST.volume = 0.5;
-    FASTEST.play();
-    const fastestFlash = setInterval(() => dropthefast(), 100);
-    setTimeout(() => {
-      FASTESTBGCHANGE = 100;
-      clearInterval(fastestFlash);
-
-      const userlistthing = document.getElementById('userlist');
-      const elems = [userlistthing];
-
-      elems.forEach((elem) => elem.style.backgroundImage = '');
-      elems.forEach((elem) => elem.style.backgroundColor = '');
-
-      setUserCSS();
-    }, 12000);
-  }
-
-  // glue gun function
-  function glueGun() {
-    GGUN.volume = 0.5;
-    GGUN.play();
-    const glueFlash = setInterval(() => droptheglue(), 100);
-    setTimeout(() => {
-      GLUEGUNBGCHANGE = 150;
-      clearInterval(glueFlash);
-
-      const userlistthing = document.getElementById('userlist');
-      const elems = [userlistthing];
-
-      elems.forEach((elem) => elem.style.backgroundImage = '');
-      elems.forEach((elem) => elem.style.backgroundColor = '');
-
-      setUserCSS();
-    }, 9000);
-  }
 
   const RandomQuotes_Array = [
-    'I like the Pope dancing',
-    'No quotes today',
-    'O rly?',
-    'People have the right to be stupid. You abuse that privilege',
-    'Don\'t play stupid with me',
-    'Roses are red violets are blue, God made me pretty, what happened to you?',
-    'Please don\'t interrupt me while I\'m ignoring you',
-    'Are you always this stupid, or are you making a special effort today?',
-    'I like you. You remind me of when I was young and stupid.',
-    'Go and buy me a beer',
-    'The door of this channel is always open for you... so feel free to leave!',
-    'I hate JQuery',
-    'amogus',
+    '"i wannt to purr so fucking bad right neow" -J6papertek',
   ];
 
   const AskAnswers_Array = [
@@ -3238,29 +3108,10 @@ var cydj = (function (exports) {
     'fairy is tired and will not answer',
     'I refuse to answer',
     'i asked your mom and she said no',
-    'i- i\'m too shy to answer..',
     'umph... yes...',
     'ahhh.. hhaahhh... yeah...',
     'what',
   ];
-
-  /**
-   * Mute YT player.
-   */
-  function mutePlayer() {
-    if (PLAYER && PLAYER.type === 'yt') {
-      PLAYER.player.mute();
-    }
-  }
-
-  /**
-   * Unmute YT player.
-   */
-  function unmutePlayer() {
-    if (PLAYER && PLAYER.type === 'yt') {
-      PLAYER.player.unMute();
-    }
-  }
 
   socket.on('queue', (data) => LAST_VIDEO_ID_QUEUED = data.item.media.id);
 
@@ -3700,20 +3551,16 @@ var cydj = (function (exports) {
 
   const ThemesCSS = [
     [
+      'Stars',
+      'https://papertek.github.io/CyDJ/deploy/beta/css/stars.css',
+    ],
+    [
       'Classic',
       'https://papertek.github.io/CyDJ/deploy/beta/css/twitchclassic.css',
     ],
     [
       'Old DJ',
       'https://papertek.github.io/CyDJ/deploy/beta/css/OldDJ.css',
-    ],
-    [
-      'Stars',
-      'https://papertek.github.io/CyDJ/deploy/beta/css/stars.css',
-    ],
-    [
-      'Black Cat',
-      'https://papertek.github.io/CyDJ/deploy/beta/css/blackcat.css',
     ],
     [
       'U.U.F.O',
@@ -3890,14 +3737,11 @@ var cydj = (function (exports) {
   let LASTADD = 1;
   // user minutes online
   let USERONLINE = 0;
-  // number of background changes for the drop it
-  let DROPBGCHANGE = 1;
 
   // array of links added from channel database by user
   const ADDEDLINKS = [];
 
   const WEBKIT = 'webkitRequestAnimationFrame' in window;
-  const DROPIT = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/dropit.wav');
   const HEY = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/hey.wav');
   const NAY = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/nay.wav');
   CHATSOUND.volume = 0.4;
@@ -4681,7 +4525,7 @@ var cydj = (function (exports) {
   /**
    * Set user CSS.
    */
-  function setUserCSS$1() {
+  function setUserCSS() {
     $('#chanexternalcss').detach().appendTo('head');
     $('#chanexternalcss-fix').remove();
 
@@ -4813,7 +4657,7 @@ var cydj = (function (exports) {
     }
   }
   // attempt a fix on css
-  window.onload = setUserCSS$1();
+  window.onload = setUserCSS();
 
   // /////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -5708,7 +5552,7 @@ var cydj = (function (exports) {
     if (alreadySetAfterLoad) {
       return;
     }
-    setUserCSS$1();
+    setUserCSS();
     alreadySetAfterLoad = true;
   }, true);
 
@@ -5760,7 +5604,7 @@ var cydj = (function (exports) {
     if (FLUID) {
       fluidLayout();
     }
-    setUserCSS$1();
+    setUserCSS();
     scrollChat();
     scrollQueue();
   });
@@ -5850,20 +5694,6 @@ var cydj = (function (exports) {
   {
     socket.on('changeMedia', changeTitle);
     changeTitle();
-  }
-
-  /**
-   * Drop the beat!
-   */
-  function dropthebeat() {
-    const userlistthing = document.getElementById('userlist');
-    const elems = [userlistthing];
-
-    elems.forEach((elem) => elem.style.backgroundImage = 'none');
-    DROPBGCHANGE++;
-
-    const newColor = DROPBGCHANGE % 2 === 0 ? 'red' : 'black';
-    elems.forEach((elem) => elem.style.backgroundColor = newColor);
   }
 
   // customizing chat notifications sound
@@ -5985,48 +5815,6 @@ var cydj = (function (exports) {
               .join('');
       $('<ul />').html(html).appendTo(modalBody);
     }
-  }
-  /*
-  function showDebugging() {
-    createModal('Debug stuff');
-    if (UI_DEBUG) {
-      modalBody.append('<strong>Buttons that do stuff</strong><br /><br />');
-      for (let i = 0; i < 4; i++) {
-        const debugbotan =
-            $('<button class="btn btn-default btn-success"><br />').appendTo(modalBody);
-        debugbotan.text(`${i}test`) + i;
-      }
-    }
-  }
-  */
-  // adding easter egg button
-  {
-    $('<button id="party-btn" class="btn btn-sm btn-default" title="Party! DO NOT USE IF YOU ARE SUBJECT TO EPILEPSY!!!" />')
-        .text('Party!')
-        .appendTo(chatcontrols)
-        .on('click', () => showDrop());
-  }
-
-  /**
-   * Easter egg drop button function.
-   */
-  function showDrop() {
-    DROPIT.volume = 0.4;
-    DROPIT.play();
-    const partyFlash = setInterval(() => dropthebeat(), 100);
-    setTimeout(() => {
-      DROPBGCHANGE = 0;
-      clearInterval(partyFlash);
-
-      const userlistthing = document.getElementById('userlist');
-      const elems = [userlistthing];
-
-      elems.forEach((elem) => elem.style.backgroundImage = '');
-      elems.forEach((elem) => elem.style.backgroundColor = '');
-
-      setUserCSS$1();
-    }, 5000);
-    socket.emit('chatMsg', {msg: '[mqr] GOOOOOOO xqcCheer FEELSWAYTOOGOOD [/mqr]'});
   }
 
   // adding moderators panel button
@@ -6262,7 +6050,7 @@ var cydj = (function (exports) {
             $('#playlistmanagerwrap').show();
             CHATFUNC = false;
             USERTHEME = $(this).val();
-            setUserCSS$1();
+            setUserCSS();
             setOpt(CHANNEL.name + '_theme', USERTHEME);
           });
 
@@ -7022,8 +6810,8 @@ var cydj = (function (exports) {
   // /////////////////////////////////////////////////////////////////////////////////////////////////
 
   // setting global sockets
-  socket.on('channelOpts', setUserCSS$1);
-  socket.on('channelCSSJS', setUserCSS$1);
+  socket.on('channelOpts', setUserCSS);
+  socket.on('channelCSSJS', setUserCSS);
   socket.on('login', patchWrap);
   socket.on('rank', toggleAdvancedPl);
 
