@@ -3113,6 +3113,8 @@ var cydj = (function (exports) {
     'what',
   ];
 
+
+
   socket.on('queue', (data) => LAST_VIDEO_ID_QUEUED = data.item.media.id);
 
   const CHANNEL_DATABASE$1 = [
