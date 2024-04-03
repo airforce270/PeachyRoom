@@ -167,7 +167,7 @@ const UI_ChannelCache = true;
 // adds context menu with links
 const UI_ContextMenu = true;
 // adds easter egg
-const UI_PartyButton = true;
+const UI_PartyButton = false;
 // adds version
 const UI_Version = true;
 // adds hey and nay
@@ -393,20 +393,16 @@ const ChannelThemeURL = 'https://papertek.github.io/CyDJ/deploy/beta/css/DJDefau
 
 const ThemesCSS = [
   [
+    'Stars',
+    'https://papertek.github.io/CyDJ/deploy/beta/css/stars.css',
+  ],
+  [
     'Classic',
     'https://papertek.github.io/CyDJ/deploy/beta/css/twitchclassic.css',
   ],
   [
     'Old DJ',
     'https://papertek.github.io/CyDJ/deploy/beta/css/OldDJ.css',
-  ],
-  [
-    'Stars',
-    'https://papertek.github.io/CyDJ/deploy/beta/css/stars.css',
-  ],
-  [
-    'Black Cat',
-    'https://papertek.github.io/CyDJ/deploy/beta/css/blackcat.css',
   ],
   [
     'U.U.F.O',
@@ -607,7 +603,6 @@ const ADDEDLINKS = [];
 const WEBKIT = 'webkitRequestAnimationFrame' in window;
 const SOUNDSVALUES = [0, 0.1, 0.2, 0.4, 0.7, 1];
 const SPEAKLINK = 'http://webanywhere.cs.washington.edu/cgi-bin/espeak/getsound.pl';
-const DROPIT = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/dropit.wav');
 const HEY = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/hey.wav');
 const NAY = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/nay.wav');
 CHATSOUND.volume = 0.4;
