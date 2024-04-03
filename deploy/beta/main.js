@@ -3035,7 +3035,7 @@ var cydj = (function (exports) {
       } else if (msg.startsWith('!add ') && hasPermission('playlistadd')) {
         const parsed = parseMediaLink(msg.split('!add ')[1]);
         if (parsed['id'] === null) {
-          msg = 'error: invalid link, item has not been added';
+        msg = 'error: invalid link, item has not been added';
         } else {
           socket.emit('queue', {
             id: parsed['id'],
@@ -3557,7 +3557,6 @@ var cydj = (function (exports) {
       'https://papertek.github.io/CyDJ/deploy/beta/css/stars.css',
     ],
     [
-      
       'Classic',
       'https://papertek.github.io/CyDJ/deploy/beta/css/twitchclassic.css',
     ],
