@@ -3064,31 +3064,6 @@ var cydj = (function (exports) {
       } else if (msg.startsWith('!media')) {
         const item = $(`.queue_active`).data('media');
         msg = `Heres the link: ${formatURL(item)}`;
-      /* } else if (msg.startsWith('!crash')) {
-        msg = '[mqr] GOOOOOOO xqcTECHNO FEELSWAYTOOGOOD xqcDisco [/mqr]';
-        fastestCrash();
-       } else if (msg.startsWith('!gluegun')) {
-        msg = '[mqr] GOOOOOOO xqcTechno FEELSWAYTOOGOOD AlienPls3 [/mqr]';
-        glueGun(); 
-      } else if (msg.startsWith('!inba')) {
-        IMBA.volume = 0.6;
-        IMBA.play();
-        mutePlayer();
-        const inbaFlash = setInterval(() => inba(), 200);
-        setTimeout(() => {
-          unmutePlayer();
-          BGCHANGE = 0;
-          clearInterval(inbaFlash);
-
-          const userlistthing = document.getElementById('userlist');
-          const elems = [userlistthing];
-
-          elems.forEach((elem) => elem.style.backgroundImage = '');
-          elems.forEach((elem) => elem.style.backgroundColor = '');
-
-          setUserCSS();
-        }, 12000);
-        msg = ' FEELSWAYTOOGOOD JP2GMD '; */
       } else {
         COMMAND = false;
       }
@@ -3115,24 +3090,9 @@ var cydj = (function (exports) {
     $('#chatline').val('');
   }
 
-  new Audio('https://dl.dropboxusercontent.com/s/xdnpynq643ziq9o/inba.ogg');
-  new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/fastestcrashegg.wav');
-  new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/gluegun.wav');
 
   const RandomQuotes_Array = [
-    'I like the Pope dancing',
-    'No quotes today',
-    'O rly?',
-    'People have the right to be stupid. You abuse that privilege',
-    'Don\'t play stupid with me',
-    'Roses are red violets are blue, God made me pretty, what happened to you?',
-    'Please don\'t interrupt me while I\'m ignoring you',
-    'Are you always this stupid, or are you making a special effort today?',
-    'I like you. You remind me of when I was young and stupid.',
-    'Go and buy me a beer',
-    'The door of this channel is always open for you... so feel free to leave!',
-    'I hate JQuery',
-    'amogus',
+    '"i wannt to purr so fucking bad right neow" -J6papertek',
   ];
 
   const AskAnswers_Array = [
@@ -3148,7 +3108,6 @@ var cydj = (function (exports) {
     'fairy is tired and will not answer',
     'I refuse to answer',
     'i asked your mom and she said no',
-    'i- i\'m too shy to answer..',
     'umph... yes...',
     'ahhh.. hhaahhh... yeah...',
     'what',
@@ -3784,7 +3743,6 @@ var cydj = (function (exports) {
   const ADDEDLINKS = [];
 
   const WEBKIT = 'webkitRequestAnimationFrame' in window;
-  new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/dropit.wav');
   const HEY = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/hey.wav');
   const NAY = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/nay.wav');
   CHATSOUND.volume = 0.4;
@@ -5859,68 +5817,6 @@ var cydj = (function (exports) {
       $('<ul />').html(html).appendTo(modalBody);
     }
   }
-  /*
-  function showDebugging() {
-    createModal('Debug stuff');
-    if (UI_DEBUG) {
-      modalBody.append('<strong>Buttons that do stuff</strong><br /><br />');
-      for (let i = 0; i < 4; i++) {
-        const debugbotan =
-            $('<button class="btn btn-default btn-success"><br />').appendTo(modalBody);
-        debugbotan.text(`${i}test`) + i;
-      }
-    }
-  }
-  */
-  /* adding easter egg button
-  if (UI_PartyButton) {
-    $('<button id="party-btn" class="btn btn-sm btn-default" title="Party! DO NOT USE IF YOU ARE SUBJECT TO EPILEPSY!!!" />')
-        .text('Party!')
-        .appendTo(chatcontrols)
-        .on('click', () => showDrop());
-  }
-
-  /* 
-   // Easter egg drop button function.
-   
-  function showDrop() {
-    DROPIT.volume = 0.4;
-    DROPIT.play();
-    const partyFlash = setInterval(() => dropthebeat(), 100);
-    setTimeout(() => {
-      DROPBGCHANGE = 0;
-      clearInterval(partyFlash);
-
-      const userlistthing = document.getElementById('userlist');
-      const elems = [userlistthing];
-
-      elems.forEach((elem) => elem.style.backgroundImage = '');
-      elems.forEach((elem) => elem.style.backgroundColor = '');
-
-      setUserCSS();
-    }, 5000);
-    socket.emit('chatMsg', {msg: '[mqr] GOOOOOOO xqcCheer FEELSWAYTOOGOOD [/mqr]'});
-  }
-
-  // adding chat sounds toggle button and control panel
-  if (UI_SoundFilters || UI_ChatSpeak) {
-    voicesbtn =
-        $('<button id="voices-btn" class="btn btn-sm btn-default" title="Mute chat voices" />')
-            .html('<i class="glyphicon glyphicon-volume-down"></i>')
-            .appendTo(chatcontrols)
-            .on('click', () => {
-              if (!SOUNDSPANEL) {
-                $('#chatfunc-dropdown').remove();
-                CHATFUNC = false;
-                showSoundsPanel();
-                SOUNDSPANEL = true;
-              } else {
-                $('#sounds-dropdown').remove();
-                SOUNDSPANEL = false;
-              }
-            });
-    VOICES = true;
-  } */ 
 
   // adding moderators panel button
   {
