@@ -4557,11 +4557,11 @@ var cydj = (function (exports) {
 
   .btn {
     background-image: linear-gradient(#4c333e00,#4c333e00 60%,#4c333e00)!important;
-      border-color: #4cb290!important
+      border-color: #ffbbf9!important
   }
 
   .btn-default:hover {
-      background-color: #4cb290
+      background-color: #ffbbf9
   }
 
   .modal-body {
@@ -4585,7 +4585,7 @@ var cydj = (function (exports) {
   }
 
   #motdwrap {
-      background-color: #28354466;
+      background-color: #283544;
   }
 
   #userlist {
