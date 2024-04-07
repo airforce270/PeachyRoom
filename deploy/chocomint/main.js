@@ -3443,7 +3443,7 @@ var cydj = (function (exports) {
 
   const RulesBtn_Caption = 'Read Channel Rules';
 
-  const TitleIcon_URL = 'https://cdn.7tv.app/emote/64115dcabdbc1698547639ac/2x.webp';
+  const TitleIcon_URL = 'https://cdn.7tv.app/emote/62740ee56fc5e131afe3d18e/1x.webp';
 
   const TitleBarDescription_Caption = 'Now Playing:';
 
@@ -3583,8 +3583,8 @@ var cydj = (function (exports) {
       35,
     ],
     [
-      ':skeet:',
-      'https://cdn.7tv.app/emote/62740ee56fc5e131afe3d18e/1x.webp',
+      ':blahaj:',
+      'https://cdn.7tv.app/emote/64115dcabdbc1698547639ac/1x.webp',
       57,
       32,
     ],
