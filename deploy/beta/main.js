@@ -3443,7 +3443,7 @@ var cydj = (function (exports) {
 
   const RulesBtn_Caption = 'Read Channel Rules';
 
-  const TitleIcon_URL = 'https://cdn.7tv.app/emote/6040a8bccf6746000db10348/2x.webp';
+  const TitleIcon_URL = 'https://cdn.7tv.app/emote/64115dcabdbc1698547639ac/2x.webp';
 
   const TitleBarDescription_Caption = 'Now Playing:';
 
@@ -3453,20 +3453,15 @@ var cydj = (function (exports) {
 
   const CustomPingSound_URL = 'https://github.com/ItMePeachy/PeachyRoom/raw/master/misc/squeak.mp3';
 
-  const PlayerHiding_URL = 'https://c.tenor.com/Q6UjBrnSzvQAAAAC/anime-uh.gif';
+  const PlayerHiding_URL = 'https://media1.tenor.com/m/hrIx2VHU5CAAAAAC/kitty-cat.gif';
 
   const HeaderDropMenu_Array = [
-    ['CyDJ Rooms', ''],
-    ['Main Room', 'https://cytu.be/r/cydj'],
-    ['Second Room', 'https://cytu.be/r/secretfbimeeting'],
-    ['Baked Live Room', 'https://baked.live/tv/cydj'],
-    ['Test Room', 'https://cytu.be/r/testplacelilroc'],
-    ['Test Room 2', 'https://cytu.be/r/emptyroomtestplace'],
-    ['Test Room 3', 'https://cytu.be/r/xqcPeepo'],
-    ['Experiments', 'https://cytu.be/r/cydjrewrite'],
+    [`Peachy's Rooms`, ''],
+    ['Main Room', 'https://cytu.be/r/peachyroom'],
+    ['Beta Room', 'https://cytu.be/r/peachyBeta'],
     ['Community Related', ''],
-    ['CyDJ Discord', 'https://discord.gg/g8tCGSc2bx'],
-    ['Camellia Discord', 'https://discord.gg/camellia'],
+    [`Peachy's Discord', 'https://discord.gg/cMUXkDcX6C`],
+    ['CyDJ Room', 'https://cytu.be/r/CyDJ'],
     ['Credits', ''],
     [
       'CyTube FAQ',
@@ -3474,11 +3469,8 @@ var cydj = (function (exports) {
     ],
     ['CyTube Source', 'https://github.com/calzoneman/sync'],
     ['CyDJ Source', 'https://github.com/papertek/CyDJ'],
-    ['CyDJ Bot Source', 'https://github.com/airforce270/CytubeBot'],
-  ];
-
-  const MOTDAutoLogo_Array = [
-    'https://github.com/papertek/CyDJ/raw/beta/images/cydjnormal.jpg',
+    ['PeachyRoom Source', 'https://github.com/ItMePeachy/PeachyRoom'],
+    ['CyDJ Old MrDestrucoid Bot Source', 'https://github.com/airforce270/CytubeBot'],
   ];
 
   const ModPanel_Array = [
@@ -3568,19 +3560,6 @@ var cydj = (function (exports) {
     ],
   ];
 
-  const EmptyCornerBackground = [
-    'https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_a054f4001b6d4f098e7969c988debd18/default/light/2.0',
-    'https://cdn.betterttv.net/emote/5dfc5d868608fb0da4120b59/2x',
-    'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/main/891194776798498826%20(1).gif',
-    'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/main/small.png',
-    'https://cdn.7tv.app/emote/60d2c62291b6751bc1e05add/4x.webp',
-    'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/main/JohnJamSmall.gif',
-    'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/main/mud.png',
-    'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/main/xso.png',
-    'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/main/pacific.gif',
-    'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/main/pushing%20ass.png',
-  ];
-
   // /////////////////////////////////////////////////////////////////////////////////////////////////
 
   /* ----- INDEPENDENT EMOTES AND FILTERS CONFIGURATION ----- */
@@ -3604,10 +3583,10 @@ var cydj = (function (exports) {
       35,
     ],
     [
-      ':skeet:',
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/main/skeet.gif',
-      35,
-      35,
+      ':blahaj:',
+      'https://cdn.7tv.app/emote/62740ee56fc5e131afe3d18e/1x.webp',
+      57,
+      32,
     ],
   ];
 
@@ -4120,18 +4099,6 @@ var cydj = (function (exports) {
    * Set MOTD.
    */
   function changeMOTD() {
-    {
-      // adding logo
-      let logo = 0;
-      let len = MOTDAutoLogo_Array.length;
-      if (len < 1) {
-        MOTDAutoLogo_Array = ['https://dl.dropboxusercontent.com/s/7mrz85gl29eiiks/logo.png'];
-        len = 1;
-      }
-      $(`<center><img id="motdlogo" src="${MOTDAutoLogo_Array[logo]}" />` +
-        '</center>')
-          .prependTo('#motd');
-    }
     {
       const rulesbtnwrap = $('<div id="rulesbtnwrap" />').appendTo('#motd');
       $('<button id="rules-btn" class="btn btn-default btn-sm" />')
@@ -5653,7 +5620,10 @@ var cydj = (function (exports) {
 
   // optional removing of "Layout" menu from header
   {
-    $('#layout-link').remove();
+    $('#layout-link li:nth-child(2) a').on('click', () => {
+      $('#configform, #modeform, #pinup-btn').hide();
+      fitChat('auto');
+    });
   }
 
   {
@@ -5925,15 +5895,6 @@ var cydj = (function (exports) {
         fontsbtnwrap.append('<br />');
       }
     }
-  }
-
-  // adding background image to empty playlistrow corner
-  if (EmptyCornerBackground.length > 0) {
-    const rnd = Math.round(Math.random() * (EmptyCornerBackground.length - 1));
-    $('#playlistrow').css({
-      'background-image': `url("${EmptyCornerBackground[rnd]}")`,
-      'background-repeat': 'no-repeat',
-    });
   }
 
   // adding layout configuration panel button
