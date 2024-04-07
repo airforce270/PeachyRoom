@@ -3477,10 +3477,6 @@ var cydj = (function (exports) {
     ['CyDJ Bot Source', 'https://github.com/airforce270/CytubeBot'],
   ];
 
-  const MOTDAutoLogo_Array = [
-    'https://github.com/papertek/CyDJ/raw/beta/images/cydjnormal.jpg',
-  ];
-
   const ModPanel_Array = [
     [
       '',
@@ -4120,18 +4116,6 @@ var cydj = (function (exports) {
    * Set MOTD.
    */
   function changeMOTD() {
-    {
-      // adding logo
-      let logo = 0;
-      let len = MOTDAutoLogo_Array.length;
-      if (len < 1) {
-        MOTDAutoLogo_Array = ['https://dl.dropboxusercontent.com/s/7mrz85gl29eiiks/logo.png'];
-        len = 1;
-      }
-      $(`<center><img id="motdlogo" src="${MOTDAutoLogo_Array[logo]}" />` +
-        '</center>')
-          .prependTo('#motd');
-    }
     {
       const rulesbtnwrap = $('<div id="rulesbtnwrap" />').appendTo('#motd');
       $('<button id="rules-btn" class="btn btn-default btn-sm" />')
@@ -5653,7 +5637,10 @@ var cydj = (function (exports) {
 
   // optional removing of "Layout" menu from header
   {
-    $('#layout-link').remove();
+    $('#layout-link li:nth-child(2) a').on('click', () => {
+      $('#configform, #modeform, #pinup-btn').hide();
+      fitChat('auto');
+    });
   }
 
   {
