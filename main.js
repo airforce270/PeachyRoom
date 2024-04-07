@@ -1564,13 +1564,13 @@ function setUserCSS() {
       background-color: #383E40;
   }
 
- .btn {
-      background-image: linear-gradient(#4c333e00,#4c333e00 60%,#4c333e00)!important;
-      border-color: #4cb290!important
+  .btn {
+    background-image: linear-gradient(#4c333e00,#4c333e00 60%,#4c333e00)!important;
+      border-color: #ffbbf9!important
   }
 
   .btn-default:hover {
-    background-color: #4cb290
+      background-color: #ffbbf9
   }
 
   .modal-body {
@@ -1590,11 +1590,11 @@ function setUserCSS() {
   }
 
   #motd {
-      background-color: #1cb0ff
+      background-color: #fff0
   }
 
   #motdwrap {
-      background-color: rgb(124 212 255 / 40%);
+      background-color: #283544;
   }
 
   #userlist {
