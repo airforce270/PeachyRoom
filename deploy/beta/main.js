@@ -4569,7 +4569,7 @@ var cydj = (function (exports) {
   }
 
   a {
-      color: #94d1bd
+      color: #d194ce
   }
 
   a:hover, a:focus {
@@ -4594,23 +4594,23 @@ var cydj = (function (exports) {
   }
 
   .btn-default:hover {
-      background-color: #4cb290
+      background-color: #4c9ab2
   }
 
   .modal-body {
-      background-color: #293d36
+      background-color: #3c293d
   }
 
   .modal-header {
-      background-color: #293d36
+      background-color: #3c293d
   }
 
   .modal-footer {
-      background-color: #293d36
+      background-color: #3c293d
   }
 
   .modal-content {
-      background-color: #293d36
+      background-color: #3c293d
   }
 
   #motd {
@@ -4618,11 +4618,11 @@ var cydj = (function (exports) {
   }
 
   #motdwrap {
-      background-color: rgba(222, 77, 134, 0.400);
+      background-color: rgb(124 212 255 / 40%);
   }
 
   #userlist {
-      background-color: #222a27
+      background-color: #2a2229
   }`;
 
     $('head').append(`<style id="chanexternalcss-fix" type="text/css">${cssfix}</style>`);
