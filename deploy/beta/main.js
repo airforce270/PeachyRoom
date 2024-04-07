@@ -3460,7 +3460,7 @@ var cydj = (function (exports) {
     ['Main Room', 'https://cytu.be/r/peachyroom'],
     ['Beta Room', 'https://cytu.be/r/peachyBeta'],
     ['Community Related', ''],
-    [`Peachy's Discord', 'https://discord.gg/cMUXkDcX6C`],
+    [`Peachy's Discord`, 'https://discord.gg/cMUXkDcX6C'],
     ['CyDJ Room', 'https://cytu.be/r/CyDJ'],
     ['Credits', ''],
     [
@@ -3533,7 +3533,7 @@ var cydj = (function (exports) {
   ];
 
   const RulesBtn_HTML =
-      '<ol><li>You want to write on the chat? Enter temporary nickname into <b>Guest Login</b> input and click enter.</li><li>You want to register a nick? Click <b>Account -> Profile</b> on the top of the channel, and fill the registration form. You don\'t need an email to register.</li><li>Troll skipping = immediate kick.</li><li>Don\'t be annoying.</li><li>Do not one man spam.</li><li>Do not encourage chat wars or harass/target people.</li><li>Queueing blatant NSFW videos such as porn/hentai/gore is strictly not allowed, doing so will result in an ip ban.</li><li>Queuing the same video but in different link variants is not allowed.</li><li>Mods have the right to skip a video if its overplayed.</li><li><b>These rules are subject to common sense.</b></li></ol>';
+      '<ol><li>no bigotry in any shape form or manner. if you attempt to spread hate to anyone you will be banned.</li><li>do not queue or post anythign nsfw or nsfl</li><li>please be nice to others queues</li><li>please try and stay positve and nice to others.</li><li>please do not spam if others are having a conversation</li></ol>';
 
   const EmbeddingMedia_Images =
       'a[href$=".jpg"], a[href$=".jpg:large"], a[href$=".jpeg"], a[href$=".JPEG"], a[href$=".JPG"], a[href$=".png"], a[href$=".PNG"], a[href$=".tiff"], a[href$=".TIFF"], a[href$=".webp"], a[href$=".WEBP"], a[href$=".gif"], a[href$=".GIF"]';
