@@ -366,7 +366,7 @@ const MOTDTabs_CSS = {
 };
 
 const RulesBtn_HTML =
-    '<ol><li>no bigotry in any shape form or manner. if you attempt to spread hate to anyone you will be banned.</li><li>do not queue or post anythign nsfw or nsfl</li><li>please be nice to others queues</li><li>please try and stay positve and nice to others.</li><li>please do not spam if others are having a conversation</li></ol>';
+    '<ol><li>no bigotry in any shape form or manner, if you attempt to spread hate to anyone you will be banned.</li><li>do not queue or post anything nsfw or nsfl you will get banned.</li><li>please be nice to others.</li><li>please do not spam if others are having a conversation.</li><li>do not be stinky.</li></ol>';
 
 const ChannelAnnouncement_HTML =
     'fuh?';
@@ -1549,7 +1549,7 @@ function setUserCSS() {
   }
 
   a:hover, a:focus {
-      color: #b8e0d3
+      color: #e0b8dc
   }
 
   .qe_title {
@@ -1561,7 +1561,7 @@ function setUserCSS() {
   }
 
   .dropdown-menu {
-      background-color: #383E40;
+      background-color: #17202b;
   }
 
   .btn {
@@ -1574,19 +1574,19 @@ function setUserCSS() {
   }
 
   .modal-body {
-      background-color: #3c293d
+      background-color: #283544
   }
 
   .modal-header {
-      background-color: #3c293d
+      background-color: #283544
   }
 
   .modal-footer {
-      background-color: #3c293d
+      background-color: #283544
   }
 
   .modal-content {
-      background-color: #3c293d
+      background-color: #283544
   }
 
   #motd {
@@ -1598,7 +1598,7 @@ function setUserCSS() {
   }
 
   #userlist {
-      background-color: #2a2229
+      background-color: #141414
   }`;
 
   $('head').append(`<style id="chanexternalcss-fix" type="text/css">${cssfix}</style>`);
