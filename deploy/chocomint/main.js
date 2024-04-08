@@ -3533,7 +3533,7 @@ var cydj = (function (exports) {
   ];
 
   const RulesBtn_HTML =
-      '<ol><li>no bigotry in any shape form or manner. if you attempt to spread hate to anyone you will be banned.</li><li>do not queue or post anythign nsfw or nsfl</li><li>please be nice to others queues</li><li>please try and stay positve and nice to others.</li><li>please do not spam if others are having a conversation</li></ol>';
+      '<ol><li>no bigotry in any shape form or manner, if you attempt to spread hate to anyone you will be banned.</li><li>do not queue or post anything nsfw or nsfl you will get banned.</li><li>please be nice to others.</li><li>please do not spam if others are having a conversation.</li><li>do not be stinky.</li></ol>';
 
   const EmbeddingMedia_Images =
       'a[href$=".jpg"], a[href$=".jpg:large"], a[href$=".jpeg"], a[href$=".JPEG"], a[href$=".JPG"], a[href$=".png"], a[href$=".PNG"], a[href$=".tiff"], a[href$=".TIFF"], a[href$=".webp"], a[href$=".WEBP"], a[href$=".gif"], a[href$=".GIF"]';
