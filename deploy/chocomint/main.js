@@ -4585,7 +4585,7 @@ var cydj = (function (exports) {
   }
 
   #motdwrap {
-      background-color: #ffbbf9;
+      background-color: #283544;
   }
 
   #userlist {
