@@ -4540,7 +4540,7 @@ var cydj = (function (exports) {
   }
 
   a:hover, a:focus {
-      color: #b8e0d3
+      color: #e0b8dc
   }
 
   .qe_title {
@@ -4552,7 +4552,7 @@ var cydj = (function (exports) {
   }
 
   .dropdown-menu {
-      background-color: #383E40;
+      background-color: #283544;
   }
 
   .btn {
@@ -4565,19 +4565,19 @@ var cydj = (function (exports) {
   }
 
   .modal-body {
-      background-color: #3c293d
+      background-color: #283544
   }
 
   .modal-header {
-      background-color: #3c293d
+      background-color: #283544
   }
 
   .modal-footer {
-      background-color: #3c293d
+      background-color: #283544
   }
 
   .modal-content {
-      background-color: #3c293d
+      background-color: #283544
   }
 
   #motd {
@@ -4585,11 +4585,11 @@ var cydj = (function (exports) {
   }
 
   #motdwrap {
-      background-color: #283544;
+      background-color: #ffbbf9;
   }
 
   #userlist {
-      background-color: #2a2229
+      background-color: #141414
   }`;
 
     $('head').append(`<style id="chanexternalcss-fix" type="text/css">${cssfix}</style>`);
