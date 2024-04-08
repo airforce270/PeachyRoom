@@ -4540,7 +4540,7 @@ var cydj = (function (exports) {
   }
 
   a:hover, a:focus {
-      color: #e0b8dc
+      color: #b8e0d3
   }
 
   .qe_title {
@@ -4552,7 +4552,7 @@ var cydj = (function (exports) {
   }
 
   .dropdown-menu {
-      background-color: #17202b;
+      background-color: #383E40;
   }
 
   .btn {
@@ -4565,19 +4565,19 @@ var cydj = (function (exports) {
   }
 
   .modal-body {
-      background-color: #283544
+      background-color: #3c293d
   }
 
   .modal-header {
-      background-color: #283544
+      background-color: #3c293d
   }
 
   .modal-footer {
-      background-color: #283544
+      background-color: #3c293d
   }
 
   .modal-content {
-      background-color: #283544
+      background-color: #3c293d
   }
 
   #motd {
@@ -4589,7 +4589,7 @@ var cydj = (function (exports) {
   }
 
   #userlist {
-      background-color: #141414
+      background-color: #2a2229
   }`;
 
     $('head').append(`<style id="chanexternalcss-fix" type="text/css">${cssfix}</style>`);
