@@ -209,7 +209,7 @@ const MiniLogo_URL = 'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/ma
 
 const ChannelName_Caption = 'PeachyRoom';
 
-export const Version_Now = 'PeachyRoom-4/7/24';
+export const Version_Now = 'PeachyRoom-4/9/24';
 
 const HeaderDropMenu_Title = 'Information';
 
