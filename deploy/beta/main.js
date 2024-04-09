@@ -3048,17 +3048,13 @@ var cydj = (function (exports) {
       } else if (msg.startsWith('!np')) {
         msg = 'Now playing: ' + $('.queue_active a').html();
       } else if (msg.startsWith('!discord')) {
-        msg = 'https://discord.gg/g8tCGSc2bx';
-      } else if (msg.startsWith('!link')) {
-        msg = 'https://tinyurl.com/jamcydj';
+        msg = 'https://discord.com/invite/cMUXkDcX6C';
       } else if (msg.startsWith('!guide')) {
         msg = 'https://tinyurl.com/CyDJguideV2';
       } else if (msg.startsWith('!script')) {
         msg = 'http://github.com/papertek/CyDJ';
-      } else if (msg.startsWith('!report')) {
-        msg = 'https://tinyurl.com/CDJReport';
       } else if (msg.startsWith('!botcommands')) {
-        msg = 'https://github.com/airforce270/cytubebot#commands';
+        msg = 'https://docs.google.com/document/d/1Vct3wORMTGovmzIK2MvRdi43vbWFNrIVtduyu1a6tO0/edit';
       } else if (msg.startsWith('!version')) {
         msg = `Running: ${Version_Now}`;
       } else if (msg.startsWith('!media')) {
@@ -5779,10 +5775,8 @@ var cydj = (function (exports) {
       modalBody.append('<strong>Useful links</strong><br /><br />');
       const html =
           [
-            '<a href="https://github.com/papertek/CyDJ/releases" target="_blank">Click here to view latest updates</a>!',
-            '<a href="https://docs.google.com/forms/d/e/1FAIpQLSdNlinbPb2Lr5qmtIPWg9gnVWr1US82CRf4X8bKmmLvj7NIhg/viewform" target="_blank">Click here to report a user</a>!',
-            '<a href="https://docs.google.com/document/d/1X2TdR9hc2KK0WEBLjY06CZaY30QyKxsI_7CQ1qbSz0g/edit" target="_blank">Click here to open the CyDJ guide</a>!',
-            '<a href="https://discord.gg/g8tCGSc2bx" target="_blank">Click here to join the Discord</a>!',
+            '<a href="https://docs.google.com/document/d/1X2TdR9hc2KK0WEBLjY06CZaY30QyKxsI_7CQ1qbSz0g/edit" target="_blank">Click here to open the guide</a>!',
+            '<a href="https://discord.com/invite/cMUXkDcX6C" target="_blank">Click here to join the Discord</a>!',
           ].map((item) => `<li>${item}</li>`)
               .join('');
       $('<ul />').html(html).appendTo(modalBody);
