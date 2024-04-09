@@ -546,7 +546,7 @@ let DEFDESCR = true;
 // admin chat functions panel visibility
 let CHATFUNC = true;
 // additional command occuring in the chat message
-let COMMAND = false;
+let COMMAND = true;
 // chat sounds not disabled by user
 let VOICES = false;
 // emotes have been loaded into emotes panel
@@ -590,8 +590,8 @@ const ADDEDLINKS = [];
 const WEBKIT = 'webkitRequestAnimationFrame' in window;
 const SOUNDSVALUES = [0, 0.1, 0.2, 0.4, 0.7, 1];
 const SPEAKLINK = 'http://webanywhere.cs.washington.edu/cgi-bin/espeak/getsound.pl';
-const HEY = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/hey.wav');
-const NAY = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/nay.wav');
+const HEY = new Audio('https://github.com/ItMePeachy/PeachyRoom/raw/beta/misc/yippee.mp3');
+const NAY = new Audio('https://github.com/ItMePeachy/PeachyRoom/raw/beta/misc/scream.mp3');
 CHATSOUND.volume = 0.4;
 
 function preloadAudio() {
@@ -3037,10 +3037,8 @@ function showContextMenu() {
     modalBody.append('<strong>Useful links</strong><br /><br />');
     const html =
         [
-          '<a href="https://github.com/papertek/CyDJ/releases" target="_blank">Click here to view latest updates</a>!',
-          '<a href="https://docs.google.com/forms/d/e/1FAIpQLSdNlinbPb2Lr5qmtIPWg9gnVWr1US82CRf4X8bKmmLvj7NIhg/viewform" target="_blank">Click here to report a user</a>!',
-          '<a href="https://docs.google.com/document/d/1X2TdR9hc2KK0WEBLjY06CZaY30QyKxsI_7CQ1qbSz0g/edit" target="_blank">Click here to open the CyDJ guide</a>!',
-          '<a href="https://discord.gg/g8tCGSc2bx" target="_blank">Click here to join the Discord</a>!',
+          '<a href="https://docs.google.com/document/d/1X2TdR9hc2KK0WEBLjY06CZaY30QyKxsI_7CQ1qbSz0g/edit" target="_blank">Click here to open the guide</a>!',
+          '<a href="https://discord.com/invite/cMUXkDcX6C" target="_blank">Click here to join the Discord</a>!',
         ].map((item) => `<li>${item}</li>`)
             .join('');
     $('<ul />').html(html).appendTo(modalBody);
@@ -3080,7 +3078,7 @@ function showDebugging() {
 */
 // adding easter egg button
 if (UI_PartyButton) {
-  $('<button id="party-btn" class="btn btn-sm btn-default" title="Party! DO NOT USE IF YOU ARE SUBJECT TO EPILEPSY!!!" />')
+  $('<button id="party-btn" class="btn btn-sm btn-default" title="DO NOT CLICK IF YOU ARE EPILEPTIC DO NOT CLICK THIS BUTTON IF YOU SEE THIS NOTIFY PEACHY" />')
       .text('Party!')
       .appendTo(chatcontrols)
       .on('click', () => showDrop());
@@ -3105,7 +3103,7 @@ function showDrop() {
 
     setUserCSS();
   }, 5000);
-  socket.emit('chatMsg', {msg: '[mqr] GOOOOOOO xqcCheer FEELSWAYTOOGOOD [/mqr]'});
+  socket.emit('chatMsg', {msg: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'});
 }
 
 // adding chat sounds toggle button and control panel
