@@ -3529,8 +3529,8 @@ var cydj = (function (exports) {
   const ADDEDLINKS = [];
 
   const WEBKIT = 'webkitRequestAnimationFrame' in window;
-  const HEY = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/hey.wav');
-  const NAY = new Audio('https://github.com/papertek/CyDJ/raw/beta/misc/nay.wav');
+  const HEY = new Audio('https://github.com/ItMePeachy/PeachyRoom/raw/beta/misc/yippee.mp3');
+  const NAY = new Audio('https://github.com/ItMePeachy/PeachyRoom/raw/beta/misc/scream.mp3');
   CHATSOUND.volume = 0.4;
 
   function preloadAudio() {
