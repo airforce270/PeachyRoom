@@ -365,8 +365,8 @@
     }
     
     .nick-highlight {
-        background-color: #293d36!important;
-        color: #ffd966;
+        background-color: #4d4d4d !important;
+        color: #95d7ff;
     }
     
     .navbar-brand {
@@ -945,10 +945,23 @@ and (max-device-width: 600px)
     }
 
     #main > div, #playlistrow > div {
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     #messagebuffer, #userlist {
         height: 700px;
     }
+
+    .videolist {
+        padding: 5px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    element.style {
+        background-image: none;
+    }
+
 }
