@@ -2912,7 +2912,7 @@ var cydj = (function (exports) {
     ],
     'JohnRG123': [
       'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/pride-flag.gif',
-      'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/pride-flag.gif',
+      'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/trans-flag.gif',
     ],
     'mrfart2323': [
       'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/Gigachad_1.jpg',
