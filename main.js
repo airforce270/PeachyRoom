@@ -546,7 +546,7 @@ let DEFDESCR = true;
 // admin chat functions panel visibility
 let CHATFUNC = true;
 // additional command occuring in the chat message
-let COMMAND = false;
+let COMMAND = true;
 // chat sounds not disabled by user
 let VOICES = false;
 // emotes have been loaded into emotes panel
