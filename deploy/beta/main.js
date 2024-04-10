@@ -2911,8 +2911,8 @@ var cydj = (function (exports) {
       'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/guitar%20time.gif',
     ],
     'JohnRG123': [
-      'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/idiot.webp',
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/small.png',
+      'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/pride-flag.gif',
+      'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/pride-flag.gif',
     ],
     'mrfart2323': [
       'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/Gigachad_1.jpg',
