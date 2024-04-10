@@ -2943,7 +2943,7 @@ var cydj = (function (exports) {
   // ID of previous video queued (so !random doesn't add it again)
   let LAST_VIDEO_ID_QUEUED = 'some-bogus-dont-leave-empty';
   // additional command occuring in the chat message
-  let COMMAND = false;
+  let COMMAND$1 = false;
 
   /**
    * Format chat messages before sending and execute commands.
@@ -2954,7 +2954,7 @@ var cydj = (function (exports) {
 
   function prepareMessage(msg) {
     if (msg.startsWith('!')) {
-      COMMAND = true;
+      COMMAND$1 = true;
       if (msg.startsWith('!stat')) {
         const {numberOfMessages, totalMessageLength} = getChatStats();
         const averageMessageLength =
@@ -3064,7 +3064,7 @@ var cydj = (function (exports) {
         const item = $(`.queue_active`).data('media');
         msg = `Heres the link: ${formatURL(item)}`;
       } else {
-        COMMAND = false;
+        COMMAND$1 = false;
       }
     }
     return msg;
@@ -3079,10 +3079,10 @@ var cydj = (function (exports) {
   let msg = $('#chatline').val();
   if (msg.trim()) {
     msg = prepareMessage(msg.trim());
-    if (COMMAND) {
+    if (COMMAND$1) {
       socket.emit('chatMsg', {msg: _msg});
       msg = `➥ ${msg}`;
-      COMMAND = false;
+      COMMAND$1 = false;
     }
     socket.emit('chatMsg', {msg: msg});
     updateChatStats(_msg);
@@ -3504,6 +3504,8 @@ var cydj = (function (exports) {
   let DEFDESCR = true;
   // admin chat functions panel visibility
   let CHATFUNC = true;
+  // additional command occuring in the chat message
+  let COMMAND = true;
   // auto clearing messages window
   let CLEARING = false;
   // enabled anti-AFK function
@@ -6392,6 +6394,11 @@ var cydj = (function (exports) {
       if (msg.trim()) {
         msg = prepareMessage(msg.trim());
         const meta = {};
+        if (COMMAND) {
+          socket.emit('chatMsg', {msg: _msg});
+          msg = `➥ ${msg}`;
+          COMMAND = false;
+        }
         if (USEROPTS.adminhat && CLIENT.rank >= 255) {
           msg = `/a ${msg}`;
         } else if (USEROPTS.modhat && CLIENT.rank >= Rank.Moderator) {
@@ -6448,6 +6455,11 @@ var cydj = (function (exports) {
     let msg = $('#chatline').val();
     if (msg.trim()) {
       msg = prepareMessage(msg.trim());
+      if (COMMAND) {
+        socket.emit('chatMsg', {msg: _msg});
+        msg = `➥ ${msg}`;
+        COMMAND = false;
+      }
       socket.emit('chatMsg', {msg: msg});
       updateChatStats(_msg);
       $('#chatline').val('');
