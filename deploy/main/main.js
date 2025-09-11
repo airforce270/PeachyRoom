@@ -22,7 +22,7 @@ var cydj = (function (exports) {
   function _objectSpread2(target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = null != arguments[i] ? arguments[i] : {};
-      i % 2 ? ownKeys(Object(source), !0).forEach(function (key) {
+      i % 2 ? ownKeys(Object(source), true).forEach(function (key) {
         _defineProperty(target, key, source[key]);
       }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {
         Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
@@ -60,7 +60,6 @@ var cydj = (function (exports) {
 
   function _createClass(Constructor, protoProps, staticProps) {
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) _defineProperties(Constructor, staticProps);
     Object.defineProperty(Constructor, "prototype", {
       writable: false
     });
@@ -458,17 +457,13 @@ var cydj = (function (exports) {
         _ref2$width = _ref2.width,
         width = _ref2$width === void 0 ? UNITS_IN_GRID : _ref2$width,
         _ref2$height = _ref2.height,
-        height = _ref2$height === void 0 ? UNITS_IN_GRID : _ref2$height,
-        _ref2$startCentered = _ref2.startCentered,
-        startCentered = _ref2$startCentered === void 0 ? false : _ref2$startCentered;
+        height = _ref2$height === void 0 ? UNITS_IN_GRID : _ref2$height;
     var val = '';
 
-    if (startCentered && IS_IE) {
+    if (IS_IE) {
       val += "translate(".concat(transform.x / d - width / 2, "em, ").concat(transform.y / d - height / 2, "em) ");
-    } else if (startCentered) {
-      val += "translate(calc(-50% + ".concat(transform.x / d, "em), calc(-50% + ").concat(transform.y / d, "em)) ");
     } else {
-      val += "translate(".concat(transform.x / d, "em, ").concat(transform.y / d, "em) ");
+      val += "translate(calc(-50% + ".concat(transform.x / d, "em), calc(-50% + ").concat(transform.y / d, "em)) ");
     }
 
     val += "scale(".concat(transform.size / d * (transform.flipX ? -1 : 1), ", ").concat(transform.size / d * (transform.flipY ? -1 : 1), ") ");
@@ -579,17 +574,6 @@ var cydj = (function (exports) {
   }
 
   /**
-   * Internal helper to bind a function known to have 4 arguments
-   * to a given context.
-   */
-
-  var bindInternal4 = function bindInternal4(func, thisContext) {
-    return function (a, b, c, d) {
-      return func.call(thisContext, a, b, c, d);
-    };
-  };
-
-  /**
    * # Reduce
    *
    * A fast object `.reduce()` implementation.
@@ -605,7 +589,7 @@ var cydj = (function (exports) {
   var reduce = function fastReduceObject(subject, fn, initialValue, thisContext) {
     var keys = Object.keys(subject),
         length = keys.length,
-        iterator = thisContext !== undefined ? bindInternal4(fn, thisContext) : fn,
+        iterator = fn,
         i,
         key,
         result;
@@ -1366,7 +1350,6 @@ var cydj = (function (exports) {
     if (transformIsMeaningful(transform)) {
       styles['transform'] = transformForCss({
         transform: transform,
-        startCentered: true,
         width: width,
         height: height
       });
@@ -1506,9 +1489,6 @@ var cydj = (function (exports) {
 
     return new Promise(function (resolve, reject) {
       ({
-        found: false,
-        width: 512,
-        height: 512,
         icon: callProvided('missingIconAbstract') || {}
       });
 
@@ -2881,11 +2861,10 @@ var cydj = (function (exports) {
   };
 
   function formatBadgeToHtml(url) {
-    return `<span class="avatar"><img src="${url}" /></span>`;
+    return `<span class='avatar'><img src="${url}" /></span>`;
   }
 
-
-   /* const applyVipColor = `
+  /* const applyVipColor = `
    chat-msg-${username} {
      color: orange;
    }`;
@@ -2904,39 +2883,38 @@ var cydj = (function (exports) {
     static SUB_0_MONTHS_T1 =
         'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/0-Month_Subscriber.png'; */
 
-
   const USER_BADGES = {
-    'ItMePeachy': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/peachy.gif',
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/guitar%20time.gif',
+    "ItMePeachy": [
+      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/peachy.gif",
+      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/guitar%20time.gif",
     ],
-    'RottenSpaceMan': [
-      'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/ace-flag.gif',
+    "RottenSpaceMan": [
+      "https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/ace-flag.gif",
     ],
-    'JohnRG123': [
-      'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/pride-flag.gif',
-      'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/trans-flag.gif',
+    "JohnTarkov": [
+      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/ezgif-3-018bdeb1e1.gif",
+      "https://static-cdn.jtvnw.net/emoticons/v2/304550342/static/light/1.0",
     ],
-    'mrfart2323': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/Gigachad_1.jpg',
+    "mrfart2323": [
+      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/Gigachad_1.jpg",
     ],
-    'GiveMeAnOnion': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/CTJoS3c.png',
+    "GiveMeAnOnion": [
+      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/CTJoS3c.png",
     ],
-    'Xsogon': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/Porcellio_Expansus_PFP.png',
+    "Xsogon": [
+      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/Porcellio_Expansus_PFP.png",
     ],
-    'airforce2700': [
-      'https://cdn.betterttv.net/emote/5d82600ec0652668c9e4e2f2/1x',
+    "airforce2700": [
+      "https://cdn.betterttv.net/emote/5d82600ec0652668c9e4e2f2/1x",
     ],
-    'eljulidi1337': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/elij.gif',
+    "eljulidi1337": [
+      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/elij.gif",
     ],
-    'PeepoGlad': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/1xend.gif',
+    "PeepoGlad": [
+      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/1xend.gif",
     ],
-    'Loi_561': [
-      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/loi.gif',
+    "Loi_561": [
+      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/loi.gif",
     ],
   };
 
@@ -3210,6 +3188,7 @@ var cydj = (function (exports) {
   IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   */
+
 
   config$1.autoA11y = true;
 
@@ -7107,8 +7086,6 @@ var cydj = (function (exports) {
   exports.prevVideo = prevVideo;
   exports.toggleCat = toggleCat;
   exports.updateChatStats = updateChatStats;
-
-  Object.defineProperty(exports, '__esModule', { value: true });
 
   return exports;
 
