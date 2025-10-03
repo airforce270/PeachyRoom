@@ -220,7 +220,7 @@ const MOTDAutoLogo_Interval = 20;
 const RulesBtn_Caption = 'Read Channel Rules';
 
 const AttentionBar_URL =
-    'https://media1.tenor.com/m/M_IykJsvFQMAAAAd/hes-waiting-by-the-microwave-cat.gif';
+  'https://media1.tenor.com/m/M_IykJsvFQMAAAAd/hes-waiting-by-the-microwave-cat.gif';
 
 const ChannelAnnouncement_Title = 'PeachyRoom Alert';
 
@@ -366,16 +366,16 @@ const MOTDTabs_CSS = {
 };
 
 const RulesBtn_HTML =
-    '<ol><li>no bigotry in any shape form or manner, if you attempt to spread hate to anyone you will be banned.</li><li>do not queue or post anything nsfw or nsfl you will get banned.</li><li>please be nice to others.</li><li>please do not spam if others are having a conversation.</li><li>do not be stinky.</li></ol>';
+  '<ol><li>no bigotry in any shape form or manner, if you attempt to spread hate to anyone you will be banned.</li><li>do not queue or post anything nsfw or nsfl you will get banned.</li><li>please be nice to others.</li><li>please do not spam if others are having a conversation.</li><li>do not be stinky.</li></ol>';
 
 const ChannelAnnouncement_HTML =
-    'fuh?';
+  'fuh?';
 
 const EmbeddingMedia_Images =
-    'a[href$=".jpg"], a[href$=".jpg:large"], a[href$=".jpeg"], a[href$=".JPEG"], a[href$=".JPG"], a[href$=".png"], a[href$=".PNG"], a[href$=".tiff"], a[href$=".TIFF"], a[href$=".webp"], a[href$=".WEBP"], a[href$=".gif"], a[href$=".GIF"]';
+  'a[href$=".jpg"], a[href$=".jpg:large"], a[href$=".jpeg"], a[href$=".JPEG"], a[href$=".JPG"], a[href$=".png"], a[href$=".PNG"], a[href$=".tiff"], a[href$=".TIFF"], a[href$=".webp"], a[href$=".WEBP"], a[href$=".gif"], a[href$=".GIF"]';
 
 const EmbeddingMedia_Videos =
-    'a[href$=".webm"], a[href$=".mp4"], a[href$=".MP4"], a[href$=".mov"], a[href$=".MOV"], a[href$=".mp3"], a[href$=".MP3"], a[href$=".wav"], a[href$=".WAV"], a[href$=".ogg"], a[href$=".OGG"], a[href$=".m4a"], a[href$=".M4A"]';
+  'a[href$=".webm"], a[href$=".mp4"], a[href$=".MP4"], a[href$=".mov"], a[href$=".MOV"], a[href$=".mp3"], a[href$=".MP3"], a[href$=".wav"], a[href$=".WAV"], a[href$=".ogg"], a[href$=".OGG"], a[href$=".m4a"], a[href$=".M4A"]';
 
 const CustomFooter_HTML = 'This is custom footer.';
 
@@ -475,22 +475,22 @@ const IndependentFilters = [
   {
     before: /\[imgur\](.*?)\[\/(i|imgur)\]/g,
     after:
-        '<a href="http://i.imgur.com/$1" target="_blank"><img src="http://i.imgur.com/$1" style="max-width:160px"></a>',
+      '<a href="http://i.imgur.com/$1" target="_blank"><img src="http://i.imgur.com/$1" style="max-width:160px"></a>',
   },
   {
     before: /\[drop\](.*?)\[\/(d|drop)\]/g,
     after: '<a href="https://dl.dropboxusercontent.com/s/$1" target="_blank">' +
-        '<img src="https://dl.dropboxusercontent.com/s/$1" style="max-width:160px"></a>',
+      '<img src="https://dl.dropboxusercontent.com/s/$1" style="max-width:160px"></a>',
   },
   {
     before: /\[minus\/(.*?)\](.*?)\[\/(m|minus)\]/g,
     after: '<a href="http://$1.minus.com/$2" target="_blank">' +
-        '<img src="http://$1.minus.com/$2" style="max-width:160px"></a>',
+      '<img src="http://$1.minus.com/$2" style="max-width:160px"></a>',
   },
   {
     before: /\[vi\/(.*?)\](.*?)\[\/(v|vi)\]/g,
     after: '<a href="https://pl.vichan.net/$1/src/$2" target="_blank">' +
-        '<img src="https://pl.vichan.net/$1/src/$2" style="max-width:160px"></a>',
+      '<img src="https://pl.vichan.net/$1/src/$2" style="max-width:160px"></a>',
   },
 ];
 
@@ -515,7 +515,7 @@ const defuserlist = UI_DefaultSynchtube ? 'right' : 'left';
 const defqueue = UI_DefaultSynchtube ? 'left' : 'right';
 
 const DEFTHEME =
-    (UI_ChannelTheme && ChannelThemeURL !== '') ? ChannelThemeURL : '/css/themes/slate.css';
+  (UI_ChannelTheme && ChannelThemeURL !== '') ? ChannelThemeURL : '/css/themes/slate.css';
 
 const USERCONFIG = {
   'player': getOrDefault(CHANNEL.name + '_player', defplayer),
@@ -646,8 +646,8 @@ function addToPlaylist(link, stand) {
   const parsed = parseMediaLink(link);
   if (parsed['id'] != null) {
     socket.emit(
-        'queue',
-        {id: parsed['id'], pos: stand, type: parsed['type'], temp: $('.add-temp').prop('checked')});
+      'queue',
+      {id: parsed['id'], pos: stand, type: parsed['type'], temp: $('.add-temp').prop('checked')});
   }
 }
 
@@ -681,8 +681,8 @@ function createModal(title) {
   modalContent = $('<div class="modal-content" />').appendTo(modalDialog);
   modalHead = $('<div class="modal-header" />').appendTo(modalContent);
   $('<button class="close" data-dismiss="modal" aria-hidden="true" />')
-      .html('&times;')
-      .appendTo(modalHead);
+    .html('&times;')
+    .appendTo(modalHead);
   $('<h3 />').text(title).appendTo(modalHead);
   modalBody = $('<div class="modal-body" />').appendTo(modalContent);
   modalFooter = $('<div class="modal-footer" />').appendTo(modalContent);
@@ -736,9 +736,9 @@ function queueLocation(a) {
     $('#rightpane').after($('#leftpane').detach());
   } else if (a === 'center') {
     $('#rightpane')
-        .after($('#leftpane').detach())
-        .removeClass()
-        .addClass('col-md-8 col-md-offset-2 col-md-12');
+      .after($('#leftpane').detach())
+      .removeClass()
+      .addClass('col-md-8 col-md-offset-2 col-md-12');
     $('#leftpane').removeClass().addClass('col-md-8 col-md-offset-2 col-md-12');
     $('#pinup-btn').hide();
   }
@@ -802,9 +802,9 @@ function headerMode(a) {
     $('#mainpage').css('margin-top', '-72px');
   } else if (a === 'mouseover') {
     $('.navbar-fixed-top')
-        .css({'position': 'fixed', 'top': '-40px'})
-        .on('mouseover', () => $('.navbar-fixed-top').css('top', '0px'))
-        .on('mouseout', () => $('.navbar-fixed-top').css('top', '-40px'));
+      .css({'position': 'fixed', 'top': '-40px'})
+      .on('mouseover', () => $('.navbar-fixed-top').css('top', '0px'))
+      .on('mouseout', () => $('.navbar-fixed-top').css('top', '-40px'));
     $('#mainpage').css('margin-top', '-40px');
   }
 }
@@ -982,18 +982,18 @@ function changeMOTD() {
     motdtabswrap = $('<div id="motdtabswrap" />').appendTo('#motd');
     for (const [i, tab] of MOTDTabs_Array.entries()) {
       btn = $(`<button class="btn btn-default motdtabs-btn" tab="${i}">`)
-                .text(tab[0])
-                .appendTo(motdtabswrap)
-                .on('click', () => {
-                  $('.motdtabs-btn').removeClass('btn-success');
-                  $(this).addClass('btn-success');
-                  nr = $(this).attr('tab');
-                  motdtabscontent.html(MOTDTabs_Array[nr][1]);
-                });
+        .text(tab[0])
+        .appendTo(motdtabswrap)
+        .on('click', () => {
+          $('.motdtabs-btn').removeClass('btn-success');
+          $(this).addClass('btn-success');
+          nr = $(this).attr('tab');
+          motdtabscontent.html(MOTDTabs_Array[nr][1]);
+        });
     }
     motdtabscontent = $(`<div id="motdtabscontent">${MOTDTabs_Array[0][1]}</div>`)
-                          .css(MOTDTabs_CSS)
-                          .appendTo('#motd');
+      .css(MOTDTabs_CSS)
+      .appendTo('#motd');
     $('.motdtabs-btn:nth-child(1)').addClass('btn-success');
   }
   if (UI_MOTDAutoLogo) {
@@ -1014,7 +1014,7 @@ function changeMOTD() {
     }
     $(`<center><img id="motdlogo" src="${MOTDAutoLogo_Array[logo]}" />` +
       '</center>')
-        .prependTo('#motd');
+      .prependTo('#motd');
   }
   if (UI_RulesBtn) {
     // adding rules button
@@ -1023,9 +1023,9 @@ function changeMOTD() {
     }
     const rulesbtnwrap = $('<div id="rulesbtnwrap" />').appendTo('#motd');
     $('<button id="rules-btn" class="btn btn-default btn-sm" />')
-        .text(RulesBtn_Caption + ' ▸')
-        .appendTo(rulesbtnwrap)
-        .on('click', () => rulesModal());
+      .text(RulesBtn_Caption + ' ▸')
+      .appendTo(rulesbtnwrap)
+      .on('click', () => rulesModal());
   }
 }
 
@@ -1033,8 +1033,8 @@ function rulesModal() {
   createModal('Rules Panel');
   modalBody.append(RulesBtn_HTML);
   $('<button class ="btn btn-default" type="button" data-dismiss="modal"/>')
-      .text('Close')
-      .appendTo(modalFooter);
+    .text('Close')
+    .appendTo(modalFooter);
 }
 
 /**
@@ -1156,7 +1156,7 @@ function createSquavatar(str) {
   for (let i = 0, hash = 0; i < str.length; hash = str.charCodeAt(i++) + ((hash << 5) - hash))
     ;
   for (let i = 0, col = ''; i < 3;
-       col += ('00' + ((hash >> i++ * 8) & 0xFF).toString(16)).slice(-2))
+    col += ('00' + ((hash >> i++ * 8) & 0xFF).toString(16)).slice(-2))
     ;
   r = parseInt(col.substring(0, 2), 16);
   g = parseInt(col.substring(2, 4), 16);
@@ -1165,7 +1165,7 @@ function createSquavatar(str) {
   g2 = 255 - g;
   b2 = 255 - b;
   html = `<span class="squavatar" style="background-color:rgb(${r},${g},${b}); ` +
-      `border-color:rgb(${r2},${g2},${b2})"></span>`;
+    `border-color:rgb(${r2},${g2},${b2})"></span>`;
   return html;
 }
 
@@ -1227,9 +1227,9 @@ function toggleModPanel() {
  */
 function createDatabase() {
   let html =
-      '<button id="la1" class="btn btn-default btn-sm db-break" onclick="cydj.toggleCat(1)">' +
-      CHANNEL_DATABASE[0][1] + '</button>' +
-      '<ul id="l1" class="videolist db-cat">';
+    '<button id="la1" class="btn btn-default btn-sm db-break" onclick="cydj.toggleCat(1)">' +
+    CHANNEL_DATABASE[0][1] + '</button>' +
+    '<ul id="l1" class="videolist db-cat">';
 
   let len = CHANNEL_DATABASE.length;
   for (let i = 1; i < CHANNEL_DATABASE.length; i++) {
@@ -1240,36 +1240,36 @@ function createDatabase() {
       count_nr = 0;
 
       html += `</ul><button id="la${layer_nr}" ` +
-          `class="btn btn-default btn-sm db-break" ` +
-          `onclick="cydj.toggleCat(${layer_nr})">` +
-          `${CHANNEL_DATABASE[i][1]}</button>` +
-          `<ul id="l${layer_nr}" class="videolist db-cat">`;
+        `class="btn btn-default btn-sm db-break" ` +
+        `onclick="cydj.toggleCat(${layer_nr})">` +
+        `${CHANNEL_DATABASE[i][1]}</button>` +
+        `<ul id="l${layer_nr}" class="videolist db-cat">`;
     } else {
       item_nr++;
       count_nr++;
       const link = CHANNEL_DATABASE[i][0];
 
       html += '<li class="queue_entry">' +
-          `<button class="btn btn-default btn-xs pull-right" ` +
-          `onclick="cydj.addVideo('${link}')">End</button>`;
+        `<button class="btn btn-default btn-xs pull-right" ` +
+        `onclick="cydj.addVideo('${link}')">End</button>`;
 
       const parsed = parseMediaLink(link);
       if (parsed['type'] === 'yt') {
         const a = parsed['id'];
         html += '<button class="btn btn-default btn-xs pull-right" ' +
-            `onclick="cydj.prevVideo('${a}')">` +
-            '<i class="glyphicon glyphicon-film"></i>' +
-            '</button>';
+          `onclick="cydj.prevVideo('${a}')">` +
+          '<i class="glyphicon glyphicon-film"></i>' +
+          '</button>';
       }
       html += '<span class="badge db-badge">' + item_nr + '</span><span class="db-title">' +
-          CHANNEL_DATABASE[i][1] + '</span><br /><span class="db-link">' + link + '</span>';
+        CHANNEL_DATABASE[i][1] + '</span><br /><span class="db-link">' + link + '</span>';
     }
   }
 
   html += '</ul><br /><br /><div id="cleardbwrap">' +
-      '<button id="cleardb-btn" class="btn btn-default btn-sm">' +
-      'Reload Data (if channel seems working slow)</button>' +
-      '</div>';
+    '<button id="cleardb-btn" class="btn btn-default btn-sm">' +
+    'Reload Data (if channel seems working slow)</button>' +
+    '</div>';
 
   item_count[layer_nr - 1] = count_nr;
   opening[layer_nr - 1] = 0;
@@ -1328,13 +1328,13 @@ function patchWrap() {
  */
 function createGallery() {
   const galleryframe = $(`<iframe id="galleryFrame" src=${ChannelGalleries_Array[0][1]} ` +
-                         'width="100%" />')
-                           .attr({'frameborder': '0', 'scrolling': 'no', 'height': '415px'})
-                           .appendTo(gallerywell);
+    'width="100%" />')
+    .attr({'frameborder': '0', 'scrolling': 'no', 'height': '415px'})
+    .appendTo(gallerywell);
   $('<span id="galtitle" class="conf-opt">Select Gallery</span>').appendTo(gallerywell);
   const galsel = $('<select id="gal-sel" class="form-control" />')
-                     .appendTo(gallerywell)
-                     .on('change', () => galleryframe.attr('src', galsel.val()));
+    .appendTo(gallerywell)
+    .on('change', () => galleryframe.attr('src', galsel.val()));
 
   for (const gallery of ChannelGalleries_Array) {
     $(`<option value="${gallery[1]}" />`).html(gallery[0]).appendTo(galsel);
@@ -1343,12 +1343,12 @@ function createGallery() {
   const text = 'Reload Galleries (if problems or slow channel)';
   $('<button id="cleargallery-btn" class="btn btn-default btn-sm">' +
     `${text}</button>`)
-      .appendTo(gallerywell)
-      .on('click', () => {
-        toggleDiv(gallerywrap);
-        gallerywell.html('');
-        GALLERY = false;
-      });
+    .appendTo(gallerywell)
+    .on('click', () => {
+      toggleDiv(gallerywrap);
+      gallerywell.html('');
+      GALLERY = false;
+    });
   GALLERY = true;
 }
 
@@ -1416,8 +1416,8 @@ function formatHTMLList() {
     const {title, duration} = item;
     const link = formatURL(item);
     list.push(
-        `<li>${title} [${duration}] - <a href="${link}" target="_blank">` +
-        `${link}</a></li>`);
+      `<li>${title} [${duration}] - <a href="${link}" target="_blank">` +
+      `${link}</a></li>`);
   }
   return list.join('\n');
 }
@@ -1608,7 +1608,7 @@ function setUserCSS() {
     $('#usertheme').attr('href', USERTHEME);
   } else {
     $(`<link id="usertheme-fix" rel="stylesheet" type="text/css" href="${USERTHEME}"></link>`)
-        .appendTo('head');
+      .appendTo('head');
   }
   $('#usercss').remove();
   if (USERCONFIG.css !== 'no') {
@@ -1643,51 +1643,51 @@ window.onload = setUserCSS();
 
 function prepareFilters() {
   str = '{"name":"white color","source":"\\\\[white\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:white\\">","active":true,"filterlinks":false},' +
-      '{"name":"yellow color","source":"\\\\[yellow\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:gold\\">","active":true,"filterlinks":false},' +
-      '{"name":"orange color","source":"\\\\[orange\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:orange\\">","active":true,"filterlinks":false},' +
-      '{"name":"pink color","source":"\\\\[pink\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:#FFBBFF\\">","active":true,"filterlinks":false},' +
-      '{"name":"red color","source":"\\\\[red\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:red\\">","active":true,"filterlinks":false},' +
-      '{"name":"limegreen color","source":"\\\\[lime\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:limegreen\\">","active":true,"filterlinks":false},' +
-      '{"name":"green color","source":"\\\\[green\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:green\\">","active":true,"filterlinks":false},' +
-      '{"name":"aqua color","source":"\\\\[aqua\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:aqua\\">","active":true,"filterlinks":false},' +
-      '{"name":"blue color","source":"\\\\[blue\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:blue\\">","active":true,"filterlinks":false},' +
-      '{"name":"violet color","source":"\\\\[violet\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:#660099\\">","active":true,"filterlinks":false},' +
-      '{"name":"brown color","source":"\\\\[brown\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:#660000\\">","active":true,"filterlinks":false},' +
-      '{"name":"silver color","source":"\\\\[silver\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:silver\\">","active":true,"filterlinks":false},' +
-      '{"name":"black color","source":"\\\\[black\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:black\\">","active":true,"filterlinks":false},' +
-      '{"name":"white color on black","source":"\\\\[bw\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:white; background-color:black\\">","active":true,"filterlinks":false},' +
-      '{"name":"bold text","source":"\\\\[b\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"font-weight:bold\\">","active":true,"filterlinks":false},' +
-      '{"name":"italic text","source":"\\\\[i\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"font-style:italic\\">","active":true,"filterlinks":false},' +
-      '{"name":"underlined text","source":"\\\\[u\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"text-decoration:underline\\">","active":true,"filterlinks":false},' +
-      '{"name":"striked text","source":"\\\\[s\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"text-decoration:line-through\\">","active":true,"filterlinks":false},' +
-      '{"name":"distinguished text","source":"\\\\[d\\\\]","flags":"g",' +
-      '"replace":"<span class=\\"dist\\">","active":true,"filterlinks":false},' +
-      '{"name":"fire text","source":"\\\\[f\\\\]","flags":"g",' +
-      '"replace":"<span style=\\"color:#FFFFFF; font-family:impact, sans-serif; padding-top:20px; ' +
-      'text-shadow:0px 0px 4px #000000, 0px -5px 4px #FFFF33, 2px -8px 6px #FFDD33, -2px -15px 10px #FF8800, ' +
-      '2px -20px 18px #FF2200; letter-spacing:2px\\">","active":true,"filterlinks":false},' +
-      '{"name":"short spoiler","source":"\\\\[sp\\\\]","flags":"g",' +
-      '"replace":"<span class=\\"spoiler\\">","active":true,"filterlinks":false},' +
-      '{"name":"closing font style","source":"\\\\[\\\\/\\\\]","flags":"g",' +
-      '"replace":"</span>","active":true,"filterlinks":false}]';
+    '"replace":"<span style=\\"color:white\\">","active":true,"filterlinks":false},' +
+    '{"name":"yellow color","source":"\\\\[yellow\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:gold\\">","active":true,"filterlinks":false},' +
+    '{"name":"orange color","source":"\\\\[orange\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:orange\\">","active":true,"filterlinks":false},' +
+    '{"name":"pink color","source":"\\\\[pink\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:#FFBBFF\\">","active":true,"filterlinks":false},' +
+    '{"name":"red color","source":"\\\\[red\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:red\\">","active":true,"filterlinks":false},' +
+    '{"name":"limegreen color","source":"\\\\[lime\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:limegreen\\">","active":true,"filterlinks":false},' +
+    '{"name":"green color","source":"\\\\[green\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:green\\">","active":true,"filterlinks":false},' +
+    '{"name":"aqua color","source":"\\\\[aqua\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:aqua\\">","active":true,"filterlinks":false},' +
+    '{"name":"blue color","source":"\\\\[blue\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:blue\\">","active":true,"filterlinks":false},' +
+    '{"name":"violet color","source":"\\\\[violet\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:#660099\\">","active":true,"filterlinks":false},' +
+    '{"name":"brown color","source":"\\\\[brown\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:#660000\\">","active":true,"filterlinks":false},' +
+    '{"name":"silver color","source":"\\\\[silver\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:silver\\">","active":true,"filterlinks":false},' +
+    '{"name":"black color","source":"\\\\[black\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:black\\">","active":true,"filterlinks":false},' +
+    '{"name":"white color on black","source":"\\\\[bw\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:white; background-color:black\\">","active":true,"filterlinks":false},' +
+    '{"name":"bold text","source":"\\\\[b\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"font-weight:bold\\">","active":true,"filterlinks":false},' +
+    '{"name":"italic text","source":"\\\\[i\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"font-style:italic\\">","active":true,"filterlinks":false},' +
+    '{"name":"underlined text","source":"\\\\[u\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"text-decoration:underline\\">","active":true,"filterlinks":false},' +
+    '{"name":"striked text","source":"\\\\[s\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"text-decoration:line-through\\">","active":true,"filterlinks":false},' +
+    '{"name":"distinguished text","source":"\\\\[d\\\\]","flags":"g",' +
+    '"replace":"<span class=\\"dist\\">","active":true,"filterlinks":false},' +
+    '{"name":"fire text","source":"\\\\[f\\\\]","flags":"g",' +
+    '"replace":"<span style=\\"color:#FFFFFF; font-family:impact, sans-serif; padding-top:20px; ' +
+    'text-shadow:0px 0px 4px #000000, 0px -5px 4px #FFFF33, 2px -8px 6px #FFDD33, -2px -15px 10px #FF8800, ' +
+    '2px -20px 18px #FF2200; letter-spacing:2px\\">","active":true,"filterlinks":false},' +
+    '{"name":"short spoiler","source":"\\\\[sp\\\\]","flags":"g",' +
+    '"replace":"<span class=\\"spoiler\\">","active":true,"filterlinks":false},' +
+    '{"name":"closing font style","source":"\\\\[\\\\/\\\\]","flags":"g",' +
+    '"replace":"</span>","active":true,"filterlinks":false}]';
 
   callback = (data) => {
     socket.listeners('chatFilters').splice(socket.listeners('chatFilters').indexOf(callback));
@@ -1700,7 +1700,7 @@ function prepareFilters() {
   socket.emit('requestChatFilters');
 
   txt = 'This option does NOT affect your current filters, all of them will be saved.\n' +
-      'Click "Import filter list" button if you\'ll decide to install.';
+    'Click "Import filter list" button if you\'ll decide to install.';
   alert(txt);
 }
 
@@ -1714,17 +1714,17 @@ function showChatFunctions() {
   $('#chatfunc-dropdown').append('<div>Prevent room freezing if spam:</div>');
 
   $('<button id="spamclear-btn" class="btn btn-xs btn-default">Auto Clear</button>')
-      .appendTo('#chatfunc-dropdown')
-      .on('click', function() {
-        if (!CLEARING) {
-          $(this).text('Stop Clearing').addClass('btn-danger');
-          CLEARING = setInterval(() => socket.emit('chatMsg', {msg: '/clear'}), 500);
-        } else {
-          $(this).text('Auto Clear').removeClass('btn-danger');
-          clearInterval(CLEARING);
-          CLEARING = false;
-        }
-      });
+    .appendTo('#chatfunc-dropdown')
+    .on('click', function() {
+      if (!CLEARING) {
+        $(this).text('Stop Clearing').addClass('btn-danger');
+        CLEARING = setInterval(() => socket.emit('chatMsg', {msg: '/clear'}), 500);
+      } else {
+        $(this).text('Auto Clear').removeClass('btn-danger');
+        clearInterval(CLEARING);
+        CLEARING = false;
+      }
+    });
   if (CLEARING) {
     $('#spamclear-btn').text('Stop Clearing').addClass('btn-danger');
   }
@@ -1732,24 +1732,24 @@ function showChatFunctions() {
   $('#chatfunc-dropdown').append('<div>Prevent me from AFK:</div>');
 
   $('<button id="antiafk-btn" class="btn btn-xs btn-default">Anti AFK</button>')
-      .appendTo('#chatfunc-dropdown')
-      .on('click', function() {
-        if (!ANTIAFK) {
-          $(this).addClass('btn-danger');
-          ANTIAFK = setInterval(function() {
-            $('#userlist').find('span[class^=userlist]').each(function() {
-              if ($(this).html() === CLIENT.name && $(this).css('font-style') === 'italic') {
-                socket.emit('chatMsg', {msg: '/afk'});
-                return;
-              }
-            });
-          }, 4000);
-        } else {
-          $(this).removeClass('btn-danger');
-          clearInterval(ANTIAFK);
-          ANTIAFK = false;
-        }
-      });
+    .appendTo('#chatfunc-dropdown')
+    .on('click', function() {
+      if (!ANTIAFK) {
+        $(this).addClass('btn-danger');
+        ANTIAFK = setInterval(function() {
+          $('#userlist').find('span[class^=userlist]').each(function() {
+            if ($(this).html() === CLIENT.name && $(this).css('font-style') === 'italic') {
+              socket.emit('chatMsg', {msg: '/afk'});
+              return;
+            }
+          });
+        }, 4000);
+      } else {
+        $(this).removeClass('btn-danger');
+        clearInterval(ANTIAFK);
+        ANTIAFK = false;
+      }
+    });
   if (ANTIAFK) {
     $('#antiafk-btn').addClass('btn-danger');
   }
@@ -1771,8 +1771,8 @@ function showEmotes() {
   } else if (!UI_GroupEmotes || len <= GroupEmotes_Number) {
     for (const emote of CHANNEL.emotes) {
       $(`<img onclick="cydj.insertText('${emote.name} ')" />`)
-          .attr({'src': emote.image, 'title': emote.name})
-          .appendTo(emotespanel);
+        .attr({'src': emote.image, 'title': emote.name})
+        .appendTo(emotespanel);
     }
   } else {
     let arr = [];
@@ -1782,7 +1782,7 @@ function showEmotes() {
 
     for (let i = 0; i < len; i++) {
       html += `<img src="${CHANNEL.emotes[i].image}" ` +
-          `onclick="cydj.insertText(\'${CHANNEL.emotes[i].name} \')" />`;
+        `onclick="cydj.insertText(\'${CHANNEL.emotes[i].name} \')" />`;
       if (i % GroupEmotes_Number === stopAt) {
         arr.push(html);
         html = '';
@@ -1794,8 +1794,8 @@ function showEmotes() {
 
     for (let i = 0; i < gr; i++) {
       div = $(`<div id="emotes-${i}" class="groupemotes" style="display:none" />`)
-                .html(arr[i])
-                .appendTo(emotespanel);
+        .html(arr[i])
+        .appendTo(emotespanel);
     }
     arr = '';
 
@@ -1805,14 +1805,14 @@ function showEmotes() {
     for (let i = 0; i < gr; i++) {
       $(`<button class="btn btn-sm btn-default emotesbtn" group="${i}">` +
         `${i + 1}</button>`)
-          .appendTo(emotesbtngroup)
-          .on('click', function() {
-            $('.emotesbtn').removeClass('active');
-            $(this).addClass('active');
-            $('.groupemotes').hide();
-            nr = $(this).attr('group');
-            $(`#emotes-${nr}`).show();
-          });
+        .appendTo(emotesbtngroup)
+        .on('click', function() {
+          $('.emotesbtn').removeClass('active');
+          $(this).addClass('active');
+          $('.groupemotes').hide();
+          nr = $(this).attr('group');
+          $(`#emotes-${nr}`).show();
+        });
     }
     $('#emotes-0').show();
     $('#emotescontrols button:nth-child(1)').addClass('active');
@@ -1826,41 +1826,41 @@ function showEmotes() {
 function showChatHelp() {
   createModal('Chat Commands');
   $('<button class ="btn btn-default" type="button" data-dismiss="modal"/>')
-      .text('Close')
-      .appendTo(modalFooter);
+    .text('Close')
+    .appendTo(modalFooter);
 
   if (UI_FontsBtn) {
     modalBody.append('<strong>Fonts commands</strong><br /><br />');
     const html =
-        [
-          '<code>[white]</code>, <code>[yellow]</code>, <code>[orange]</code>, <code>[pink]</code>, ' +
-              '<code>[red]</code>, <code>[lime]</code>, <code>[green]</code>, <code>[aqua]</code>, ' +
-              '<code>[blue]</code>, <code>[violet]</code>, <code>[brown]</code>, <code>[silver]</code>, ' +
-              '<code>[black]</code> - begin of colored text',
-          '<code>[bw]</code> - begin of white text on the black background',
-          '<code>[b]</code>, <code>[i]</code>, <code>[u]</code>, <code>[s]</code> - ' +
-              'begin of bold, italic, underlined, striked or underlined text',
-          '<code>[d]</code> - begin of a distinguished text (red on yellow background)',
-          '<code>[f]</code> - begin of a text with a fire effect',
-          '<code>[sp]</code> - begin of an inline spoiler',
-          '<code>[/]</code> - <b>end of any color, style or spoiler</b>',
-          '<code>[f]</code> - begin of a text with a fire effect',
-          '<code>@</code> - beginning and end of continuous text scrolling',
-          '<code>@@</code> - beginning and end of bounce text scrolling',
-          '<code>@@@</code> - beginning and end of buggy text scrolling (still fun!)',
-          '<code>!</code> - beginning and end of faster bounce text scrolling',
-          '<code>!!</code> - beginning and end of fastest bounce text scrolling!',
-        ].map((line) => `<li>${line}</li>`)
-            .join('') +
-        'For a quick CyDJ guide check out this Google Doc <a href="https://tinyurl.com/CyDJguideV2" target="_blank">here</a>.';
+      [
+        '<code>[white]</code>, <code>[yellow]</code>, <code>[orange]</code>, <code>[pink]</code>, ' +
+        '<code>[red]</code>, <code>[lime]</code>, <code>[green]</code>, <code>[aqua]</code>, ' +
+        '<code>[blue]</code>, <code>[violet]</code>, <code>[brown]</code>, <code>[silver]</code>, ' +
+        '<code>[black]</code> - begin of colored text',
+        '<code>[bw]</code> - begin of white text on the black background',
+        '<code>[b]</code>, <code>[i]</code>, <code>[u]</code>, <code>[s]</code> - ' +
+        'begin of bold, italic, underlined, striked or underlined text',
+        '<code>[d]</code> - begin of a distinguished text (red on yellow background)',
+        '<code>[f]</code> - begin of a text with a fire effect',
+        '<code>[sp]</code> - begin of an inline spoiler',
+        '<code>[/]</code> - <b>end of any color, style or spoiler</b>',
+        '<code>[f]</code> - begin of a text with a fire effect',
+        '<code>@</code> - beginning and end of continuous text scrolling',
+        '<code>@@</code> - beginning and end of bounce text scrolling',
+        '<code>@@@</code> - beginning and end of buggy text scrolling (still fun!)',
+        '<code>!</code> - beginning and end of faster bounce text scrolling',
+        '<code>!!</code> - beginning and end of fastest bounce text scrolling!',
+      ].map((line) => `<li>${line}</li>`)
+        .join('') +
+      'For a quick CyDJ guide check out this Google Doc <a href="https://tinyurl.com/CyDJguideV2" target="_blank">here</a>.';
     $('<ul />').html(html).appendTo(modalBody);
   }
   if (UI_UserCommands) {
     const arr = {
       'pick': 'choosing a random option from a list separated by commas ' +
-          '(e.g. <i>!pick japan,korea,china</i>)',
+        '(e.g. <i>!pick japan,korea,china</i>)',
       'ask': 'asking a question with yes/no type answer ' +
-          '(e.g. <i>!ask Will this channel be popular?</i>)',
+        '(e.g. <i>!ask Will this channel be popular?</i>)',
       'q': 'displaying random quote (<i>!q</i>)',
       'dice': 'rolling dice (<i>!dice</i>)',
       'roll': 'rolling 3-digit number (<i>!roll</i>)',
@@ -1869,7 +1869,7 @@ function showChatHelp() {
       'media': 'links current media in the playlist (<i>!media</i>)',
       'skip': 'skip current item (<i>!skip</i>)',
       'add': 'adding a link to the end of playlist ' +
-          '(e.g. <i>!add https://www.youtube.com/watch?v=29FFHC2D12Q</i>)',
+        '(e.g. <i>!add https://www.youtube.com/watch?v=29FFHC2D12Q</i>)',
       'stat': 'displaying user chat statistics in current session (<i>!stat</i>)',
       'version': 'displays current script version (<i>!version</i>)',
       'report': 'links a report fourm for reporting a user (<i>!report</i>)',
@@ -1892,13 +1892,13 @@ function showChatHelp() {
   if (UI_ChatSpeak) {
     modalBody.append('<strong>Voice commands</strong><br /><br />');
     html = '<li><code>!say</code> - text speaking in english (<i>!say Hello!</i>)</li>' +
-        '<li><code>!mow</code> - text speaking in polish (<i>!mow Chrząszcz brzmi w trzcinie.</i>)';
+      '<li><code>!mow</code> - text speaking in polish (<i>!mow Chrząszcz brzmi w trzcinie.</i>)';
     $('<ul />').html(html).appendTo(modalBody);
   }
   const arr = {
     'me': 'showing an action-style message (username does something, e.g. <i>/me is dancing</i>)',
     'sp':
-        'hiding a message in a hover-to-show spoiler box (e.g. <i>/sp This message is hidden</i>)',
+      'hiding a message in a hover-to-show spoiler box (e.g. <i>/sp This message is hidden</i>)',
     'afk': 'toggling your AFK (away from keyboard) status (<i>/afk</i>)',
   };
   modalBody.append('<br /><strong>Default CyTube commands</strong><br /><br />');
@@ -1917,20 +1917,20 @@ function showSoundsPanel() {
   setPanelProperties('#sounds-dropdown');
 
   const muteallbtn = $('<button id="muteall-btn" class="btn btn-xs btn-default">Mute All</button>')
-                         .appendTo('#sounds-dropdown')
-                         .on('click', function() {
-                           if (VOICES) {
-                             $(this).text('Unmute All').addClass('btn-danger');
-                             voicesbtn.addClass('btn-danger').attr('title', 'Unmute chat voices');
-                             VOICES = false;
-                             SOUNDSPANEL = false;
-                             $('#sounds-dropdown').remove();
-                           } else {
-                             $(this).text('Mute All').removeClass('btn-danger');
-                             voicesbtn.removeClass('btn-danger').attr('title', 'Mute chat voices');
-                             VOICES = true;
-                           }
-                         });
+    .appendTo('#sounds-dropdown')
+    .on('click', function() {
+      if (VOICES) {
+        $(this).text('Unmute All').addClass('btn-danger');
+        voicesbtn.addClass('btn-danger').attr('title', 'Unmute chat voices');
+        VOICES = false;
+        SOUNDSPANEL = false;
+        $('#sounds-dropdown').remove();
+      } else {
+        $(this).text('Mute All').removeClass('btn-danger');
+        voicesbtn.removeClass('btn-danger').attr('title', 'Mute chat voices');
+        VOICES = true;
+      }
+    });
   if (!VOICES) {
     muteallbtn.text('Unmute All').addClass('btn-danger');
   }
@@ -1942,37 +1942,37 @@ function showSoundsPanel() {
   for (let i = 1; i <= 5; i++) {
     $(`<button class="btn btn-xs btn-default" id="lvlvol${i}" ` +
       `level="${i}" />`)
-        .html(i)
-        .appendTo(lvlgroup)
-        .on('click', function() {
-          $(`#lvlvol${SOUNDSLVL}`).removeClass('btn-success');
-          SOUNDSLVL = $(this).attr('level');
-          setOpt(CHANNEL.name + '_soundslvl', SOUNDSLVL);
-          $(this).addClass('btn-success');
-        });
+      .html(i)
+      .appendTo(lvlgroup)
+      .on('click', function() {
+        $(`#lvlvol${SOUNDSLVL}`).removeClass('btn-success');
+        SOUNDSLVL = $(this).attr('level');
+        setOpt(CHANNEL.name + '_soundslvl', SOUNDSLVL);
+        $(this).addClass('btn-success');
+      });
   }
   $(`#lvlvol${SOUNDSLVL}`).addClass('btn-success');
 
   $('#sounds-dropdown').append('<div>Select users to mute sounds:</div>');
 
   const mutegroup =
-      $('<div id="mutegroup" class="btn-group-vertical"></div>').appendTo('#sounds-dropdown');
+    $('<div id="mutegroup" class="btn-group-vertical"></div>').appendTo('#sounds-dropdown');
 
   $('.userlist_item').each(function() {
     const user = $(this).find('span:nth-child(2)').html();
     const btn = $(`<button class="btn btn-xs btn-default" name="${user}" />`)
-                    .html(user)
-                    .appendTo(mutegroup)
-                    .on('click', function() {
-                      name = $(this).attr('name');
-                      if (name in MUTEDVOICES && MUTEDVOICES[name] == '1') {
-                        $(this).removeClass('btn-danger');
-                        MUTEDVOICES[name] = 0;
-                      } else {
-                        $(this).addClass('btn-danger');
-                        MUTEDVOICES[name] = 1;
-                      }
-                    });
+      .html(user)
+      .appendTo(mutegroup)
+      .on('click', function() {
+        name = $(this).attr('name');
+        if (name in MUTEDVOICES && MUTEDVOICES[name] == '1') {
+          $(this).removeClass('btn-danger');
+          MUTEDVOICES[name] = 0;
+        } else {
+          $(this).addClass('btn-danger');
+          MUTEDVOICES[name] = 1;
+        }
+      });
     if (user in MUTEDVOICES && MUTEDVOICES[user] == '1') {
       btn.addClass('btn-danger');
     }
@@ -1986,8 +1986,8 @@ function showModPanel() {
   createModal('Moderators panel');
 
   $('<button class ="btn btn-default" type="button" data-dismiss="modal"/>')
-      .text('Close')
-      .appendTo(modalFooter);
+    .text('Close')
+    .appendTo(modalFooter);
   let html = '';
   for (const panel of ModPanel_Array) {
     const name = panel[0];
@@ -1996,8 +1996,8 @@ function showModPanel() {
       html += `<i class="glyphicon glyphicon-comment"></i> ${mess}<br /><br />`;
     } else if (name === CLIENT.name) {
       html = '<i class="glyphicon glyphicon-comment"></i> ' +
-          '<i class="glyphicon glyphicon-user"></i> ' +
-          `(to: ${CLIENT.name}) → ${mess}<br /><br />`;
+        '<i class="glyphicon glyphicon-user"></i> ' +
+        `(to: ${CLIENT.name}) → ${mess}<br /><br />`;
     }
   }
   modalBody.append(html);
@@ -2081,12 +2081,12 @@ function coverPlayer() {
   const w = $('#ytapiplayer').css('width');
   const h = $('#videowrap').css('height').replace('px', '') - 30;
   coverpl = $('<div id="coverpl" />')
-                .css({
-                  'width': w,
-                  'height': h + 'px',
-                  'background-image': `url(${PlayerHiding_URL})`,
-                })
-                .appendTo($('#videowrap'));
+    .css({
+      'width': w,
+      'height': h + 'px',
+      'background-image': `url(${PlayerHiding_URL})`,
+    })
+    .appendTo($('#videowrap'));
   hideplayerbtn.addClass('btn-danger').attr('title', 'Show player');
 }
 
@@ -2107,11 +2107,11 @@ export function prevVideo(a) {
   createModal('Preview Video');
 
   $('<iframe id="previewFrame" width="558" height="314" frameborder="0" />')
-      .attr('src', `https://www.youtube.com/embed/${a}?wmode=transparent&enablejsapi`)
-      .appendTo(modalBody);
+    .attr('src', `https://www.youtube.com/embed/${a}?wmode=transparent&enablejsapi`)
+    .appendTo(modalBody);
   const closepv = $('<button class ="btn btn-default" type="button" data-dismiss="modal"/>')
-                      .text('Close')
-                      .appendTo(modalFooter);
+    .text('Close')
+    .appendTo(modalFooter);
   closepv.on('click', () => {
     $('Preview Video').empty();
   });
@@ -2135,14 +2135,14 @@ function toggleConfigPanel() {
     }
     pinupbtn.show();
     layoutbtn.removeClass('btn-danger')
-        .addClass('btn-success')
-        .html('<span class="glyphicon glyphicon-cog"></span> Layout');
+      .addClass('btn-success')
+      .html('<span class="glyphicon glyphicon-cog"></span> Layout');
     $('#min-layout').prop('checked', false);
     $('#plcontrol button, #db-btn, #gallery-btn, #newpollbtn').removeAttr('disabled');
     MINIMIZED = false;
     // patch: giving back 15px additional space on the top
     $('#mainpage')
-        .css('margin-top', $('#mainpage').css('margin-top').replace('px', '') * 1 - 15 + 'px');
+      .css('margin-top', $('#mainpage').css('margin-top').replace('px', '') * 1 - 15 + 'px');
   } else {
     toggleDiv(configwrap);
     if (configwrap.css('display') === 'none') {
@@ -2218,14 +2218,14 @@ function showConfig() {
   addOption('Top logo', logoinsert);
 
   const userlogo =
-      $('<input />').addClass('form-control').attr('type', 'text').attr('placeholder', 'Image URL');
+    $('<input />').addClass('form-control').attr('type', 'text').attr('placeholder', 'Image URL');
   userlogo.val('');
   addOption('User logo URL', userlogo);
 
   const userlogoht = $('<input />')
-                         .addClass('form-control')
-                         .attr('type', 'text')
-                         .attr('placeholder', 'Image Height (in px)');
+    .addClass('form-control')
+    .attr('type', 'text')
+    .attr('placeholder', 'Image Height (in px)');
   userlogoht.val('');
   addOption('User logo height', userlogoht);
 
@@ -2251,7 +2251,7 @@ function showConfig() {
   addOption('Custom CSS', customcss);
 
   const usercss =
-      $('<textarea rows="8" />').addClass('form-control').attr('placeholder', 'Insert CSS code');
+    $('<textarea rows="8" />').addClass('form-control').attr('placeholder', 'Insert CSS code');
   usercss.val(USERCONFIG.csscode);
   addOption('CSS code', usercss);
 
@@ -2260,12 +2260,12 @@ function showConfig() {
   }
 
   const submit = $('<button class="btn btn-default btn-success" />')
-                     .text('Save changes')
-                     .appendTo(modalFooter);
+    .text('Save changes')
+    .appendTo(modalFooter);
   const reset =
-      $('<button class="btn btn-default pull-left" />').text('Default').appendTo(modalFooter);
+    $('<button class="btn btn-default pull-left" />').text('Default').appendTo(modalFooter);
   const column =
-      $('<button class="btn btn-default pull-left" />').text('One column').appendTo(modalFooter);
+    $('<button class="btn btn-default pull-left" />').text('One column').appendTo(modalFooter);
 
   logoinsert.on('change', () => {
     if (logoinsert.val() === 'user') {
@@ -2446,7 +2446,7 @@ function toggleMinLayout() {
     MINIMIZED = true;
     // patch for 15px more space on the top
     $('#mainpage')
-        .css('margin-top', $('#mainpage').css('margin-top').replace('px', '') * 1 + 15 + 'px');
+      .css('margin-top', $('#mainpage').css('margin-top').replace('px', '') * 1 + 15 + 'px');
   }
 }
 
@@ -2513,22 +2513,22 @@ function showContributors() {
   const /** @type {!Map<string, number} */ userQueueCounts = new Map();
 
   const /** @type {!Array<HTMLLIElement>} */ queuedItems =
-      Array.from(document.getElementById('queue').children);
+    Array.from(document.getElementById('queue').children);
   const userQueues = queuedItems.map((elem) => elem.getAttribute('title'))
-                         .filter((title) => title)
-                         .map((title) => title.replace('Added by: ', ''));
+    .filter((title) => title)
+    .map((title) => title.replace('Added by: ', ''));
   for (const user of userQueues) {
     const current = userQueueCounts.get(user) || 0;
     userQueueCounts.set(user, current + 1);
   }
 
   const userContributions = Array.from(userQueueCounts.entries())
-                                .sort((a, b) => b[1] - a[1])
-                                .map(([user, count]) => `${count}: ${user}`);
+    .sort((a, b) => b[1] - a[1])
+    .map(([user, count]) => `${count}: ${user}`);
 
   modalBody.append(
-      '<strong>Number of added playlist items:</strong>' +
-      '<br /><br />' + userContributions.join('<br />'));
+    '<strong>Number of added playlist items:</strong>' +
+    '<br /><br />' + userContributions.join('<br />'));
 }
 
 /**
@@ -2554,17 +2554,17 @@ function getPlaylistURLs() {
   createModal('Playlist URLs');
 
   const data =
-      $('<textarea rows="10" class="form-control" />').val(formatRawList()).appendTo(modalBody);
+    $('<textarea rows="10" class="form-control" />').val(formatRawList()).appendTo(modalBody);
   const rlist =
-      $('<button class="btn btn-default pull-left">Raw Links</button>').appendTo(modalFooter);
+    $('<button class="btn btn-default pull-left">Raw Links</button>').appendTo(modalFooter);
   const tlist =
-      $('<button class="btn btn-default pull-left">Plain Text</button>').appendTo(modalFooter);
+    $('<button class="btn btn-default pull-left">Plain Text</button>').appendTo(modalFooter);
   const hlist =
-      $('<button class="btn btn-default pull-left">HTML Code</button>').appendTo(modalFooter);
+    $('<button class="btn btn-default pull-left">HTML Code</button>').appendTo(modalFooter);
   const olist =
-      $('<button class="btn btn-default pull-left">Ordered List</button>').appendTo(modalFooter);
+    $('<button class="btn btn-default pull-left">Ordered List</button>').appendTo(modalFooter);
   const dlist =
-      $('<button class="btn btn-default pull-left">Database Format</button>').appendTo(modalFooter);
+    $('<button class="btn btn-default pull-left">Database Format</button>').appendTo(modalFooter);
 
   rlist.on('click', () => data.val(formatRawList()));
   tlist.on('click', () => data.val(formatPlainTextList()));
@@ -2608,25 +2608,25 @@ if (USEROPTS.hidevid) {
   $('#chatwrap, #chatline').removeClass('col-lg-12 col-md-12').addClass('col-lg-5 col-md-5');
   videowrap = $('<div id="videowrap" class="col-lg-7 col-md-7" />').insertBefore('#chatwrap');
   currenttitle = $('<p id="currenttitle" />')
-                     .html('Currently Playing: ' + $('.queue_active a').html())
-                     .appendTo(videowrap);
+    .html('Currently Playing: ' + $('.queue_active a').html())
+    .appendTo(videowrap);
   ytapiplayer = $('<div id="ytapiplayer" />').appendTo(videowrap);
 
   html = 'According to your User Preferences, video player is hidden. ' +
-      'Click a button below to continue hiding player. ' +
-      'Click default "Reload" icon to show player in this session. ' +
-      'If you\'ll stay in "Chat Only" mode, functionality of this channel will be limited.<br /><br />';
+    'Click a button below to continue hiding player. ' +
+    'Click default "Reload" icon to show player in this session. ' +
+    'If you\'ll stay in "Chat Only" mode, functionality of this channel will be limited.<br /><br />';
   makeAlert('No Player', html).appendTo(ytapiplayer);
 
   staybtn =
-      $('<button id="stay-btn" class="btn btn-default btn-sm">Stay In "Chat Only" Mode</button>')
-          .appendTo('#ytapiplayer .alert')
-          .on('click', () => {
-            videowrap.remove();
-            $('#chatwrap').removeClass().addClass('col-lg-12 col-md-12');
-            $('#configform, #modeform, #pinup-btn').hide();
-            fitChat('auto');
-          });
+    $('<button id="stay-btn" class="btn btn-default btn-sm">Stay In "Chat Only" Mode</button>')
+      .appendTo('#ytapiplayer .alert')
+      .on('click', () => {
+        videowrap.remove();
+        $('#chatwrap').removeClass().addClass('col-lg-12 col-md-12');
+        $('#configform, #modeform, #pinup-btn').hide();
+        fitChat('auto');
+      });
 }
 
 // changing initial layout to compact for new users
@@ -2661,8 +2661,8 @@ $('#home-link a, #account-link ul a, .credit a').attr('target', '_blank');
 if ($('#chanexternalcss').length < 1) {
   const url = 'https://dl.dropboxusercontent.com/s/hbhlrmys5piztgo/main.css';
   $('head').append(
-      `<link id="chanexternalcss" href="${url}" ` +
-      'rel="stylesheet" type="text/css">');
+    `<link id="chanexternalcss" href="${url}" ` +
+    'rel="stylesheet" type="text/css">');
 }
 
 // attempt to fix dumbass buttons
@@ -2682,7 +2682,7 @@ if (UI_Favicon && Favicon_URL !== '') {
   $(document).ready(() => {
     $(`<link id="chanfavicon" href="${Favicon_URL}" type="image/x-icon" ` +
       'rel="shortcut icon" />')
-        .appendTo('head');
+      .appendTo('head');
   });
 }
 
@@ -2692,12 +2692,12 @@ $('nav .caret, #cs-edit-dd-toggle .caret').removeClass('caret').html(' ▾');
 // adding important messages to "Options"
 
 const text1 =
-    'Please use "Personal theme" selector in the room configuration box to select a theme for this channel. ';
+  'Please use "Personal theme" selector in the room configuration box to select a theme for this channel. ';
 const text2 =
-    'Please use "Click to configure" button in the room configuration box to configure this channel. ';
+  'Please use "Click to configure" button in the room configuration box to configure this channel. ';
 const text3 =
-    'If you want to make global changes, please go to another channel, or make changes before accepting ' +
-    'special features.';
+  'If you want to make global changes, please go to another channel, or make changes before accepting ' +
+  'special features.';
 $('#us-theme').hide();
 $('#us-theme').parent().append(`<p class="text-danger">${text1}${text3}</p>`);
 $('#us-layout').hide();
@@ -2705,8 +2705,8 @@ $('#us-layout').parent().append(`<p class="text-danger">${text2}${text3}</p>`);
 
 // creating channel settings filters preparation button
 $('<button id="cs-fonts-import" class="btn btn-default pull-right">Prepare fonts filters</button>')
-    .insertAfter('#cs-chatfilters-import')
-    .on('click', () => prepareFilters());
+  .insertAfter('#cs-chatfilters-import')
+  .on('click', () => prepareFilters());
 
 // fixing layout after saving global user options
 $('#useroptions .modal-footer button:nth-child(1)').on('click', () => {
@@ -2714,12 +2714,12 @@ $('#useroptions .modal-footer button:nth-child(1)').on('click', () => {
     location.reload();
   }
   html = 'All changes are applying globally, but this channel uses its own layout. ' +
-      'Please use "Click to configure" button to configure this channel layout.<br />' +
-      'Reload player if the wrong title is displaying. ' +
-      'In HD layout or if player is removed, you may not see some elements due to CyTube API. ' +
-      'If so, reload channel.';
+    'Please use "Click to configure" button to configure this channel layout.<br />' +
+    'Reload player if the wrong title is displaying. ' +
+    'In HD layout or if player is removed, you may not see some elements due to CyTube API. ' +
+    'If so, reload channel.';
   makeAlert('You have changed global User Preferences', html, 'alert-info')
-      .appendTo('#announcements');
+    .appendTo('#announcements');
   compactLayout();
   setLayout();
   if (FLUID) {
@@ -2747,8 +2747,8 @@ if (UI_HeaderDropMenu) {
   }
   const headerdrop = $('<li id="headerdrop" class="dropdown" />').insertAfter('#home-link');
   $('<a class="dropdown-toggle" data-toggle="dropdown" href="#" />')
-      .html(HeaderDropMenu_Title + ' ▾')
-      .appendTo(headerdrop);
+    .html(HeaderDropMenu_Title + ' ▾')
+    .appendTo(headerdrop);
   const headermenu = $('<ul id="headermenu" class="dropdown-menu" />').appendTo(headerdrop);
 
   if (HeaderDropMenu_Array.length < 1) {
@@ -2761,8 +2761,8 @@ if (UI_HeaderDropMenu) {
       headermenu.append(`<li class="dropdown-header">${title}</li>`);
     } else {
       $('<li class="header-drop-link" />')
-          .append(`<a href="${link}" target="_blank">${title}</a>`)
-          .appendTo(headermenu);
+        .append(`<a href="${link}" target="_blank">${title}</a>`)
+        .appendTo(headermenu);
     }
   }
 }
@@ -2774,8 +2774,8 @@ if (UI_Version) {
   }
   const headerdrop = $('<li id="headerdrop" class="dropdown" />').insertAfter('#channelset-link');
   $('<a class="dropdown-toggle disabled" href="https://github.com/ItMePeachy/PeachyRoom" target="_blank" />')
-      .html(`${Version_Now}`)
-      .appendTo(headerdrop);
+    .html(`${Version_Now}`)
+    .appendTo(headerdrop);
 }
 
 // optional removing of "Layout" menu from header
@@ -2824,7 +2824,7 @@ if (UI_MOTDAutoLogo || UI_RulesBtn || (UI_MOTDTabs && MOTDTabs_Array.length > 0)
 // setting MOTD logo
 if (UI_MOTDAutoLogo) {
   if (MOTDAutoLogo_Mode != '1' && MOTDAutoLogo_Mode != '2' && MOTDAutoLogo_Mode != '3' &&
-      MOTDAutoLogo_Mode != '7') {
+    MOTDAutoLogo_Mode != '7') {
     MOTDAutoLogo_Mode = '1';
   }
   if (MOTDAutoLogo_Mode == '3') {
@@ -2842,8 +2842,8 @@ if (UI_MOTDAutoLogo) {
 if (UI_AttentionBar && AttentionBar_URL !== '') {
   attbarwrap = $('<div id="attbarrow-outer" class="col-md-12" />').prependTo('#announcements');
   attbar = $('<iframe id="attbar" width="100%" frameborder="0" scrolling="no" />')
-               .attr('src', AttentionBar_URL)
-               .appendTo(attbarwrap);
+    .attr('src', AttentionBar_URL)
+    .appendTo(attbarwrap);
 }
 
 // adding custom channel announcement
@@ -2861,8 +2861,8 @@ if (UI_ChannelAnnouncement) {
 if (UI_FullTitleBar) {
   titlerow = $('<div id="titlerow" class="row" />').insertBefore('#main');
   $('<div id="titlerow-outer" class="col-md-12" />')
-      .html($('#currenttitle').detach())
-      .appendTo(titlerow);
+    .html($('#currenttitle').detach())
+    .appendTo(titlerow);
   mediainfo = $('<p id="mediainfo" />').html('Nothing is playing').prependTo('#videowrap');
 
   if (UI_ProgressBar) {
@@ -2931,19 +2931,19 @@ if (UI_PublicSkip) {
 
 // additional chat functions
 const chatflair =
-    $('<span id="chatflair" class="label label-success pull-right pointer">Func</span>')
-        .insertAfter('#adminflair')
-        .on('click', () => {
-          if (!CHATFUNC) {
-            $('#sounds-dropdown').remove();
-            SOUNDSPANEL = false;
-            showChatFunctions();
-            CHATFUNC = false;
-          } else {
-            $('#chatfunc-dropdown').remove();
-            CHATFUNC = true;
-          }
-        });
+  $('<span id="chatflair" class="label label-success pull-right pointer">Func</span>')
+    .insertAfter('#adminflair')
+    .on('click', () => {
+      if (!CHATFUNC) {
+        $('#sounds-dropdown').remove();
+        SOUNDSPANEL = false;
+        showChatFunctions();
+        CHATFUNC = false;
+      } else {
+        $('#chatfunc-dropdown').remove();
+        CHATFUNC = true;
+      }
+    });
 
 /**
  * Toggle additional chat functions.
@@ -2969,7 +2969,7 @@ let chatcontrols;
 
 // adding chat buttons wrapping
 if (UI_FontsBtn || UI_EmotesBtn || UI_CommandsBtn || UI_SoundFilters || UI_ModPanel ||
-    UI_ChatSpeak) {
+  UI_ChatSpeak) {
   chatcontrols = $('<div id="chatcontrols" class="btn-group" />').appendTo('#chatwrap');
 }
 
@@ -2978,22 +2978,22 @@ let fontspanel;
 // adding chat fonts button
 if (UI_FontsBtn) {
   $('<button id="fonts-btn" class="btn btn-sm btn-default" title="Display fonts panel" />')
-      .html('<i class="glyphicon glyphicon-font"></i>')
-      .appendTo(chatcontrols)
-      .on('click', () => toggleDiv(fontspanel));
+    .html('<i class="glyphicon glyphicon-font"></i>')
+    .appendTo(chatcontrols)
+    .on('click', () => toggleDiv(fontspanel));
 }
 
 // adding chat emotes button
 if (UI_EmotesBtn) {
   $('<button id="emotes-btn" class="btn btn-sm btn-default" title="Display emotes panel" />')
-      .html('<i class="glyphicon glyphicon-picture"></i>')
-      .appendTo(chatcontrols)
-      .on('click', () => {
-        toggleDiv(emotespanel);
-        if (!UI_ChannelCache && !EMOTES) {
-          showEmotes();
-        }
-      });
+    .html('<i class="glyphicon glyphicon-picture"></i>')
+    .appendTo(chatcontrols)
+    .on('click', () => {
+      toggleDiv(emotespanel);
+      if (!UI_ChannelCache && !EMOTES) {
+        showEmotes();
+      }
+    });
 }
 
 // moving emote button attempt
@@ -3005,24 +3005,24 @@ if (UI_SpecialEmoteBtn) {
 // adding chat commands button
 if (UI_CommandsBtn && (UI_UserCommands || UI_FontsBtn || UI_ChatSpeak)) {
   $('<button id="chathelp-btn" class="btn btn-sm btn-default" title="Show chat commands"/>')
-      .html('<i class="glyphicon glyphicon-question-sign"></i>')
-      .appendTo(chatcontrols)
-      .on('click', () => showChatHelp());
+    .html('<i class="glyphicon glyphicon-question-sign"></i>')
+    .appendTo(chatcontrols)
+    .on('click', () => showChatHelp());
 }
 
 // adding the stupid context button to show up
 if (UI_ContextMenu) {
   $('<button id="context-btn" class="btn btn-sm btn-default" title="Opens a menu with links" />')
-      .html('<i class="glyphicon glyphicon-align-center"></i>')
-      .appendTo(chatcontrols)
-      .on('click', () => showContextMenu());
+    .html('<i class="glyphicon glyphicon-align-center"></i>')
+    .appendTo(chatcontrols)
+    .on('click', () => showContextMenu());
 }
 // adds the button
 if (UI_DEBUG) {
   $('<button id="debug-btn" class="btn btn-sm btn-default" title="for the debug" />')
-      .html('<i class="glyphicon glyphicon-cog"></i>')
-      .appendTo(chatcontrols)
-      .on('click', () => showDebugging());
+    .html('<i class="glyphicon glyphicon-cog"></i>')
+    .appendTo(chatcontrols)
+    .on('click', () => showDebugging());
 }
 
 /**
@@ -3031,16 +3031,16 @@ if (UI_DEBUG) {
 function showContextMenu() {
   createModal('Context Menu');
   $('<button class ="btn btn-default" type="button" data-dismiss="modal"/>')
-      .text('Close')
-      .appendTo(modalFooter);
+    .text('Close')
+    .appendTo(modalFooter);
   if (UI_ContextMenu) {
     modalBody.append('<strong>Useful links</strong><br /><br />');
     const html =
-        [
-          '<a href="https://docs.google.com/document/d/1X2TdR9hc2KK0WEBLjY06CZaY30QyKxsI_7CQ1qbSz0g/edit" target="_blank">Click here to open the guide</a>!',
-          '<a href="https://discord.com/invite/cMUXkDcX6C" target="_blank">Click here to join the Discord</a>!',
-        ].map((item) => `<li>${item}</li>`)
-            .join('');
+      [
+        '<a href="https://docs.google.com/document/d/1X2TdR9hc2KK0WEBLjY06CZaY30QyKxsI_7CQ1qbSz0g/edit" target="_blank">Click here to open the guide</a>!',
+        '<a href="https://discord.com/invite/cMUXkDcX6C" target="_blank">Click here to join the Discord</a>!',
+      ].map((item) => `<li>${item}</li>`)
+        .join('');
     $('<ul />').html(html).appendTo(modalBody);
   }
 }
@@ -3050,16 +3050,16 @@ function showDebugging() {
   if (UI_DEBUG) {
     modalBody.append('<strong>Buttons that do stuff</strong><br /><br />');
     const bootan1 = $('<button class="btn btn-default btn-success" />')
-                        .text('setUserCSS();')
-                        .appendTo(modalBody);
+      .text('setUserCSS();')
+      .appendTo(modalBody);
     bootan1.on('click', () => setUserCSS());
     const bootan2 = $('<button class="btn btn-default btn-success" />')
-                        .text('chatflair.show();')
-                        .appendTo(modalBody);
+      .text('chatflair.show();')
+      .appendTo(modalBody);
     bootan2.on('click', () => chatflair.show());
     const bootan3 = $('<button class="btn btn-default btn-success" />')
-                        .text('location.reload();')
-                        .appendTo(modalBody);
+      .text('location.reload();')
+      .appendTo(modalBody);
     bootan3.on('click', () => location.reload());
   }
 }
@@ -3079,9 +3079,9 @@ function showDebugging() {
 // adding easter egg button
 if (UI_PartyButton) {
   $('<button id="party-btn" class="btn btn-sm btn-default" title="DO NOT CLICK IF YOU ARE EPILEPTIC DO NOT CLICK THIS BUTTON IF YOU SEE THIS NOTIFY PEACHY" />')
-      .text('Party!')
-      .appendTo(chatcontrols)
-      .on('click', () => showDrop());
+    .text('Party!')
+    .appendTo(chatcontrols)
+    .on('click', () => showDrop());
 }
 
 /**
@@ -3109,29 +3109,29 @@ function showDrop() {
 // adding chat sounds toggle button and control panel
 if (UI_SoundFilters || UI_ChatSpeak) {
   voicesbtn =
-      $('<button id="voices-btn" class="btn btn-sm btn-default" title="Mute chat voices" />')
-          .html('<i class="glyphicon glyphicon-volume-down"></i>')
-          .appendTo(chatcontrols)
-          .on('click', () => {
-            if (!SOUNDSPANEL) {
-              $('#chatfunc-dropdown').remove();
-              CHATFUNC = false;
-              showSoundsPanel();
-              SOUNDSPANEL = true;
-            } else {
-              $('#sounds-dropdown').remove();
-              SOUNDSPANEL = false;
-            }
-          });
+    $('<button id="voices-btn" class="btn btn-sm btn-default" title="Mute chat voices" />')
+      .html('<i class="glyphicon glyphicon-volume-down"></i>')
+      .appendTo(chatcontrols)
+      .on('click', () => {
+        if (!SOUNDSPANEL) {
+          $('#chatfunc-dropdown').remove();
+          CHATFUNC = false;
+          showSoundsPanel();
+          SOUNDSPANEL = true;
+        } else {
+          $('#sounds-dropdown').remove();
+          SOUNDSPANEL = false;
+        }
+      });
   VOICES = true;
 }
 
 // adding moderators panel button
 if (UI_ModPanel) {
   modbtn = $('<button id="mod-btn" class="btn btn-sm btn-default" title="Show moderators panel" />')
-               .html('<i class="glyphicon glyphicon-tasks"></i>')
-               .appendTo(chatcontrols)
-               .on('click', () => showModPanel());
+    .html('<i class="glyphicon glyphicon-tasks"></i>')
+    .appendTo(chatcontrols)
+    .on('click', () => showModPanel());
 
   socket.on('rank', toggleModPanel);
   toggleModPanel();
@@ -3140,104 +3140,104 @@ if (UI_ModPanel) {
 // adding hey nay thing
 if (UI_RateButtons) {
   const transcontrols =
-      $('<div id="transcontrols" class="btn-group pull-right" />').appendTo('#videowrap');
+    $('<div id="transcontrols" class="btn-group pull-right" />').appendTo('#videowrap');
   $('<button id="hey-btn" class="btn btn-sm btn-default" title="Woot! (Cancels Voteskip)" />')
-      .html('<i class="glyphicon glyphicon-headphones"></i>')
-      .appendTo(transcontrols)
-      .on('click', () => {
-        socket.emit('chatMsg', {msg: '/afk'});
-        socket.emit('chatMsg', {msg: '[lime]Woot![/] PepePls'});
-        HEY.volume = 0.4;
-        HEY.play();
-        // votehey();
-      });
+    .html('<i class="glyphicon glyphicon-headphones"></i>')
+    .appendTo(transcontrols)
+    .on('click', () => {
+      socket.emit('chatMsg', {msg: '/afk'});
+      socket.emit('chatMsg', {msg: '[lime]Woot![/] PepePls'});
+      HEY.volume = 0.4;
+      HEY.play();
+      // votehey();
+    });
   $('<button id="nay-btn" class="btn btn-sm btn-default" title="Meh.. (Voteskip)" />')
-      .html('<i class="glyphicon glyphicon-thumbs-down"></i>')
-      .appendTo(transcontrols)
-      .on('click', () => {
-        socket.emit('chatMsg', {msg: '[red]Meh..[/] ResidentSleeper'});
-        socket.emit('voteskip');
-        NAY.volume = 0.4;
-        NAY.play();
-      });
+    .html('<i class="glyphicon glyphicon-thumbs-down"></i>')
+    .appendTo(transcontrols)
+    .on('click', () => {
+      socket.emit('chatMsg', {msg: '[red]Meh..[/] ResidentSleeper'});
+      socket.emit('voteskip');
+      NAY.volume = 0.4;
+      NAY.play();
+    });
 }
 
 // adding player control buttons
 if (UI_PlayerOptions) {
   if (UI_FullTitleBar) {
     $('<button id="switchdescr-btn" class="btn btn-sm btn-default" />')
-        .attr('title', 'Switch description')
-        .html('<span class="glyphicon glyphicon-info-sign"></span>')
-        .appendTo('#playercontrols')
-        .on('click', () => {
-          DEFDESCR = !DEFDESCR;
-          showInfo();
-        });
+      .attr('title', 'Switch description')
+      .html('<span class="glyphicon glyphicon-info-sign"></span>')
+      .appendTo('#playercontrols')
+      .on('click', () => {
+        DEFDESCR = !DEFDESCR;
+        showInfo();
+      });
   }
 
   hideplayerbtn =
-      $('<button id="hideplayer-btn" class="btn btn-sm btn-default" title="Hide player" />')
-          .html('<span class="glyphicon glyphicon-ban-circle"></span>')
-          .appendTo('#playercontrols')
-          .on('click', function() {
-            if ($(this).hasClass('btn-danger')) {
-              showPlayer();
-            } else {
-              coverPlayer();
-            }
-          });
+    $('<button id="hideplayer-btn" class="btn btn-sm btn-default" title="Hide player" />')
+      .html('<span class="glyphicon glyphicon-ban-circle"></span>')
+      .appendTo('#playercontrols')
+      .on('click', function() {
+        if ($(this).hasClass('btn-danger')) {
+          showPlayer();
+        } else {
+          coverPlayer();
+        }
+      });
 }
 
 // adding player transformation buttons
 if (UI_TransformationBtns) {
   const transcontrols =
-      $('<div id="transcontrols" class="btn-group pull-right" />').appendTo('#videowrap');
+    $('<div id="transcontrols" class="btn-group pull-right" />').appendTo('#videowrap');
 
   $('<button id="mirrorx-btn" class="btn btn-sm btn-default" title="Mirror X player" />')
-      .html('<span class="glyphicon glyphicon-resize-horizontal"></span>')
-      .appendTo(transcontrols)
-      .on('click', () => {
-        if ($('#ytapiplayer').hasClass('mX')) {
-          $('#ytapiplayer').removeClass('mX');
-        } else {
-          $('#ytapiplayer').addClass('mX');
-        }
-      });
+    .html('<span class="glyphicon glyphicon-resize-horizontal"></span>')
+    .appendTo(transcontrols)
+    .on('click', () => {
+      if ($('#ytapiplayer').hasClass('mX')) {
+        $('#ytapiplayer').removeClass('mX');
+      } else {
+        $('#ytapiplayer').addClass('mX');
+      }
+    });
 
   $('<button id="mirrory-btn" class="btn btn-sm btn-default" title="Mirror Y player" />')
-      .html('<span class="glyphicon glyphicon-resize-vertical"></span>')
-      .appendTo(transcontrols)
-      .on('click', () => {
-        if ($('#ytapiplayer').hasClass('mY')) {
-          $('#ytapiplayer').removeClass('mY');
-        } else {
-          $('#ytapiplayer').addClass('mY');
-        }
-      });
+    .html('<span class="glyphicon glyphicon-resize-vertical"></span>')
+    .appendTo(transcontrols)
+    .on('click', () => {
+      if ($('#ytapiplayer').hasClass('mY')) {
+        $('#ytapiplayer').removeClass('mY');
+      } else {
+        $('#ytapiplayer').addClass('mY');
+      }
+    });
 
   $('<button id="rotate-btn" class="btn btn-sm btn-default" title="Rotate player" />')
-      .html('<span class="glyphicon glyphicon-repeat"></span>')
-      .appendTo(transcontrols)
-      .on('click', () => {
-        if ($('#ytapiplayer').hasClass('rotate')) {
-          $('#ytapiplayer').removeClass('rotate');
-        } else {
-          $('#ytapiplayer').addClass('rotate');
-        }
-      });
+    .html('<span class="glyphicon glyphicon-repeat"></span>')
+    .appendTo(transcontrols)
+    .on('click', () => {
+      if ($('#ytapiplayer').hasClass('rotate')) {
+        $('#ytapiplayer').removeClass('rotate');
+      } else {
+        $('#ytapiplayer').addClass('rotate');
+      }
+    });
 
   $('<button id="vertical-btn" class="btn btn-sm btn-default" title="Vertical player" />')
-      .html('<span class="glyphicon glyphicon-arrow-up"></span>')
-      .appendTo(transcontrols)
-      .on('click', function() {
-        if ($('#ytapiplayer').hasClass('vertical')) {
-          $('#ytapiplayer').removeClass('vertical');
-          this.attr('title', 'Vertical player');
-        } else {
-          $('#ytapiplayer').addClass('vertical');
-          this.attr('title', 'Horizontal player');
-        }
-      });
+    .html('<span class="glyphicon glyphicon-arrow-up"></span>')
+    .appendTo(transcontrols)
+    .on('click', function() {
+      if ($('#ytapiplayer').hasClass('vertical')) {
+        $('#ytapiplayer').removeClass('vertical');
+        this.attr('title', 'Vertical player');
+      } else {
+        $('#ytapiplayer').addClass('vertical');
+        this.attr('title', 'Horizontal player');
+      }
+    });
 }
 
 // creating fonts and emotes main row
@@ -3278,10 +3278,10 @@ if (UI_FontsBtn) {
 
   for (const [i, font] of FontsArray.entries()) {
     $(`<button id="cbtn${i}" onclick="cydj.insertText('[${font[1]}]')" />`)
-        .addClass('btn btn-primary')
-        .attr('style', font[0])
-        .text(font[2])
-        .appendTo(fontsbtnwrap);
+      .addClass('btn btn-primary')
+      .attr('style', font[0])
+      .text(font[2])
+      .appendTo(fontsbtnwrap);
     if (i % 13 === 12) {
       fontsbtnwrap.append('<br />');
     }
@@ -3291,9 +3291,9 @@ if (UI_FontsBtn) {
     const unibtnwrap = $('<div id="unibtnwrap" />').appendTo(fontspanel);
     for (const char of UnicodeChars_Array) {
       $(`<button onclick="cydj.insertText('${char}')" />`)
-          .addClass('btn btn-primary')
-          .text(char)
-          .appendTo(unibtnwrap);
+        .addClass('btn btn-primary')
+        .text(char)
+        .appendTo(unibtnwrap);
     }
   }
 }
@@ -3317,10 +3317,10 @@ if (UI_EmptyCornerBackground && EmptyCornerBackground.length > 0) {
 
 // adding layout configuration panel button
 const layoutbtn =
-    $('<button id="layout-btn" class="btn btn-sm btn-default btn-success pull-right" />')
-        .html('<span class="glyphicon glyphicon-cog"></span> Layout')
-        .prependTo('#leftpane')
-        .on('click', () => toggleConfigPanel());
+  $('<button id="layout-btn" class="btn btn-sm btn-default btn-success pull-right" />')
+    .html('<span class="glyphicon glyphicon-cog"></span> Layout')
+    .prependTo('#leftpane')
+    .on('click', () => toggleConfigPanel());
 $('#playlistmanagerwrap').show();
 
 let leftpanecontrols;
@@ -3328,46 +3328,46 @@ let leftpanecontrols;
 // adding media database and gallery wrap
 if (UI_ChannelDatabase || UI_ChannelGalleries) {
   leftpanecontrols =
-      $('<div id="leftpanecontrols" class="btn-group pull-left" />').insertAfter(layoutbtn);
+    $('<div id="leftpanecontrols" class="btn-group pull-left" />').insertAfter(layoutbtn);
 }
 
 // adding media database button
 if (UI_ChannelDatabase) {
   $('<button id="db-btn" class="btn btn-sm btn-default" title="Display submitted songs in categories" />')
-      .text('Public Playlists')
-      .appendTo(leftpanecontrols)
-      .on('click', () => {
-        toggleDiv(dbwrap);
-        if (!CHANDB) {
-          createDatabase();
-        }
-      });
+    .text('Public Playlists')
+    .appendTo(leftpanecontrols)
+    .on('click', () => {
+      toggleDiv(dbwrap);
+      if (!CHANDB) {
+        createDatabase();
+      }
+    });
 }
 
 // adding galleries button
 if (UI_ChannelGalleries) {
   $('<button id="gallery-btn" class="btn btn-sm btn-default">Channel Galleries</button>')
-      .appendTo(leftpanecontrols)
-      .on('click', () => {
-        toggleDiv(gallerywrap);
-        if (!GALLERY) {
-          createGallery();
-        }
+    .appendTo(leftpanecontrols)
+    .on('click', () => {
+      toggleDiv(gallerywrap);
+      if (!GALLERY) {
+        createGallery();
+      }
 
-        // patch: strange imgur behaviour (not loading first cached gallery)
-        if (!GALLVIS && UI_ChannelCache && gallerywrap.css('display') !== 'none') {
-          iframe = document.getElementById('galleryFrame');
-          if (iframe.src.includes('imgur.com')) {
-            iframe.src = iframe.src;
-          }
+      // patch: strange imgur behaviour (not loading first cached gallery)
+      if (!GALLVIS && UI_ChannelCache && gallerywrap.css('display') !== 'none') {
+        iframe = document.getElementById('galleryFrame');
+        if (iframe.src.includes('imgur.com')) {
+          iframe.src = iframe.src;
         }
-        GALLVIS = true;
-      });
+      }
+      GALLVIS = true;
+    });
 }
 
 // adding layout configuration well
 const configwrap =
-    $('<div id="configwrap" class="col-lg-12 col-md-12" />').appendTo('#leftpane-inner');
+  $('<div id="configwrap" class="col-lg-12 col-md-12" />').appendTo('#leftpane-inner');
 const configwell = $('<div id="config-well" class="well form-horizontal" />').appendTo(configwrap);
 
 if (!LAYOUTBOX) {
@@ -3380,25 +3380,25 @@ if (!LAYOUTBOX) {
 const configform = $('<div id="configform" class="form-group" />').appendTo(configwell);
 $('<div class="col-lg-5 col-md-5">Global layout</div>').appendTo(configform);
 const configbtnwrap =
-    $('<div id="configbtnwrap" class="col-lg-7 col-md-7" />').appendTo(configform);
+  $('<div id="configbtnwrap" class="col-lg-7 col-md-7" />').appendTo(configform);
 
 $('<button id="config-btn" class="btn btn-default">Click to configure</button>')
-    .appendTo(configbtnwrap)
-    .on('click', () => showConfig());
+  .appendTo(configbtnwrap)
+  .on('click', () => showConfig());
 
 configbtnwrap.append('<br />');
 
 const fluidlayout = $('<label class="checkbox-inline" />').appendTo(configbtnwrap);
 $('<input type="checkbox" id="fluid-layout" value="no" />')
-    .appendTo(fluidlayout)
-    .on('click', () => toggleFluidLayout())
-    .after(' Fluid');
+  .appendTo(fluidlayout)
+  .on('click', () => toggleFluidLayout())
+  .after(' Fluid');
 
 const minlayout = $('<label class="checkbox-inline" />').appendTo(configbtnwrap);
 $('<input type="checkbox" id="min-layout" value="no" />')
-    .appendTo(minlayout)
-    .on('click', () => toggleMinLayout())
-    .after(' Minimized');
+  .appendTo(minlayout)
+  .on('click', () => toggleMinLayout())
+  .after(' Minimized');
 
 let modesel;
 
@@ -3409,25 +3409,25 @@ if (UI_DisplayModeSel) {
   const modewrap = $('<div id="modewrap" class="col-lg-7 col-md-7" />').appendTo(modeform);
 
   modesel = $('<select id="mode-sel" class="form-control" />')
-                .append('<option value="syMode">synchtube mode</option>')
-                .append('<option value="kMode">cinema mode</option>')
-                .append('<option value="chMode">chatroom mode</option>')
-                .append('<option value="rMode">radio mode</option>')
-                .appendTo(modewrap)
-                .on('change', function() {
-                  $('#config-btn, #configbtnwrap br').hide();
-                  $('#min-layout').parent().hide();
-                  $('#sounds-dropdown, #chatfunc-dropdown').remove();
-                  SOUNDSPANEL = false;
-                  CHATFUNC = false;
-                  if (PLAYER.type === 'jw') {
-                    refreshPlayer();
-                  }
-                  setMode($(this).val());
-                  scrollQueue();
-                  scrollChat();
-                  showPlayer();
-                });
+    .append('<option value="syMode">synchtube mode</option>')
+    .append('<option value="kMode">cinema mode</option>')
+    .append('<option value="chMode">chatroom mode</option>')
+    .append('<option value="rMode">radio mode</option>')
+    .appendTo(modewrap)
+    .on('change', function() {
+      $('#config-btn, #configbtnwrap br').hide();
+      $('#min-layout').parent().hide();
+      $('#sounds-dropdown, #chatfunc-dropdown').remove();
+      SOUNDSPANEL = false;
+      CHATFUNC = false;
+      if (PLAYER.type === 'jw') {
+        refreshPlayer();
+      }
+      setMode($(this).val());
+      scrollQueue();
+      scrollChat();
+      showPlayer();
+    });
 
   socket.on('changeMedia', setModeAfterVideoChange);
 }
@@ -3439,22 +3439,22 @@ $('<div class="col-lg-5 col-md-5">Personal theme</div>').appendTo(themeform);
 const themewrap = $('<div id="themewrap" class="col-lg-7 col-md-7" />').appendTo(themeform);
 
 const themesel =
-    $('<select id="theme-sel" class="form-control" />')
-        .append('<option value="" class="theme-header" disabled>default themes</option>')
-        .append('<option value="/css/themes/light.css"># Light</option>')
-        .append('<option value="/css/themes/bootstrap-theme.min.css"># Bootstrap</option>')
-        .append('<option value="/css/themes/slate.css"># Slate</option>')
-        .append('<option value="/css/themes/cyborg.css"># Cyborg</option>')
-        .appendTo(themewrap)
-        .on('change', function() {
-          $('#sounds-dropdown, #chatfunc-dropdown').remove();
-          $('#playlistmanagerwrap').show();
-          SOUNDSPANEL = false;
-          CHATFUNC = false;
-          USERTHEME = $(this).val();
-          setUserCSS();
-          setOpt(CHANNEL.name + '_theme', USERTHEME);
-        });
+  $('<select id="theme-sel" class="form-control" />')
+    .append('<option value="" class="theme-header" disabled>default themes</option>')
+    .append('<option value="/css/themes/light.css"># Light</option>')
+    .append('<option value="/css/themes/bootstrap-theme.min.css"># Bootstrap</option>')
+    .append('<option value="/css/themes/slate.css"># Slate</option>')
+    .append('<option value="/css/themes/cyborg.css"># Cyborg</option>')
+    .appendTo(themewrap)
+    .on('change', function() {
+      $('#sounds-dropdown, #chatfunc-dropdown').remove();
+      $('#playlistmanagerwrap').show();
+      SOUNDSPANEL = false;
+      CHATFUNC = false;
+      USERTHEME = $(this).val();
+      setUserCSS();
+      setOpt(CHANNEL.name + '_theme', USERTHEME);
+    });
 
 if (ThemesCSS.length > 0) {
   themesel.append('<option value="" class="theme-header" disabled>additional themes</option>');
@@ -3465,7 +3465,7 @@ if (ThemesCSS.length > 0) {
 
 if (UI_ChannelTheme && ChannelThemeURL !== '') {
   themesel.prepend(`<option value="${ChannelThemeURL}"># Channel Theme</option>`)
-      .prepend('<option value="" class="theme-header" disabled>main theme</option>');
+    .prepend('<option value="" class="theme-header" disabled>main theme</option>');
 }
 
 themesel.val(USERTHEME);
@@ -3478,65 +3478,65 @@ const hidewrap = $('<div id="hidewrap" class="col-lg-7 col-md-7" />').appendTo(h
 
 const hidemotd = $('<label class="checkbox-inline" />').appendTo(hidewrap);
 $('<input type="checkbox" id="hide-motd" value="no" >')
-    .appendTo(hidemotd)
-    .on('click', () => toggleDiv('#motdrow'))
-    .after(' MOTD');
+  .appendTo(hidemotd)
+  .on('click', () => toggleDiv('#motdrow'))
+  .after(' MOTD');
 
 const hideann = $('<label class="checkbox-inline" />').appendTo(hidewrap);
 $('<input type="checkbox" id="hide-ann" value="no" />')
-    .appendTo(hideann)
-    .on('click', () => toggleDiv('#announcements'))
-    .after(' Announcements');
+  .appendTo(hideann)
+  .on('click', () => toggleDiv('#announcements'))
+  .after(' Announcements');
 
 const hidetitle = $('<label class="checkbox-inline" />').appendTo(hidewrap);
 $('<input type="checkbox" id="hide-title" value="no" />')
-    .appendTo(hidetitle)
-    .on('click',
-        () => {
-          toggleDiv('#titlerow');
-          toggleDiv('#currenttitle');
-        })
-    .after(' Title');
+  .appendTo(hidetitle)
+  .on('click',
+    () => {
+      toggleDiv('#titlerow');
+      toggleDiv('#currenttitle');
+    })
+  .after(' Title');
 
 const hidepl = $('<label class="checkbox-inline" />').appendTo(hidewrap);
 $('<input type="checkbox" id="hide-pl" value="no" />')
-    .appendTo(hidepl)
-    .on('click',
-        () => {
-          toggleDiv('#queue');
-          toggleDiv('#plmeta');
-        })
-    .after(' Playlist');
+  .appendTo(hidepl)
+  .on('click',
+    () => {
+      toggleDiv('#queue');
+      toggleDiv('#plmeta');
+    })
+  .after(' Playlist');
 
 const hidehf = $('<label class="checkbox-inline" />').appendTo(hidewrap);
 $('<input type="checkbox" id="hide-hf" value="no" />')
-    .appendTo(hidehf)
-    .on('click',
-        () => {
-          if ($('nav').css('display') !== 'none') {
-            headerMode('fixed');
-          } else {
-            headerMode(USERCONFIG.header);
-          }
-          toggleDiv('nav');
-          toggleDiv('footer');
-        })
-    .after(' H&F');
+  .appendTo(hidehf)
+  .on('click',
+    () => {
+      if ($('nav').css('display') !== 'none') {
+        headerMode('fixed');
+      } else {
+        headerMode(USERCONFIG.header);
+      }
+      toggleDiv('nav');
+      toggleDiv('footer');
+    })
+  .after(' H&F');
 
 // adding embedding options
 if (UI_EmbeddingMedia && (EmbeddingMedia_Images !== '' || EmbeddingMedia_Videos !== '')) {
   const embedform = $('<div id="embedform" class="form-group" />').appendTo(configwell);
   $('<div class="col-lg-5 col-md-5 conf-cap">Embeds <span id="embed-help">[?]</span></div>')
-      .appendTo(embedform);
+    .appendTo(embedform);
   const embedwrap = $('<div id="embedwrap" class="col-lg-7 col-md-7" />').appendTo(embedform);
 
   $('#embed-help').on('click', () => {
     let txt =
-        'This option lets you see images or videos directly on the chat, instead of links.\n' +
-        'Click on image or double click on video to open in the new tab.\n' +
-        'All videos are muted by default, if autoplay - click to unmute, else click to play.\n\n' +
-        'This channel supports following types of links (specified as CSS codes):\n' +
-        '■ Images - ';
+      'This option lets you see images or videos directly on the chat, instead of links.\n' +
+      'Click on image or double click on video to open in the new tab.\n' +
+      'All videos are muted by default, if autoplay - click to unmute, else click to play.\n\n' +
+      'This channel supports following types of links (specified as CSS codes):\n' +
+      '■ Images - ';
     if (EmbeddingMedia_Images !== '') {
       txt += EmbeddingMedia_Images;
     }
@@ -3550,13 +3550,13 @@ if (UI_EmbeddingMedia && (EmbeddingMedia_Images !== '' || EmbeddingMedia_Videos 
   if (EmbeddingMedia_Images !== '') {
     const embedimg = $('<label class="checkbox-inline" />').appendTo(embedwrap);
     const cbox = $('<input type="checkbox" id="embed-img" checked>')
-                     .appendTo(embedimg)
-                     .on('click',
-                         () => {
-                           EMBEDIMG = !EMBEDIMG;
-                           setOpt(CHANNEL.name + '_embedimg', EMBEDIMG);
-                         })
-                     .after(' img');
+      .appendTo(embedimg)
+      .on('click',
+        () => {
+          EMBEDIMG = !EMBEDIMG;
+          setOpt(CHANNEL.name + '_embedimg', EMBEDIMG);
+        })
+      .after(' img');
     if (!EMBEDIMG) {
       cbox.removeAttr('checked');
     }
@@ -3565,31 +3565,31 @@ if (UI_EmbeddingMedia && (EmbeddingMedia_Images !== '' || EmbeddingMedia_Videos 
   if (EmbeddingMedia_Videos !== '') {
     const embedvid = $('<label class="checkbox-inline" />').appendTo(embedwrap);
     const cbox = $('<input type="checkbox" id="embed-webm" checked>')
-                     .appendTo(embedvid)
-                     .on('click',
-                         () => {
-                           EMBEDVID = !EMBEDVID;
-                           setOpt(CHANNEL.name + '_embedvid', EMBEDVID);
-                           if (EMBEDVID) {
-                             autovid.show();
-                           } else {
-                             autovid.hide();
-                           }
-                         })
-                     .after(' video');
+      .appendTo(embedvid)
+      .on('click',
+        () => {
+          EMBEDVID = !EMBEDVID;
+          setOpt(CHANNEL.name + '_embedvid', EMBEDVID);
+          if (EMBEDVID) {
+            autovid.show();
+          } else {
+            autovid.hide();
+          }
+        })
+      .after(' video');
     if (!EMBEDVID) {
       cbox.removeAttr('checked');
     }
 
     const autovid = $('<label class="checkbox-inline" />').appendTo(embedwrap);
     const cbox2 = $('<input type="checkbox" id="auto-webm" checked>')
-                      .appendTo(autovid)
-                      .on('click',
-                          () => {
-                            AUTOVID = !AUTOVID;
-                            setOpt(CHANNEL.name + '_autovid', AUTOVID);
-                          })
-                      .after(' autoplay');
+      .appendTo(autovid)
+      .on('click',
+        () => {
+          AUTOVID = !AUTOVID;
+          setOpt(CHANNEL.name + '_autovid', AUTOVID);
+        })
+      .after(' autoplay');
     if (!AUTOVID) {
       cbox2.removeAttr('checked');
     }
@@ -3636,15 +3636,15 @@ if (UI_QuickCommandsBtns || UI_VolumeBtns) {
 
   if (UI_QuickCommandsBtns) {
     clearbtn = $('<button id="clear-btn" class="btn btn-default btn-sm">/clear</button>')
-                   .appendTo(btnsgroup)
-                   .on('click', () => {
-                     if (confirm('Are you sure to clear the chat window?')) {
-                       socket.emit('chatMsg', {msg: '/clear'});
-                     }
-                   });
+      .appendTo(btnsgroup)
+      .on('click', () => {
+        if (confirm('Are you sure to clear the chat window?')) {
+          socket.emit('chatMsg', {msg: '/clear'});
+        }
+      });
     $('<button id="afk-btn" class="btn btn-default btn-sm">/afk</button>')
-        .appendTo(btnsgroup)
-        .on('click', () => socket.emit('chatMsg', {msg: '/afk'}));
+      .appendTo(btnsgroup)
+      .on('click', () => socket.emit('chatMsg', {msg: '/afk'}));
 
     socket.on('rank', toggleClearBtn);
     toggleClearBtn();
@@ -3652,17 +3652,17 @@ if (UI_QuickCommandsBtns || UI_VolumeBtns) {
 
   if (UI_VolumeBtns) {
     voldownbtn = $('<button id="voldown-btn" class="btn btn-default btn-sm">vol -</button>')
-                     .appendTo(btnsgroup)
-                     .on('click', () => {
-                       a = PLAYER.player.getVolume();
-                       PLAYER.player.setVolume(a - 1);
-                     });
+      .appendTo(btnsgroup)
+      .on('click', () => {
+        a = PLAYER.player.getVolume();
+        PLAYER.player.setVolume(a - 1);
+      });
     volupbtn = $('<button id="volup-btn" class="btn btn-default btn-sm">vol +</button>')
-                   .appendTo(btnsgroup)
-                   .on('click', () => {
-                     a = PLAYER.player.getVolume();
-                     PLAYER.player.setVolume(a + 1);
-                   });
+      .appendTo(btnsgroup)
+      .on('click', () => {
+        a = PLAYER.player.getVolume();
+        PLAYER.player.setVolume(a + 1);
+      });
 
     socket.on('changeMedia', toggleVolBtn);
     toggleVolBtn();
@@ -3681,7 +3681,7 @@ let dbwell;
 // adding media database layout
 if (UI_ChannelDatabase) {
   dbwrap = $('<div id="dbwrap" class="col-lg-12 col-md-12" style="display:none" />')
-               .insertBefore(configwrap);
+    .insertBefore(configwrap);
   dbwell = $('<div id="db-well" class="well" />').appendTo(dbwrap);
 
   if (CHANNEL_DATABASE.length < 1 || CHANNEL_DATABASE[0][0] !== '') {
@@ -3695,7 +3695,7 @@ if (UI_ChannelDatabase) {
 // adding galleries layout
 if (UI_ChannelGalleries) {
   gallerywrap = $('<div id="gallerywrap" class="col-lg-12 col-md-12" style="display:none" />')
-                    .appendTo('#leftpane-inner');
+    .appendTo('#leftpane-inner');
   gallerywell = $('<div id="gallery-well" class="well" />').appendTo(gallerywrap);
 
   if (ChannelGalleries_Array.length < 1) {
@@ -3715,81 +3715,81 @@ if (UI_DefaultNonTemp) {
 
 // adding playlist options for moderators button
 const advplaylist =
-    $('<button id="advplaylist" class="btn btn-sm btn-default" title="Advanced options" />')
-        .append('<span class="glyphicon glyphicon-wrench" />')
-        .insertBefore('#qlockbtn')
-        .on('click', () => toggleDiv(advplcontrols));
+  $('<button id="advplaylist" class="btn btn-sm btn-default" title="Advanced options" />')
+    .append('<span class="glyphicon glyphicon-wrench" />')
+    .insertBefore('#qlockbtn')
+    .on('click', () => toggleDiv(advplcontrols));
 
 // adding advanced playlist options form
 
 const advplcontrol =
-    $('<div id="advplcontrol" class="col-lg-12 col-md-12" />').insertAfter('#playlistmanager');
+  $('<div id="advplcontrol" class="col-lg-12 col-md-12" />').insertAfter('#playlistmanager');
 const advplcontrols =
-    $('<div id="advplcontrols" class="btn-group" style="display:none" />').appendTo(advplcontrol);
+  $('<div id="advplcontrols" class="btn-group" style="display:none" />').appendTo(advplcontrol);
 
 // adding advanced playlist options buttons
 
 const playnextbtn = $('<button id="playnext-btn" class="btn btn-default">Play next</button>')
-                        .appendTo(advplcontrols)
-                        .on('click', () => socket.emit('playNext'));
+  .appendTo(advplcontrols)
+  .on('click', () => socket.emit('playNext'));
 
 const addrandombtn = $('<button id="addrandom-btn" class="btn btn-default">Add random</button>')
-                         .appendTo(advplcontrols)
-                         .on('click', () => addRandomItem());
+  .appendTo(advplcontrols)
+  .on('click', () => addRandomItem());
 
 const bumplastbtn = $('<button id="bumplast-btn" class="btn btn-default">Bump last</button>')
-                        .appendTo(advplcontrols)
-                        .on('click', () => {
-                          const len = $('#queue').children().length;
-                          const uid = $(`#queue .queue_entry:nth-child(${len})`).data('uid');
-                          socket.emit('moveMedia', {from: uid, after: PL_CURRENT});
-                        });
+  .appendTo(advplcontrols)
+  .on('click', () => {
+    const len = $('#queue').children().length;
+    const uid = $(`#queue .queue_entry:nth-child(${len})`).data('uid');
+    socket.emit('moveMedia', {from: uid, after: PL_CURRENT});
+  });
 
 const deletelastbtn = $('<button id="deletelast-btn" class="btn btn-default">Delete last</button>')
-                          .appendTo(advplcontrols)
-                          .on('click', () => {
-                            if (confirm('Are you sure to delete last item?')) {
-                              const len = $('#queue').children().length;
-                              const uid = $(`#queue .queue_entry:nth-child(${len})`).data('uid');
-                              socket.emit('delete', uid);
-                            }
-                          });
+  .appendTo(advplcontrols)
+  .on('click', () => {
+    if (confirm('Are you sure to delete last item?')) {
+      const len = $('#queue').children().length;
+      const uid = $(`#queue .queue_entry:nth-child(${len})`).data('uid');
+      socket.emit('delete', uid);
+    }
+  });
 
 toggleAdvancedPl();
 
 // adding playlist expanding button
 const expandbtn =
-    $('<button id="expand-btn" class="btn btn-sm btn-default" title="Expand playlist" />')
-        .append('<span class="glyphicon glyphicon-resize-full" />')
-        .prependTo('#videocontrols')
-        .on('click', () => expandQueue());
+  $('<button id="expand-btn" class="btn btn-sm btn-default" title="Expand playlist" />')
+    .append('<span class="glyphicon glyphicon-resize-full" />')
+    .prependTo('#videocontrols')
+    .on('click', () => expandQueue());
 
 // adding playlist scrolling button
 $('<button id="scroll-btn" class="btn btn-sm btn-default" title="Scroll playlist to current item" />')
-    .append('<span class="glyphicon glyphicon-hand-right" />')
-    .prependTo('#videocontrols')
-    .on('click', () => scrollQueue());
+  .append('<span class="glyphicon glyphicon-hand-right" />')
+  .prependTo('#videocontrols')
+  .on('click', () => scrollQueue());
 
 // adding contributors button
 $('<button id="contrib-btn" class="btn btn-sm btn-default" title="Contributors list" />')
-    .append('<span class="glyphicon glyphicon-user" />')
-    .prependTo('#videocontrols')
-    .on('click', () => showContributors());
+  .append('<span class="glyphicon glyphicon-user" />')
+  .prependTo('#videocontrols')
+  .on('click', () => showContributors());
 
 // adding pin-up button
 const pinupbtn =
-    $('<button id="pinup-btn" class="btn btn-sm btn-default" title="Pin playlist to player" />')
-        .append('<span class="glyphicon glyphicon-pushpin" />')
-        .prependTo('#videocontrols')
-        .on('click', () => {
-          if (!PINNED) {
-            pinUp();
-          } else {
-            unPin();
-          }
-          scrollQueue();
-          scrollChat();
-        });
+  $('<button id="pinup-btn" class="btn btn-sm btn-default" title="Pin playlist to player" />')
+    .append('<span class="glyphicon glyphicon-pushpin" />')
+    .prependTo('#videocontrols')
+    .on('click', () => {
+      if (!PINNED) {
+        pinUp();
+      } else {
+        unPin();
+      }
+      scrollQueue();
+      scrollChat();
+    });
 
 // extending 'Get URLs' function
 if (UI_ExtendedGetURLs) {
@@ -3798,35 +3798,35 @@ if (UI_ExtendedGetURLs) {
 
 // Update alert first-time users see
 (function() {
-const /** @type {HTMLDivElement} */ alertWrapper = document.getElementById('plonotification');
-if (!alertWrapper) {
-  return;
-}
+  const /** @type {HTMLDivElement} */ alertWrapper = document.getElementById('plonotification');
+  if (!alertWrapper) {
+    return;
+  }
 
-const /** @type {HTMLDivElement} */ alertContainer = alertWrapper.firstChild;
-alertContainer.innerHTML =
+  const /** @type {HTMLDivElement} */ alertContainer = alertWrapper.firstChild;
+  alertContainer.innerHTML =
     alertContainer.innerHTML
-        .replace('show them when you right click). ', 'show them when you right click).<br />')
-        .replace(
-            'the old style of playlist buttons.',
-            '"the old style" of playlist buttons (<b>recommended</b>) - ' +
-                'more compact playlist with nice icons ' +
-                `(see image <a href="https://dl.dropboxusercontent.com/s/4ya7i5vlyb3likk/oldpl.jpg" target="_blank">here</a>).`);
+      .replace('show them when you right click). ', 'show them when you right click).<br />')
+      .replace(
+        'the old style of playlist buttons.',
+        '"the old style" of playlist buttons (<b>recommended</b>) - ' +
+        'more compact playlist with nice icons ' +
+        `(see image <a href="https://dl.dropboxusercontent.com/s/4ya7i5vlyb3likk/oldpl.jpg" target="_blank">here</a>).`);
 
-// Updating the innerHTML removes the event handler on the dismiss button, re-add it
-const /** @type {HTMLButtonElement} */ dismissButton =
+  // Updating the innerHTML removes the event handler on the dismiss button, re-add it
+  const /** @type {HTMLButtonElement} */ dismissButton =
     Array.from(alertContainer.children)
-        .filter((elem) => elem.tagName.toLowerCase() === 'button')[0];
-dismissButton.addEventListener('click', () => {
-  alertContainer.remove();
-  window.localStorage['first_visit'] = 'false';
-});
+      .filter((elem) => elem.tagName.toLowerCase() === 'button')[0];
+  dismissButton.addEventListener('click', () => {
+    alertContainer.remove();
+    window.localStorage['first_visit'] = 'false';
+  });
 })();
 
 // rearranging footer
 $('.credit').append(
-    '<br />Built off CyTube Plus 4.5 · Copyright &copy; 2013-2014 Zimny Lech, Modified by CyDJ staff · ' +
-    'Free source on <a href="http://github.com/papertek/CyDJ" target="_blank">GitHub</a>');
+  '<br />Built off CyTube Plus 4.5 · Copyright &copy; 2013-2014 Zimny Lech, Modified by CyDJ staff · ' +
+  'Free source on <a href="http://github.com/papertek/CyDJ" target="_blank">GitHub</a>');
 
 if (UI_CustomRightFooter) {
   $(`<span id="rightfooter">${CustomRightFooter_HTML}</span>`).appendTo('footer .container');
@@ -3854,10 +3854,10 @@ if (UI_UserStatistics) {
   $('<span>My visits: </span>' +
     `<span class="badge footer-badge">${USERVISITS}</span>` +
     '<span> / </span>')
-      .appendTo(leftfooter);
+    .appendTo(leftfooter);
   $('<span>Current online time: </span>').appendTo(leftfooter);
   onlinetime =
-      $('<span id="onlinetime" class="badge footer-badge">0:00</span>').appendTo(leftfooter);
+    $('<span id="onlinetime" class="badge footer-badge">0:00</span>').appendTo(leftfooter);
 
   setInterval(() => onlineTime(), 60000);
 }
@@ -3970,9 +3970,9 @@ if (ALTERCHATFORMAT) {
       for (const emote of IndependentEmotes) {
         const filter = emote[0];
         const html = `<img src="${emote[1]}" title="${filter}" ` +
-            `style="width:${emote[2]}px; ` +
-            `height:${emote[3]}px; cursor:pointer" ` +
-            `onclick="cydj.insertText('${filter}')" />`;
+          `style="width:${emote[2]}px; ` +
+          `height:${emote[3]}px; cursor:pointer" ` +
+          `onclick="cydj.insertText('${filter}')" />`;
         _div = _div.replace(new RegExp(filter, 'g'), html);
       }
       div.html(_div);
@@ -4053,7 +4053,7 @@ if (ALTERCHATFORMAT) {
 const _chatBuffer = addChatMessage;
 function addChatMessage(data) {
   if (UI_SoundFilters && VOICES &&
-      (!(data.username in MUTEDVOICES) || MUTEDVOICES[data.username] == '0')) {
+    (!(data.username in MUTEDVOICES) || MUTEDVOICES[data.username] == '0')) {
     for (let i = 1; i < SoundFilters_Array; i++) {
       if (data.msg.indexOf(i) > -1) {
         const aud = new Audio(SoundFilters_Array[i]);
@@ -4063,7 +4063,7 @@ function addChatMessage(data) {
     }
   }
   if (UI_ChatSpeak == '1' && VOICES &&
-      (!(data.username in MUTEDVOICES) || MUTEDVOICES[data.username] == '0')) {
+    (!(data.username in MUTEDVOICES) || MUTEDVOICES[data.username] == '0')) {
     const msg = getText(data.msg);
     if (msg.indexOf('!mow ') >= 0) {
       const str = msg.split('!mow ');
@@ -4241,8 +4241,8 @@ function fixSayMsg(event) {
 
   const /** @type {HTMLElement} */ newestMessageRow = messageBuffer.lastChild;
   if (Array.from(newestMessageRow.classList)
-          .filter((className) => className.startsWith('chat-msg-'))
-          .length < 1) {
+    .filter((className) => className.startsWith('chat-msg-'))
+    .length < 1) {
     return;
   }
 
@@ -4374,7 +4374,7 @@ if (!CHAT_INIT) {
   socket.on('chatMsg', (obj) => {
     const mb = document.getElementById('messagebuffer');
     if (mb && mb.lastChild && $(mb.lastChild).attr('class').startsWith('chat-msg-') &&
-        !obj.meta.shadow) {
+      !obj.meta.shadow) {
       mb.lastChild.classList.add(lastMessageOdd ? ODD_MESSAGE_CLASS : EVEN_MESSAGE_CLASS);
       lastMessageOdd = !lastMessageOdd;
     }
@@ -4386,8 +4386,8 @@ if (!CHAT_INIT) {
     }, 250);
     emoteHoverAll();
     if (CLIENT.name && obj.username !== CLIENT.name &&
-        obj.msg.toLowerCase().includes(CLIENT.name.toLowerCase()) && !obj.meta.shadow &&
-        obj.username !== '[server]') {
+      obj.msg.toLowerCase().includes(CLIENT.name.toLowerCase()) && !obj.meta.shadow &&
+      obj.username !== '[server]') {
       audioFeedback();
     }
     if (obj.msg.startsWith('!poof') || obj.msg.includes('do poof')) {
@@ -4397,18 +4397,18 @@ if (!CHAT_INIT) {
   socket.on('addUser', (obj) => {
     if (USERLIST_COLORS[obj.name]) {
       const userType = USERLIST_COLORS[obj.name].usertype ?
-          `.userlist_${USERLIST_COLORS[obj.name].usertype}` :
-          '';
+        `.userlist_${USERLIST_COLORS[obj.name].usertype}` :
+        '';
       $(`div.userlist_item span${userType}:contains("${obj.name}")`)
-          .css('cssText', USERLIST_COLORS[obj.name].css);
+        .css('cssText', USERLIST_COLORS[obj.name].css);
       /* not sure if DOM is guaranteed to be updated yet when emit occurs, so
        * try again in 0.25 seconds for good measure */
       setTimeout(() => {
         const userType = USERLIST_COLORS[obj.name].usertype ?
-            `.userlist_${USERLIST_COLORS[obj.name].usertype}` :
-            '';
+          `.userlist_${USERLIST_COLORS[obj.name].usertype}` :
+          '';
         $(`div.userlist_item span${userType}:contains("${obj.name}")`)
-            .css('cssText', USERLIST_COLORS[obj.name].css);
+          .css('cssText', USERLIST_COLORS[obj.name].css);
       }, 250);
     }
   });
@@ -4479,19 +4479,19 @@ function chatTabComplete() {
     return;
   }
   const usersWithCap = Array.prototype.slice.call($('#userlist').children())
-                           .map((elem) => elem.children[1].innerHTML);
+    .map((elem) => elem.children[1].innerHTML);
   if (currentWithCap === TabCompletion.last) {
     TabCompletion.last = current =
-        TabCompletion
-            .matches[(TabCompletion.matches.indexOf(currentWithCap) + 1) % TabCompletion.matches.length];
+      TabCompletion
+        .matches[(TabCompletion.matches.indexOf(currentWithCap) + 1) % TabCompletion.matches.length];
     current += ' ';
     words[words.length - 1] = current;
     $('#chatline').val(words.join(' '));
     return;
   }
   const matches = TabCompletionEmotes.filter((str) => str.toLowerCase().startsWith(current))
-                      .concat(usersWithCap.filter((str) => str.toLowerCase().startsWith(current))
-                                  .map((str) => words.length === 1 ? str + ':' : str));
+    .concat(usersWithCap.filter((str) => str.toLowerCase().startsWith(current))
+      .map((str) => words.length === 1 ? str + ':' : str));
   if (matches.length === 0) {
     return;
   }
@@ -4506,10 +4506,10 @@ function chatTabComplete() {
 const emoteHover = document.createElement('div');
 emoteHover.id = 'emote-hover';
 emoteHover.setAttribute(
-    'style',
-    'visibility: hidden; top: 0px;left: 0px;box-sizing: border-box;display: block;position: absolute;padding: 5px;margin: 0px;color: #D3D3D3;line-height: 60px;text-align: center;z-index: 9999;');
+  'style',
+  'visibility: hidden; top: 0px;left: 0px;box-sizing: border-box;display: block;position: absolute;padding: 5px;margin: 0px;color: #D3D3D3;line-height: 60px;text-align: center;z-index: 9999;');
 emoteHover.innerHTML =
-    '<div id="emote-hover-inner" style="box-sizing: border-box;background-color: #000;color: #fff;max-width: 200px;padding: 5px 8px 4px;margin: 0px;text-align: center;font-family: Helvetica Neue,Helvetica,sans-serif;font-size: 1.2rem;line-height: 2rem;"></div>';
+  '<div id="emote-hover-inner" style="box-sizing: border-box;background-color: #000;color: #fff;max-width: 200px;padding: 5px 8px 4px;margin: 0px;text-align: center;font-family: Helvetica Neue,Helvetica,sans-serif;font-size: 1.2rem;line-height: 2rem;"></div>';
 document.querySelector('body').appendChild(emoteHover);
 const emoteHoverInner = emoteHover.firstChild;
 
@@ -4552,22 +4552,22 @@ newpollbtn !== null && (newpollbtn.onclick = newPoll);
 $('#emotelist > div.modal-dialog > div.modal-content').draggable();
 
 const togglesCSS_Compact =
-    '#queue .queue_entry{padding: 0px;line-height: 10px;}#queue .queue_entry .btn-group button {padding-top: 0px;padding-bottom: 0px;line-height: 14px;}#rightcontrols button {padding-top: 0px;padding-bottom: 0px;}#mediaurl {padding: 0px 3px;height: 20px;}#addfromurl .input-group button {padding-top: 0px;padding-bottom: 0px;}#rightcontrols{margin-top: 0px !important;}#playlistmanagerwrap{margin-top: 0px;}#videowrap{margin-bottom: 0px !important;}#queuefail .vertical-spacer{margin-top: 0px;}#addfromurl .vertical-spacer{margin-top: 0px;}#addfromurl .checkbox{margin: 0px;}#mainpage{padding-top: 25px !important;}';
+  '#queue .queue_entry{padding: 0px;line-height: 10px;}#queue .queue_entry .btn-group button {padding-top: 0px;padding-bottom: 0px;line-height: 14px;}#rightcontrols button {padding-top: 0px;padding-bottom: 0px;}#mediaurl {padding: 0px 3px;height: 20px;}#addfromurl .input-group button {padding-top: 0px;padding-bottom: 0px;}#rightcontrols{margin-top: 0px !important;}#playlistmanagerwrap{margin-top: 0px;}#videowrap{margin-bottom: 0px !important;}#queuefail .vertical-spacer{margin-top: 0px;}#addfromurl .vertical-spacer{margin-top: 0px;}#addfromurl .checkbox{margin: 0px;}#mainpage{padding-top: 25px !important;}';
 const togglesCSS_Title =
-    '#currenttitle{display: block !important; font-size: 16px !important; margin-top: -30px !important; margin-bottom: -5px;}#mainpage{/*padding-top: 45px !important;*/}';
+  '#currenttitle{display: block !important; font-size: 16px !important; margin-top: -30px !important; margin-bottom: -5px;}#mainpage{/*padding-top: 45px !important;*/}';
 const togglesCSS_Timestamp = '#messagebuffer>div>span.timestamp{display:none;}';
 const userlistToggle = document.querySelector('#userlisttoggle');
 let userlistSizeToggleInner;
 function userlistSizeToggleFn() {
   $('#userlist').toggleClass('userlist-large', !!cookie.userlistLarge);
   $('#messagebuffer')
-      .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
+    .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
   $('#chatline').toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
   $('#leftcontrols')
-      .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
+    .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
   $('#videowrap').toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
   $('#rightcontrols')
-      .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
+    .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
   $('#rightpane').toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
   userlistSizeToggleInner.style.width = !!cookie.userlistLarge ? '100%' : '50%';
 }
@@ -4578,7 +4578,7 @@ function cookieLoad() {
   if (regex && typeof regex !== null && regex[1] && regex[1] !== '') {
     try {
       cookieJSON = JSON.parse(regex[1]);
-    } catch (e) {
+    } catch {
     }
   }
   cookie = (cookieJSON && typeof cookieJSON === 'object') ? cookieJSON : {
@@ -4711,7 +4711,7 @@ if (!COOKIE_INIT) {
   userlistSizeToggle.setAttribute('title', 'Toggle Userlist Size');
   userlistSizeToggle.innerHTML = '<div id="userlistsizetoggle-inner"></div>';
   document.querySelector('#usercount')
-      .parentNode.insertBefore(userlistSizeToggle, document.querySelector('#usercount'));
+    .parentNode.insertBefore(userlistSizeToggle, document.querySelector('#usercount'));
   userlistSizeToggle.onclick = cookieUserlistSizeToggle;
   setHover(userlistSizeToggle);
   userlistSizeToggleInner = document.querySelector('#userlistsizetoggle-inner');
@@ -4721,7 +4721,7 @@ if (!COOKIE_INIT) {
   audioFeedbackToggleBtn.setAttribute('title', 'Toggle Audio Feedback');
   audioFeedbackToggleBtn.innerHTML = '\uD83D\uDCE2';
   document.querySelector('#usercount')
-      .parentNode.insertBefore(audioFeedbackToggleBtn, document.querySelector('#usercount'));
+    .parentNode.insertBefore(audioFeedbackToggleBtn, document.querySelector('#usercount'));
   audioFeedbackToggleBtn.onclick = audioFeedbackToggle;
   setHover(audioFeedbackToggleBtn);
   const playlistStyleToggleBtn = document.createElement('i');
@@ -4730,7 +4730,7 @@ if (!COOKIE_INIT) {
   playlistStyleToggleBtn.setAttribute('title', 'Toggle Playlist Style');
   playlistStyleToggleBtn.innerHTML = '';
   document.querySelector('#usercount')
-      .parentNode.insertBefore(playlistStyleToggleBtn, document.querySelector('#usercount'));
+    .parentNode.insertBefore(playlistStyleToggleBtn, document.querySelector('#usercount'));
   playlistStyleToggleBtn.onclick = playlistStyleToggle;
   setHover(playlistStyleToggleBtn);
   compactToggleBtn = document.createElement('i');
@@ -4739,7 +4739,7 @@ if (!COOKIE_INIT) {
   compactToggleBtn.setAttribute('title', 'Toggle Compact Layout');
   compactToggleBtn.innerHTML = 'C';
   document.querySelector('#usercount')
-      .parentNode.insertBefore(compactToggleBtn, document.querySelector('#usercount'));
+    .parentNode.insertBefore(compactToggleBtn, document.querySelector('#usercount'));
   compactToggleBtn.onclick = compactToggle;
   setHover(compactToggleBtn);
   titleToggleBtn = document.createElement('i');
@@ -4748,7 +4748,7 @@ if (!COOKIE_INIT) {
   titleToggleBtn.setAttribute('title', 'Toggle Video Title');
   titleToggleBtn.innerHTML = 'T';
   document.querySelector('#usercount')
-      .parentNode.insertBefore(titleToggleBtn, document.querySelector('#usercount'));
+    .parentNode.insertBefore(titleToggleBtn, document.querySelector('#usercount'));
   titleToggleBtn.onclick = titleToggle;
   setHover(titleToggleBtn);
   const timestampToggleBtn = document.createElement('i');
@@ -4757,7 +4757,7 @@ if (!COOKIE_INIT) {
   timestampToggleBtn.setAttribute('title', 'Toggle Timestamp');
   timestampToggleBtn.innerHTML = '\uD83D\uDD51';
   document.querySelector('#usercount')
-      .parentNode.insertBefore(timestampToggleBtn, document.querySelector('#usercount'));
+    .parentNode.insertBefore(timestampToggleBtn, document.querySelector('#usercount'));
   timestampToggleBtn.onclick = timestampToggle;
   setHover(timestampToggleBtn);
   compactToggleCss = document.createElement('style');
@@ -4783,7 +4783,7 @@ const messagebuffer = document.querySelector('#messagebuffer');
 function deleteMsg(messageDiv) {
   const secondToLastChild = messageDiv.children.item(messageDiv.children.length - 2);
   if (!secondToLastChild.classList.contains('timestamp') &&
-      secondToLastChild.style.display === 'none') {
+    secondToLastChild.style.display === 'none') {
     // Message is already deleted.
     return;
   }
