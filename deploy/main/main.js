@@ -2,162 +2,186 @@ var cydj = (function (exports) {
   'use strict';
 
   /*!
-   * Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
+   * Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com
    * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
-   * Copyright 2022 Fonticons, Inc.
+   * Copyright 2025 Fonticons, Inc.
    */
-  function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-
-    if (Object.getOwnPropertySymbols) {
-      var symbols = Object.getOwnPropertySymbols(object);
-      enumerableOnly && (symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      })), keys.push.apply(keys, symbols);
-    }
-
-    return keys;
+  function _arrayLikeToArray(r, a) {
+    (null == a || a > r.length) && (a = r.length);
+    for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
+    return n;
   }
-
-  function _objectSpread2(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = null != arguments[i] ? arguments[i] : {};
-      i % 2 ? ownKeys(Object(source), true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
-
-    return target;
+  function _arrayWithHoles(r) {
+    if (Array.isArray(r)) return r;
   }
-
-  function _typeof(obj) {
-    "@babel/helpers - typeof";
-
-    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
-      return typeof obj;
-    } : function (obj) {
-      return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    }, _typeof(obj);
+  function _arrayWithoutHoles(r) {
+    if (Array.isArray(r)) return _arrayLikeToArray(r);
   }
-
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
+  function _classCallCheck(a, n) {
+    if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function");
+  }
+  function _defineProperties(e, r) {
+    for (var t = 0; t < r.length; t++) {
+      var o = r[t];
+      o.enumerable = o.enumerable || false, o.configurable = true, "value" in o && (o.writable = true), Object.defineProperty(e, _toPropertyKey(o.key), o);
     }
   }
-
-  function _defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  function _createClass(Constructor, protoProps, staticProps) {
-    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    Object.defineProperty(Constructor, "prototype", {
+  function _createClass(e, r, t) {
+    return r && _defineProperties(e.prototype, r), Object.defineProperty(e, "prototype", {
       writable: false
-    });
-    return Constructor;
+    }), e;
   }
-
-  function _defineProperty(obj, key, value) {
-    if (key in obj) {
-      Object.defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-    } else {
-      obj[key] = value;
-    }
-
-    return obj;
-  }
-
-  function _slicedToArray(arr, i) {
-    return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-  }
-
-  function _toConsumableArray(arr) {
-    return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
-  }
-
-  function _arrayWithoutHoles(arr) {
-    if (Array.isArray(arr)) return _arrayLikeToArray(arr);
-  }
-
-  function _arrayWithHoles(arr) {
-    if (Array.isArray(arr)) return arr;
-  }
-
-  function _iterableToArray(iter) {
-    if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
-  }
-
-  function _iterableToArrayLimit(arr, i) {
-    var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
-
-    if (_i == null) return;
-    var _arr = [];
-    var _n = true;
-    var _d = false;
-
-    var _s, _e;
-
-    try {
-      for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
-        _arr.push(_s.value);
-
-        if (i && _arr.length === i) break;
+  function _createForOfIteratorHelper(r, e) {
+    var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+    if (!t) {
+      if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e) {
+        t && (r = t);
+        var n = 0,
+          F = function () {};
+        return {
+          s: F,
+          n: function () {
+            return n >= r.length ? {
+              done: true
+            } : {
+              done: false,
+              value: r[n++]
+            };
+          },
+          e: function (r) {
+            throw r;
+          },
+          f: F
+        };
       }
-    } catch (err) {
-      _d = true;
-      _e = err;
-    } finally {
+      throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+    }
+    var o,
+      a = true,
+      u = false;
+    return {
+      s: function () {
+        t = t.call(r);
+      },
+      n: function () {
+        var r = t.next();
+        return a = r.done, r;
+      },
+      e: function (r) {
+        u = true, o = r;
+      },
+      f: function () {
+        try {
+          a || null == t.return || t.return();
+        } finally {
+          if (u) throw o;
+        }
+      }
+    };
+  }
+  function _defineProperty(e, r, t) {
+    return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, {
+      value: t,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    }) : e[r] = t, e;
+  }
+  function _iterableToArray(r) {
+    if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r);
+  }
+  function _iterableToArrayLimit(r, l) {
+    var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+    if (null != t) {
+      var e,
+        n,
+        i,
+        u,
+        a = [],
+        f = true,
+        o = false;
       try {
-        if (!_n && _i["return"] != null) _i["return"]();
+        if (i = (t = t.call(r)).next, 0 === l) {
+          if (Object(t) !== t) return;
+          f = !1;
+        } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
+      } catch (r) {
+        o = true, n = r;
       } finally {
-        if (_d) throw _e;
+        try {
+          if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
+        } finally {
+          if (o) throw n;
+        }
       }
+      return a;
     }
-
-    return _arr;
   }
-
-  function _unsupportedIterableToArray(o, minLen) {
-    if (!o) return;
-    if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-    var n = Object.prototype.toString.call(o).slice(8, -1);
-    if (n === "Object" && o.constructor) n = o.constructor.name;
-    if (n === "Map" || n === "Set") return Array.from(o);
-    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-  }
-
-  function _arrayLikeToArray(arr, len) {
-    if (len == null || len > arr.length) len = arr.length;
-
-    for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-
-    return arr2;
-  }
-
-  function _nonIterableSpread() {
-    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-  }
-
   function _nonIterableRest() {
     throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
   }
+  function _nonIterableSpread() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+  function ownKeys(e, r) {
+    var t = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+      var o = Object.getOwnPropertySymbols(e);
+      r && (o = o.filter(function (r) {
+        return Object.getOwnPropertyDescriptor(e, r).enumerable;
+      })), t.push.apply(t, o);
+    }
+    return t;
+  }
+  function _objectSpread2(e) {
+    for (var r = 1; r < arguments.length; r++) {
+      var t = null != arguments[r] ? arguments[r] : {};
+      r % 2 ? ownKeys(Object(t), true).forEach(function (r) {
+        _defineProperty(e, r, t[r]);
+      }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) {
+        Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+      });
+    }
+    return e;
+  }
+  function _slicedToArray(r, e) {
+    return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest();
+  }
+  function _toConsumableArray(r) {
+    return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread();
+  }
+  function _toPrimitive(t, r) {
+    if ("object" != typeof t || !t) return t;
+    var e = t[Symbol.toPrimitive];
+    if (void 0 !== e) {
+      var i = e.call(t, r);
+      if ("object" != typeof i) return i;
+      throw new TypeError("@@toPrimitive must return a primitive value.");
+    }
+    return ("string" === r ? String : Number)(t);
+  }
+  function _toPropertyKey(t) {
+    var i = _toPrimitive(t, "string");
+    return "symbol" == typeof i ? i : i + "";
+  }
+  function _typeof(o) {
+    "@babel/helpers - typeof";
+
+    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+      return typeof o;
+    } : function (o) {
+      return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+    }, _typeof(o);
+  }
+  function _unsupportedIterableToArray(r, a) {
+    if (r) {
+      if ("string" == typeof r) return _arrayLikeToArray(r, a);
+      var t = {}.toString.call(r).slice(8, -1);
+      return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0;
+    }
+  }
 
   var noop = function noop() {};
-
   var _WINDOW = {};
   var _DOCUMENT = {};
   var _MUTATION_OBSERVER = null;
@@ -165,17 +189,16 @@ var cydj = (function (exports) {
     mark: noop,
     measure: noop
   };
-
   try {
     if (typeof window !== 'undefined') _WINDOW = window;
     if (typeof document !== 'undefined') _DOCUMENT = document;
     if (typeof MutationObserver !== 'undefined') _MUTATION_OBSERVER = MutationObserver;
     if (typeof performance !== 'undefined') _PERFORMANCE = performance;
-  } catch (e) {}
+  } catch (e) {} // eslint-disable-line no-empty
 
   var _ref = _WINDOW.navigator || {},
-      _ref$userAgent = _ref.userAgent,
-      userAgent = _ref$userAgent === void 0 ? '' : _ref$userAgent;
+    _ref$userAgent = _ref.userAgent,
+    userAgent = _ref$userAgent === void 0 ? '' : _ref$userAgent;
   var WINDOW = _WINDOW;
   var DOCUMENT = _DOCUMENT;
   var MUTATION_OBSERVER = _MUTATION_OBSERVER;
@@ -184,9 +207,785 @@ var cydj = (function (exports) {
   var IS_DOM = !!DOCUMENT.documentElement && !!DOCUMENT.head && typeof DOCUMENT.addEventListener === 'function' && typeof DOCUMENT.createElement === 'function';
   var IS_IE = ~userAgent.indexOf('MSIE') || ~userAgent.indexOf('Trident/');
 
+  var _dt;
+  var E = /fa(k|kd|s|r|l|t|d|dr|dl|dt|b|slr|slpr|wsb|tl|ns|nds|es|jr|jfr|jdr|usb|ufsb|udsb|cr|ss|sr|sl|st|sds|sdr|sdl|sdt)?[\-\ ]/,
+    _ = /Font ?Awesome ?([567 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Sharp Duotone|Sharp|Kit|Notdog Duo|Notdog|Chisel|Etch|Thumbprint|Jelly Fill|Jelly Duo|Jelly|Utility|Utility Fill|Utility Duo|Slab Press|Slab|Whiteboard)?.*/i;
+  var q = {
+      classic: {
+        fa: "solid",
+        fas: "solid",
+        "fa-solid": "solid",
+        far: "regular",
+        "fa-regular": "regular",
+        fal: "light",
+        "fa-light": "light",
+        fat: "thin",
+        "fa-thin": "thin",
+        fab: "brands",
+        "fa-brands": "brands"
+      },
+      duotone: {
+        fa: "solid",
+        fad: "solid",
+        "fa-solid": "solid",
+        "fa-duotone": "solid",
+        fadr: "regular",
+        "fa-regular": "regular",
+        fadl: "light",
+        "fa-light": "light",
+        fadt: "thin",
+        "fa-thin": "thin"
+      },
+      sharp: {
+        fa: "solid",
+        fass: "solid",
+        "fa-solid": "solid",
+        fasr: "regular",
+        "fa-regular": "regular",
+        fasl: "light",
+        "fa-light": "light",
+        fast: "thin",
+        "fa-thin": "thin"
+      },
+      "sharp-duotone": {
+        fa: "solid",
+        fasds: "solid",
+        "fa-solid": "solid",
+        fasdr: "regular",
+        "fa-regular": "regular",
+        fasdl: "light",
+        "fa-light": "light",
+        fasdt: "thin",
+        "fa-thin": "thin"
+      },
+      slab: {
+        "fa-regular": "regular",
+        faslr: "regular"
+      },
+      "slab-press": {
+        "fa-regular": "regular",
+        faslpr: "regular"
+      },
+      thumbprint: {
+        "fa-light": "light",
+        fatl: "light"
+      },
+      whiteboard: {
+        "fa-semibold": "semibold",
+        fawsb: "semibold"
+      },
+      notdog: {
+        "fa-solid": "solid",
+        fans: "solid"
+      },
+      "notdog-duo": {
+        "fa-solid": "solid",
+        fands: "solid"
+      },
+      etch: {
+        "fa-solid": "solid",
+        faes: "solid"
+      },
+      jelly: {
+        "fa-regular": "regular",
+        fajr: "regular"
+      },
+      "jelly-fill": {
+        "fa-regular": "regular",
+        fajfr: "regular"
+      },
+      "jelly-duo": {
+        "fa-regular": "regular",
+        fajdr: "regular"
+      },
+      chisel: {
+        "fa-regular": "regular",
+        facr: "regular"
+      },
+      utility: {
+        "fa-semibold": "semibold",
+        fausb: "semibold"
+      },
+      "utility-duo": {
+        "fa-semibold": "semibold",
+        faudsb: "semibold"
+      },
+      "utility-fill": {
+        "fa-semibold": "semibold",
+        faufsb: "semibold"
+      }
+    },
+    H = {
+      GROUP: "duotone-group",
+      PRIMARY: "primary",
+      SECONDARY: "secondary"
+    },
+    Q = ["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"];
+  var i = "classic",
+    t = "duotone",
+    d = "sharp",
+    l = "sharp-duotone",
+    f = "chisel",
+    n = "etch",
+    h = "jelly",
+    o = "jelly-duo",
+    u = "jelly-fill",
+    g = "notdog",
+    s = "notdog-duo",
+    y = "slab",
+    m = "slab-press",
+    e = "thumbprint",
+    p = "utility",
+    a$1 = "utility-duo",
+    w = "utility-fill",
+    x = "whiteboard",
+    b = "Classic",
+    c = "Duotone",
+    I = "Sharp",
+    F = "Sharp Duotone",
+    v = "Chisel",
+    S = "Etch",
+    A = "Jelly",
+    P = "Jelly Duo",
+    j = "Jelly Fill",
+    B = "Notdog",
+    N = "Notdog Duo",
+    k = "Slab",
+    D = "Slab Press",
+    T = "Thumbprint",
+    C = "Utility",
+    W = "Utility Duo",
+    K = "Utility Fill",
+    R = "Whiteboard",
+    rt = [i, t, d, l, f, n, h, o, u, g, s, y, m, e, p, a$1, w, x];
+    (_dt = {}, _defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_dt, i, b), t, c), d, I), l, F), f, v), n, S), h, A), o, P), u, j), g, B), _defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_dt, s, N), y, k), m, D), e, T), p, C), a$1, W), w, K), x, R));
+  var gt = {
+      classic: {
+        900: "fas",
+        400: "far",
+        normal: "far",
+        300: "fal",
+        100: "fat"
+      },
+      duotone: {
+        900: "fad",
+        400: "fadr",
+        300: "fadl",
+        100: "fadt"
+      },
+      sharp: {
+        900: "fass",
+        400: "fasr",
+        300: "fasl",
+        100: "fast"
+      },
+      "sharp-duotone": {
+        900: "fasds",
+        400: "fasdr",
+        300: "fasdl",
+        100: "fasdt"
+      },
+      slab: {
+        400: "faslr"
+      },
+      "slab-press": {
+        400: "faslpr"
+      },
+      whiteboard: {
+        600: "fawsb"
+      },
+      thumbprint: {
+        300: "fatl"
+      },
+      notdog: {
+        900: "fans"
+      },
+      "notdog-duo": {
+        900: "fands"
+      },
+      etch: {
+        900: "faes"
+      },
+      chisel: {
+        400: "facr"
+      },
+      jelly: {
+        400: "fajr"
+      },
+      "jelly-fill": {
+        400: "fajfr"
+      },
+      "jelly-duo": {
+        400: "fajdr"
+      },
+      utility: {
+        600: "fausb"
+      },
+      "utility-duo": {
+        600: "faudsb"
+      },
+      "utility-fill": {
+        600: "faufsb"
+      }
+    };
+  var Ct = {
+      "Font Awesome 7 Free": {
+        900: "fas",
+        400: "far"
+      },
+      "Font Awesome 7 Pro": {
+        900: "fas",
+        400: "far",
+        normal: "far",
+        300: "fal",
+        100: "fat"
+      },
+      "Font Awesome 7 Brands": {
+        400: "fab",
+        normal: "fab"
+      },
+      "Font Awesome 7 Duotone": {
+        900: "fad",
+        400: "fadr",
+        normal: "fadr",
+        300: "fadl",
+        100: "fadt"
+      },
+      "Font Awesome 7 Sharp": {
+        900: "fass",
+        400: "fasr",
+        normal: "fasr",
+        300: "fasl",
+        100: "fast"
+      },
+      "Font Awesome 7 Sharp Duotone": {
+        900: "fasds",
+        400: "fasdr",
+        normal: "fasdr",
+        300: "fasdl",
+        100: "fasdt"
+      },
+      "Font Awesome 7 Jelly": {
+        400: "fajr",
+        normal: "fajr"
+      },
+      "Font Awesome 7 Jelly Fill": {
+        400: "fajfr",
+        normal: "fajfr"
+      },
+      "Font Awesome 7 Jelly Duo": {
+        400: "fajdr",
+        normal: "fajdr"
+      },
+      "Font Awesome 7 Slab": {
+        400: "faslr",
+        normal: "faslr"
+      },
+      "Font Awesome 7 Slab Press": {
+        400: "faslpr",
+        normal: "faslpr"
+      },
+      "Font Awesome 7 Thumbprint": {
+        300: "fatl",
+        normal: "fatl"
+      },
+      "Font Awesome 7 Notdog": {
+        900: "fans",
+        normal: "fans"
+      },
+      "Font Awesome 7 Notdog Duo": {
+        900: "fands",
+        normal: "fands"
+      },
+      "Font Awesome 7 Etch": {
+        900: "faes",
+        normal: "faes"
+      },
+      "Font Awesome 7 Chisel": {
+        400: "facr",
+        normal: "facr"
+      },
+      "Font Awesome 7 Whiteboard": {
+        600: "fawsb",
+        normal: "fawsb"
+      },
+      "Font Awesome 7 Utility": {
+        600: "fausb",
+        normal: "fausb"
+      },
+      "Font Awesome 7 Utility Duo": {
+        600: "faudsb",
+        normal: "faudsb"
+      },
+      "Font Awesome 7 Utility Fill": {
+        600: "faufsb",
+        normal: "faufsb"
+      }
+    };
+  var Ut = new Map([["classic", {
+      defaultShortPrefixId: "fas",
+      defaultStyleId: "solid",
+      styleIds: ["solid", "regular", "light", "thin", "brands"],
+      futureStyleIds: [],
+      defaultFontWeight: 900
+    }], ["duotone", {
+      defaultShortPrefixId: "fad",
+      defaultStyleId: "solid",
+      styleIds: ["solid", "regular", "light", "thin"],
+      futureStyleIds: [],
+      defaultFontWeight: 900
+    }], ["sharp", {
+      defaultShortPrefixId: "fass",
+      defaultStyleId: "solid",
+      styleIds: ["solid", "regular", "light", "thin"],
+      futureStyleIds: [],
+      defaultFontWeight: 900
+    }], ["sharp-duotone", {
+      defaultShortPrefixId: "fasds",
+      defaultStyleId: "solid",
+      styleIds: ["solid", "regular", "light", "thin"],
+      futureStyleIds: [],
+      defaultFontWeight: 900
+    }], ["chisel", {
+      defaultShortPrefixId: "facr",
+      defaultStyleId: "regular",
+      styleIds: ["regular"],
+      futureStyleIds: [],
+      defaultFontWeight: 400
+    }], ["etch", {
+      defaultShortPrefixId: "faes",
+      defaultStyleId: "solid",
+      styleIds: ["solid"],
+      futureStyleIds: [],
+      defaultFontWeight: 900
+    }], ["jelly", {
+      defaultShortPrefixId: "fajr",
+      defaultStyleId: "regular",
+      styleIds: ["regular"],
+      futureStyleIds: [],
+      defaultFontWeight: 400
+    }], ["jelly-duo", {
+      defaultShortPrefixId: "fajdr",
+      defaultStyleId: "regular",
+      styleIds: ["regular"],
+      futureStyleIds: [],
+      defaultFontWeight: 400
+    }], ["jelly-fill", {
+      defaultShortPrefixId: "fajfr",
+      defaultStyleId: "regular",
+      styleIds: ["regular"],
+      futureStyleIds: [],
+      defaultFontWeight: 400
+    }], ["notdog", {
+      defaultShortPrefixId: "fans",
+      defaultStyleId: "solid",
+      styleIds: ["solid"],
+      futureStyleIds: [],
+      defaultFontWeight: 900
+    }], ["notdog-duo", {
+      defaultShortPrefixId: "fands",
+      defaultStyleId: "solid",
+      styleIds: ["solid"],
+      futureStyleIds: [],
+      defaultFontWeight: 900
+    }], ["slab", {
+      defaultShortPrefixId: "faslr",
+      defaultStyleId: "regular",
+      styleIds: ["regular"],
+      futureStyleIds: [],
+      defaultFontWeight: 400
+    }], ["slab-press", {
+      defaultShortPrefixId: "faslpr",
+      defaultStyleId: "regular",
+      styleIds: ["regular"],
+      futureStyleIds: [],
+      defaultFontWeight: 400
+    }], ["thumbprint", {
+      defaultShortPrefixId: "fatl",
+      defaultStyleId: "light",
+      styleIds: ["light"],
+      futureStyleIds: [],
+      defaultFontWeight: 300
+    }], ["utility", {
+      defaultShortPrefixId: "fausb",
+      defaultStyleId: "semibold",
+      styleIds: ["semibold"],
+      futureStyleIds: [],
+      defaultFontWeight: 600
+    }], ["utility-duo", {
+      defaultShortPrefixId: "faudsb",
+      defaultStyleId: "semibold",
+      styleIds: ["semibold"],
+      futureStyleIds: [],
+      defaultFontWeight: 600
+    }], ["utility-fill", {
+      defaultShortPrefixId: "faufsb",
+      defaultStyleId: "semibold",
+      styleIds: ["semibold"],
+      futureStyleIds: [],
+      defaultFontWeight: 600
+    }], ["whiteboard", {
+      defaultShortPrefixId: "fawsb",
+      defaultStyleId: "semibold",
+      styleIds: ["semibold"],
+      futureStyleIds: [],
+      defaultFontWeight: 600
+    }]]),
+    _t = {
+      chisel: {
+        regular: "facr"
+      },
+      classic: {
+        brands: "fab",
+        light: "fal",
+        regular: "far",
+        solid: "fas",
+        thin: "fat"
+      },
+      duotone: {
+        light: "fadl",
+        regular: "fadr",
+        solid: "fad",
+        thin: "fadt"
+      },
+      etch: {
+        solid: "faes"
+      },
+      jelly: {
+        regular: "fajr"
+      },
+      "jelly-duo": {
+        regular: "fajdr"
+      },
+      "jelly-fill": {
+        regular: "fajfr"
+      },
+      notdog: {
+        solid: "fans"
+      },
+      "notdog-duo": {
+        solid: "fands"
+      },
+      sharp: {
+        light: "fasl",
+        regular: "fasr",
+        solid: "fass",
+        thin: "fast"
+      },
+      "sharp-duotone": {
+        light: "fasdl",
+        regular: "fasdr",
+        solid: "fasds",
+        thin: "fasdt"
+      },
+      slab: {
+        regular: "faslr"
+      },
+      "slab-press": {
+        regular: "faslpr"
+      },
+      thumbprint: {
+        light: "fatl"
+      },
+      utility: {
+        semibold: "fausb"
+      },
+      "utility-duo": {
+        semibold: "faudsb"
+      },
+      "utility-fill": {
+        semibold: "faufsb"
+      },
+      whiteboard: {
+        semibold: "fawsb"
+      }
+    };
+  var Yt = ["fak", "fa-kit", "fakd", "fa-kit-duotone"],
+    qt = {
+      kit: {
+        fak: "kit",
+        "fa-kit": "kit"
+      },
+      "kit-duotone": {
+        fakd: "kit-duotone",
+        "fa-kit-duotone": "kit-duotone"
+      }
+    },
+    Ht = ["kit"];
+  var L = "kit",
+    r = "kit-duotone",
+    U = "Kit",
+    J = "Kit Duotone";
+    _defineProperty(_defineProperty({}, L, U), r, J);
+  var ol = {
+    kit: {
+      "fa-kit": "fak"
+    }};
+  var dl = {
+      "Font Awesome Kit": {
+        400: "fak",
+        normal: "fak"
+      },
+      "Font Awesome Kit Duotone": {
+        400: "fakd",
+        normal: "fakd"
+      }
+    },
+    fl = {
+      kit: {
+        fak: "fa-kit"
+      }};
+  var ul = {
+      kit: {
+        kit: "fak"
+      },
+      "kit-duotone": {
+        "kit-duotone": "fakd"
+      }
+    };
+
+  var _ml;
+  var l$1 = {
+      GROUP: "duotone-group",
+      SWAP_OPACITY: "swap-opacity",
+      PRIMARY: "primary",
+      SECONDARY: "secondary"
+    },
+    f$1 = ["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"];
+  var n$1 = "classic",
+    o$1 = "duotone",
+    u$1 = "sharp",
+    s$1 = "sharp-duotone",
+    h$1 = "chisel",
+    g$1 = "etch",
+    y$1 = "jelly",
+    e$1 = "jelly-duo",
+    m$1 = "jelly-fill",
+    p$1 = "notdog",
+    a$1$1 = "notdog-duo",
+    w$1 = "slab",
+    b$1 = "slab-press",
+    r$1 = "thumbprint",
+    c$1 = "utility",
+    i$1 = "utility-duo",
+    x$1 = "utility-fill",
+    I$1 = "whiteboard",
+    F$1 = "Classic",
+    v$1 = "Duotone",
+    S$1 = "Sharp",
+    A$1 = "Sharp Duotone",
+    P$1 = "Chisel",
+    j$1 = "Etch",
+    B$1 = "Jelly",
+    N$1 = "Jelly Duo",
+    k$1 = "Jelly Fill",
+    D$1 = "Notdog",
+    C$1 = "Notdog Duo",
+    T$1 = "Slab",
+    L$1 = "Slab Press",
+    W$1 = "Thumbprint",
+    R$1 = "Utility",
+    K$1 = "Utility Duo",
+    U$1 = "Utility Fill",
+    J$1 = "Whiteboard";
+    (_ml = {}, _defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_ml, n$1, F$1), o$1, v$1), u$1, S$1), s$1, A$1), h$1, P$1), g$1, j$1), y$1, B$1), e$1, N$1), m$1, k$1), p$1, D$1), _defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_ml, a$1$1, C$1), w$1, T$1), b$1, L$1), r$1, W$1), c$1, R$1), i$1, K$1), x$1, U$1), I$1, J$1));
+  var E$1 = "kit",
+    d$1 = "kit-duotone",
+    _$1 = "Kit",
+    M$1 = "Kit Duotone";
+    _defineProperty(_defineProperty({}, E$1, _$1), d$1, M$1);
+  var $t$1 = {
+      classic: {
+        "fa-brands": "fab",
+        "fa-duotone": "fad",
+        "fa-light": "fal",
+        "fa-regular": "far",
+        "fa-solid": "fas",
+        "fa-thin": "fat"
+      },
+      duotone: {
+        "fa-regular": "fadr",
+        "fa-light": "fadl",
+        "fa-thin": "fadt"
+      },
+      sharp: {
+        "fa-solid": "fass",
+        "fa-regular": "fasr",
+        "fa-light": "fasl",
+        "fa-thin": "fast"
+      },
+      "sharp-duotone": {
+        "fa-solid": "fasds",
+        "fa-regular": "fasdr",
+        "fa-light": "fasdl",
+        "fa-thin": "fasdt"
+      },
+      slab: {
+        "fa-regular": "faslr"
+      },
+      "slab-press": {
+        "fa-regular": "faslpr"
+      },
+      whiteboard: {
+        "fa-semibold": "fawsb"
+      },
+      thumbprint: {
+        "fa-light": "fatl"
+      },
+      notdog: {
+        "fa-solid": "fans"
+      },
+      "notdog-duo": {
+        "fa-solid": "fands"
+      },
+      etch: {
+        "fa-solid": "faes"
+      },
+      jelly: {
+        "fa-regular": "fajr"
+      },
+      "jelly-fill": {
+        "fa-regular": "fajfr"
+      },
+      "jelly-duo": {
+        "fa-regular": "fajdr"
+      },
+      chisel: {
+        "fa-regular": "facr"
+      },
+      utility: {
+        "fa-semibold": "fausb"
+      },
+      "utility-duo": {
+        "fa-semibold": "faudsb"
+      },
+      "utility-fill": {
+        "fa-semibold": "faufsb"
+      }
+    },
+    z = {
+      classic: ["fas", "far", "fal", "fat", "fad"],
+      duotone: ["fadr", "fadl", "fadt"],
+      sharp: ["fass", "fasr", "fasl", "fast"],
+      "sharp-duotone": ["fasds", "fasdr", "fasdl", "fasdt"],
+      slab: ["faslr"],
+      "slab-press": ["faslpr"],
+      whiteboard: ["fawsb"],
+      thumbprint: ["fatl"],
+      notdog: ["fans"],
+      "notdog-duo": ["fands"],
+      etch: ["faes"],
+      jelly: ["fajr"],
+      "jelly-fill": ["fajfr"],
+      "jelly-duo": ["fajdr"],
+      chisel: ["facr"],
+      utility: ["fausb"],
+      "utility-duo": ["faudsb"],
+      "utility-fill": ["faufsb"]
+    },
+    Ht$1 = {
+      classic: {
+        fab: "fa-brands",
+        fad: "fa-duotone",
+        fal: "fa-light",
+        far: "fa-regular",
+        fas: "fa-solid",
+        fat: "fa-thin"
+      },
+      duotone: {
+        fadr: "fa-regular",
+        fadl: "fa-light",
+        fadt: "fa-thin"
+      },
+      sharp: {
+        fass: "fa-solid",
+        fasr: "fa-regular",
+        fasl: "fa-light",
+        fast: "fa-thin"
+      },
+      "sharp-duotone": {
+        fasds: "fa-solid",
+        fasdr: "fa-regular",
+        fasdl: "fa-light",
+        fasdt: "fa-thin"
+      },
+      slab: {
+        faslr: "fa-regular"
+      },
+      "slab-press": {
+        faslpr: "fa-regular"
+      },
+      whiteboard: {
+        fawsb: "fa-semibold"
+      },
+      thumbprint: {
+        fatl: "fa-light"
+      },
+      notdog: {
+        fans: "fa-solid"
+      },
+      "notdog-duo": {
+        fands: "fa-solid"
+      },
+      etch: {
+        faes: "fa-solid"
+      },
+      jelly: {
+        fajr: "fa-regular"
+      },
+      "jelly-fill": {
+        fajfr: "fa-regular"
+      },
+      "jelly-duo": {
+        fajdr: "fa-regular"
+      },
+      chisel: {
+        facr: "fa-regular"
+      },
+      utility: {
+        fausb: "fa-semibold"
+      },
+      "utility-duo": {
+        faudsb: "fa-semibold"
+      },
+      "utility-fill": {
+        faufsb: "fa-semibold"
+      }
+    },
+    Y$1 = ["fa-solid", "fa-regular", "fa-light", "fa-thin", "fa-duotone", "fa-brands", "fa-semibold"],
+    Zt$1 = ["fa", "fas", "far", "fal", "fat", "fad", "fadr", "fadl", "fadt", "fab", "fass", "fasr", "fasl", "fast", "fasds", "fasdr", "fasdl", "fasdt", "faslr", "faslpr", "fawsb", "fatl", "fans", "fands", "faes", "fajr", "fajfr", "fajdr", "facr", "fausb", "faudsb", "faufsb"].concat(f$1, Y$1),
+    G$1 = ["solid", "regular", "light", "thin", "duotone", "brands", "semibold"],
+    O$1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    V$1 = O$1.concat([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]),
+    $$1 = ["aw", "fw", "pull-left", "pull-right"],
+    to = [].concat(_toConsumableArray(Object.keys(z)), G$1, $$1, ["2xs", "xs", "sm", "lg", "xl", "2xl", "beat", "border", "fade", "beat-fade", "bounce", "flip-both", "flip-horizontal", "flip-vertical", "flip", "inverse", "layers", "layers-bottom-left", "layers-bottom-right", "layers-counter", "layers-text", "layers-top-left", "layers-top-right", "li", "pull-end", "pull-start", "pulse", "rotate-180", "rotate-270", "rotate-90", "rotate-by", "shake", "spin-pulse", "spin-reverse", "spin", "stack-1x", "stack-2x", "stack", "ul", "width-auto", "width-fixed", l$1.GROUP, l$1.SWAP_OPACITY, l$1.PRIMARY, l$1.SECONDARY]).concat(O$1.map(function (t) {
+      return "".concat(t, "x");
+    })).concat(V$1.map(function (t) {
+      return "w-".concat(t);
+    }));
+  var ro = {
+      "Font Awesome 5 Free": {
+        900: "fas",
+        400: "far"
+      },
+      "Font Awesome 5 Pro": {
+        900: "fas",
+        400: "far",
+        normal: "far",
+        300: "fal"
+      },
+      "Font Awesome 5 Brands": {
+        400: "fab",
+        normal: "fab"
+      },
+      "Font Awesome 5 Duotone": {
+        900: "fad"
+      }
+    };
+
   var NAMESPACE_IDENTIFIER = '___FONT_AWESOME___';
   var UNITS_IN_GRID = 16;
-  var DEFAULT_FAMILY_PREFIX = 'fa';
+  var DEFAULT_CSS_PREFIX = 'fa';
   var DEFAULT_REPLACEMENT_CLASS = 'svg-inline--fa';
   var DATA_FA_I2SVG = 'data-fa-i2svg';
   var DATA_FA_PSEUDO_ELEMENT = 'data-fa-pseudo-element';
@@ -196,127 +995,91 @@ var cydj = (function (exports) {
   var HTML_CLASS_I2SVG_BASE_CLASS = 'fontawesome-i2svg';
   var MUTATION_APPROACH_ASYNC = 'async';
   var TAGNAMES_TO_SKIP_FOR_PSEUDOELEMENTS = ['HTML', 'HEAD', 'STYLE', 'SCRIPT'];
+  var PSEUDO_ELEMENTS = ['::before', '::after', ':before', ':after'];
   var PRODUCTION = function () {
     try {
       return process.env.NODE_ENV === 'production';
-    } catch (e) {
+    } catch (e$$1) {
       return false;
     }
   }();
-  var PREFIX_TO_STYLE = {
-    'fas': 'solid',
-    'fa-solid': 'solid',
-    'far': 'regular',
-    'fa-regular': 'regular',
-    'fal': 'light',
-    'fa-light': 'light',
-    'fat': 'thin',
-    'fa-thin': 'thin',
-    'fad': 'duotone',
-    'fa-duotone': 'duotone',
-    'fab': 'brands',
-    'fa-brands': 'brands',
-    'fak': 'kit',
-    'fa-kit': 'kit',
-    'fa': 'solid'
-  };
-  var STYLE_TO_PREFIX = {
-    'solid': 'fas',
-    'regular': 'far',
-    'light': 'fal',
-    'thin': 'fat',
-    'duotone': 'fad',
-    'brands': 'fab',
-    'kit': 'fak'
-  };
-  var PREFIX_TO_LONG_STYLE = {
-    'fab': 'fa-brands',
-    'fad': 'fa-duotone',
-    'fak': 'fa-kit',
-    'fal': 'fa-light',
-    'far': 'fa-regular',
-    'fas': 'fa-solid',
-    'fat': 'fa-thin'
-  };
-  var LONG_STYLE_TO_PREFIX = {
-    'fa-brands': 'fab',
-    'fa-duotone': 'fad',
-    'fa-kit': 'fak',
-    'fa-light': 'fal',
-    'fa-regular': 'far',
-    'fa-solid': 'fas',
-    'fa-thin': 'fat'
-  };
-  var ICON_SELECTION_SYNTAX_PATTERN = /fa[srltdbk\-\ ]/; // eslint-disable-line no-useless-escape
+  function familyProxy(obj) {
+    // Defaults to the classic family if family is not available
+    return new Proxy(obj, {
+      get: function get(target, prop) {
+        return prop in target ? target[prop] : target[i];
+      }
+    });
+  }
+  var _PREFIX_TO_STYLE = _objectSpread2({}, q);
 
+  // We changed FACSSClassesToStyleId in the icons repo to be canonical and as such, "classic" family does not have any
+  // duotone styles.  But we do still need duotone in _PREFIX_TO_STYLE below, so we are manually adding
+  // {'fa-duotone': 'duotone'}
+  _PREFIX_TO_STYLE[i] = _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, {
+    'fa-duotone': 'duotone'
+  }), q[i]), qt['kit']), qt['kit-duotone']);
+  var PREFIX_TO_STYLE = familyProxy(_PREFIX_TO_STYLE);
+  var _STYLE_TO_PREFIX = _objectSpread2({}, _t);
+
+  // We changed FAStyleIdToShortPrefixId in the icons repo to be canonical and as such, "classic" family does not have any
+  // duotone styles.  But we do still need duotone in _STYLE_TO_PREFIX below, so we are manually adding {duotone: 'fad'}
+  _STYLE_TO_PREFIX[i] = _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, {
+    duotone: 'fad'
+  }), _STYLE_TO_PREFIX[i]), ul['kit']), ul['kit-duotone']);
+  var STYLE_TO_PREFIX = familyProxy(_STYLE_TO_PREFIX);
+  var _PREFIX_TO_LONG_STYLE = _objectSpread2({}, Ht$1);
+  _PREFIX_TO_LONG_STYLE[i] = _objectSpread2(_objectSpread2({}, _PREFIX_TO_LONG_STYLE[i]), fl['kit']);
+  var PREFIX_TO_LONG_STYLE = familyProxy(_PREFIX_TO_LONG_STYLE);
+  var _LONG_STYLE_TO_PREFIX = _objectSpread2({}, $t$1);
+  _LONG_STYLE_TO_PREFIX[i] = _objectSpread2(_objectSpread2({}, _LONG_STYLE_TO_PREFIX[i]), ol['kit']);
+  familyProxy(_LONG_STYLE_TO_PREFIX);
+  var ICON_SELECTION_SYNTAX_PATTERN = E;
   var LAYERS_TEXT_CLASSNAME = 'fa-layers-text';
-  var FONT_FAMILY_PATTERN = /Font ?Awesome ?([56 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Kit)?.*/i; // TODO: do we need to handle font-weight for kit SVG pseudo-elements?
-
-  var FONT_WEIGHT_TO_PREFIX = {
-    '900': 'fas',
-    '400': 'far',
-    'normal': 'far',
-    '300': 'fal',
-    '100': 'fat'
-  };
-  var oneToTen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  var oneToTwenty = oneToTen.concat([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+  var FONT_FAMILY_PATTERN = _;
+  var _FONT_WEIGHT_TO_PREFIX = _objectSpread2({}, gt);
+  familyProxy(_FONT_WEIGHT_TO_PREFIX);
   var ATTRIBUTES_WATCHED_FOR_MUTATION = ['class', 'data-prefix', 'data-icon', 'data-fa-transform', 'data-fa-mask'];
-  var DUOTONE_CLASSES = {
-    GROUP: 'duotone-group',
-    SWAP_OPACITY: 'swap-opacity',
-    PRIMARY: 'primary',
-    SECONDARY: 'secondary'
-  };
-  var RESERVED_CLASSES = [].concat(_toConsumableArray(Object.keys(STYLE_TO_PREFIX)), ['2xs', 'xs', 'sm', 'lg', 'xl', '2xl', 'beat', 'border', 'fade', 'beat-fade', 'bounce', 'flip-both', 'flip-horizontal', 'flip-vertical', 'flip', 'fw', 'inverse', 'layers-counter', 'layers-text', 'layers', 'li', 'pull-left', 'pull-right', 'pulse', 'rotate-180', 'rotate-270', 'rotate-90', 'rotate-by', 'shake', 'spin-pulse', 'spin-reverse', 'spin', 'stack-1x', 'stack-2x', 'stack', 'ul', DUOTONE_CLASSES.GROUP, DUOTONE_CLASSES.SWAP_OPACITY, DUOTONE_CLASSES.PRIMARY, DUOTONE_CLASSES.SECONDARY]).concat(oneToTen.map(function (n) {
-    return "".concat(n, "x");
-  })).concat(oneToTwenty.map(function (n) {
-    return "w-".concat(n);
-  }));
+  var DUOTONE_CLASSES = H;
+  var RESERVED_CLASSES = [].concat(_toConsumableArray(Ht), _toConsumableArray(to));
 
   var initial = WINDOW.FontAwesomeConfig || {};
-
   function getAttrConfig(attr) {
     var element = DOCUMENT.querySelector('script[' + attr + ']');
-
     if (element) {
       return element.getAttribute(attr);
     }
   }
-
   function coerce(val) {
     // Getting an empty string will occur if the attribute is set on the HTML tag but without a value
     // We'll assume that this is an indication that it should be toggled to true
-    // For example <script data-search-pseudo-elements src="..."></script>
     if (val === '') return true;
     if (val === 'false') return false;
     if (val === 'true') return true;
     return val;
   }
-
   if (DOCUMENT && typeof DOCUMENT.querySelector === 'function') {
-    var attrs = [['data-family-prefix', 'familyPrefix'], ['data-style-default', 'styleDefault'], ['data-replacement-class', 'replacementClass'], ['data-auto-replace-svg', 'autoReplaceSvg'], ['data-auto-add-css', 'autoAddCss'], ['data-auto-a11y', 'autoA11y'], ['data-search-pseudo-elements', 'searchPseudoElements'], ['data-observe-mutations', 'observeMutations'], ['data-mutate-approach', 'mutateApproach'], ['data-keep-original-source', 'keepOriginalSource'], ['data-measure-performance', 'measurePerformance'], ['data-show-missing-icons', 'showMissingIcons']];
+    var attrs = [['data-family-prefix', 'familyPrefix'], ['data-css-prefix', 'cssPrefix'], ['data-family-default', 'familyDefault'], ['data-style-default', 'styleDefault'], ['data-replacement-class', 'replacementClass'], ['data-auto-replace-svg', 'autoReplaceSvg'], ['data-auto-add-css', 'autoAddCss'], ['data-search-pseudo-elements', 'searchPseudoElements'], ['data-search-pseudo-elements-warnings', 'searchPseudoElementsWarnings'], ['data-search-pseudo-elements-full-scan', 'searchPseudoElementsFullScan'], ['data-observe-mutations', 'observeMutations'], ['data-mutate-approach', 'mutateApproach'], ['data-keep-original-source', 'keepOriginalSource'], ['data-measure-performance', 'measurePerformance'], ['data-show-missing-icons', 'showMissingIcons']];
     attrs.forEach(function (_ref) {
       var _ref2 = _slicedToArray(_ref, 2),
-          attr = _ref2[0],
-          key = _ref2[1];
-
+        attr = _ref2[0],
+        key = _ref2[1];
       var val = coerce(getAttrConfig(attr));
-
       if (val !== undefined && val !== null) {
         initial[key] = val;
       }
     });
   }
-
   var _default = {
-    familyPrefix: DEFAULT_FAMILY_PREFIX,
     styleDefault: 'solid',
+    familyDefault: i,
+    cssPrefix: DEFAULT_CSS_PREFIX,
     replacementClass: DEFAULT_REPLACEMENT_CLASS,
     autoReplaceSvg: true,
     autoAddCss: true,
-    autoA11y: true,
     searchPseudoElements: false,
+    searchPseudoElementsWarnings: true,
+    searchPseudoElementsFullScan: false,
     observeMutations: true,
     mutateApproach: 'async',
     keepOriginalSource: true,
@@ -324,16 +1087,18 @@ var cydj = (function (exports) {
     showMissingIcons: true
   };
 
+  // familyPrefix is deprecated but we must still support it if present
+  if (initial.familyPrefix) {
+    initial.cssPrefix = initial.familyPrefix;
+  }
   var _config = _objectSpread2(_objectSpread2({}, _default), initial);
-
   if (!_config.autoReplaceSvg) _config.observeMutations = false;
   var config = {};
-  Object.keys(_config).forEach(function (key) {
+  Object.keys(_default).forEach(function (key) {
     Object.defineProperty(config, key, {
       enumerable: true,
       set: function set(val) {
         _config[key] = val;
-
         _onChangeCb.forEach(function (cb) {
           return cb(config);
         });
@@ -343,17 +1108,30 @@ var cydj = (function (exports) {
       }
     });
   });
+
+  // familyPrefix is deprecated as of 6.2.0 and should be removed in 7.0.0
+  Object.defineProperty(config, 'familyPrefix', {
+    enumerable: true,
+    set: function set(val) {
+      _config.cssPrefix = val;
+      _onChangeCb.forEach(function (cb) {
+        return cb(config);
+      });
+    },
+    get: function get() {
+      return _config.cssPrefix;
+    }
+  });
   WINDOW.FontAwesomeConfig = config;
   var _onChangeCb = [];
   function onChange(cb) {
     _onChangeCb.push(cb);
-
     return function () {
       _onChangeCb.splice(_onChangeCb.indexOf(cb), 1);
     };
   }
 
-  var d = UNITS_IN_GRID;
+  var d$2 = UNITS_IN_GRID;
   var meaninglessTransform = {
     size: 16,
     x: 0,
@@ -366,22 +1144,18 @@ var cydj = (function (exports) {
     if (!css || !IS_DOM) {
       return;
     }
-
     var style = DOCUMENT.createElement('style');
     style.setAttribute('type', 'text/css');
     style.innerHTML = css;
     var headChildren = DOCUMENT.head.childNodes;
     var beforeChild = null;
-
     for (var i = headChildren.length - 1; i > -1; i--) {
       var child = headChildren[i];
       var tagName = (child.tagName || '').toUpperCase();
-
       if (['STYLE', 'LINK'].indexOf(tagName) > -1) {
         beforeChild = child;
       }
     }
-
     DOCUMENT.head.insertBefore(style, beforeChild);
     return css;
   }
@@ -389,20 +1163,16 @@ var cydj = (function (exports) {
   function nextUniqueId() {
     var size = 12;
     var id = '';
-
     while (size-- > 0) {
       id += idPool[Math.random() * 62 | 0];
     }
-
     return id;
   }
   function toArray(obj) {
     var array = [];
-
     for (var i = (obj || []).length >>> 0; i--;) {
       array[i] = obj[i];
     }
-
     return array;
   }
   function classArray(node) {
@@ -432,8 +1202,8 @@ var cydj = (function (exports) {
   }
   function transformForSvg(_ref) {
     var transform = _ref.transform,
-        containerWidth = _ref.containerWidth,
-        iconWidth = _ref.iconWidth;
+      containerWidth = _ref.containerWidth,
+      iconWidth = _ref.iconWidth;
     var outer = {
       transform: "translate(".concat(containerWidth / 2, " 256)")
     };
@@ -454,51 +1224,44 @@ var cydj = (function (exports) {
   }
   function transformForCss(_ref2) {
     var transform = _ref2.transform,
-        _ref2$width = _ref2.width,
-        width = _ref2$width === void 0 ? UNITS_IN_GRID : _ref2$width,
-        _ref2$height = _ref2.height,
-        height = _ref2$height === void 0 ? UNITS_IN_GRID : _ref2$height;
+      _ref2$width = _ref2.width,
+      width = _ref2$width === void 0 ? UNITS_IN_GRID : _ref2$width,
+      _ref2$height = _ref2.height,
+      height = _ref2$height === void 0 ? UNITS_IN_GRID : _ref2$height;
     var val = '';
-
     if (IS_IE) {
-      val += "translate(".concat(transform.x / d - width / 2, "em, ").concat(transform.y / d - height / 2, "em) ");
+      val += "translate(".concat(transform.x / d$2 - width / 2, "em, ").concat(transform.y / d$2 - height / 2, "em) ");
     } else {
-      val += "translate(calc(-50% + ".concat(transform.x / d, "em), calc(-50% + ").concat(transform.y / d, "em)) ");
+      val += "translate(calc(-50% + ".concat(transform.x / d$2, "em), calc(-50% + ").concat(transform.y / d$2, "em)) ");
     }
-
-    val += "scale(".concat(transform.size / d * (transform.flipX ? -1 : 1), ", ").concat(transform.size / d * (transform.flipY ? -1 : 1), ") ");
+    val += "scale(".concat(transform.size / d$2 * (transform.flipX ? -1 : 1), ", ").concat(transform.size / d$2 * (transform.flipY ? -1 : 1), ") ");
     val += "rotate(".concat(transform.rotate, "deg) ");
     return val;
   }
 
-  var baseStyles = ":root, :host {\n  --fa-font-solid: normal 900 1em/1 \"Font Awesome 6 Solid\";\n  --fa-font-regular: normal 400 1em/1 \"Font Awesome 6 Regular\";\n  --fa-font-light: normal 300 1em/1 \"Font Awesome 6 Light\";\n  --fa-font-thin: normal 100 1em/1 \"Font Awesome 6 Thin\";\n  --fa-font-duotone: normal 900 1em/1 \"Font Awesome 6 Duotone\";\n  --fa-font-brands: normal 400 1em/1 \"Font Awesome 6 Brands\";\n}\n\nsvg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {\n  overflow: visible;\n  box-sizing: content-box;\n}\n\n.svg-inline--fa {\n  display: var(--fa-display, inline-block);\n  height: 1em;\n  overflow: visible;\n  vertical-align: -0.125em;\n}\n.svg-inline--fa.fa-2xs {\n  vertical-align: 0.1em;\n}\n.svg-inline--fa.fa-xs {\n  vertical-align: 0em;\n}\n.svg-inline--fa.fa-sm {\n  vertical-align: -0.0714285705em;\n}\n.svg-inline--fa.fa-lg {\n  vertical-align: -0.2em;\n}\n.svg-inline--fa.fa-xl {\n  vertical-align: -0.25em;\n}\n.svg-inline--fa.fa-2xl {\n  vertical-align: -0.3125em;\n}\n.svg-inline--fa.fa-pull-left {\n  margin-right: var(--fa-pull-margin, 0.3em);\n  width: auto;\n}\n.svg-inline--fa.fa-pull-right {\n  margin-left: var(--fa-pull-margin, 0.3em);\n  width: auto;\n}\n.svg-inline--fa.fa-li {\n  width: var(--fa-li-width, 2em);\n  top: 0.25em;\n}\n.svg-inline--fa.fa-fw {\n  width: var(--fa-fw-width, 1.25em);\n}\n\n.fa-layers svg.svg-inline--fa {\n  bottom: 0;\n  left: 0;\n  margin: auto;\n  position: absolute;\n  right: 0;\n  top: 0;\n}\n\n.fa-layers-counter, .fa-layers-text {\n  display: inline-block;\n  position: absolute;\n  text-align: center;\n}\n\n.fa-layers {\n  display: inline-block;\n  height: 1em;\n  position: relative;\n  text-align: center;\n  vertical-align: -0.125em;\n  width: 1em;\n}\n.fa-layers svg.svg-inline--fa {\n  -webkit-transform-origin: center center;\n          transform-origin: center center;\n}\n\n.fa-layers-text {\n  left: 50%;\n  top: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  -webkit-transform-origin: center center;\n          transform-origin: center center;\n}\n\n.fa-layers-counter {\n  background-color: var(--fa-counter-background-color, #ff253a);\n  border-radius: var(--fa-counter-border-radius, 1em);\n  box-sizing: border-box;\n  color: var(--fa-inverse, #fff);\n  line-height: var(--fa-counter-line-height, 1);\n  max-width: var(--fa-counter-max-width, 5em);\n  min-width: var(--fa-counter-min-width, 1.5em);\n  overflow: hidden;\n  padding: var(--fa-counter-padding, 0.25em 0.5em);\n  right: var(--fa-right, 0);\n  text-overflow: ellipsis;\n  top: var(--fa-top, 0);\n  -webkit-transform: scale(var(--fa-counter-scale, 0.25));\n          transform: scale(var(--fa-counter-scale, 0.25));\n  -webkit-transform-origin: top right;\n          transform-origin: top right;\n}\n\n.fa-layers-bottom-right {\n  bottom: var(--fa-bottom, 0);\n  right: var(--fa-right, 0);\n  top: auto;\n  -webkit-transform: scale(var(--fa-layers-scale, 0.25));\n          transform: scale(var(--fa-layers-scale, 0.25));\n  -webkit-transform-origin: bottom right;\n          transform-origin: bottom right;\n}\n\n.fa-layers-bottom-left {\n  bottom: var(--fa-bottom, 0);\n  left: var(--fa-left, 0);\n  right: auto;\n  top: auto;\n  -webkit-transform: scale(var(--fa-layers-scale, 0.25));\n          transform: scale(var(--fa-layers-scale, 0.25));\n  -webkit-transform-origin: bottom left;\n          transform-origin: bottom left;\n}\n\n.fa-layers-top-right {\n  top: var(--fa-top, 0);\n  right: var(--fa-right, 0);\n  -webkit-transform: scale(var(--fa-layers-scale, 0.25));\n          transform: scale(var(--fa-layers-scale, 0.25));\n  -webkit-transform-origin: top right;\n          transform-origin: top right;\n}\n\n.fa-layers-top-left {\n  left: var(--fa-left, 0);\n  right: auto;\n  top: var(--fa-top, 0);\n  -webkit-transform: scale(var(--fa-layers-scale, 0.25));\n          transform: scale(var(--fa-layers-scale, 0.25));\n  -webkit-transform-origin: top left;\n          transform-origin: top left;\n}\n\n.fa-1x {\n  font-size: 1em;\n}\n\n.fa-2x {\n  font-size: 2em;\n}\n\n.fa-3x {\n  font-size: 3em;\n}\n\n.fa-4x {\n  font-size: 4em;\n}\n\n.fa-5x {\n  font-size: 5em;\n}\n\n.fa-6x {\n  font-size: 6em;\n}\n\n.fa-7x {\n  font-size: 7em;\n}\n\n.fa-8x {\n  font-size: 8em;\n}\n\n.fa-9x {\n  font-size: 9em;\n}\n\n.fa-10x {\n  font-size: 10em;\n}\n\n.fa-2xs {\n  font-size: 0.625em;\n  line-height: 0.1em;\n  vertical-align: 0.225em;\n}\n\n.fa-xs {\n  font-size: 0.75em;\n  line-height: 0.0833333337em;\n  vertical-align: 0.125em;\n}\n\n.fa-sm {\n  font-size: 0.875em;\n  line-height: 0.0714285718em;\n  vertical-align: 0.0535714295em;\n}\n\n.fa-lg {\n  font-size: 1.25em;\n  line-height: 0.05em;\n  vertical-align: -0.075em;\n}\n\n.fa-xl {\n  font-size: 1.5em;\n  line-height: 0.0416666682em;\n  vertical-align: -0.125em;\n}\n\n.fa-2xl {\n  font-size: 2em;\n  line-height: 0.03125em;\n  vertical-align: -0.1875em;\n}\n\n.fa-fw {\n  text-align: center;\n  width: 1.25em;\n}\n\n.fa-ul {\n  list-style-type: none;\n  margin-left: var(--fa-li-margin, 2.5em);\n  padding-left: 0;\n}\n.fa-ul > li {\n  position: relative;\n}\n\n.fa-li {\n  left: calc(var(--fa-li-width, 2em) * -1);\n  position: absolute;\n  text-align: center;\n  width: var(--fa-li-width, 2em);\n  line-height: inherit;\n}\n\n.fa-border {\n  border-color: var(--fa-border-color, #eee);\n  border-radius: var(--fa-border-radius, 0.1em);\n  border-style: var(--fa-border-style, solid);\n  border-width: var(--fa-border-width, 0.08em);\n  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);\n}\n\n.fa-pull-left {\n  float: left;\n  margin-right: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-pull-right {\n  float: right;\n  margin-left: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-beat {\n  -webkit-animation-name: fa-beat;\n          animation-name: fa-beat;\n  -webkit-animation-delay: var(--fa-animation-delay, 0);\n          animation-delay: var(--fa-animation-delay, 0);\n  -webkit-animation-direction: var(--fa-animation-direction, normal);\n          animation-direction: var(--fa-animation-direction, normal);\n  -webkit-animation-duration: var(--fa-animation-duration, 1s);\n          animation-duration: var(--fa-animation-duration, 1s);\n  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n          animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);\n          animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-bounce {\n  -webkit-animation-name: fa-bounce;\n          animation-name: fa-bounce;\n  -webkit-animation-delay: var(--fa-animation-delay, 0);\n          animation-delay: var(--fa-animation-delay, 0);\n  -webkit-animation-direction: var(--fa-animation-direction, normal);\n          animation-direction: var(--fa-animation-direction, normal);\n  -webkit-animation-duration: var(--fa-animation-duration, 1s);\n          animation-duration: var(--fa-animation-duration, 1s);\n  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n          animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));\n          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));\n}\n\n.fa-fade {\n  -webkit-animation-name: fa-fade;\n          animation-name: fa-fade;\n  -webkit-animation-delay: var(--fa-animation-delay, 0);\n          animation-delay: var(--fa-animation-delay, 0);\n  -webkit-animation-direction: var(--fa-animation-direction, normal);\n          animation-direction: var(--fa-animation-direction, normal);\n  -webkit-animation-duration: var(--fa-animation-duration, 1s);\n          animation-duration: var(--fa-animation-duration, 1s);\n  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n          animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-beat-fade {\n  -webkit-animation-name: fa-beat-fade;\n          animation-name: fa-beat-fade;\n  -webkit-animation-delay: var(--fa-animation-delay, 0);\n          animation-delay: var(--fa-animation-delay, 0);\n  -webkit-animation-direction: var(--fa-animation-direction, normal);\n          animation-direction: var(--fa-animation-direction, normal);\n  -webkit-animation-duration: var(--fa-animation-duration, 1s);\n          animation-duration: var(--fa-animation-duration, 1s);\n  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n          animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-flip {\n  -webkit-animation-name: fa-flip;\n          animation-name: fa-flip;\n  -webkit-animation-delay: var(--fa-animation-delay, 0);\n          animation-delay: var(--fa-animation-delay, 0);\n  -webkit-animation-direction: var(--fa-animation-direction, normal);\n          animation-direction: var(--fa-animation-direction, normal);\n  -webkit-animation-duration: var(--fa-animation-duration, 1s);\n          animation-duration: var(--fa-animation-duration, 1s);\n  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n          animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);\n          animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-shake {\n  -webkit-animation-name: fa-shake;\n          animation-name: fa-shake;\n  -webkit-animation-delay: var(--fa-animation-delay, 0);\n          animation-delay: var(--fa-animation-delay, 0);\n  -webkit-animation-direction: var(--fa-animation-direction, normal);\n          animation-direction: var(--fa-animation-direction, normal);\n  -webkit-animation-duration: var(--fa-animation-duration, 1s);\n          animation-duration: var(--fa-animation-duration, 1s);\n  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n          animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  -webkit-animation-timing-function: var(--fa-animation-timing, linear);\n          animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin {\n  -webkit-animation-name: fa-spin;\n          animation-name: fa-spin;\n  -webkit-animation-delay: var(--fa-animation-delay, 0);\n          animation-delay: var(--fa-animation-delay, 0);\n  -webkit-animation-direction: var(--fa-animation-direction, normal);\n          animation-direction: var(--fa-animation-direction, normal);\n  -webkit-animation-duration: var(--fa-animation-duration, 2s);\n          animation-duration: var(--fa-animation-duration, 2s);\n  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n          animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  -webkit-animation-timing-function: var(--fa-animation-timing, linear);\n          animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin-reverse {\n  --fa-animation-direction: reverse;\n}\n\n.fa-pulse,\n.fa-spin-pulse {\n  -webkit-animation-name: fa-spin;\n          animation-name: fa-spin;\n  -webkit-animation-direction: var(--fa-animation-direction, normal);\n          animation-direction: var(--fa-animation-direction, normal);\n  -webkit-animation-duration: var(--fa-animation-duration, 1s);\n          animation-duration: var(--fa-animation-duration, 1s);\n  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n          animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));\n          animation-timing-function: var(--fa-animation-timing, steps(8));\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .fa-beat,\n.fa-bounce,\n.fa-fade,\n.fa-beat-fade,\n.fa-flip,\n.fa-pulse,\n.fa-shake,\n.fa-spin,\n.fa-spin-pulse {\n    -webkit-animation-delay: -1ms;\n            animation-delay: -1ms;\n    -webkit-animation-duration: 1ms;\n            animation-duration: 1ms;\n    -webkit-animation-iteration-count: 1;\n            animation-iteration-count: 1;\n    transition-delay: 0s;\n    transition-duration: 0s;\n  }\n}\n@-webkit-keyframes fa-beat {\n  0%, 90% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n  }\n  45% {\n    -webkit-transform: scale(var(--fa-beat-scale, 1.25));\n            transform: scale(var(--fa-beat-scale, 1.25));\n  }\n}\n@keyframes fa-beat {\n  0%, 90% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n  }\n  45% {\n    -webkit-transform: scale(var(--fa-beat-scale, 1.25));\n            transform: scale(var(--fa-beat-scale, 1.25));\n  }\n}\n@-webkit-keyframes fa-bounce {\n  0% {\n    -webkit-transform: scale(1, 1) translateY(0);\n            transform: scale(1, 1) translateY(0);\n  }\n  10% {\n    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n  }\n  30% {\n    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n  }\n  50% {\n    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n  }\n  57% {\n    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n  }\n  64% {\n    -webkit-transform: scale(1, 1) translateY(0);\n            transform: scale(1, 1) translateY(0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1) translateY(0);\n            transform: scale(1, 1) translateY(0);\n  }\n}\n@keyframes fa-bounce {\n  0% {\n    -webkit-transform: scale(1, 1) translateY(0);\n            transform: scale(1, 1) translateY(0);\n  }\n  10% {\n    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n  }\n  30% {\n    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n  }\n  50% {\n    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n  }\n  57% {\n    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n  }\n  64% {\n    -webkit-transform: scale(1, 1) translateY(0);\n            transform: scale(1, 1) translateY(0);\n  }\n  100% {\n    -webkit-transform: scale(1, 1) translateY(0);\n            transform: scale(1, 1) translateY(0);\n  }\n}\n@-webkit-keyframes fa-fade {\n  50% {\n    opacity: var(--fa-fade-opacity, 0.4);\n  }\n}\n@keyframes fa-fade {\n  50% {\n    opacity: var(--fa-fade-opacity, 0.4);\n  }\n}\n@-webkit-keyframes fa-beat-fade {\n  0%, 100% {\n    opacity: var(--fa-beat-fade-opacity, 0.4);\n    -webkit-transform: scale(1);\n            transform: scale(1);\n  }\n  50% {\n    opacity: 1;\n    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));\n            transform: scale(var(--fa-beat-fade-scale, 1.125));\n  }\n}\n@keyframes fa-beat-fade {\n  0%, 100% {\n    opacity: var(--fa-beat-fade-opacity, 0.4);\n    -webkit-transform: scale(1);\n            transform: scale(1);\n  }\n  50% {\n    opacity: 1;\n    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));\n            transform: scale(var(--fa-beat-fade-scale, 1.125));\n  }\n}\n@-webkit-keyframes fa-flip {\n  50% {\n    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n  }\n}\n@keyframes fa-flip {\n  50% {\n    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n  }\n}\n@-webkit-keyframes fa-shake {\n  0% {\n    -webkit-transform: rotate(-15deg);\n            transform: rotate(-15deg);\n  }\n  4% {\n    -webkit-transform: rotate(15deg);\n            transform: rotate(15deg);\n  }\n  8%, 24% {\n    -webkit-transform: rotate(-18deg);\n            transform: rotate(-18deg);\n  }\n  12%, 28% {\n    -webkit-transform: rotate(18deg);\n            transform: rotate(18deg);\n  }\n  16% {\n    -webkit-transform: rotate(-22deg);\n            transform: rotate(-22deg);\n  }\n  20% {\n    -webkit-transform: rotate(22deg);\n            transform: rotate(22deg);\n  }\n  32% {\n    -webkit-transform: rotate(-12deg);\n            transform: rotate(-12deg);\n  }\n  36% {\n    -webkit-transform: rotate(12deg);\n            transform: rotate(12deg);\n  }\n  40%, 100% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n}\n@keyframes fa-shake {\n  0% {\n    -webkit-transform: rotate(-15deg);\n            transform: rotate(-15deg);\n  }\n  4% {\n    -webkit-transform: rotate(15deg);\n            transform: rotate(15deg);\n  }\n  8%, 24% {\n    -webkit-transform: rotate(-18deg);\n            transform: rotate(-18deg);\n  }\n  12%, 28% {\n    -webkit-transform: rotate(18deg);\n            transform: rotate(18deg);\n  }\n  16% {\n    -webkit-transform: rotate(-22deg);\n            transform: rotate(-22deg);\n  }\n  20% {\n    -webkit-transform: rotate(22deg);\n            transform: rotate(22deg);\n  }\n  32% {\n    -webkit-transform: rotate(-12deg);\n            transform: rotate(-12deg);\n  }\n  36% {\n    -webkit-transform: rotate(12deg);\n            transform: rotate(12deg);\n  }\n  40%, 100% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n}\n@-webkit-keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n.fa-rotate-90 {\n  -webkit-transform: rotate(90deg);\n          transform: rotate(90deg);\n}\n\n.fa-rotate-180 {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n\n.fa-rotate-270 {\n  -webkit-transform: rotate(270deg);\n          transform: rotate(270deg);\n}\n\n.fa-flip-horizontal {\n  -webkit-transform: scale(-1, 1);\n          transform: scale(-1, 1);\n}\n\n.fa-flip-vertical {\n  -webkit-transform: scale(1, -1);\n          transform: scale(1, -1);\n}\n\n.fa-flip-both,\n.fa-flip-horizontal.fa-flip-vertical {\n  -webkit-transform: scale(-1, -1);\n          transform: scale(-1, -1);\n}\n\n.fa-rotate-by {\n  -webkit-transform: rotate(var(--fa-rotate-angle, none));\n          transform: rotate(var(--fa-rotate-angle, none));\n}\n\n.fa-stack {\n  display: inline-block;\n  vertical-align: middle;\n  height: 2em;\n  position: relative;\n  width: 2.5em;\n}\n\n.fa-stack-1x,\n.fa-stack-2x {\n  bottom: 0;\n  left: 0;\n  margin: auto;\n  position: absolute;\n  right: 0;\n  top: 0;\n  z-index: var(--fa-stack-z-index, auto);\n}\n\n.svg-inline--fa.fa-stack-1x {\n  height: 1em;\n  width: 1.25em;\n}\n.svg-inline--fa.fa-stack-2x {\n  height: 2em;\n  width: 2.5em;\n}\n\n.fa-inverse {\n  color: var(--fa-inverse, #fff);\n}\n\n.sr-only,\n.fa-sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border-width: 0;\n}\n\n.sr-only-focusable:not(:focus),\n.fa-sr-only-focusable:not(:focus) {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border-width: 0;\n}\n\n.svg-inline--fa .fa-primary {\n  fill: var(--fa-primary-color, currentColor);\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa .fa-secondary {\n  fill: var(--fa-secondary-color, currentColor);\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-primary {\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-secondary {\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa mask .fa-primary,\n.svg-inline--fa mask .fa-secondary {\n  fill: black;\n}\n\n.fad.fa-inverse,\n.fa-duotone.fa-inverse {\n  color: var(--fa-inverse, #fff);\n}";
+  var baseStyles = ":root, :host {\n  --fa-font-solid: normal 900 1em/1 \"Font Awesome 7 Free\";\n  --fa-font-regular: normal 400 1em/1 \"Font Awesome 7 Free\";\n  --fa-font-light: normal 300 1em/1 \"Font Awesome 7 Pro\";\n  --fa-font-thin: normal 100 1em/1 \"Font Awesome 7 Pro\";\n  --fa-font-duotone: normal 900 1em/1 \"Font Awesome 7 Duotone\";\n  --fa-font-duotone-regular: normal 400 1em/1 \"Font Awesome 7 Duotone\";\n  --fa-font-duotone-light: normal 300 1em/1 \"Font Awesome 7 Duotone\";\n  --fa-font-duotone-thin: normal 100 1em/1 \"Font Awesome 7 Duotone\";\n  --fa-font-brands: normal 400 1em/1 \"Font Awesome 7 Brands\";\n  --fa-font-sharp-solid: normal 900 1em/1 \"Font Awesome 7 Sharp\";\n  --fa-font-sharp-regular: normal 400 1em/1 \"Font Awesome 7 Sharp\";\n  --fa-font-sharp-light: normal 300 1em/1 \"Font Awesome 7 Sharp\";\n  --fa-font-sharp-thin: normal 100 1em/1 \"Font Awesome 7 Sharp\";\n  --fa-font-sharp-duotone-solid: normal 900 1em/1 \"Font Awesome 7 Sharp Duotone\";\n  --fa-font-sharp-duotone-regular: normal 400 1em/1 \"Font Awesome 7 Sharp Duotone\";\n  --fa-font-sharp-duotone-light: normal 300 1em/1 \"Font Awesome 7 Sharp Duotone\";\n  --fa-font-sharp-duotone-thin: normal 100 1em/1 \"Font Awesome 7 Sharp Duotone\";\n  --fa-font-slab-regular: normal 400 1em/1 \"Font Awesome 7 Slab\";\n  --fa-font-slab-press-regular: normal 400 1em/1 \"Font Awesome 7 Slab Press\";\n  --fa-font-whiteboard-semibold: normal 600 1em/1 \"Font Awesome 7 Whiteboard\";\n  --fa-font-thumbprint-light: normal 300 1em/1 \"Font Awesome 7 Thumbprint\";\n  --fa-font-notdog-solid: normal 900 1em/1 \"Font Awesome 7 Notdog\";\n  --fa-font-notdog-duo-solid: normal 900 1em/1 \"Font Awesome 7 Notdog Duo\";\n  --fa-font-etch-solid: normal 900 1em/1 \"Font Awesome 7 Etch\";\n  --fa-font-jelly-regular: normal 400 1em/1 \"Font Awesome 7 Jelly\";\n  --fa-font-jelly-fill-regular: normal 400 1em/1 \"Font Awesome 7 Jelly Fill\";\n  --fa-font-jelly-duo-regular: normal 400 1em/1 \"Font Awesome 7 Jelly Duo\";\n  --fa-font-chisel-regular: normal 400 1em/1 \"Font Awesome 7 Chisel\";\n  --fa-font-utility-semibold: normal 600 1em/1 \"Font Awesome 7 Utility\";\n  --fa-font-utility-duo-semibold: normal 600 1em/1 \"Font Awesome 7 Utility Duo\";\n  --fa-font-utility-fill-semibold: normal 600 1em/1 \"Font Awesome 7 Utility Fill\";\n}\n\n.svg-inline--fa {\n  box-sizing: content-box;\n  display: var(--fa-display, inline-block);\n  height: 1em;\n  overflow: visible;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.svg-inline--fa.fa-2xs {\n  vertical-align: 0.1em;\n}\n.svg-inline--fa.fa-xs {\n  vertical-align: 0em;\n}\n.svg-inline--fa.fa-sm {\n  vertical-align: -0.0714285714em;\n}\n.svg-inline--fa.fa-lg {\n  vertical-align: -0.2em;\n}\n.svg-inline--fa.fa-xl {\n  vertical-align: -0.25em;\n}\n.svg-inline--fa.fa-2xl {\n  vertical-align: -0.3125em;\n}\n.svg-inline--fa.fa-pull-left,\n.svg-inline--fa .fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-pull-right,\n.svg-inline--fa .fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-li {\n  width: var(--fa-li-width, 2em);\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */\n}\n\n.fa-layers-counter, .fa-layers-text {\n  display: inline-block;\n  position: absolute;\n  text-align: center;\n}\n\n.fa-layers {\n  display: inline-block;\n  height: 1em;\n  position: relative;\n  text-align: center;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.fa-layers .svg-inline--fa {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  transform-origin: center center;\n}\n\n.fa-layers-text {\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  transform-origin: center center;\n}\n\n.fa-layers-counter {\n  background-color: var(--fa-counter-background-color, #ff253a);\n  border-radius: var(--fa-counter-border-radius, 1em);\n  box-sizing: border-box;\n  color: var(--fa-inverse, #fff);\n  line-height: var(--fa-counter-line-height, 1);\n  max-width: var(--fa-counter-max-width, 5em);\n  min-width: var(--fa-counter-min-width, 1.5em);\n  overflow: hidden;\n  padding: var(--fa-counter-padding, 0.25em 0.5em);\n  right: var(--fa-right, 0);\n  text-overflow: ellipsis;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-counter-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-bottom-right {\n  bottom: var(--fa-bottom, 0);\n  right: var(--fa-right, 0);\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom right;\n}\n\n.fa-layers-bottom-left {\n  bottom: var(--fa-bottom, 0);\n  left: var(--fa-left, 0);\n  right: auto;\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom left;\n}\n\n.fa-layers-top-right {\n  top: var(--fa-top, 0);\n  right: var(--fa-right, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-top-left {\n  left: var(--fa-left, 0);\n  right: auto;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top left;\n}\n\n.fa-1x {\n  font-size: 1em;\n}\n\n.fa-2x {\n  font-size: 2em;\n}\n\n.fa-3x {\n  font-size: 3em;\n}\n\n.fa-4x {\n  font-size: 4em;\n}\n\n.fa-5x {\n  font-size: 5em;\n}\n\n.fa-6x {\n  font-size: 6em;\n}\n\n.fa-7x {\n  font-size: 7em;\n}\n\n.fa-8x {\n  font-size: 8em;\n}\n\n.fa-9x {\n  font-size: 9em;\n}\n\n.fa-10x {\n  font-size: 10em;\n}\n\n.fa-2xs {\n  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xs {\n  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-sm {\n  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-lg {\n  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xl {\n  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-2xl {\n  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-width-auto {\n  --fa-width: auto;\n}\n\n.fa-fw,\n.fa-width-fixed {\n  --fa-width: 1.25em;\n}\n\n.fa-ul {\n  list-style-type: none;\n  margin-inline-start: var(--fa-li-margin, 2.5em);\n  padding-inline-start: 0;\n}\n.fa-ul > li {\n  position: relative;\n}\n\n.fa-li {\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  position: absolute;\n  text-align: center;\n  width: var(--fa-li-width, 2em);\n  line-height: inherit;\n}\n\n/* Heads Up: Bordered Icons will not be supported in the future!\n  - This feature will be deprecated in the next major release of Font Awesome (v8)!\n  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.\n*/\n/* Notes:\n* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)\n* --@{v.$css-prefix}-border-padding =\n  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)\n  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)\n*/\n.fa-border {\n  border-color: var(--fa-border-color, #eee);\n  border-radius: var(--fa-border-radius, 0.1em);\n  border-style: var(--fa-border-style, solid);\n  border-width: var(--fa-border-width, 0.0625em);\n  box-sizing: var(--fa-border-box-sizing, content-box);\n  padding: var(--fa-border-padding, 0.1875em 0.25em);\n}\n\n.fa-pull-left,\n.fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-pull-right,\n.fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-beat {\n  animation-name: fa-beat;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-bounce {\n  animation-name: fa-bounce;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));\n}\n\n.fa-fade {\n  animation-name: fa-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-beat-fade {\n  animation-name: fa-beat-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-flip {\n  animation-name: fa-flip;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-shake {\n  animation-name: fa-shake;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin {\n  animation-name: fa-spin;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 2s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin-reverse {\n  --fa-animation-direction: reverse;\n}\n\n.fa-pulse,\n.fa-spin-pulse {\n  animation-name: fa-spin;\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, steps(8));\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .fa-beat,\n  .fa-bounce,\n  .fa-fade,\n  .fa-beat-fade,\n  .fa-flip,\n  .fa-pulse,\n  .fa-shake,\n  .fa-spin,\n  .fa-spin-pulse {\n    animation: none !important;\n    transition: none !important;\n  }\n}\n@keyframes fa-beat {\n  0%, 90% {\n    transform: scale(1);\n  }\n  45% {\n    transform: scale(var(--fa-beat-scale, 1.25));\n  }\n}\n@keyframes fa-bounce {\n  0% {\n    transform: scale(1, 1) translateY(0);\n  }\n  10% {\n    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n  }\n  30% {\n    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n  }\n  50% {\n    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n  }\n  57% {\n    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n  }\n  64% {\n    transform: scale(1, 1) translateY(0);\n  }\n  100% {\n    transform: scale(1, 1) translateY(0);\n  }\n}\n@keyframes fa-fade {\n  50% {\n    opacity: var(--fa-fade-opacity, 0.4);\n  }\n}\n@keyframes fa-beat-fade {\n  0%, 100% {\n    opacity: var(--fa-beat-fade-opacity, 0.4);\n    transform: scale(1);\n  }\n  50% {\n    opacity: 1;\n    transform: scale(var(--fa-beat-fade-scale, 1.125));\n  }\n}\n@keyframes fa-flip {\n  50% {\n    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n  }\n}\n@keyframes fa-shake {\n  0% {\n    transform: rotate(-15deg);\n  }\n  4% {\n    transform: rotate(15deg);\n  }\n  8%, 24% {\n    transform: rotate(-18deg);\n  }\n  12%, 28% {\n    transform: rotate(18deg);\n  }\n  16% {\n    transform: rotate(-22deg);\n  }\n  20% {\n    transform: rotate(22deg);\n  }\n  32% {\n    transform: rotate(-12deg);\n  }\n  36% {\n    transform: rotate(12deg);\n  }\n  40%, 100% {\n    transform: rotate(0deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.fa-rotate-90 {\n  transform: rotate(90deg);\n}\n\n.fa-rotate-180 {\n  transform: rotate(180deg);\n}\n\n.fa-rotate-270 {\n  transform: rotate(270deg);\n}\n\n.fa-flip-horizontal {\n  transform: scale(-1, 1);\n}\n\n.fa-flip-vertical {\n  transform: scale(1, -1);\n}\n\n.fa-flip-both,\n.fa-flip-horizontal.fa-flip-vertical {\n  transform: scale(-1, -1);\n}\n\n.fa-rotate-by {\n  transform: rotate(var(--fa-rotate-angle, 0));\n}\n\n.svg-inline--fa .fa-primary {\n  fill: var(--fa-primary-color, currentColor);\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa .fa-secondary {\n  fill: var(--fa-secondary-color, currentColor);\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-primary {\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-secondary {\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa mask .fa-primary,\n.svg-inline--fa mask .fa-secondary {\n  fill: black;\n}\n\n.svg-inline--fa.fa-inverse {\n  fill: var(--fa-inverse, #fff);\n}\n\n.fa-stack {\n  display: inline-block;\n  height: 2em;\n  line-height: 2em;\n  position: relative;\n  vertical-align: middle;\n  width: 2.5em;\n}\n\n.fa-inverse {\n  color: var(--fa-inverse, #fff);\n}\n\n.svg-inline--fa.fa-stack-1x {\n  --fa-width: 1.25em;\n  height: 1em;\n  width: var(--fa-width);\n}\n.svg-inline--fa.fa-stack-2x {\n  --fa-width: 2.5em;\n  height: 2em;\n  width: var(--fa-width);\n}\n\n.fa-stack-1x,\n.fa-stack-2x {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  z-index: var(--fa-stack-z-index, auto);\n}";
 
   function css() {
-    var dfp = DEFAULT_FAMILY_PREFIX;
+    var dcp = DEFAULT_CSS_PREFIX;
     var drc = DEFAULT_REPLACEMENT_CLASS;
-    var fp = config.familyPrefix;
+    var fp = config.cssPrefix;
     var rc = config.replacementClass;
     var s = baseStyles;
-
-    if (fp !== dfp || rc !== drc) {
-      var dPatt = new RegExp("\\.".concat(dfp, "\\-"), 'g');
-      var customPropPatt = new RegExp("\\--".concat(dfp, "\\-"), 'g');
+    if (fp !== dcp || rc !== drc) {
+      var dPatt = new RegExp("\\.".concat(dcp, "\\-"), 'g');
+      var customPropPatt = new RegExp("\\--".concat(dcp, "\\-"), 'g');
       var rPatt = new RegExp("\\.".concat(drc), 'g');
       s = s.replace(dPatt, ".".concat(fp, "-")).replace(customPropPatt, "--".concat(fp, "-")).replace(rPatt, ".".concat(rc));
     }
-
     return s;
   }
-
   var _cssInserted = false;
-
   function ensureCss() {
     if (config.autoAddCss && !_cssInserted) {
       insertCss(css());
       _cssInserted = true;
     }
   }
-
   var InjectCSS = {
     mixout: function mixout() {
       return {
@@ -520,30 +1283,26 @@ var cydj = (function (exports) {
     }
   };
 
-  var w = WINDOW || {};
-  if (!w[NAMESPACE_IDENTIFIER]) w[NAMESPACE_IDENTIFIER] = {};
-  if (!w[NAMESPACE_IDENTIFIER].styles) w[NAMESPACE_IDENTIFIER].styles = {};
-  if (!w[NAMESPACE_IDENTIFIER].hooks) w[NAMESPACE_IDENTIFIER].hooks = {};
-  if (!w[NAMESPACE_IDENTIFIER].shims) w[NAMESPACE_IDENTIFIER].shims = [];
-  var namespace = w[NAMESPACE_IDENTIFIER];
+  var w$2 = WINDOW || {};
+  if (!w$2[NAMESPACE_IDENTIFIER]) w$2[NAMESPACE_IDENTIFIER] = {};
+  if (!w$2[NAMESPACE_IDENTIFIER].styles) w$2[NAMESPACE_IDENTIFIER].styles = {};
+  if (!w$2[NAMESPACE_IDENTIFIER].hooks) w$2[NAMESPACE_IDENTIFIER].hooks = {};
+  if (!w$2[NAMESPACE_IDENTIFIER].shims) w$2[NAMESPACE_IDENTIFIER].shims = [];
+  var namespace = w$2[NAMESPACE_IDENTIFIER];
 
   var functions = [];
-
-  var listener = function listener() {
-    DOCUMENT.removeEventListener('DOMContentLoaded', listener);
+  var _listener = function listener() {
+    DOCUMENT.removeEventListener('DOMContentLoaded', _listener);
     loaded = 1;
     functions.map(function (fn) {
       return fn();
     });
   };
-
   var loaded = false;
-
   if (IS_DOM) {
     loaded = (DOCUMENT.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(DOCUMENT.readyState);
-    if (!loaded) DOCUMENT.addEventListener('DOMContentLoaded', listener);
+    if (!loaded) DOCUMENT.addEventListener('DOMContentLoaded', _listener);
   }
-
   function domready (fn) {
     if (!IS_DOM) return;
     loaded ? setTimeout(fn, 0) : functions.push(fn);
@@ -551,11 +1310,10 @@ var cydj = (function (exports) {
 
   function toHtml(abstractNodes) {
     var tag = abstractNodes.tag,
-        _abstractNodes$attrib = abstractNodes.attributes,
-        attributes = _abstractNodes$attrib === void 0 ? {} : _abstractNodes$attrib,
-        _abstractNodes$childr = abstractNodes.children,
-        children = _abstractNodes$childr === void 0 ? [] : _abstractNodes$childr;
-
+      _abstractNodes$attrib = abstractNodes.attributes,
+      attributes = _abstractNodes$attrib === void 0 ? {} : _abstractNodes$attrib,
+      _abstractNodes$childr = abstractNodes.children,
+      children = _abstractNodes$childr === void 0 ? [] : _abstractNodes$childr;
     if (typeof abstractNodes === 'string') {
       return htmlEscape(abstractNodes);
     } else {
@@ -584,16 +1342,13 @@ var cydj = (function (exports) {
    * @param  {Object}   thisContext  The context for the reducer.
    * @return {mixed}                 The final result.
    */
-
-
   var reduce = function fastReduceObject(subject, fn, initialValue, thisContext) {
     var keys = Object.keys(subject),
-        length = keys.length,
-        iterator = fn,
-        i,
-        key,
-        result;
-
+      length = keys.length,
+      iterator = fn,
+      i,
+      key,
+      result;
     if (initialValue === undefined) {
       i = 1;
       result = subject[keys[0]];
@@ -601,145 +1356,78 @@ var cydj = (function (exports) {
       i = 0;
       result = initialValue;
     }
-
     for (; i < length; i++) {
       key = keys[i];
       result = iterator(result, subject[key], key, subject);
     }
-
     return result;
   };
 
   /**
-   * ucs2decode() and codePointAt() are both works of Mathias Bynens and licensed under MIT
-   *
-   * Copyright Mathias Bynens <https://mathiasbynens.be/>
-
-   * Permission is hereby granted, free of charge, to any person obtaining
-   * a copy of this software and associated documentation files (the
-   * "Software"), to deal in the Software without restriction, including
-   * without limitation the rights to use, copy, modify, merge, publish,
-   * distribute, sublicense, and/or sell copies of the Software, and to
-   * permit persons to whom the Software is furnished to do so, subject to
-   * the following conditions:
-
-   * The above copyright notice and this permission notice shall be
-   * included in all copies or substantial portions of the Software.
-
-   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-   * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-   * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-   * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-   * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-   * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-   * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+   * Return hexadecimal string for a unicode character
+   * Returns `null` when more than one character (not bytes!) are passed
+   * For example: 'K' → '7B'
    */
-  function ucs2decode(string) {
-    var output = [];
-    var counter = 0;
-    var length = string.length;
-
-    while (counter < length) {
-      var value = string.charCodeAt(counter++);
-
-      if (value >= 0xD800 && value <= 0xDBFF && counter < length) {
-        var extra = string.charCodeAt(counter++);
-
-        if ((extra & 0xFC00) == 0xDC00) {
-          // eslint-disable-line eqeqeq
-          output.push(((value & 0x3FF) << 10) + (extra & 0x3FF) + 0x10000);
-        } else {
-          output.push(value);
-          counter--;
-        }
-      } else {
-        output.push(value);
-      }
-    }
-
-    return output;
-  }
-
   function toHex(unicode) {
-    var decoded = ucs2decode(unicode);
-    return decoded.length === 1 ? decoded[0].toString(16) : null;
-  }
-  function codePointAt(string, index) {
-    var size = string.length;
-    var first = string.charCodeAt(index);
-    var second;
-
-    if (first >= 0xD800 && first <= 0xDBFF && size > index + 1) {
-      second = string.charCodeAt(index + 1);
-
-      if (second >= 0xDC00 && second <= 0xDFFF) {
-        return (first - 0xD800) * 0x400 + second - 0xDC00 + 0x10000;
-      }
-    }
-
-    return first;
+    if (_toConsumableArray(unicode).length !== 1) return null;
+    return unicode.codePointAt(0).toString(16);
   }
 
   function normalizeIcons(icons) {
     return Object.keys(icons).reduce(function (acc, iconName) {
       var icon = icons[iconName];
       var expanded = !!icon.icon;
-
       if (expanded) {
         acc[icon.iconName] = icon.icon;
       } else {
         acc[iconName] = icon;
       }
-
       return acc;
     }, {});
   }
-
   function defineIcons(prefix, icons) {
     var params = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
     var _params$skipHooks = params.skipHooks,
-        skipHooks = _params$skipHooks === void 0 ? false : _params$skipHooks;
+      skipHooks = _params$skipHooks === void 0 ? false : _params$skipHooks;
     var normalized = normalizeIcons(icons);
-
     if (typeof namespace.hooks.addPack === 'function' && !skipHooks) {
       namespace.hooks.addPack(prefix, normalizeIcons(icons));
     } else {
       namespace.styles[prefix] = _objectSpread2(_objectSpread2({}, namespace.styles[prefix] || {}), normalized);
     }
+
     /**
      * Font Awesome 4 used the prefix of `fa` for all icons. With the introduction
      * of new styles we needed to differentiate between them. Prefix `fa` is now an alias
      * for `fas` so we'll ease the upgrade process for our users by automatically defining
      * this as well.
      */
-
-
     if (prefix === 'fas') {
       defineIcons('fa', icons);
     }
   }
 
   var styles = namespace.styles,
-      shims = namespace.shims;
-  var LONG_STYLE = Object.values(PREFIX_TO_LONG_STYLE);
+    shims = namespace.shims;
+  var FAMILY_NAMES = Object.keys(PREFIX_TO_LONG_STYLE);
+  var PREFIXES_FOR_FAMILY = FAMILY_NAMES.reduce(function (acc, familyId) {
+    acc[familyId] = Object.keys(PREFIX_TO_LONG_STYLE[familyId]);
+    return acc;
+  }, {});
   var _defaultUsablePrefix = null;
   var _byUnicode = {};
   var _byLigature = {};
   var _byOldName = {};
   var _byOldUnicode = {};
   var _byAlias = {};
-  var PREFIXES = Object.keys(PREFIX_TO_STYLE);
-
   function isReserved(name) {
     return ~RESERVED_CLASSES.indexOf(name);
   }
-
-  function getIconName(familyPrefix, cls) {
+  function getIconName(cssPrefix, cls) {
     var parts = cls.split('-');
     var prefix = parts[0];
     var iconName = parts.slice(1).join('-');
-
-    if (prefix === familyPrefix && iconName !== '' && !isReserved(iconName)) {
+    if (prefix === cssPrefix && iconName !== '' && !isReserved(iconName)) {
       return iconName;
     } else {
       return null;
@@ -747,40 +1435,35 @@ var cydj = (function (exports) {
   }
   var build = function build() {
     var lookup = function lookup(reducer) {
-      return reduce(styles, function (o, style, prefix) {
-        o[prefix] = reduce(style, reducer, {});
-        return o;
+      return reduce(styles, function (o$$1, style, prefix) {
+        o$$1[prefix] = reduce(style, reducer, {});
+        return o$$1;
       }, {});
     };
-
     _byUnicode = lookup(function (acc, icon, iconName) {
       if (icon[3]) {
         acc[icon[3]] = iconName;
       }
-
       if (icon[2]) {
-        var aliases = icon[2].filter(function (a) {
-          return typeof a === 'number';
+        var aliases = icon[2].filter(function (a$$1) {
+          return typeof a$$1 === 'number';
         });
         aliases.forEach(function (alias) {
           acc[alias.toString(16)] = iconName;
         });
       }
-
       return acc;
     });
     _byLigature = lookup(function (acc, icon, iconName) {
       acc[iconName] = iconName;
-
       if (icon[2]) {
-        var aliases = icon[2].filter(function (a) {
-          return typeof a === 'string';
+        var aliases = icon[2].filter(function (a$$1) {
+          return typeof a$$1 === 'string';
         });
         aliases.forEach(function (alias) {
           acc[alias] = iconName;
         });
       }
-
       return acc;
     });
     _byAlias = lookup(function (acc, icon, iconName) {
@@ -790,33 +1473,30 @@ var cydj = (function (exports) {
         acc[alias] = iconName;
       });
       return acc;
-    }); // If we have a Kit, we can't determine if regular is available since we
-    // could be auto-fetching it. We'll have to assume that it is available.
+    });
 
+    // If we have a Kit, we can't determine if regular is available since we
+    // could be auto-fetching it. We'll have to assume that it is available.
     var hasRegular = 'far' in styles || config.autoFetchSvg;
     var shimLookups = reduce(shims, function (acc, shim) {
       var maybeNameMaybeUnicode = shim[0];
       var prefix = shim[1];
       var iconName = shim[2];
-
       if (prefix === 'far' && !hasRegular) {
         prefix = 'fas';
       }
-
       if (typeof maybeNameMaybeUnicode === 'string') {
         acc.names[maybeNameMaybeUnicode] = {
           prefix: prefix,
           iconName: iconName
         };
       }
-
       if (typeof maybeNameMaybeUnicode === 'number') {
         acc.unicodes[maybeNameMaybeUnicode.toString(16)] = {
           prefix: prefix,
           iconName: iconName
         };
       }
-
       return acc;
     }, {
       names: {},
@@ -824,10 +1504,14 @@ var cydj = (function (exports) {
     });
     _byOldName = shimLookups.names;
     _byOldUnicode = shimLookups.unicodes;
-    _defaultUsablePrefix = getCanonicalPrefix(config.styleDefault);
+    _defaultUsablePrefix = getCanonicalPrefix(config.styleDefault, {
+      family: config.familyDefault
+    });
   };
-  onChange(function (c) {
-    _defaultUsablePrefix = getCanonicalPrefix(c.styleDefault);
+  onChange(function (c$$1) {
+    _defaultUsablePrefix = getCanonicalPrefix(c$$1.styleDefault, {
+      family: config.familyDefault
+    });
   });
   build();
   function byUnicode(prefix, unicode) {
@@ -866,84 +1550,179 @@ var cydj = (function (exports) {
       rest: []
     };
   };
-  function getCanonicalPrefix(styleOrPrefix) {
-    var style = PREFIX_TO_STYLE[styleOrPrefix];
-    var prefix = STYLE_TO_PREFIX[styleOrPrefix] || STYLE_TO_PREFIX[style];
-    var defined = styleOrPrefix in namespace.styles ? styleOrPrefix : null;
-    return prefix || defined || null;
+  function getFamilyId(values) {
+    var family = i;
+    var famProps = FAMILY_NAMES.reduce(function (acc, familyId) {
+      acc[familyId] = "".concat(config.cssPrefix, "-").concat(familyId);
+      return acc;
+    }, {});
+    rt.forEach(function (familyId) {
+      if (values.includes(famProps[familyId]) || values.some(function (v$$1) {
+        return PREFIXES_FOR_FAMILY[familyId].includes(v$$1);
+      })) {
+        family = familyId;
+      }
+    });
+    return family;
   }
+  function getCanonicalPrefix(styleOrPrefix) {
+    var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var _params$family = params.family,
+      family = _params$family === void 0 ? i : _params$family;
+    var style = PREFIX_TO_STYLE[family][styleOrPrefix];
+
+    // handles the exception of passing in only a family of 'duotone' with no style
+    if (family === t && !styleOrPrefix) {
+      return 'fad';
+    }
+    var prefix = STYLE_TO_PREFIX[family][styleOrPrefix] || STYLE_TO_PREFIX[family][style];
+    var defined = styleOrPrefix in namespace.styles ? styleOrPrefix : null;
+    var result = prefix || defined || null;
+    return result;
+  }
+  function moveNonFaClassesToRest(classNames) {
+    var rest = [];
+    var iconName = null;
+    classNames.forEach(function (cls) {
+      var result = getIconName(config.cssPrefix, cls);
+      if (result) {
+        iconName = result;
+      } else if (cls) {
+        rest.push(cls);
+      }
+    });
+    return {
+      iconName: iconName,
+      rest: rest
+    };
+  }
+  function sortedUniqueValues(arr) {
+    return arr.sort().filter(function (value, index, arr) {
+      return arr.indexOf(value) === index;
+    });
+  }
+  var _faCombinedClasses = Zt$1.concat(Yt);
   function getCanonicalIcon(values) {
     var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     var _params$skipLookups = params.skipLookups,
-        skipLookups = _params$skipLookups === void 0 ? false : _params$skipLookups;
+      skipLookups = _params$skipLookups === void 0 ? false : _params$skipLookups;
     var givenPrefix = null;
-    var canonical = values.reduce(function (acc, cls) {
-      var iconName = getIconName(config.familyPrefix, cls);
-
-      if (styles[cls]) {
-        cls = LONG_STYLE.includes(cls) ? LONG_STYLE_TO_PREFIX[cls] : cls;
-        givenPrefix = cls;
-        acc.prefix = cls;
-      } else if (PREFIXES.indexOf(cls) > -1) {
-        givenPrefix = cls;
-        acc.prefix = getCanonicalPrefix(cls);
-      } else if (iconName) {
-        acc.iconName = iconName;
-      } else if (cls !== config.replacementClass) {
-        acc.rest.push(cls);
+    var faStyleOrFamilyClasses = sortedUniqueValues(values.filter(function (cls) {
+      return _faCombinedClasses.includes(cls);
+    }));
+    var nonStyleOrFamilyClasses = sortedUniqueValues(values.filter(function (cls) {
+      return !_faCombinedClasses.includes(cls);
+    }));
+    var faStyles = faStyleOrFamilyClasses.filter(function (cls) {
+      givenPrefix = cls;
+      return !Q.includes(cls);
+    });
+    var _faStyles = _slicedToArray(faStyles, 1),
+      _faStyles$ = _faStyles[0],
+      styleFromValues = _faStyles$ === void 0 ? null : _faStyles$;
+    var family = getFamilyId(faStyleOrFamilyClasses);
+    var canonical = _objectSpread2(_objectSpread2({}, moveNonFaClassesToRest(nonStyleOrFamilyClasses)), {}, {
+      prefix: getCanonicalPrefix(styleFromValues, {
+        family: family
+      })
+    });
+    return _objectSpread2(_objectSpread2(_objectSpread2({}, canonical), getDefaultCanonicalPrefix({
+      values: values,
+      family: family,
+      styles: styles,
+      config: config,
+      canonical: canonical,
+      givenPrefix: givenPrefix
+    })), applyShimAndAlias(skipLookups, givenPrefix, canonical));
+  }
+  function applyShimAndAlias(skipLookups, givenPrefix, canonical) {
+    var prefix = canonical.prefix,
+      iconName = canonical.iconName;
+    if (skipLookups || !prefix || !iconName) {
+      return {
+        prefix: prefix,
+        iconName: iconName
+      };
+    }
+    var shim = givenPrefix === 'fa' ? byOldName(iconName) : {};
+    var aliasIconName = byAlias(prefix, iconName);
+    iconName = shim.iconName || aliasIconName || iconName;
+    prefix = shim.prefix || prefix;
+    if (prefix === 'far' && !styles['far'] && styles['fas'] && !config.autoFetchSvg) {
+      // Allow a fallback from the regular style to solid if regular is not available
+      // but only if we aren't auto-fetching SVGs
+      prefix = 'fas';
+    }
+    return {
+      prefix: prefix,
+      iconName: iconName
+    };
+  }
+  var newCanonicalFamilies = rt.filter(function (familyId) {
+    return familyId !== i || familyId !== t;
+  });
+  var newCanonicalStyles = Object.keys(Ht$1).filter(function (key) {
+    return key !== i;
+  }).map(function (key) {
+    return Object.keys(Ht$1[key]);
+  }).flat();
+  function getDefaultCanonicalPrefix(prefixOptions) {
+    var values = prefixOptions.values,
+      family = prefixOptions.family,
+      canonical = prefixOptions.canonical,
+      _prefixOptions$givenP = prefixOptions.givenPrefix,
+      givenPrefix = _prefixOptions$givenP === void 0 ? '' : _prefixOptions$givenP,
+      _prefixOptions$styles = prefixOptions.styles,
+      styles = _prefixOptions$styles === void 0 ? {} : _prefixOptions$styles,
+      _prefixOptions$config = prefixOptions.config,
+      config$$1 = _prefixOptions$config === void 0 ? {} : _prefixOptions$config;
+    var isDuotoneFamily = family === t;
+    var valuesHasDuotone = values.includes('fa-duotone') || values.includes('fad');
+    var defaultFamilyIsDuotone = config$$1.familyDefault === 'duotone';
+    var canonicalPrefixIsDuotone = canonical.prefix === 'fad' || canonical.prefix === 'fa-duotone';
+    if (!isDuotoneFamily && (valuesHasDuotone || defaultFamilyIsDuotone || canonicalPrefixIsDuotone)) {
+      canonical.prefix = 'fad';
+    }
+    if (values.includes('fa-brands') || values.includes('fab')) {
+      canonical.prefix = 'fab';
+    }
+    if (!canonical.prefix && newCanonicalFamilies.includes(family)) {
+      var validPrefix = Object.keys(styles).find(function (key) {
+        return newCanonicalStyles.includes(key);
+      });
+      if (validPrefix || config$$1.autoFetchSvg) {
+        var defaultPrefix = Ut.get(family).defaultShortPrefixId;
+        canonical.prefix = defaultPrefix;
+        canonical.iconName = byAlias(canonical.prefix, canonical.iconName) || canonical.iconName;
       }
-
-      if (!skipLookups && acc.prefix && acc.iconName) {
-        var shim = givenPrefix === 'fa' ? byOldName(acc.iconName) : {};
-        var aliasIconName = byAlias(acc.prefix, acc.iconName);
-
-        if (shim.prefix) {
-          givenPrefix = null;
-        }
-
-        acc.iconName = shim.iconName || aliasIconName || acc.iconName;
-        acc.prefix = shim.prefix || acc.prefix;
-
-        if (acc.prefix === 'far' && !styles['far'] && styles['fas'] && !config.autoFetchSvg) {
-          // Allow a fallback from the regular style to solid if regular is not available
-          // but only if we aren't auto-fetching SVGs
-          acc.prefix = 'fas';
-        }
-      }
-
-      return acc;
-    }, emptyCanonicalIcon());
-
+    }
     if (canonical.prefix === 'fa' || givenPrefix === 'fa') {
       // The fa prefix is not canonical. So if it has made it through until this point
       // we will shift it to the correct prefix.
       canonical.prefix = getDefaultUsablePrefix() || 'fas';
     }
-
     return canonical;
   }
 
   var Library = /*#__PURE__*/function () {
     function Library() {
       _classCallCheck(this, Library);
-
       this.definitions = {};
     }
-
-    _createClass(Library, [{
+    return _createClass(Library, [{
       key: "add",
       value: function add() {
         var _this = this;
-
         for (var _len = arguments.length, definitions = new Array(_len), _key = 0; _key < _len; _key++) {
           definitions[_key] = arguments[_key];
         }
-
         var additions = definitions.reduce(this._pullDefinitions, {});
         Object.keys(additions).forEach(function (key) {
           _this.definitions[key] = _objectSpread2(_objectSpread2({}, _this.definitions[key] || {}), additions[key]);
           defineIcons(key, additions[key]);
-          var longPrefix = PREFIX_TO_LONG_STYLE[key];
+
+          // To keep support for older Classic styles, also add longer prefixes
+          var longPrefix = PREFIX_TO_LONG_STYLE[i][key];
           if (longPrefix) defineIcons(longPrefix, additions[key]);
           build();
         });
@@ -961,12 +1740,11 @@ var cydj = (function (exports) {
         } : definition;
         Object.keys(normalized).map(function (key) {
           var _normalized$key = normalized[key],
-              prefix = _normalized$key.prefix,
-              iconName = _normalized$key.iconName,
-              icon = _normalized$key.icon;
+            prefix = _normalized$key.prefix,
+            iconName = _normalized$key.iconName,
+            icon = _normalized$key.icon;
           var aliases = icon[2];
           if (!additions[prefix]) additions[prefix] = {};
-
           if (aliases.length > 0) {
             aliases.forEach(function (alias) {
               if (typeof alias === 'string') {
@@ -974,14 +1752,11 @@ var cydj = (function (exports) {
               }
             });
           }
-
           additions[prefix][iconName] = icon;
         });
         return additions;
       }
     }]);
-
-    return Library;
   }();
 
   var _plugins = [];
@@ -997,51 +1772,43 @@ var cydj = (function (exports) {
         delete providers[k];
       }
     });
-
     _plugins.forEach(function (plugin) {
       var mixout = plugin.mixout ? plugin.mixout() : {};
       Object.keys(mixout).forEach(function (tk) {
         if (typeof mixout[tk] === 'function') {
           obj[tk] = mixout[tk];
         }
-
         if (_typeof(mixout[tk]) === 'object') {
           Object.keys(mixout[tk]).forEach(function (sk) {
             if (!obj[tk]) {
               obj[tk] = {};
             }
-
             obj[tk][sk] = mixout[tk][sk];
           });
         }
       });
-
       if (plugin.hooks) {
         var hooks = plugin.hooks();
         Object.keys(hooks).forEach(function (hook) {
           if (!_hooks[hook]) {
             _hooks[hook] = [];
           }
-
           _hooks[hook].push(hooks[hook]);
         });
       }
-
       if (plugin.provides) {
         plugin.provides(providers);
       }
     });
-
     return obj;
   }
   function chainHooks(hook, accumulator) {
     for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
       args[_key - 2] = arguments[_key];
     }
-
     var hookFns = _hooks[hook] || [];
     hookFns.forEach(function (hookFn) {
-      accumulator = hookFn.apply(null, [accumulator].concat(args)); // eslint-disable-line no-useless-call
+      accumulator = hookFn.apply(null, [accumulator].concat(args));
     });
     return accumulator;
   }
@@ -1049,7 +1816,6 @@ var cydj = (function (exports) {
     for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
       args[_key2 - 1] = arguments[_key2];
     }
-
     var hookFns = _hooks[hook] || [];
     hookFns.forEach(function (hookFn) {
       hookFn.apply(null, args);
@@ -1066,7 +1832,6 @@ var cydj = (function (exports) {
     if (iconLookup.prefix === 'fa') {
       iconLookup.prefix = 'fas';
     }
-
     var iconName = iconLookup.iconName;
     var prefix = iconLookup.prefix || getDefaultUsablePrefix();
     if (!iconName) return;
@@ -1082,23 +1847,20 @@ var cydj = (function (exports) {
   var dom = {
     i2svg: function i2svg() {
       var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
       if (IS_DOM) {
         callHooks('beforeI2svg', params);
         callProvided('pseudoElements2svg', params);
         return callProvided('i2svg', params);
       } else {
-        return Promise.reject('Operation requires a DOM of some kind.');
+        return Promise.reject(new Error('Operation requires a DOM of some kind.'));
       }
     },
     watch: function watch() {
       var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var autoReplaceSvgRoot = params.autoReplaceSvgRoot;
-
       if (config.autoReplaceSvg === false) {
         config.autoReplaceSvg = true;
       }
-
       config.observeMutations = true;
       domready(function () {
         autoReplace({
@@ -1113,14 +1875,12 @@ var cydj = (function (exports) {
       if (_icon === null) {
         return null;
       }
-
       if (_typeof(_icon) === 'object' && _icon.prefix && _icon.iconName) {
         return {
           prefix: _icon.prefix,
           iconName: byAlias(_icon.prefix, _icon.iconName) || _icon.iconName
         };
       }
-
       if (Array.isArray(_icon) && _icon.length === 2) {
         var iconName = _icon[1].indexOf('fa-') === 0 ? _icon[1].slice(3) : _icon[1];
         var prefix = getCanonicalPrefix(_icon[0]);
@@ -1129,8 +1889,7 @@ var cydj = (function (exports) {
           iconName: byAlias(prefix, iconName) || iconName
         };
       }
-
-      if (typeof _icon === 'string' && (_icon.indexOf("".concat(config.familyPrefix, "-")) > -1 || _icon.match(ICON_SELECTION_SYNTAX_PATTERN))) {
+      if (typeof _icon === 'string' && (_icon.indexOf("".concat(config.cssPrefix, "-")) > -1 || _icon.match(ICON_SELECTION_SYNTAX_PATTERN))) {
         var canonicalIcon = getCanonicalIcon(_icon.split(' '), {
           skipLookups: true
         });
@@ -1139,10 +1898,8 @@ var cydj = (function (exports) {
           iconName: byAlias(canonicalIcon.prefix, canonicalIcon.iconName) || canonicalIcon.iconName
         };
       }
-
       if (typeof _icon === 'string') {
         var _prefix = getDefaultUsablePrefix();
-
         return {
           prefix: _prefix,
           iconName: byAlias(_prefix, _icon) || _icon
@@ -1159,11 +1916,10 @@ var cydj = (function (exports) {
     findIconDefinition: findIconDefinition,
     toHtml: toHtml
   };
-
   var autoReplace = function autoReplace() {
     var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
     var _params$autoReplaceSv = params.autoReplaceSvgRoot,
-        autoReplaceSvgRoot = _params$autoReplaceSv === void 0 ? DOCUMENT : _params$autoReplaceSv;
+      autoReplaceSvgRoot = _params$autoReplaceSv === void 0 ? DOCUMENT : _params$autoReplaceSv;
     if ((Object.keys(namespace.styles).length > 0 || config.autoFetchSvg) && IS_DOM && config.autoReplaceSvg) api.dom.i2svg({
       node: autoReplaceSvgRoot
     });
@@ -1182,7 +1938,7 @@ var cydj = (function (exports) {
     });
     Object.defineProperty(val, 'node', {
       get: function get() {
-        if (!IS_DOM) return;
+        if (!IS_DOM) return undefined;
         var container = DOCUMENT.createElement('div');
         container.innerHTML = val.html;
         return container.children;
@@ -1193,15 +1949,14 @@ var cydj = (function (exports) {
 
   function asIcon (_ref) {
     var children = _ref.children,
-        main = _ref.main,
-        mask = _ref.mask,
-        attributes = _ref.attributes,
-        styles = _ref.styles,
-        transform = _ref.transform;
-
+      main = _ref.main,
+      mask = _ref.mask,
+      attributes = _ref.attributes,
+      styles = _ref.styles,
+      transform = _ref.transform;
     if (transformIsMeaningful(transform) && main.found && !mask.found) {
       var width = main.width,
-          height = main.height;
+        height = main.height;
       var offset = {
         x: width / height / 2,
         y: 0.5
@@ -1210,7 +1965,6 @@ var cydj = (function (exports) {
         'transform-origin': "".concat(offset.x + transform.x / 16, "em ").concat(offset.y + transform.y / 16, "em")
       }));
     }
-
     return [{
       tag: 'svg',
       attributes: attributes,
@@ -1220,11 +1974,11 @@ var cydj = (function (exports) {
 
   function asSymbol (_ref) {
     var prefix = _ref.prefix,
-        iconName = _ref.iconName,
-        children = _ref.children,
-        attributes = _ref.attributes,
-        symbol = _ref.symbol;
-    var id = symbol === true ? "".concat(prefix, "-").concat(config.familyPrefix, "-").concat(iconName) : symbol;
+      iconName = _ref.iconName,
+      children = _ref.children,
+      attributes = _ref.attributes,
+      symbol = _ref.symbol;
+    var id = symbol === true ? "".concat(prefix, "-").concat(config.cssPrefix, "-").concat(iconName) : symbol;
     return [{
       tag: 'svg',
       attributes: {
@@ -1240,27 +1994,29 @@ var cydj = (function (exports) {
     }];
   }
 
+  // If any of these attributes are present, don't assume the icon is decorative
+  function isLabeled(attributes) {
+    var labels = ['aria-label', 'aria-labelledby', 'title', 'role'];
+    return labels.some(function (label) {
+      return label in attributes;
+    });
+  }
   function makeInlineSvgAbstract(params) {
     var _params$icons = params.icons,
-        main = _params$icons.main,
-        mask = _params$icons.mask,
-        prefix = params.prefix,
-        iconName = params.iconName,
-        transform = params.transform,
-        symbol = params.symbol,
-        title = params.title,
-        maskId = params.maskId,
-        titleId = params.titleId,
-        extra = params.extra,
-        _params$watchable = params.watchable,
-        watchable = _params$watchable === void 0 ? false : _params$watchable;
-
+      main = _params$icons.main,
+      mask = _params$icons.mask,
+      prefix = params.prefix,
+      iconName = params.iconName,
+      transform = params.transform,
+      symbol = params.symbol,
+      maskId = params.maskId,
+      extra = params.extra,
+      _params$watchable = params.watchable,
+      watchable = _params$watchable === void 0 ? false : _params$watchable;
     var _ref = mask.found ? mask : main,
-        width = _ref.width,
-        height = _ref.height;
-
-    var isUploadedIcon = prefix === 'fak';
-    var attrClass = [config.replacementClass, iconName ? "".concat(config.familyPrefix, "-").concat(iconName) : ''].filter(function (c) {
+      width = _ref.width,
+      height = _ref.height;
+    var attrClass = [config.replacementClass, iconName ? "".concat(config.cssPrefix, "-").concat(iconName) : ''].filter(function (c) {
       return extra.classes.indexOf(c) === -1;
     }).filter(function (c) {
       return c !== '' || !!c;
@@ -1272,29 +2028,15 @@ var cydj = (function (exports) {
         'data-icon': iconName,
         'class': attrClass,
         'role': extra.attributes.role || 'img',
-        'xmlns': 'http://www.w3.org/2000/svg',
         'viewBox': "0 0 ".concat(width, " ").concat(height)
       })
     };
-    var uploadedIconWidthStyle = isUploadedIcon && !~extra.classes.indexOf('fa-fw') ? {
-      width: "".concat(width / height * 16 * 0.0625, "em")
-    } : {};
-
+    if (!isLabeled(extra.attributes) && !extra.attributes['aria-hidden']) {
+      content.attributes['aria-hidden'] = 'true';
+    }
     if (watchable) {
       content.attributes[DATA_FA_I2SVG] = '';
     }
-
-    if (title) {
-      content.children.push({
-        tag: 'title',
-        attributes: {
-          id: content.attributes['aria-labelledby'] || "title-".concat(titleId || nextUniqueId())
-        },
-        children: [title]
-      });
-      delete content.attributes.title;
-    }
-
     var args = _objectSpread2(_objectSpread2({}, content), {}, {
       prefix: prefix,
       iconName: iconName,
@@ -1303,22 +2045,19 @@ var cydj = (function (exports) {
       maskId: maskId,
       transform: transform,
       symbol: symbol,
-      styles: _objectSpread2(_objectSpread2({}, uploadedIconWidthStyle), extra.styles)
+      styles: _objectSpread2({}, extra.styles)
     });
-
     var _ref2 = mask.found && main.found ? callProvided('generateAbstractMask', args) || {
-      children: [],
-      attributes: {}
-    } : callProvided('generateAbstractIcon', args) || {
-      children: [],
-      attributes: {}
-    },
-        children = _ref2.children,
-        attributes = _ref2.attributes;
-
+        children: [],
+        attributes: {}
+      } : callProvided('generateAbstractIcon', args) || {
+        children: [],
+        attributes: {}
+      },
+      children = _ref2.children,
+      attributes = _ref2.attributes;
     args.children = children;
     args.attributes = attributes;
-
     if (symbol) {
       return asSymbol(args);
     } else {
@@ -1327,26 +2066,19 @@ var cydj = (function (exports) {
   }
   function makeLayersTextAbstract(params) {
     var content = params.content,
-        width = params.width,
-        height = params.height,
-        transform = params.transform,
-        title = params.title,
-        extra = params.extra,
-        _params$watchable2 = params.watchable,
-        watchable = _params$watchable2 === void 0 ? false : _params$watchable2;
-
-    var attributes = _objectSpread2(_objectSpread2(_objectSpread2({}, extra.attributes), title ? {
-      'title': title
-    } : {}), {}, {
-      'class': extra.classes.join(' ')
+      width = params.width,
+      height = params.height,
+      transform = params.transform,
+      extra = params.extra,
+      _params$watchable2 = params.watchable,
+      watchable = _params$watchable2 === void 0 ? false : _params$watchable2;
+    var attributes = _objectSpread2(_objectSpread2({}, extra.attributes), {}, {
+      class: extra.classes.join(' ')
     });
-
     if (watchable) {
       attributes[DATA_FA_I2SVG] = '';
     }
-
     var styles = _objectSpread2({}, extra.styles);
-
     if (transformIsMeaningful(transform)) {
       styles['transform'] = transformForCss({
         transform: transform,
@@ -1355,66 +2087,34 @@ var cydj = (function (exports) {
       });
       styles['-webkit-transform'] = styles['transform'];
     }
-
     var styleString = joinStyles(styles);
-
     if (styleString.length > 0) {
       attributes['style'] = styleString;
     }
-
     var val = [];
     val.push({
       tag: 'span',
       attributes: attributes,
       children: [content]
     });
-
-    if (title) {
-      val.push({
-        tag: 'span',
-        attributes: {
-          class: 'sr-only'
-        },
-        children: [title]
-      });
-    }
-
     return val;
   }
   function makeLayersCounterAbstract(params) {
     var content = params.content,
-        title = params.title,
-        extra = params.extra;
-
-    var attributes = _objectSpread2(_objectSpread2(_objectSpread2({}, extra.attributes), title ? {
-      'title': title
-    } : {}), {}, {
-      'class': extra.classes.join(' ')
+      extra = params.extra;
+    var attributes = _objectSpread2(_objectSpread2({}, extra.attributes), {}, {
+      class: extra.classes.join(' ')
     });
-
     var styleString = joinStyles(extra.styles);
-
     if (styleString.length > 0) {
       attributes['style'] = styleString;
     }
-
     var val = [];
     val.push({
       tag: 'span',
       attributes: attributes,
       children: [content]
     });
-
-    if (title) {
-      val.push({
-        tag: 'span',
-        attributes: {
-          class: 'sr-only'
-        },
-        children: [title]
-      });
-    }
-
     return val;
   }
 
@@ -1422,30 +2122,27 @@ var cydj = (function (exports) {
   function asFoundIcon(icon) {
     var width = icon[0];
     var height = icon[1];
-
     var _icon$slice = icon.slice(4),
-        _icon$slice2 = _slicedToArray(_icon$slice, 1),
-        vectorData = _icon$slice2[0];
-
+      _icon$slice2 = _slicedToArray(_icon$slice, 1),
+      vectorData = _icon$slice2[0];
     var element = null;
-
     if (Array.isArray(vectorData)) {
       element = {
         tag: 'g',
         attributes: {
-          class: "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.GROUP)
+          class: "".concat(config.cssPrefix, "-").concat(DUOTONE_CLASSES.GROUP)
         },
         children: [{
           tag: 'path',
           attributes: {
-            class: "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.SECONDARY),
+            class: "".concat(config.cssPrefix, "-").concat(DUOTONE_CLASSES.SECONDARY),
             fill: 'currentColor',
             d: vectorData[0]
           }
         }, {
           tag: 'path',
           attributes: {
-            class: "".concat(config.familyPrefix, "-").concat(DUOTONE_CLASSES.PRIMARY),
+            class: "".concat(config.cssPrefix, "-").concat(DUOTONE_CLASSES.PRIMARY),
             fill: 'currentColor',
             d: vectorData[1]
           }
@@ -1460,7 +2157,6 @@ var cydj = (function (exports) {
         }
       };
     }
-
     return {
       found: true,
       width: width,
@@ -1473,36 +2169,26 @@ var cydj = (function (exports) {
     width: 512,
     height: 512
   };
-
   function maybeNotifyMissing(iconName, prefix) {
     if (!PRODUCTION && !config.showMissingIcons && iconName) {
       console.error("Icon with name \"".concat(iconName, "\" and prefix \"").concat(prefix, "\" is missing."));
     }
   }
-
   function findIcon(iconName, prefix) {
     var givenPrefix = prefix;
-
     if (prefix === 'fa' && config.styleDefault !== null) {
       prefix = getDefaultUsablePrefix();
     }
-
     return new Promise(function (resolve, reject) {
-      ({
-        icon: callProvided('missingIconAbstract') || {}
-      });
-
       if (givenPrefix === 'fa') {
         var shim = byOldName(iconName) || {};
         iconName = shim.iconName || iconName;
         prefix = shim.prefix || prefix;
       }
-
       if (iconName && prefix && styles$1[prefix] && styles$1[prefix][iconName]) {
         var icon = styles$1[prefix][iconName];
         return resolve(asFoundIcon(icon));
       }
-
       maybeNotifyMissing(iconName, prefix);
       resolve(_objectSpread2(_objectSpread2({}, missingIconResolutionMixin), {}, {
         icon: config.showMissingIcons && iconName ? callProvided('missingIconAbstract') || {} : {}
@@ -1511,73 +2197,59 @@ var cydj = (function (exports) {
   }
 
   var noop$1 = function noop() {};
-
-  var p = config.measurePerformance && PERFORMANCE && PERFORMANCE.mark && PERFORMANCE.measure ? PERFORMANCE : {
+  var p$2 = config.measurePerformance && PERFORMANCE && PERFORMANCE.mark && PERFORMANCE.measure ? PERFORMANCE : {
     mark: noop$1,
     measure: noop$1
   };
-  var preamble = "FA \"6.0.0\"";
-
+  var preamble = "FA \"7.1.0\"";
   var begin = function begin(name) {
-    p.mark("".concat(preamble, " ").concat(name, " begins"));
+    p$2.mark("".concat(preamble, " ").concat(name, " begins"));
     return function () {
       return end(name);
     };
   };
-
   var end = function end(name) {
-    p.mark("".concat(preamble, " ").concat(name, " ends"));
-    p.measure("".concat(preamble, " ").concat(name), "".concat(preamble, " ").concat(name, " begins"), "".concat(preamble, " ").concat(name, " ends"));
+    p$2.mark("".concat(preamble, " ").concat(name, " ends"));
+    p$2.measure("".concat(preamble, " ").concat(name), "".concat(preamble, " ").concat(name, " begins"), "".concat(preamble, " ").concat(name, " ends"));
   };
-
   var perf = {
     begin: begin,
     end: end
   };
 
   var noop$2 = function noop() {};
-
   function isWatched(node) {
     var i2svg = node.getAttribute ? node.getAttribute(DATA_FA_I2SVG) : null;
     return typeof i2svg === 'string';
   }
-
   function hasPrefixAndIcon(node) {
     var prefix = node.getAttribute ? node.getAttribute(DATA_PREFIX) : null;
     var icon = node.getAttribute ? node.getAttribute(DATA_ICON) : null;
     return prefix && icon;
   }
-
   function hasBeenReplaced(node) {
     return node && node.classList && node.classList.contains && node.classList.contains(config.replacementClass);
   }
-
   function getMutator() {
     if (config.autoReplaceSvg === true) {
       return mutators.replace;
     }
-
     var mutator = mutators[config.autoReplaceSvg];
     return mutator || mutators.replace;
   }
-
   function createElementNS(tag) {
     return DOCUMENT.createElementNS('http://www.w3.org/2000/svg', tag);
   }
-
   function createElement(tag) {
     return DOCUMENT.createElement(tag);
   }
-
   function convertSVG(abstractObj) {
     var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     var _params$ceFn = params.ceFn,
-        ceFn = _params$ceFn === void 0 ? abstractObj.tag === 'svg' ? createElementNS : createElement : _params$ceFn;
-
+      ceFn = _params$ceFn === void 0 ? abstractObj.tag === 'svg' ? createElementNS : createElement : _params$ceFn;
     if (typeof abstractObj === 'string') {
       return DOCUMENT.createTextNode(abstractObj);
     }
-
     var tag = ceFn(abstractObj.tag);
     Object.keys(abstractObj.attributes || []).forEach(function (key) {
       tag.setAttribute(key, abstractObj.attributes[key]);
@@ -1590,26 +2262,20 @@ var cydj = (function (exports) {
     });
     return tag;
   }
-
   function nodeAsComment(node) {
     var comment = " ".concat(node.outerHTML, " ");
     /* BEGIN.ATTRIBUTION */
-
     comment = "".concat(comment, "Font Awesome fontawesome.com ");
     /* END.ATTRIBUTION */
-
     return comment;
   }
-
   var mutators = {
     replace: function replace(mutation) {
       var node = mutation[0];
-
       if (node.parentNode) {
         mutation[1].forEach(function (abstract) {
           node.parentNode.insertBefore(convertSVG(abstract), node);
         });
-
         if (node.getAttribute(DATA_FA_I2SVG) === null && config.keepOriginalSource) {
           var comment = DOCUMENT.createComment(nodeAsComment(node));
           node.parentNode.replaceChild(comment, node);
@@ -1620,16 +2286,15 @@ var cydj = (function (exports) {
     },
     nest: function nest(mutation) {
       var node = mutation[0];
-      var abstract = mutation[1]; // If we already have a replaced node we do not want to continue nesting within it.
-      // Short-circuit to the standard replacement
+      var abstract = mutation[1];
 
+      // If we already have a replaced node we do not want to continue nesting within it.
+      // Short-circuit to the standard replacement
       if (~classArray(node).indexOf(config.replacementClass)) {
         return mutators.replace(mutation);
       }
-
-      var forSvg = new RegExp("".concat(config.familyPrefix, "-.*"));
+      var forSvg = new RegExp("".concat(config.cssPrefix, "-.*"));
       delete abstract[0].attributes.id;
-
       if (abstract[0].attributes.class) {
         var splitClasses = abstract[0].attributes.class.split(' ').reduce(function (acc, cls) {
           if (cls === config.replacementClass || cls.match(forSvg)) {
@@ -1637,21 +2302,18 @@ var cydj = (function (exports) {
           } else {
             acc.toNode.push(cls);
           }
-
           return acc;
         }, {
           toNode: [],
           toSvg: []
         });
         abstract[0].attributes.class = splitClasses.toSvg.join(' ');
-
         if (splitClasses.toNode.length === 0) {
           node.removeAttribute('class');
         } else {
           node.setAttribute('class', splitClasses.toNode.join(' '));
         }
       }
-
       var newInnerHTML = abstract.map(function (a) {
         return toHtml(a);
       }).join('\n');
@@ -1659,23 +2321,18 @@ var cydj = (function (exports) {
       node.innerHTML = newInnerHTML;
     }
   };
-
   function performOperationSync(op) {
     op();
   }
-
   function perform(mutations, callback) {
     var callbackFunction = typeof callback === 'function' ? callback : noop$2;
-
     if (mutations.length === 0) {
       callbackFunction();
     } else {
       var frame = performOperationSync;
-
       if (config.mutateApproach === MUTATION_APPROACH_ASYNC) {
         frame = WINDOW.requestAnimationFrame || performOperationSync;
       }
-
       frame(function () {
         var mutator = getMutator();
         var mark = perf.begin('mutate');
@@ -1697,19 +2354,17 @@ var cydj = (function (exports) {
     if (!MUTATION_OBSERVER) {
       return;
     }
-
     if (!config.observeMutations) {
       return;
     }
-
     var _options$treeCallback = options.treeCallback,
-        treeCallback = _options$treeCallback === void 0 ? noop$2 : _options$treeCallback,
-        _options$nodeCallback = options.nodeCallback,
-        nodeCallback = _options$nodeCallback === void 0 ? noop$2 : _options$nodeCallback,
-        _options$pseudoElemen = options.pseudoElementsCallback,
-        pseudoElementsCallback = _options$pseudoElemen === void 0 ? noop$2 : _options$pseudoElemen,
-        _options$observeMutat = options.observeMutationsRoot,
-        observeMutationsRoot = _options$observeMutat === void 0 ? DOCUMENT : _options$observeMutat;
+      treeCallback = _options$treeCallback === void 0 ? noop$2 : _options$treeCallback,
+      _options$nodeCallback = options.nodeCallback,
+      nodeCallback = _options$nodeCallback === void 0 ? noop$2 : _options$nodeCallback,
+      _options$pseudoElemen = options.pseudoElementsCallback,
+      pseudoElementsCallback = _options$pseudoElemen === void 0 ? noop$2 : _options$pseudoElemen,
+      _options$observeMutat = options.observeMutationsRoot,
+      observeMutationsRoot = _options$observeMutat === void 0 ? DOCUMENT : _options$observeMutat;
     mo = new MUTATION_OBSERVER(function (objects) {
       if (disabled) return;
       var defaultPrefix = getDefaultUsablePrefix();
@@ -1718,20 +2373,16 @@ var cydj = (function (exports) {
           if (config.searchPseudoElements) {
             pseudoElementsCallback(mutationRecord.target);
           }
-
           treeCallback(mutationRecord.target);
         }
-
         if (mutationRecord.type === 'attributes' && mutationRecord.target.parentNode && config.searchPseudoElements) {
-          pseudoElementsCallback(mutationRecord.target.parentNode);
+          pseudoElementsCallback([mutationRecord.target], true);
         }
-
         if (mutationRecord.type === 'attributes' && isWatched(mutationRecord.target) && ~ATTRIBUTES_WATCHED_FOR_MUTATION.indexOf(mutationRecord.attributeName)) {
           if (mutationRecord.attributeName === 'class' && hasPrefixAndIcon(mutationRecord.target)) {
             var _getCanonicalIcon = getCanonicalIcon(classArray(mutationRecord.target)),
-                prefix = _getCanonicalIcon.prefix,
-                iconName = _getCanonicalIcon.iconName;
-
+              prefix = _getCanonicalIcon.prefix,
+              iconName = _getCanonicalIcon.iconName;
             mutationRecord.target.setAttribute(DATA_PREFIX, prefix || defaultPrefix);
             if (iconName) mutationRecord.target.setAttribute(DATA_ICON, iconName);
           } else if (hasBeenReplaced(mutationRecord.target)) {
@@ -1756,21 +2407,17 @@ var cydj = (function (exports) {
   function styleParser (node) {
     var style = node.getAttribute('style');
     var val = [];
-
     if (style) {
       val = style.split(';').reduce(function (acc, style) {
         var styles = style.split(':');
         var prop = styles[0];
         var value = styles.slice(1);
-
         if (prop && value.length > 0) {
           acc[prop] = value.join(':').trim();
         }
-
         return acc;
       }, {});
     }
-
     return val;
   }
 
@@ -1779,24 +2426,22 @@ var cydj = (function (exports) {
     var existingIconName = node.getAttribute('data-icon');
     var innerText = node.innerText !== undefined ? node.innerText.trim() : '';
     var val = getCanonicalIcon(classArray(node));
-
     if (!val.prefix) {
       val.prefix = getDefaultUsablePrefix();
     }
-
     if (existingPrefix && existingIconName) {
       val.prefix = existingPrefix;
       val.iconName = existingIconName;
     }
-
     if (val.iconName && val.prefix) {
       return val;
     }
-
     if (val.prefix && innerText.length > 0) {
       val.iconName = byLigature(val.prefix, node.innerText) || byUnicode(val.prefix, toHex(node.innerText));
     }
-
+    if (!val.iconName && config.autoFetchSvg && node.firstChild && node.firstChild.nodeType === Node.TEXT_NODE) {
+      val.iconName = node.firstChild.data;
+    }
     return val;
   }
 
@@ -1805,29 +2450,14 @@ var cydj = (function (exports) {
       if (acc.name !== 'class' && acc.name !== 'style') {
         acc[attr.name] = attr.value;
       }
-
       return acc;
     }, {});
-    var title = node.getAttribute('title');
-    var titleId = node.getAttribute('data-fa-title-id');
-
-    if (config.autoA11y) {
-      if (title) {
-        extraAttributes['aria-labelledby'] = "".concat(config.replacementClass, "-title-").concat(titleId || nextUniqueId());
-      } else {
-        extraAttributes['aria-hidden'] = 'true';
-        extraAttributes['focusable'] = 'false';
-      }
-    }
-
     return extraAttributes;
   }
 
   function blankMeta() {
     return {
       iconName: null,
-      title: null,
-      titleId: null,
       prefix: null,
       transform: meaninglessTransform,
       symbol: false,
@@ -1848,19 +2478,15 @@ var cydj = (function (exports) {
     var parser = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
       styleParser: true
     };
-
     var _classParser = classParser(node),
-        iconName = _classParser.iconName,
-        prefix = _classParser.prefix,
-        extraClasses = _classParser.rest;
-
+      iconName = _classParser.iconName,
+      prefix = _classParser.prefix,
+      extraClasses = _classParser.rest;
     var extraAttributes = attributesParser(node);
     var pluginMeta = chainHooks('parseNodeAttributes', {}, node);
     var extraStyles = parser.styleParser ? styleParser(node) : [];
     return _objectSpread2({
       iconName: iconName,
-      title: node.getAttribute('title'),
-      titleId: node.getAttribute('data-fa-title-id'),
       prefix: prefix,
       transform: meaninglessTransform,
       mask: {
@@ -1879,71 +2505,65 @@ var cydj = (function (exports) {
   }
 
   var styles$2 = namespace.styles;
-
   function generateMutation(node) {
     var nodeMeta = config.autoReplaceSvg === 'nest' ? parseMeta(node, {
       styleParser: false
     }) : parseMeta(node);
-
     if (~nodeMeta.extra.classes.indexOf(LAYERS_TEXT_CLASSNAME)) {
       return callProvided('generateLayersText', node, nodeMeta);
     } else {
       return callProvided('generateSvgReplacementMutation', node, nodeMeta);
     }
   }
-
+  function getKnownPrefixes() {
+    return [].concat(_toConsumableArray(Yt), _toConsumableArray(Zt$1));
+  }
   function onTree(root) {
     var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
     if (!IS_DOM) return Promise.resolve();
     var htmlClassList = DOCUMENT.documentElement.classList;
-
     var hclAdd = function hclAdd(suffix) {
       return htmlClassList.add("".concat(HTML_CLASS_I2SVG_BASE_CLASS, "-").concat(suffix));
     };
-
     var hclRemove = function hclRemove(suffix) {
       return htmlClassList.remove("".concat(HTML_CLASS_I2SVG_BASE_CLASS, "-").concat(suffix));
     };
-
-    var prefixes = config.autoFetchSvg ? Object.keys(PREFIX_TO_STYLE) : Object.keys(styles$2);
-    var prefixesDomQuery = [".".concat(LAYERS_TEXT_CLASSNAME, ":not([").concat(DATA_FA_I2SVG, "])")].concat(prefixes.map(function (p) {
-      return ".".concat(p, ":not([").concat(DATA_FA_I2SVG, "])");
+    var prefixes = config.autoFetchSvg ? getKnownPrefixes() : Q.concat(Object.keys(styles$2));
+    if (!prefixes.includes('fa')) {
+      prefixes.push('fa');
+    }
+    var prefixesDomQuery = [".".concat(LAYERS_TEXT_CLASSNAME, ":not([").concat(DATA_FA_I2SVG, "])")].concat(prefixes.map(function (p$$1) {
+      return ".".concat(p$$1, ":not([").concat(DATA_FA_I2SVG, "])");
     })).join(', ');
-
     if (prefixesDomQuery.length === 0) {
       return Promise.resolve();
     }
-
     var candidates = [];
-
     try {
       candidates = toArray(root.querySelectorAll(prefixesDomQuery));
-    } catch (e) {// noop
+    } catch (e$$1) {
+      // noop
     }
-
     if (candidates.length > 0) {
       hclAdd('pending');
       hclRemove('complete');
     } else {
       return Promise.resolve();
     }
-
     var mark = perf.begin('onTree');
     var mutations = candidates.reduce(function (acc, node) {
       try {
         var mutation = generateMutation(node);
-
         if (mutation) {
           acc.push(mutation);
         }
-      } catch (e) {
+      } catch (e$$1) {
         if (!PRODUCTION) {
-          if (e.name === 'MissingIcon') {
-            console.error(e);
+          if (e$$1.name === 'MissingIcon') {
+            console.error(e$$1);
           }
         }
       }
-
       return acc;
     }, []);
     return new Promise(function (resolve, reject) {
@@ -1956,13 +2576,12 @@ var cydj = (function (exports) {
           mark();
           resolve();
         });
-      }).catch(function (e) {
+      }).catch(function (e$$1) {
         mark();
-        reject(e);
+        reject(e$$1);
       });
     });
   }
-
   function onNode(node) {
     var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
     generateMutation(node).then(function (mutation) {
@@ -1971,47 +2590,39 @@ var cydj = (function (exports) {
       }
     });
   }
-
   function resolveIcons(next) {
     return function (maybeIconDefinition) {
       var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       var iconDefinition = (maybeIconDefinition || {}).icon ? maybeIconDefinition : findIconDefinition(maybeIconDefinition || {});
       var mask = params.mask;
-
       if (mask) {
         mask = (mask || {}).icon ? mask : findIconDefinition(mask || {});
       }
-
       return next(iconDefinition, _objectSpread2(_objectSpread2({}, params), {}, {
         mask: mask
       }));
     };
   }
-
   var render = function render(iconDefinition) {
     var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     var _params$transform = params.transform,
-        transform = _params$transform === void 0 ? meaninglessTransform : _params$transform,
-        _params$symbol = params.symbol,
-        symbol = _params$symbol === void 0 ? false : _params$symbol,
-        _params$mask = params.mask,
-        mask = _params$mask === void 0 ? null : _params$mask,
-        _params$maskId = params.maskId,
-        maskId = _params$maskId === void 0 ? null : _params$maskId,
-        _params$title = params.title,
-        title = _params$title === void 0 ? null : _params$title,
-        _params$titleId = params.titleId,
-        titleId = _params$titleId === void 0 ? null : _params$titleId,
-        _params$classes = params.classes,
-        classes = _params$classes === void 0 ? [] : _params$classes,
-        _params$attributes = params.attributes,
-        attributes = _params$attributes === void 0 ? {} : _params$attributes,
-        _params$styles = params.styles,
-        styles = _params$styles === void 0 ? {} : _params$styles;
+      transform = _params$transform === void 0 ? meaninglessTransform : _params$transform,
+      _params$symbol = params.symbol,
+      symbol = _params$symbol === void 0 ? false : _params$symbol,
+      _params$mask = params.mask,
+      mask = _params$mask === void 0 ? null : _params$mask,
+      _params$maskId = params.maskId,
+      maskId = _params$maskId === void 0 ? null : _params$maskId,
+      _params$classes = params.classes,
+      classes = _params$classes === void 0 ? [] : _params$classes,
+      _params$attributes = params.attributes,
+      attributes = _params$attributes === void 0 ? {} : _params$attributes,
+      _params$styles = params.styles,
+      styles = _params$styles === void 0 ? {} : _params$styles;
     if (!iconDefinition) return;
     var prefix = iconDefinition.prefix,
-        iconName = iconDefinition.iconName,
-        icon = iconDefinition.icon;
+      iconName = iconDefinition.iconName,
+      icon = iconDefinition.icon;
     return domVariants(_objectSpread2({
       type: 'icon'
     }, iconDefinition), function () {
@@ -2019,16 +2630,6 @@ var cydj = (function (exports) {
         iconDefinition: iconDefinition,
         params: params
       });
-
-      if (config.autoA11y) {
-        if (title) {
-          attributes['aria-labelledby'] = "".concat(config.replacementClass, "-title-").concat(titleId || nextUniqueId());
-        } else {
-          attributes['aria-hidden'] = 'true';
-          attributes['focusable'] = 'false';
-        }
-      }
-
       return makeInlineSvgAbstract({
         icons: {
           main: asFoundIcon(icon),
@@ -2043,9 +2644,7 @@ var cydj = (function (exports) {
         iconName: iconName,
         transform: _objectSpread2(_objectSpread2({}, meaninglessTransform), transform),
         symbol: symbol,
-        title: title,
         maskId: maskId,
-        titleId: titleId,
         extra: {
           attributes: attributes,
           styles: styles,
@@ -2072,22 +2671,19 @@ var cydj = (function (exports) {
     provides: function provides(providers$$1) {
       providers$$1.i2svg = function (params) {
         var _params$node = params.node,
-            node = _params$node === void 0 ? DOCUMENT : _params$node,
-            _params$callback = params.callback,
-            callback = _params$callback === void 0 ? function () {} : _params$callback;
+          node = _params$node === void 0 ? DOCUMENT : _params$node,
+          _params$callback = params.callback,
+          callback = _params$callback === void 0 ? function () {} : _params$callback;
         return onTree(node, callback);
       };
-
       providers$$1.generateSvgReplacementMutation = function (node, nodeMeta) {
         var iconName = nodeMeta.iconName,
-            title = nodeMeta.title,
-            titleId = nodeMeta.titleId,
-            prefix = nodeMeta.prefix,
-            transform = nodeMeta.transform,
-            symbol = nodeMeta.symbol,
-            mask = nodeMeta.mask,
-            maskId = nodeMeta.maskId,
-            extra = nodeMeta.extra;
+          prefix = nodeMeta.prefix,
+          transform = nodeMeta.transform,
+          symbol = nodeMeta.symbol,
+          mask = nodeMeta.mask,
+          maskId = nodeMeta.maskId,
+          extra = nodeMeta.extra;
         return new Promise(function (resolve, reject) {
           Promise.all([findIcon(iconName, prefix), mask.iconName ? findIcon(mask.iconName, mask.prefix) : Promise.resolve({
             found: false,
@@ -2096,9 +2692,8 @@ var cydj = (function (exports) {
             icon: {}
           })]).then(function (_ref) {
             var _ref2 = _slicedToArray(_ref, 2),
-                main = _ref2[0],
-                mask = _ref2[1];
-
+              main = _ref2[0],
+              mask = _ref2[1];
             resolve([node, makeInlineSvgAbstract({
               icons: {
                 main: main,
@@ -2109,29 +2704,23 @@ var cydj = (function (exports) {
               transform: transform,
               symbol: symbol,
               maskId: maskId,
-              title: title,
-              titleId: titleId,
               extra: extra,
               watchable: true
             })]);
           }).catch(reject);
         });
       };
-
       providers$$1.generateAbstractIcon = function (_ref3) {
         var children = _ref3.children,
-            attributes = _ref3.attributes,
-            main = _ref3.main,
-            transform = _ref3.transform,
-            styles = _ref3.styles;
+          attributes = _ref3.attributes,
+          main = _ref3.main,
+          transform = _ref3.transform,
+          styles = _ref3.styles;
         var styleString = joinStyles(styles);
-
         if (styleString.length > 0) {
           attributes['style'] = styleString;
         }
-
         var nextChild;
-
         if (transformIsMeaningful(transform)) {
           nextChild = callProvided('generateAbstractTransformGrouping', {
             main: main,
@@ -2140,7 +2729,6 @@ var cydj = (function (exports) {
             iconWidth: main.width
           });
         }
-
         children.push(nextChild || main.icon);
         return {
           children: children,
@@ -2156,7 +2744,7 @@ var cydj = (function (exports) {
         layer: function layer(assembler) {
           var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
           var _params$classes = params.classes,
-              classes = _params$classes === void 0 ? [] : _params$classes;
+            classes = _params$classes === void 0 ? [] : _params$classes;
           return domVariants({
             type: 'layer'
           }, function () {
@@ -2173,7 +2761,7 @@ var cydj = (function (exports) {
             return [{
               tag: 'span',
               attributes: {
-                class: ["".concat(config.familyPrefix, "-layers")].concat(_toConsumableArray(classes)).join(' ')
+                class: ["".concat(config.cssPrefix, "-layers")].concat(_toConsumableArray(classes)).join(' ')
               },
               children: children
             }];
@@ -2188,14 +2776,13 @@ var cydj = (function (exports) {
       return {
         counter: function counter(content) {
           var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-          var _params$title = params.title,
-              title = _params$title === void 0 ? null : _params$title,
-              _params$classes = params.classes,
-              classes = _params$classes === void 0 ? [] : _params$classes,
-              _params$attributes = params.attributes,
-              attributes = _params$attributes === void 0 ? {} : _params$attributes,
-              _params$styles = params.styles,
-              styles = _params$styles === void 0 ? {} : _params$styles;
+          params.title;
+            var _params$classes = params.classes,
+            classes = _params$classes === void 0 ? [] : _params$classes,
+            _params$attributes = params.attributes,
+            attributes = _params$attributes === void 0 ? {} : _params$attributes,
+            _params$styles = params.styles,
+            styles = _params$styles === void 0 ? {} : _params$styles;
           return domVariants({
             type: 'counter',
             content: content
@@ -2206,11 +2793,10 @@ var cydj = (function (exports) {
             });
             return makeLayersCounterAbstract({
               content: content.toString(),
-              title: title,
               extra: {
                 attributes: attributes,
                 styles: styles,
-                classes: ["".concat(config.familyPrefix, "-layers-counter")].concat(_toConsumableArray(classes))
+                classes: ["".concat(config.cssPrefix, "-layers-counter")].concat(_toConsumableArray(classes))
               }
             });
           });
@@ -2225,15 +2811,13 @@ var cydj = (function (exports) {
         text: function text(content) {
           var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
           var _params$transform = params.transform,
-              transform = _params$transform === void 0 ? meaninglessTransform : _params$transform,
-              _params$title = params.title,
-              title = _params$title === void 0 ? null : _params$title,
-              _params$classes = params.classes,
-              classes = _params$classes === void 0 ? [] : _params$classes,
-              _params$attributes = params.attributes,
-              attributes = _params$attributes === void 0 ? {} : _params$attributes,
-              _params$styles = params.styles,
-              styles = _params$styles === void 0 ? {} : _params$styles;
+            transform = _params$transform === void 0 ? meaninglessTransform : _params$transform,
+            _params$classes = params.classes,
+            classes = _params$classes === void 0 ? [] : _params$classes,
+            _params$attributes = params.attributes,
+            attributes = _params$attributes === void 0 ? {} : _params$attributes,
+            _params$styles = params.styles,
+            styles = _params$styles === void 0 ? {} : _params$styles;
           return domVariants({
             type: 'text',
             content: content
@@ -2245,11 +2829,10 @@ var cydj = (function (exports) {
             return makeLayersTextAbstract({
               content: content,
               transform: _objectSpread2(_objectSpread2({}, meaninglessTransform), transform),
-              title: title,
               extra: {
                 attributes: attributes,
                 styles: styles,
-                classes: ["".concat(config.familyPrefix, "-layers-text")].concat(_toConsumableArray(classes))
+                classes: ["".concat(config.cssPrefix, "-layers-text")].concat(_toConsumableArray(classes))
               }
             });
           });
@@ -2258,29 +2841,21 @@ var cydj = (function (exports) {
     },
     provides: function provides(providers$$1) {
       providers$$1.generateLayersText = function (node, nodeMeta) {
-        var title = nodeMeta.title,
-            transform = nodeMeta.transform,
-            extra = nodeMeta.extra;
+        var transform = nodeMeta.transform,
+          extra = nodeMeta.extra;
         var width = null;
         var height = null;
-
         if (IS_IE) {
           var computedFontSize = parseInt(getComputedStyle(node).fontSize, 10);
           var boundingClientRect = node.getBoundingClientRect();
           width = boundingClientRect.width / computedFontSize;
           height = boundingClientRect.height / computedFontSize;
         }
-
-        if (config.autoA11y && !title) {
-          extra.attributes['aria-hidden'] = 'true';
-        }
-
         return Promise.resolve([node, makeLayersTextAbstract({
           content: node.innerHTML,
           width: width,
           height: height,
           transform: transform,
-          title: title,
           extra: extra,
           watchable: true
         })]);
@@ -2290,17 +2865,47 @@ var cydj = (function (exports) {
 
   var CLEAN_CONTENT_PATTERN = new RegExp("\"", 'ug');
   var SECONDARY_UNICODE_RANGE = [1105920, 1112319];
+  var _FONT_FAMILY_WEIGHT_TO_PREFIX = _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, {
+    FontAwesome: {
+      normal: 'fas',
+      400: 'fas'
+    }
+  }), Ct), ro), dl);
+  var FONT_FAMILY_WEIGHT_TO_PREFIX = Object.keys(_FONT_FAMILY_WEIGHT_TO_PREFIX).reduce(function (acc, key) {
+    acc[key.toLowerCase()] = _FONT_FAMILY_WEIGHT_TO_PREFIX[key];
+    return acc;
+  }, {});
+  var FONT_FAMILY_WEIGHT_FALLBACK = Object.keys(FONT_FAMILY_WEIGHT_TO_PREFIX).reduce(function (acc, fontFamily) {
+    var weights = FONT_FAMILY_WEIGHT_TO_PREFIX[fontFamily];
+    acc[fontFamily] = weights[900] || _toConsumableArray(Object.entries(weights))[0][1];
+    return acc;
+  }, {});
+
+  // Return hex value of *first* character in `content`
   function hexValueFromContent(content) {
     var cleaned = content.replace(CLEAN_CONTENT_PATTERN, '');
-    var codePoint = codePointAt(cleaned, 0);
-    var isPrependTen = codePoint >= SECONDARY_UNICODE_RANGE[0] && codePoint <= SECONDARY_UNICODE_RANGE[1];
-    var isDoubled = cleaned.length === 2 ? cleaned[0] === cleaned[1] : false;
-    return {
-      value: isDoubled ? toHex(cleaned[0]) : toHex(cleaned),
-      isSecondary: isPrependTen || isDoubled
-    };
+    return toHex(_toConsumableArray(cleaned)[0] || '');
   }
 
+  // Check if it's a secondary Duotone layer, by checking if:
+  // - Unicode value in `content` is repeated
+  // - Unicode value in `content` is above 0x10000
+  // - The "ss01" font feature is enabled on the `content`
+  function isSecondaryLayer(styles) {
+    var hasStylisticSet = styles.getPropertyValue('font-feature-settings').includes('ss01');
+    var content = styles.getPropertyValue('content');
+    var cleaned = content.replace(CLEAN_CONTENT_PATTERN, '');
+    var codePoint = cleaned.codePointAt(0);
+    var isPrependTen = codePoint >= SECONDARY_UNICODE_RANGE[0] && codePoint <= SECONDARY_UNICODE_RANGE[1];
+    var isDoubled = cleaned.length === 2 ? cleaned[0] === cleaned[1] : false;
+    return isPrependTen || isDoubled || hasStylisticSet;
+  }
+  function getPrefix(fontFamily, fontWeight) {
+    var fontFamilySanitized = fontFamily.replace(/^['"]|['"]$/g, '').toLowerCase();
+    var fontWeightInteger = parseInt(fontWeight);
+    var fontWeightSanitized = isNaN(fontWeightInteger) ? 'normal' : fontWeightInteger;
+    return (FONT_FAMILY_WEIGHT_TO_PREFIX[fontFamilySanitized] || {})[fontWeightSanitized] || FONT_FAMILY_WEIGHT_FALLBACK[fontFamilySanitized];
+  }
   function replaceForPosition(node, position) {
     var pendingAttribute = "".concat(DATA_FA_PSEUDO_ELEMENT_PENDING).concat(position.replace(':', '-'));
     return new Promise(function (resolve, reject) {
@@ -2308,54 +2913,45 @@ var cydj = (function (exports) {
         // This node is already being processed
         return resolve();
       }
-
       var children = toArray(node.children);
-      var alreadyProcessedPseudoElement = children.filter(function (c) {
-        return c.getAttribute(DATA_FA_PSEUDO_ELEMENT) === position;
+      var alreadyProcessedPseudoElement = children.filter(function (c$$1) {
+        return c$$1.getAttribute(DATA_FA_PSEUDO_ELEMENT) === position;
       })[0];
       var styles = WINDOW.getComputedStyle(node, position);
-      var fontFamily = styles.getPropertyValue('font-family').match(FONT_FAMILY_PATTERN);
+      var fontFamily = styles.getPropertyValue('font-family');
+      var fontFamilyMatch = fontFamily.match(FONT_FAMILY_PATTERN);
       var fontWeight = styles.getPropertyValue('font-weight');
       var content = styles.getPropertyValue('content');
-
-      if (alreadyProcessedPseudoElement && !fontFamily) {
+      if (alreadyProcessedPseudoElement && !fontFamilyMatch) {
         // If we've already processed it but the current computed style does not result in a font-family,
         // that probably means that a class name that was previously present to make the icon has been
         // removed. So we now should delete the icon.
         node.removeChild(alreadyProcessedPseudoElement);
         return resolve();
-      } else if (fontFamily && content !== 'none' && content !== '') {
+      } else if (fontFamilyMatch && content !== 'none' && content !== '') {
         var _content = styles.getPropertyValue('content');
-
-        var prefix = ~['Solid', 'Regular', 'Light', 'Thin', 'Duotone', 'Brands', 'Kit'].indexOf(fontFamily[2]) ? STYLE_TO_PREFIX[fontFamily[2].toLowerCase()] : FONT_WEIGHT_TO_PREFIX[fontWeight];
-
-        var _hexValueFromContent = hexValueFromContent(_content),
-            hexValue = _hexValueFromContent.value,
-            isSecondary = _hexValueFromContent.isSecondary;
-
-        var isV4 = fontFamily[0].startsWith('FontAwesome');
+        var prefix = getPrefix(fontFamily, fontWeight);
+        var hexValue = hexValueFromContent(_content);
+        var isV4 = fontFamilyMatch[0].startsWith('FontAwesome');
+        var isSecondary = isSecondaryLayer(styles);
         var iconName = byUnicode(prefix, hexValue);
         var iconIdentifier = iconName;
-
         if (isV4) {
           var iconName4 = byOldUnicode(hexValue);
-
           if (iconName4.iconName && iconName4.prefix) {
             iconName = iconName4.iconName;
             prefix = iconName4.prefix;
           }
-        } // Only convert the pseudo element in this ::before/::after position into an icon if we haven't
+        }
+
+        // Only convert the pseudo element in this ::before/::after position into an icon if we haven't
         // already done so with the same prefix and iconName
-
-
         if (iconName && !isSecondary && (!alreadyProcessedPseudoElement || alreadyProcessedPseudoElement.getAttribute(DATA_PREFIX) !== prefix || alreadyProcessedPseudoElement.getAttribute(DATA_ICON) !== iconIdentifier)) {
           node.setAttribute(pendingAttribute, iconIdentifier);
-
           if (alreadyProcessedPseudoElement) {
             // Delete the old one, since we're replacing it with a new one
             node.removeChild(alreadyProcessedPseudoElement);
           }
-
           var meta = blankMeta();
           var extra = meta.extra;
           extra.attributes[DATA_FA_PSEUDO_ELEMENT] = position;
@@ -2370,16 +2966,14 @@ var cydj = (function (exports) {
               extra: extra,
               watchable: true
             }));
-            var element = DOCUMENT.createElement('svg');
-
+            var element = DOCUMENT.createElementNS('http://www.w3.org/2000/svg', 'svg');
             if (position === '::before') {
               node.insertBefore(element, node.firstChild);
             } else {
               node.appendChild(element);
             }
-
-            element.outerHTML = abstract.map(function (a) {
-              return toHtml(a);
+            element.outerHTML = abstract.map(function (a$$1) {
+              return toHtml(a$$1);
             }).join('\n');
             node.removeAttribute(pendingAttribute);
             resolve();
@@ -2392,19 +2986,113 @@ var cydj = (function (exports) {
       }
     });
   }
-
   function replace(node) {
     return Promise.all([replaceForPosition(node, '::before'), replaceForPosition(node, '::after')]);
   }
-
   function processable(node) {
     return node.parentNode !== document.head && !~TAGNAMES_TO_SKIP_FOR_PSEUDOELEMENTS.indexOf(node.tagName.toUpperCase()) && !node.getAttribute(DATA_FA_PSEUDO_ELEMENT) && (!node.parentNode || node.parentNode.tagName !== 'svg');
   }
+  var hasPseudoElement = function hasPseudoElement(selector) {
+    return !!selector && PSEUDO_ELEMENTS.some(function (pseudoSelector) {
+      return selector.includes(pseudoSelector);
+    });
+  };
 
+  // Return selectors from all available stylesheets that have
+  // pseudo-elements defined.
+  var parseCSSRuleForPseudos = function parseCSSRuleForPseudos(selectorText) {
+    if (!selectorText) return [];
+    var selectorSet = new Set();
+    var selectors = selectorText.split(/,(?![^()]*\))/).map(function (s$$1) {
+      return s$$1.trim();
+    });
+    selectors = selectors.flatMap(function (selector) {
+      return selector.includes('(') ? selector : selector.split(',').map(function (s$$1) {
+        return s$$1.trim();
+      });
+    });
+    var _iterator = _createForOfIteratorHelper(selectors),
+      _step;
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var selector = _step.value;
+        if (hasPseudoElement(selector)) {
+          // Remove pseudo-elements from the selector
+          var selectorWithoutPseudo = PSEUDO_ELEMENTS.reduce(function (acc, pseudoSelector) {
+            return acc.replace(pseudoSelector, '');
+          }, selector);
+          if (selectorWithoutPseudo !== '' && selectorWithoutPseudo !== '*') {
+            selectorSet.add(selectorWithoutPseudo);
+          }
+        }
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+    return selectorSet;
+  };
   function searchPseudoElements(root) {
+    var useAsNodeList = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
     if (!IS_DOM) return;
+    var nodeList;
+    if (useAsNodeList) {
+      nodeList = root;
+    } else if (config.searchPseudoElementsFullScan) {
+      nodeList = root.querySelectorAll('*');
+    } else {
+      // Get elements that have pseudo elements defined in the CSS
+      var selectorSet = new Set();
+      var _iterator2 = _createForOfIteratorHelper(document.styleSheets),
+        _step2;
+      try {
+        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+          var stylesheet = _step2.value;
+          try {
+            var _iterator3 = _createForOfIteratorHelper(stylesheet.cssRules),
+              _step3;
+            try {
+              for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+                var rule = _step3.value;
+                var parsedSelectors = parseCSSRuleForPseudos(rule.selectorText);
+                var _iterator4 = _createForOfIteratorHelper(parsedSelectors),
+                  _step4;
+                try {
+                  for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+                    var selector = _step4.value;
+                    selectorSet.add(selector);
+                  }
+                } catch (err) {
+                  _iterator4.e(err);
+                } finally {
+                  _iterator4.f();
+                }
+              }
+            } catch (err) {
+              _iterator3.e(err);
+            } finally {
+              _iterator3.f();
+            }
+          } catch (e$$1) {
+            if (config.searchPseudoElementsWarnings) {
+              console.warn("Font Awesome: cannot parse stylesheet: ".concat(stylesheet.href, " (").concat(e$$1.message, ")\nIf it declares any Font Awesome CSS pseudo-elements, they will not be rendered as SVG icons. Add crossorigin=\"anonymous\" to the <link>, enable searchPseudoElementsFullScan for slower but more thorough DOM parsing, or suppress this warning by setting searchPseudoElementsWarnings to false."));
+            }
+          }
+        }
+      } catch (err) {
+        _iterator2.e(err);
+      } finally {
+        _iterator2.f();
+      }
+      if (!selectorSet.size) return;
+      var cleanSelectors = Array.from(selectorSet).join(', ');
+      try {
+        nodeList = root.querySelectorAll(cleanSelectors);
+      } catch (_unused) {} // eslint-disable-line no-empty
+    }
     return new Promise(function (resolve, reject) {
-      var operations = toArray(root.querySelectorAll('*')).filter(processable).map(replace);
+      var operations = toArray(nodeList).filter(processable).map(replace);
       var end = perf.begin('searchPseudoElements');
       disableObservation();
       Promise.all(operations).then(function () {
@@ -2418,7 +3106,6 @@ var cydj = (function (exports) {
       });
     });
   }
-
   var PseudoElements = {
     hooks: function hooks() {
       return {
@@ -2428,11 +3115,10 @@ var cydj = (function (exports) {
         }
       };
     },
-    provides: function provides(providers$$1) {
-      providers$$1.pseudoElements2svg = function (params) {
+    provides: function provides(providers) {
+      providers.pseudoElements2svg = function (params) {
         var _params$node = params.node,
-            node = _params$node === void 0 ? DOCUMENT : _params$node;
-
+          node = _params$node === void 0 ? DOCUMENT : _params$node;
         if (config.searchPseudoElements) {
           searchPseudoElements(node);
         }
@@ -2462,7 +3148,6 @@ var cydj = (function (exports) {
         },
         watch: function watch(params) {
           var observeMutationsRoot = params.observeMutationsRoot;
-
           if (_unwatched) {
             enableObservation();
           } else {
@@ -2488,53 +3173,41 @@ var cydj = (function (exports) {
       var parts = n.toLowerCase().split('-');
       var first = parts[0];
       var rest = parts.slice(1).join('-');
-
       if (first && rest === 'h') {
         acc.flipX = true;
         return acc;
       }
-
       if (first && rest === 'v') {
         acc.flipY = true;
         return acc;
       }
-
       rest = parseFloat(rest);
-
       if (isNaN(rest)) {
         return acc;
       }
-
       switch (first) {
         case 'grow':
           acc.size = acc.size + rest;
           break;
-
         case 'shrink':
           acc.size = acc.size - rest;
           break;
-
         case 'left':
           acc.x = acc.x - rest;
           break;
-
         case 'right':
           acc.x = acc.x + rest;
           break;
-
         case 'up':
           acc.y = acc.y - rest;
           break;
-
         case 'down':
           acc.y = acc.y + rest;
           break;
-
         case 'rotate':
           acc.rotate = acc.rotate + rest;
           break;
       }
-
       return acc;
     }, transform);
   };
@@ -2552,11 +3225,9 @@ var cydj = (function (exports) {
       return {
         parseNodeAttributes: function parseNodeAttributes(accumulator, node) {
           var transformString = node.getAttribute('data-fa-transform');
-
           if (transformString) {
             accumulator.transform = parseTransformString(transformString);
           }
-
           return accumulator;
         }
       };
@@ -2564,9 +3235,9 @@ var cydj = (function (exports) {
     provides: function provides(providers) {
       providers.generateAbstractTransformGrouping = function (_ref) {
         var main = _ref.main,
-            transform = _ref.transform,
-            containerWidth = _ref.containerWidth,
-            iconWidth = _ref.iconWidth;
+          transform = _ref.transform,
+          containerWidth = _ref.containerWidth,
+          iconWidth = _ref.iconWidth;
         var outer = {
           transform: "translate(".concat(containerWidth / 2, " 256)")
         };
@@ -2607,17 +3278,13 @@ var cydj = (function (exports) {
     width: '100%',
     height: '100%'
   };
-
   function fillBlack(abstract) {
     var force = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-
     if (abstract.attributes && (abstract.attributes.fill || force)) {
       abstract.attributes.fill = 'black';
     }
-
     return abstract;
   }
-
   function deGroup(abstract) {
     if (abstract.tag === 'g') {
       return abstract.children;
@@ -2625,7 +3292,6 @@ var cydj = (function (exports) {
       return [abstract];
     }
   }
-
   var Masks = {
     hooks: function hooks() {
       return {
@@ -2634,11 +3300,9 @@ var cydj = (function (exports) {
           var mask = !maskData ? emptyCanonicalIcon() : getCanonicalIcon(maskData.split(' ').map(function (i) {
             return i.trim();
           }));
-
           if (!mask.prefix) {
             mask.prefix = getDefaultUsablePrefix();
           }
-
           accumulator.mask = mask;
           accumulator.maskId = node.getAttribute('data-fa-mask-id');
           return accumulator;
@@ -2648,15 +3312,15 @@ var cydj = (function (exports) {
     provides: function provides(providers) {
       providers.generateAbstractMask = function (_ref) {
         var children = _ref.children,
-            attributes = _ref.attributes,
-            main = _ref.main,
-            mask = _ref.mask,
-            explicitMaskId = _ref.maskId,
-            transform = _ref.transform;
+          attributes = _ref.attributes,
+          main = _ref.main,
+          mask = _ref.mask,
+          explicitMaskId = _ref.maskId,
+          transform = _ref.transform;
         var mainWidth = main.width,
-            mainPath = main.icon;
+          mainPath = main.icon;
         var maskWidth = mask.width,
-            maskPath = mask.icon;
+          maskPath = mask.icon;
         var trans = transformForSvg({
           transform: transform,
           containerWidth: maskWidth,
@@ -2708,9 +3372,9 @@ var cydj = (function (exports) {
         children.push(defs, {
           tag: 'rect',
           attributes: _objectSpread2({
-            fill: 'currentColor',
+            'fill': 'currentColor',
             'clip-path': "url(#".concat(clipId, ")"),
-            mask: "url(#".concat(maskId, ")")
+            'mask': "url(#".concat(maskId, ")")
           }, ALL_SPACE)
         });
         return {
@@ -2724,11 +3388,9 @@ var cydj = (function (exports) {
   var MissingIconIndicator = {
     provides: function provides(providers) {
       var reduceMotion = false;
-
       if (WINDOW.matchMedia) {
         reduceMotion = WINDOW.matchMedia('(prefers-reduced-motion: reduce)').matches;
       }
-
       providers.missingIconAbstract = function () {
         var gChildren = [];
         var FILL = {
@@ -2738,19 +3400,18 @@ var cydj = (function (exports) {
           attributeType: 'XML',
           repeatCount: 'indefinite',
           dur: '2s'
-        }; // Ring
+        };
 
+        // Ring
         gChildren.push({
           tag: 'path',
           attributes: _objectSpread2(_objectSpread2({}, FILL), {}, {
             d: 'M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z'
           })
         });
-
         var OPACITY_ANIMATE = _objectSpread2(_objectSpread2({}, ANIMATION_BASE), {}, {
           attributeName: 'opacity'
         });
-
         var dot = {
           tag: 'circle',
           attributes: _objectSpread2(_objectSpread2({}, FILL), {}, {
@@ -2760,7 +3421,6 @@ var cydj = (function (exports) {
           }),
           children: []
         };
-
         if (!reduceMotion) {
           dot.children.push({
             tag: 'animate',
@@ -2775,7 +3435,6 @@ var cydj = (function (exports) {
             })
           });
         }
-
         gChildren.push(dot);
         gChildren.push({
           tag: 'path',
@@ -2790,7 +3449,6 @@ var cydj = (function (exports) {
             })
           }]
         });
-
         if (!reduceMotion) {
           // Exclamation
           gChildren.push({
@@ -2807,11 +3465,10 @@ var cydj = (function (exports) {
             }]
           });
         }
-
         return {
           tag: 'g',
           attributes: {
-            'class': 'missing'
+            class: 'missing'
           },
           children: gChildren
         };
@@ -2850,14 +3507,14 @@ var cydj = (function (exports) {
   api.counter;
 
   /*!
-   * Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
+   * Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com
    * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
-   * Copyright 2022 Fonticons, Inc.
+   * Copyright 2025 Fonticons, Inc.
    */
   var faCamera = {
     prefix: 'fas',
     iconName: 'camera',
-    icon: [512, 512, [62258, "camera-alt"], "f030", "M194.6 32H317.4C338.1 32 356.4 45.22 362.9 64.82L373.3 96H448C483.3 96 512 124.7 512 160V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V160C0 124.7 28.65 96 64 96H138.7L149.1 64.82C155.6 45.22 173.9 32 194.6 32H194.6zM256 384C309 384 352 341 352 288C352 234.1 309 192 256 192C202.1 192 160 234.1 160 288C160 341 202.1 384 256 384z"]
+    icon: [512, 512, [62258, "camera-alt"], "f030", "M149.1 64.8L138.7 96 64 96C28.7 96 0 124.7 0 160L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64l-74.7 0-10.4-31.2C356.4 45.2 338.1 32 317.4 32L194.6 32c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"]
   };
 
   function formatBadgeToHtml(url) {
@@ -2884,37 +3541,37 @@ var cydj = (function (exports) {
         'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/0-Month_Subscriber.png'; */
 
   const USER_BADGES = {
-    "ItMePeachy": [
-      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/peachy.gif",
-      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/guitar%20time.gif",
+    'ItMePeachy': [
+      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/peachy.gif',
+      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/guitar%20time.gif',
     ],
-    "RottenSpaceMan": [
-      "https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/ace-flag.gif",
+    'RottenSpaceMan': [
+      'https://raw.githubusercontent.com/ItMePeachy/PeachyRoom/beta/images/ace-flag.gif',
     ],
-    "JohnTarkov": [
-      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/ezgif-3-018bdeb1e1.gif",
-      "https://static-cdn.jtvnw.net/emoticons/v2/304550342/static/light/1.0",
+    'JohnTarkov': [
+      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/ezgif-3-018bdeb1e1.gif',
+      'https://static-cdn.jtvnw.net/emoticons/v2/304550342/static/light/1.0',
     ],
-    "mrfart2323": [
-      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/Gigachad_1.jpg",
+    'mrfart2323': [
+      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/Gigachad_1.jpg',
     ],
-    "GiveMeAnOnion": [
-      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/CTJoS3c.png",
+    'GiveMeAnOnion': [
+      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/CTJoS3c.png',
     ],
-    "Xsogon": [
-      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/Porcellio_Expansus_PFP.png",
+    'Xsogon': [
+      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/Porcellio_Expansus_PFP.png',
     ],
-    "airforce2700": [
-      "https://cdn.betterttv.net/emote/5d82600ec0652668c9e4e2f2/1x",
+    'airforce2700': [
+      'https://cdn.betterttv.net/emote/5d82600ec0652668c9e4e2f2/1x',
     ],
-    "eljulidi1337": [
-      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/elij.gif",
+    'eljulidi1337': [
+      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/elij.gif',
     ],
-    "PeepoGlad": [
-      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/1xend.gif",
+    'PeepoGlad': [
+      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/1xend.gif',
     ],
-    "Loi_561": [
-      "https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/loi.gif",
+    'Loi_561': [
+      'https://raw.githubusercontent.com/papertek/CyDJ/beta/images/badges/loi.gif',
     ],
   };
 
@@ -3321,13 +3978,13 @@ var cydj = (function (exports) {
   ];
 
   const RulesBtn_HTML =
-      '<ol><li>no bigotry in any shape form or manner, if you attempt to spread hate to anyone you will be banned.</li><li>do not queue or post anything nsfw or nsfl you will get banned.</li><li>please be nice to others.</li><li>please do not spam if others are having a conversation.</li><li>do not be stinky.</li></ol>';
+    '<ol><li>no bigotry in any shape form or manner, if you attempt to spread hate to anyone you will be banned.</li><li>do not queue or post anything nsfw or nsfl you will get banned.</li><li>please be nice to others.</li><li>please do not spam if others are having a conversation.</li><li>do not be stinky.</li></ol>';
 
   const EmbeddingMedia_Images =
-      'a[href$=".jpg"], a[href$=".jpg:large"], a[href$=".jpeg"], a[href$=".JPEG"], a[href$=".JPG"], a[href$=".png"], a[href$=".PNG"], a[href$=".tiff"], a[href$=".TIFF"], a[href$=".webp"], a[href$=".WEBP"], a[href$=".gif"], a[href$=".GIF"]';
+    'a[href$=".jpg"], a[href$=".jpg:large"], a[href$=".jpeg"], a[href$=".JPEG"], a[href$=".JPG"], a[href$=".png"], a[href$=".PNG"], a[href$=".tiff"], a[href$=".TIFF"], a[href$=".webp"], a[href$=".WEBP"], a[href$=".gif"], a[href$=".GIF"]';
 
   const EmbeddingMedia_Videos =
-      'a[href$=".webm"], a[href$=".mp4"], a[href$=".MP4"], a[href$=".mov"], a[href$=".MOV"], a[href$=".mp3"], a[href$=".MP3"], a[href$=".wav"], a[href$=".WAV"], a[href$=".ogg"], a[href$=".OGG"], a[href$=".m4a"], a[href$=".M4A"]';
+    'a[href$=".webm"], a[href$=".mp4"], a[href$=".MP4"], a[href$=".mov"], a[href$=".MOV"], a[href$=".mp3"], a[href$=".MP3"], a[href$=".wav"], a[href$=".WAV"], a[href$=".ogg"], a[href$=".OGG"], a[href$=".m4a"], a[href$=".M4A"]';
 
   const ThemesCSS = [
     [
@@ -3413,22 +4070,22 @@ var cydj = (function (exports) {
     {
       before: /\[imgur\](.*?)\[\/(i|imgur)\]/g,
       after:
-          '<a href="http://i.imgur.com/$1" target="_blank"><img src="http://i.imgur.com/$1" style="max-width:160px"></a>',
+        '<a href="http://i.imgur.com/$1" target="_blank"><img src="http://i.imgur.com/$1" style="max-width:160px"></a>',
     },
     {
       before: /\[drop\](.*?)\[\/(d|drop)\]/g,
       after: '<a href="https://dl.dropboxusercontent.com/s/$1" target="_blank">' +
-          '<img src="https://dl.dropboxusercontent.com/s/$1" style="max-width:160px"></a>',
+        '<img src="https://dl.dropboxusercontent.com/s/$1" style="max-width:160px"></a>',
     },
     {
       before: /\[minus\/(.*?)\](.*?)\[\/(m|minus)\]/g,
       after: '<a href="http://$1.minus.com/$2" target="_blank">' +
-          '<img src="http://$1.minus.com/$2" style="max-width:160px"></a>',
+        '<img src="http://$1.minus.com/$2" style="max-width:160px"></a>',
     },
     {
       before: /\[vi\/(.*?)\](.*?)\[\/(v|vi)\]/g,
       after: '<a href="https://pl.vichan.net/$1/src/$2" target="_blank">' +
-          '<img src="https://pl.vichan.net/$1/src/$2" style="max-width:160px"></a>',
+        '<img src="https://pl.vichan.net/$1/src/$2" style="max-width:160px"></a>',
     },
   ];
 
@@ -3453,7 +4110,7 @@ var cydj = (function (exports) {
   const defqueue = 'left' ;
 
   const DEFTHEME =
-      '/css/themes/slate.css';
+    '/css/themes/slate.css';
 
   const USERCONFIG = {
     'player': getOrDefault(CHANNEL.name + '_player', defplayer),
@@ -3565,8 +4222,8 @@ var cydj = (function (exports) {
     const parsed = parseMediaLink(link);
     if (parsed['id'] != null) {
       socket.emit(
-          'queue',
-          {id: parsed['id'], pos: stand, type: parsed['type'], temp: $('.add-temp').prop('checked')});
+        'queue',
+        {id: parsed['id'], pos: stand, type: parsed['type'], temp: $('.add-temp').prop('checked')});
     }
   }
 
@@ -3600,8 +4257,8 @@ var cydj = (function (exports) {
     modalContent = $('<div class="modal-content" />').appendTo(modalDialog);
     modalHead = $('<div class="modal-header" />').appendTo(modalContent);
     $('<button class="close" data-dismiss="modal" aria-hidden="true" />')
-        .html('&times;')
-        .appendTo(modalHead);
+      .html('&times;')
+      .appendTo(modalHead);
     $('<h3 />').text(title).appendTo(modalHead);
     modalBody = $('<div class="modal-body" />').appendTo(modalContent);
     modalFooter = $('<div class="modal-footer" />').appendTo(modalContent);
@@ -3655,9 +4312,9 @@ var cydj = (function (exports) {
       $('#rightpane').after($('#leftpane').detach());
     } else if (a === 'center') {
       $('#rightpane')
-          .after($('#leftpane').detach())
-          .removeClass()
-          .addClass('col-md-8 col-md-offset-2 col-md-12');
+        .after($('#leftpane').detach())
+        .removeClass()
+        .addClass('col-md-8 col-md-offset-2 col-md-12');
       $('#leftpane').removeClass().addClass('col-md-8 col-md-offset-2 col-md-12');
       $('#pinup-btn').hide();
     }
@@ -3721,9 +4378,9 @@ var cydj = (function (exports) {
       $('#mainpage').css('margin-top', '-72px');
     } else if (a === 'mouseover') {
       $('.navbar-fixed-top')
-          .css({'position': 'fixed', 'top': '-40px'})
-          .on('mouseover', () => $('.navbar-fixed-top').css('top', '0px'))
-          .on('mouseout', () => $('.navbar-fixed-top').css('top', '-40px'));
+        .css({'position': 'fixed', 'top': '-40px'})
+        .on('mouseover', () => $('.navbar-fixed-top').css('top', '0px'))
+        .on('mouseout', () => $('.navbar-fixed-top').css('top', '-40px'));
       $('#mainpage').css('margin-top', '-40px');
     }
   }
@@ -3890,9 +4547,9 @@ var cydj = (function (exports) {
     {
       const rulesbtnwrap = $('<div id="rulesbtnwrap" />').appendTo('#motd');
       $('<button id="rules-btn" class="btn btn-default btn-sm" />')
-          .text(RulesBtn_Caption + ' ▸')
-          .appendTo(rulesbtnwrap)
-          .on('click', () => rulesModal());
+        .text(RulesBtn_Caption + ' ▸')
+        .appendTo(rulesbtnwrap)
+        .on('click', () => rulesModal());
     }
   }
 
@@ -3900,8 +4557,8 @@ var cydj = (function (exports) {
     createModal('Rules Panel');
     modalBody.append(RulesBtn_HTML);
     $('<button class ="btn btn-default" type="button" data-dismiss="modal"/>')
-        .text('Close')
-        .appendTo(modalFooter);
+      .text('Close')
+      .appendTo(modalFooter);
   }
 
   /**
@@ -4042,9 +4699,9 @@ var cydj = (function (exports) {
    */
   function createDatabase() {
     let html =
-        '<button id="la1" class="btn btn-default btn-sm db-break" onclick="cydj.toggleCat(1)">' +
-        CHANNEL_DATABASE$1[0][1] + '</button>' +
-        '<ul id="l1" class="videolist db-cat">';
+      '<button id="la1" class="btn btn-default btn-sm db-break" onclick="cydj.toggleCat(1)">' +
+      CHANNEL_DATABASE$1[0][1] + '</button>' +
+      '<ul id="l1" class="videolist db-cat">';
 
     let len = CHANNEL_DATABASE$1.length;
     for (let i = 1; i < CHANNEL_DATABASE$1.length; i++) {
@@ -4055,36 +4712,36 @@ var cydj = (function (exports) {
         count_nr = 0;
 
         html += `</ul><button id="la${layer_nr}" ` +
-            `class="btn btn-default btn-sm db-break" ` +
-            `onclick="cydj.toggleCat(${layer_nr})">` +
-            `${CHANNEL_DATABASE$1[i][1]}</button>` +
-            `<ul id="l${layer_nr}" class="videolist db-cat">`;
+          `class="btn btn-default btn-sm db-break" ` +
+          `onclick="cydj.toggleCat(${layer_nr})">` +
+          `${CHANNEL_DATABASE$1[i][1]}</button>` +
+          `<ul id="l${layer_nr}" class="videolist db-cat">`;
       } else {
         item_nr++;
         count_nr++;
         const link = CHANNEL_DATABASE$1[i][0];
 
         html += '<li class="queue_entry">' +
-            `<button class="btn btn-default btn-xs pull-right" ` +
-            `onclick="cydj.addVideo('${link}')">End</button>`;
+          `<button class="btn btn-default btn-xs pull-right" ` +
+          `onclick="cydj.addVideo('${link}')">End</button>`;
 
         const parsed = parseMediaLink(link);
         if (parsed['type'] === 'yt') {
           const a = parsed['id'];
           html += '<button class="btn btn-default btn-xs pull-right" ' +
-              `onclick="cydj.prevVideo('${a}')">` +
-              '<i class="glyphicon glyphicon-film"></i>' +
-              '</button>';
+            `onclick="cydj.prevVideo('${a}')">` +
+            '<i class="glyphicon glyphicon-film"></i>' +
+            '</button>';
         }
         html += '<span class="badge db-badge">' + item_nr + '</span><span class="db-title">' +
-            CHANNEL_DATABASE$1[i][1] + '</span><br /><span class="db-link">' + link + '</span>';
+          CHANNEL_DATABASE$1[i][1] + '</span><br /><span class="db-link">' + link + '</span>';
       }
     }
 
     html += '</ul><br /><br /><div id="cleardbwrap">' +
-        '<button id="cleardb-btn" class="btn btn-default btn-sm">' +
-        'Reload Data (if channel seems working slow)</button>' +
-        '</div>';
+      '<button id="cleardb-btn" class="btn btn-default btn-sm">' +
+      'Reload Data (if channel seems working slow)</button>' +
+      '</div>';
 
     item_count[layer_nr - 1] = count_nr;
     opening[layer_nr - 1] = 0;
@@ -4202,8 +4859,8 @@ var cydj = (function (exports) {
       const {title, duration} = item;
       const link = formatURL(item);
       list.push(
-          `<li>${title} [${duration}] - <a href="${link}" target="_blank">` +
-          `${link}</a></li>`);
+        `<li>${title} [${duration}] - <a href="${link}" target="_blank">` +
+        `${link}</a></li>`);
     }
     return list.join('\n');
   }
@@ -4387,7 +5044,7 @@ var cydj = (function (exports) {
       $('#usertheme').attr('href', USERTHEME);
     } else {
       $(`<link id="usertheme-fix" rel="stylesheet" type="text/css" href="${USERTHEME}"></link>`)
-          .appendTo('head');
+        .appendTo('head');
     }
     $('#usercss').remove();
     if (USERCONFIG.css !== 'no') {
@@ -4422,51 +5079,51 @@ var cydj = (function (exports) {
 
   function prepareFilters() {
     str = '{"name":"white color","source":"\\\\[white\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:white\\">","active":true,"filterlinks":false},' +
-        '{"name":"yellow color","source":"\\\\[yellow\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:gold\\">","active":true,"filterlinks":false},' +
-        '{"name":"orange color","source":"\\\\[orange\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:orange\\">","active":true,"filterlinks":false},' +
-        '{"name":"pink color","source":"\\\\[pink\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:#FFBBFF\\">","active":true,"filterlinks":false},' +
-        '{"name":"red color","source":"\\\\[red\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:red\\">","active":true,"filterlinks":false},' +
-        '{"name":"limegreen color","source":"\\\\[lime\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:limegreen\\">","active":true,"filterlinks":false},' +
-        '{"name":"green color","source":"\\\\[green\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:green\\">","active":true,"filterlinks":false},' +
-        '{"name":"aqua color","source":"\\\\[aqua\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:aqua\\">","active":true,"filterlinks":false},' +
-        '{"name":"blue color","source":"\\\\[blue\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:blue\\">","active":true,"filterlinks":false},' +
-        '{"name":"violet color","source":"\\\\[violet\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:#660099\\">","active":true,"filterlinks":false},' +
-        '{"name":"brown color","source":"\\\\[brown\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:#660000\\">","active":true,"filterlinks":false},' +
-        '{"name":"silver color","source":"\\\\[silver\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:silver\\">","active":true,"filterlinks":false},' +
-        '{"name":"black color","source":"\\\\[black\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:black\\">","active":true,"filterlinks":false},' +
-        '{"name":"white color on black","source":"\\\\[bw\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:white; background-color:black\\">","active":true,"filterlinks":false},' +
-        '{"name":"bold text","source":"\\\\[b\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"font-weight:bold\\">","active":true,"filterlinks":false},' +
-        '{"name":"italic text","source":"\\\\[i\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"font-style:italic\\">","active":true,"filterlinks":false},' +
-        '{"name":"underlined text","source":"\\\\[u\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"text-decoration:underline\\">","active":true,"filterlinks":false},' +
-        '{"name":"striked text","source":"\\\\[s\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"text-decoration:line-through\\">","active":true,"filterlinks":false},' +
-        '{"name":"distinguished text","source":"\\\\[d\\\\]","flags":"g",' +
-        '"replace":"<span class=\\"dist\\">","active":true,"filterlinks":false},' +
-        '{"name":"fire text","source":"\\\\[f\\\\]","flags":"g",' +
-        '"replace":"<span style=\\"color:#FFFFFF; font-family:impact, sans-serif; padding-top:20px; ' +
-        'text-shadow:0px 0px 4px #000000, 0px -5px 4px #FFFF33, 2px -8px 6px #FFDD33, -2px -15px 10px #FF8800, ' +
-        '2px -20px 18px #FF2200; letter-spacing:2px\\">","active":true,"filterlinks":false},' +
-        '{"name":"short spoiler","source":"\\\\[sp\\\\]","flags":"g",' +
-        '"replace":"<span class=\\"spoiler\\">","active":true,"filterlinks":false},' +
-        '{"name":"closing font style","source":"\\\\[\\\\/\\\\]","flags":"g",' +
-        '"replace":"</span>","active":true,"filterlinks":false}]';
+      '"replace":"<span style=\\"color:white\\">","active":true,"filterlinks":false},' +
+      '{"name":"yellow color","source":"\\\\[yellow\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:gold\\">","active":true,"filterlinks":false},' +
+      '{"name":"orange color","source":"\\\\[orange\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:orange\\">","active":true,"filterlinks":false},' +
+      '{"name":"pink color","source":"\\\\[pink\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:#FFBBFF\\">","active":true,"filterlinks":false},' +
+      '{"name":"red color","source":"\\\\[red\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:red\\">","active":true,"filterlinks":false},' +
+      '{"name":"limegreen color","source":"\\\\[lime\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:limegreen\\">","active":true,"filterlinks":false},' +
+      '{"name":"green color","source":"\\\\[green\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:green\\">","active":true,"filterlinks":false},' +
+      '{"name":"aqua color","source":"\\\\[aqua\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:aqua\\">","active":true,"filterlinks":false},' +
+      '{"name":"blue color","source":"\\\\[blue\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:blue\\">","active":true,"filterlinks":false},' +
+      '{"name":"violet color","source":"\\\\[violet\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:#660099\\">","active":true,"filterlinks":false},' +
+      '{"name":"brown color","source":"\\\\[brown\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:#660000\\">","active":true,"filterlinks":false},' +
+      '{"name":"silver color","source":"\\\\[silver\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:silver\\">","active":true,"filterlinks":false},' +
+      '{"name":"black color","source":"\\\\[black\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:black\\">","active":true,"filterlinks":false},' +
+      '{"name":"white color on black","source":"\\\\[bw\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:white; background-color:black\\">","active":true,"filterlinks":false},' +
+      '{"name":"bold text","source":"\\\\[b\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"font-weight:bold\\">","active":true,"filterlinks":false},' +
+      '{"name":"italic text","source":"\\\\[i\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"font-style:italic\\">","active":true,"filterlinks":false},' +
+      '{"name":"underlined text","source":"\\\\[u\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"text-decoration:underline\\">","active":true,"filterlinks":false},' +
+      '{"name":"striked text","source":"\\\\[s\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"text-decoration:line-through\\">","active":true,"filterlinks":false},' +
+      '{"name":"distinguished text","source":"\\\\[d\\\\]","flags":"g",' +
+      '"replace":"<span class=\\"dist\\">","active":true,"filterlinks":false},' +
+      '{"name":"fire text","source":"\\\\[f\\\\]","flags":"g",' +
+      '"replace":"<span style=\\"color:#FFFFFF; font-family:impact, sans-serif; padding-top:20px; ' +
+      'text-shadow:0px 0px 4px #000000, 0px -5px 4px #FFFF33, 2px -8px 6px #FFDD33, -2px -15px 10px #FF8800, ' +
+      '2px -20px 18px #FF2200; letter-spacing:2px\\">","active":true,"filterlinks":false},' +
+      '{"name":"short spoiler","source":"\\\\[sp\\\\]","flags":"g",' +
+      '"replace":"<span class=\\"spoiler\\">","active":true,"filterlinks":false},' +
+      '{"name":"closing font style","source":"\\\\[\\\\/\\\\]","flags":"g",' +
+      '"replace":"</span>","active":true,"filterlinks":false}]';
 
     callback = (data) => {
       socket.listeners('chatFilters').splice(socket.listeners('chatFilters').indexOf(callback));
@@ -4479,7 +5136,7 @@ var cydj = (function (exports) {
     socket.emit('requestChatFilters');
 
     txt = 'This option does NOT affect your current filters, all of them will be saved.\n' +
-        'Click "Import filter list" button if you\'ll decide to install.';
+      'Click "Import filter list" button if you\'ll decide to install.';
     alert(txt);
   }
 
@@ -4493,17 +5150,17 @@ var cydj = (function (exports) {
     $('#chatfunc-dropdown').append('<div>Prevent room freezing if spam:</div>');
 
     $('<button id="spamclear-btn" class="btn btn-xs btn-default">Auto Clear</button>')
-        .appendTo('#chatfunc-dropdown')
-        .on('click', function() {
-          if (!CLEARING) {
-            $(this).text('Stop Clearing').addClass('btn-danger');
-            CLEARING = setInterval(() => socket.emit('chatMsg', {msg: '/clear'}), 500);
-          } else {
-            $(this).text('Auto Clear').removeClass('btn-danger');
-            clearInterval(CLEARING);
-            CLEARING = false;
-          }
-        });
+      .appendTo('#chatfunc-dropdown')
+      .on('click', function() {
+        if (!CLEARING) {
+          $(this).text('Stop Clearing').addClass('btn-danger');
+          CLEARING = setInterval(() => socket.emit('chatMsg', {msg: '/clear'}), 500);
+        } else {
+          $(this).text('Auto Clear').removeClass('btn-danger');
+          clearInterval(CLEARING);
+          CLEARING = false;
+        }
+      });
     if (CLEARING) {
       $('#spamclear-btn').text('Stop Clearing').addClass('btn-danger');
     }
@@ -4511,24 +5168,24 @@ var cydj = (function (exports) {
     $('#chatfunc-dropdown').append('<div>Prevent me from AFK:</div>');
 
     $('<button id="antiafk-btn" class="btn btn-xs btn-default">Anti AFK</button>')
-        .appendTo('#chatfunc-dropdown')
-        .on('click', function() {
-          if (!ANTIAFK) {
-            $(this).addClass('btn-danger');
-            ANTIAFK = setInterval(function() {
-              $('#userlist').find('span[class^=userlist]').each(function() {
-                if ($(this).html() === CLIENT.name && $(this).css('font-style') === 'italic') {
-                  socket.emit('chatMsg', {msg: '/afk'});
-                  return;
-                }
-              });
-            }, 4000);
-          } else {
-            $(this).removeClass('btn-danger');
-            clearInterval(ANTIAFK);
-            ANTIAFK = false;
-          }
-        });
+      .appendTo('#chatfunc-dropdown')
+      .on('click', function() {
+        if (!ANTIAFK) {
+          $(this).addClass('btn-danger');
+          ANTIAFK = setInterval(function() {
+            $('#userlist').find('span[class^=userlist]').each(function() {
+              if ($(this).html() === CLIENT.name && $(this).css('font-style') === 'italic') {
+                socket.emit('chatMsg', {msg: '/afk'});
+                return;
+              }
+            });
+          }, 4000);
+        } else {
+          $(this).removeClass('btn-danger');
+          clearInterval(ANTIAFK);
+          ANTIAFK = false;
+        }
+      });
     if (ANTIAFK) {
       $('#antiafk-btn').addClass('btn-danger');
     }
@@ -4540,41 +5197,41 @@ var cydj = (function (exports) {
   function showChatHelp() {
     createModal('Chat Commands');
     $('<button class ="btn btn-default" type="button" data-dismiss="modal"/>')
-        .text('Close')
-        .appendTo(modalFooter);
+      .text('Close')
+      .appendTo(modalFooter);
 
     {
       modalBody.append('<strong>Fonts commands</strong><br /><br />');
       const html =
-          [
-            '<code>[white]</code>, <code>[yellow]</code>, <code>[orange]</code>, <code>[pink]</code>, ' +
-                '<code>[red]</code>, <code>[lime]</code>, <code>[green]</code>, <code>[aqua]</code>, ' +
-                '<code>[blue]</code>, <code>[violet]</code>, <code>[brown]</code>, <code>[silver]</code>, ' +
-                '<code>[black]</code> - begin of colored text',
-            '<code>[bw]</code> - begin of white text on the black background',
-            '<code>[b]</code>, <code>[i]</code>, <code>[u]</code>, <code>[s]</code> - ' +
-                'begin of bold, italic, underlined, striked or underlined text',
-            '<code>[d]</code> - begin of a distinguished text (red on yellow background)',
-            '<code>[f]</code> - begin of a text with a fire effect',
-            '<code>[sp]</code> - begin of an inline spoiler',
-            '<code>[/]</code> - <b>end of any color, style or spoiler</b>',
-            '<code>[f]</code> - begin of a text with a fire effect',
-            '<code>@</code> - beginning and end of continuous text scrolling',
-            '<code>@@</code> - beginning and end of bounce text scrolling',
-            '<code>@@@</code> - beginning and end of buggy text scrolling (still fun!)',
-            '<code>!</code> - beginning and end of faster bounce text scrolling',
-            '<code>!!</code> - beginning and end of fastest bounce text scrolling!',
-          ].map((line) => `<li>${line}</li>`)
-              .join('') +
-          'For a quick CyDJ guide check out this Google Doc <a href="https://tinyurl.com/CyDJguideV2" target="_blank">here</a>.';
+        [
+          '<code>[white]</code>, <code>[yellow]</code>, <code>[orange]</code>, <code>[pink]</code>, ' +
+          '<code>[red]</code>, <code>[lime]</code>, <code>[green]</code>, <code>[aqua]</code>, ' +
+          '<code>[blue]</code>, <code>[violet]</code>, <code>[brown]</code>, <code>[silver]</code>, ' +
+          '<code>[black]</code> - begin of colored text',
+          '<code>[bw]</code> - begin of white text on the black background',
+          '<code>[b]</code>, <code>[i]</code>, <code>[u]</code>, <code>[s]</code> - ' +
+          'begin of bold, italic, underlined, striked or underlined text',
+          '<code>[d]</code> - begin of a distinguished text (red on yellow background)',
+          '<code>[f]</code> - begin of a text with a fire effect',
+          '<code>[sp]</code> - begin of an inline spoiler',
+          '<code>[/]</code> - <b>end of any color, style or spoiler</b>',
+          '<code>[f]</code> - begin of a text with a fire effect',
+          '<code>@</code> - beginning and end of continuous text scrolling',
+          '<code>@@</code> - beginning and end of bounce text scrolling',
+          '<code>@@@</code> - beginning and end of buggy text scrolling (still fun!)',
+          '<code>!</code> - beginning and end of faster bounce text scrolling',
+          '<code>!!</code> - beginning and end of fastest bounce text scrolling!',
+        ].map((line) => `<li>${line}</li>`)
+          .join('') +
+        'For a quick CyDJ guide check out this Google Doc <a href="https://tinyurl.com/CyDJguideV2" target="_blank">here</a>.';
       $('<ul />').html(html).appendTo(modalBody);
     }
     {
       const arr = {
         'pick': 'choosing a random option from a list separated by commas ' +
-            '(e.g. <i>!pick japan,korea,china</i>)',
+          '(e.g. <i>!pick japan,korea,china</i>)',
         'ask': 'asking a question with yes/no type answer ' +
-            '(e.g. <i>!ask Will this channel be popular?</i>)',
+          '(e.g. <i>!ask Will this channel be popular?</i>)',
         'q': 'displaying random quote (<i>!q</i>)',
         'dice': 'rolling dice (<i>!dice</i>)',
         'roll': 'rolling 3-digit number (<i>!roll</i>)',
@@ -4583,7 +5240,7 @@ var cydj = (function (exports) {
         'media': 'links current media in the playlist (<i>!media</i>)',
         'skip': 'skip current item (<i>!skip</i>)',
         'add': 'adding a link to the end of playlist ' +
-            '(e.g. <i>!add https://www.youtube.com/watch?v=29FFHC2D12Q</i>)',
+          '(e.g. <i>!add https://www.youtube.com/watch?v=29FFHC2D12Q</i>)',
         'stat': 'displaying user chat statistics in current session (<i>!stat</i>)',
         'version': 'displays current script version (<i>!version</i>)',
         'report': 'links a report fourm for reporting a user (<i>!report</i>)',
@@ -4606,7 +5263,7 @@ var cydj = (function (exports) {
     const arr = {
       'me': 'showing an action-style message (username does something, e.g. <i>/me is dancing</i>)',
       'sp':
-          'hiding a message in a hover-to-show spoiler box (e.g. <i>/sp This message is hidden</i>)',
+        'hiding a message in a hover-to-show spoiler box (e.g. <i>/sp This message is hidden</i>)',
       'afk': 'toggling your AFK (away from keyboard) status (<i>/afk</i>)',
     };
     modalBody.append('<br /><strong>Default CyTube commands</strong><br /><br />');
@@ -4623,8 +5280,8 @@ var cydj = (function (exports) {
     createModal('Moderators panel');
 
     $('<button class ="btn btn-default" type="button" data-dismiss="modal"/>')
-        .text('Close')
-        .appendTo(modalFooter);
+      .text('Close')
+      .appendTo(modalFooter);
     let html = '';
     for (const panel of ModPanel_Array) {
       const name = panel[0];
@@ -4633,8 +5290,8 @@ var cydj = (function (exports) {
         html += `<i class="glyphicon glyphicon-comment"></i> ${mess}<br /><br />`;
       } else if (name === CLIENT.name) {
         html = '<i class="glyphicon glyphicon-comment"></i> ' +
-            '<i class="glyphicon glyphicon-user"></i> ' +
-            `(to: ${CLIENT.name}) → ${mess}<br /><br />`;
+          '<i class="glyphicon glyphicon-user"></i> ' +
+          `(to: ${CLIENT.name}) → ${mess}<br /><br />`;
       }
     }
     modalBody.append(html);
@@ -4715,12 +5372,12 @@ var cydj = (function (exports) {
     const w = $('#ytapiplayer').css('width');
     const h = $('#videowrap').css('height').replace('px', '') - 30;
     coverpl = $('<div id="coverpl" />')
-                  .css({
-                    'width': w,
-                    'height': h + 'px',
-                    'background-image': `url(${PlayerHiding_URL})`,
-                  })
-                  .appendTo($('#videowrap'));
+      .css({
+        'width': w,
+        'height': h + 'px',
+        'background-image': `url(${PlayerHiding_URL})`,
+      })
+      .appendTo($('#videowrap'));
     hideplayerbtn.addClass('btn-danger').attr('title', 'Show player');
   }
 
@@ -4741,11 +5398,11 @@ var cydj = (function (exports) {
     createModal('Preview Video');
 
     $('<iframe id="previewFrame" width="558" height="314" frameborder="0" />')
-        .attr('src', `https://www.youtube.com/embed/${a}?wmode=transparent&enablejsapi`)
-        .appendTo(modalBody);
+      .attr('src', `https://www.youtube.com/embed/${a}?wmode=transparent&enablejsapi`)
+      .appendTo(modalBody);
     const closepv = $('<button class ="btn btn-default" type="button" data-dismiss="modal"/>')
-                        .text('Close')
-                        .appendTo(modalFooter);
+      .text('Close')
+      .appendTo(modalFooter);
     closepv.on('click', () => {
       $('Preview Video').empty();
     });
@@ -4769,14 +5426,14 @@ var cydj = (function (exports) {
       }
       pinupbtn.show();
       layoutbtn.removeClass('btn-danger')
-          .addClass('btn-success')
-          .html('<span class="glyphicon glyphicon-cog"></span> Layout');
+        .addClass('btn-success')
+        .html('<span class="glyphicon glyphicon-cog"></span> Layout');
       $('#min-layout').prop('checked', false);
       $('#plcontrol button, #db-btn, #gallery-btn, #newpollbtn').removeAttr('disabled');
       MINIMIZED = false;
       // patch: giving back 15px additional space on the top
       $('#mainpage')
-          .css('margin-top', $('#mainpage').css('margin-top').replace('px', '') * 1 - 15 + 'px');
+        .css('margin-top', $('#mainpage').css('margin-top').replace('px', '') * 1 - 15 + 'px');
     } else {
       toggleDiv(configwrap);
       if (configwrap.css('display') === 'none') {
@@ -4852,14 +5509,14 @@ var cydj = (function (exports) {
     addOption('Top logo', logoinsert);
 
     const userlogo =
-        $('<input />').addClass('form-control').attr('type', 'text').attr('placeholder', 'Image URL');
+      $('<input />').addClass('form-control').attr('type', 'text').attr('placeholder', 'Image URL');
     userlogo.val('');
     addOption('User logo URL', userlogo);
 
     const userlogoht = $('<input />')
-                           .addClass('form-control')
-                           .attr('type', 'text')
-                           .attr('placeholder', 'Image Height (in px)');
+      .addClass('form-control')
+      .attr('type', 'text')
+      .attr('placeholder', 'Image Height (in px)');
     userlogoht.val('');
     addOption('User logo height', userlogoht);
 
@@ -4885,7 +5542,7 @@ var cydj = (function (exports) {
     addOption('Custom CSS', customcss);
 
     const usercss =
-        $('<textarea rows="8" />').addClass('form-control').attr('placeholder', 'Insert CSS code');
+      $('<textarea rows="8" />').addClass('form-control').attr('placeholder', 'Insert CSS code');
     usercss.val(USERCONFIG.csscode);
     addOption('CSS code', usercss);
 
@@ -4894,12 +5551,12 @@ var cydj = (function (exports) {
     }
 
     const submit = $('<button class="btn btn-default btn-success" />')
-                       .text('Save changes')
-                       .appendTo(modalFooter);
+      .text('Save changes')
+      .appendTo(modalFooter);
     const reset =
-        $('<button class="btn btn-default pull-left" />').text('Default').appendTo(modalFooter);
+      $('<button class="btn btn-default pull-left" />').text('Default').appendTo(modalFooter);
     const column =
-        $('<button class="btn btn-default pull-left" />').text('One column').appendTo(modalFooter);
+      $('<button class="btn btn-default pull-left" />').text('One column').appendTo(modalFooter);
 
     logoinsert.on('change', () => {
       if (logoinsert.val() === 'user') {
@@ -5080,7 +5737,7 @@ var cydj = (function (exports) {
       MINIMIZED = true;
       // patch for 15px more space on the top
       $('#mainpage')
-          .css('margin-top', $('#mainpage').css('margin-top').replace('px', '') * 1 + 15 + 'px');
+        .css('margin-top', $('#mainpage').css('margin-top').replace('px', '') * 1 + 15 + 'px');
     }
   }
 
@@ -5147,22 +5804,22 @@ var cydj = (function (exports) {
     const /** @type {!Map<string, number} */ userQueueCounts = new Map();
 
     const /** @type {!Array<HTMLLIElement>} */ queuedItems =
-        Array.from(document.getElementById('queue').children);
+      Array.from(document.getElementById('queue').children);
     const userQueues = queuedItems.map((elem) => elem.getAttribute('title'))
-                           .filter((title) => title)
-                           .map((title) => title.replace('Added by: ', ''));
+      .filter((title) => title)
+      .map((title) => title.replace('Added by: ', ''));
     for (const user of userQueues) {
       const current = userQueueCounts.get(user) || 0;
       userQueueCounts.set(user, current + 1);
     }
 
     const userContributions = Array.from(userQueueCounts.entries())
-                                  .sort((a, b) => b[1] - a[1])
-                                  .map(([user, count]) => `${count}: ${user}`);
+      .sort((a, b) => b[1] - a[1])
+      .map(([user, count]) => `${count}: ${user}`);
 
     modalBody.append(
-        '<strong>Number of added playlist items:</strong>' +
-        '<br /><br />' + userContributions.join('<br />'));
+      '<strong>Number of added playlist items:</strong>' +
+      '<br /><br />' + userContributions.join('<br />'));
   }
 
   /**
@@ -5188,17 +5845,17 @@ var cydj = (function (exports) {
     createModal('Playlist URLs');
 
     const data =
-        $('<textarea rows="10" class="form-control" />').val(formatRawList()).appendTo(modalBody);
+      $('<textarea rows="10" class="form-control" />').val(formatRawList()).appendTo(modalBody);
     const rlist =
-        $('<button class="btn btn-default pull-left">Raw Links</button>').appendTo(modalFooter);
+      $('<button class="btn btn-default pull-left">Raw Links</button>').appendTo(modalFooter);
     const tlist =
-        $('<button class="btn btn-default pull-left">Plain Text</button>').appendTo(modalFooter);
+      $('<button class="btn btn-default pull-left">Plain Text</button>').appendTo(modalFooter);
     const hlist =
-        $('<button class="btn btn-default pull-left">HTML Code</button>').appendTo(modalFooter);
+      $('<button class="btn btn-default pull-left">HTML Code</button>').appendTo(modalFooter);
     const olist =
-        $('<button class="btn btn-default pull-left">Ordered List</button>').appendTo(modalFooter);
+      $('<button class="btn btn-default pull-left">Ordered List</button>').appendTo(modalFooter);
     const dlist =
-        $('<button class="btn btn-default pull-left">Database Format</button>').appendTo(modalFooter);
+      $('<button class="btn btn-default pull-left">Database Format</button>').appendTo(modalFooter);
 
     rlist.on('click', () => data.val(formatRawList()));
     tlist.on('click', () => data.val(formatPlainTextList()));
@@ -5242,25 +5899,25 @@ var cydj = (function (exports) {
     $('#chatwrap, #chatline').removeClass('col-lg-12 col-md-12').addClass('col-lg-5 col-md-5');
     videowrap = $('<div id="videowrap" class="col-lg-7 col-md-7" />').insertBefore('#chatwrap');
     currenttitle = $('<p id="currenttitle" />')
-                       .html('Currently Playing: ' + $('.queue_active a').html())
-                       .appendTo(videowrap);
+      .html('Currently Playing: ' + $('.queue_active a').html())
+      .appendTo(videowrap);
     ytapiplayer = $('<div id="ytapiplayer" />').appendTo(videowrap);
 
     html = 'According to your User Preferences, video player is hidden. ' +
-        'Click a button below to continue hiding player. ' +
-        'Click default "Reload" icon to show player in this session. ' +
-        'If you\'ll stay in "Chat Only" mode, functionality of this channel will be limited.<br /><br />';
+      'Click a button below to continue hiding player. ' +
+      'Click default "Reload" icon to show player in this session. ' +
+      'If you\'ll stay in "Chat Only" mode, functionality of this channel will be limited.<br /><br />';
     makeAlert('No Player', html).appendTo(ytapiplayer);
 
     staybtn =
-        $('<button id="stay-btn" class="btn btn-default btn-sm">Stay In "Chat Only" Mode</button>')
-            .appendTo('#ytapiplayer .alert')
-            .on('click', () => {
-              videowrap.remove();
-              $('#chatwrap').removeClass().addClass('col-lg-12 col-md-12');
-              $('#configform, #modeform, #pinup-btn').hide();
-              fitChat('auto');
-            });
+      $('<button id="stay-btn" class="btn btn-default btn-sm">Stay In "Chat Only" Mode</button>')
+        .appendTo('#ytapiplayer .alert')
+        .on('click', () => {
+          videowrap.remove();
+          $('#chatwrap').removeClass().addClass('col-lg-12 col-md-12');
+          $('#configform, #modeform, #pinup-btn').hide();
+          fitChat('auto');
+        });
   }
 
   // changing initial layout to compact for new users
@@ -5295,8 +5952,8 @@ var cydj = (function (exports) {
   if ($('#chanexternalcss').length < 1) {
     const url = 'https://dl.dropboxusercontent.com/s/hbhlrmys5piztgo/main.css';
     $('head').append(
-        `<link id="chanexternalcss" href="${url}" ` +
-        'rel="stylesheet" type="text/css">');
+      `<link id="chanexternalcss" href="${url}" ` +
+      'rel="stylesheet" type="text/css">');
   }
 
   // attempt to fix dumbass buttons
@@ -5316,7 +5973,7 @@ var cydj = (function (exports) {
     $(document).ready(() => {
       $(`<link id="chanfavicon" href="${Favicon_URL}" type="image/x-icon" ` +
         'rel="shortcut icon" />')
-          .appendTo('head');
+        .appendTo('head');
     });
   }
 
@@ -5326,12 +5983,12 @@ var cydj = (function (exports) {
   // adding important messages to "Options"
 
   const text1 =
-      'Please use "Personal theme" selector in the room configuration box to select a theme for this channel. ';
+    'Please use "Personal theme" selector in the room configuration box to select a theme for this channel. ';
   const text2 =
-      'Please use "Click to configure" button in the room configuration box to configure this channel. ';
+    'Please use "Click to configure" button in the room configuration box to configure this channel. ';
   const text3 =
-      'If you want to make global changes, please go to another channel, or make changes before accepting ' +
-      'special features.';
+    'If you want to make global changes, please go to another channel, or make changes before accepting ' +
+    'special features.';
   $('#us-theme').hide();
   $('#us-theme').parent().append(`<p class="text-danger">${text1}${text3}</p>`);
   $('#us-layout').hide();
@@ -5339,8 +5996,8 @@ var cydj = (function (exports) {
 
   // creating channel settings filters preparation button
   $('<button id="cs-fonts-import" class="btn btn-default pull-right">Prepare fonts filters</button>')
-      .insertAfter('#cs-chatfilters-import')
-      .on('click', () => prepareFilters());
+    .insertAfter('#cs-chatfilters-import')
+    .on('click', () => prepareFilters());
 
   // fixing layout after saving global user options
   $('#useroptions .modal-footer button:nth-child(1)').on('click', () => {
@@ -5348,12 +6005,12 @@ var cydj = (function (exports) {
       location.reload();
     }
     html = 'All changes are applying globally, but this channel uses its own layout. ' +
-        'Please use "Click to configure" button to configure this channel layout.<br />' +
-        'Reload player if the wrong title is displaying. ' +
-        'In HD layout or if player is removed, you may not see some elements due to CyTube API. ' +
-        'If so, reload channel.';
+      'Please use "Click to configure" button to configure this channel layout.<br />' +
+      'Reload player if the wrong title is displaying. ' +
+      'In HD layout or if player is removed, you may not see some elements due to CyTube API. ' +
+      'If so, reload channel.';
     makeAlert('You have changed global User Preferences', html, 'alert-info')
-        .appendTo('#announcements');
+      .appendTo('#announcements');
     compactLayout();
     setLayout();
     if (FLUID) {
@@ -5378,8 +6035,8 @@ var cydj = (function (exports) {
   {
     const headerdrop = $('<li id="headerdrop" class="dropdown" />').insertAfter('#home-link');
     $('<a class="dropdown-toggle" data-toggle="dropdown" href="#" />')
-        .html(HeaderDropMenu_Title + ' ▾')
-        .appendTo(headerdrop);
+      .html(HeaderDropMenu_Title + ' ▾')
+      .appendTo(headerdrop);
     const headermenu = $('<ul id="headermenu" class="dropdown-menu" />').appendTo(headerdrop);
 
     if (HeaderDropMenu_Array.length < 1) {
@@ -5392,8 +6049,8 @@ var cydj = (function (exports) {
         headermenu.append(`<li class="dropdown-header">${title}</li>`);
       } else {
         $('<li class="header-drop-link" />')
-            .append(`<a href="${link}" target="_blank">${title}</a>`)
-            .appendTo(headermenu);
+          .append(`<a href="${link}" target="_blank">${title}</a>`)
+          .appendTo(headermenu);
       }
     }
   }
@@ -5402,8 +6059,8 @@ var cydj = (function (exports) {
   {
     const headerdrop = $('<li id="headerdrop" class="dropdown" />').insertAfter('#channelset-link');
     $('<a class="dropdown-toggle disabled" href="https://github.com/ItMePeachy/PeachyRoom" target="_blank" />')
-        .html(`${Version_Now}`)
-        .appendTo(headerdrop);
+      .html(`${Version_Now}`)
+      .appendTo(headerdrop);
   }
 
   // optional removing of "Layout" menu from header
@@ -5428,8 +6085,8 @@ var cydj = (function (exports) {
   {
     titlerow = $('<div id="titlerow" class="row" />').insertBefore('#main');
     $('<div id="titlerow-outer" class="col-md-12" />')
-        .html($('#currenttitle').detach())
-        .appendTo(titlerow);
+      .html($('#currenttitle').detach())
+      .appendTo(titlerow);
     mediainfo = $('<p id="mediainfo" />').html('Nothing is playing').prependTo('#videowrap');
 
     {
@@ -5484,18 +6141,18 @@ var cydj = (function (exports) {
 
   // additional chat functions
   const chatflair =
-      $('<span id="chatflair" class="label label-success pull-right pointer">Func</span>')
-          .insertAfter('#adminflair')
-          .on('click', () => {
-            if (!CHATFUNC) {
-              $('#sounds-dropdown').remove();
-              showChatFunctions();
-              CHATFUNC = false;
-            } else {
-              $('#chatfunc-dropdown').remove();
-              CHATFUNC = true;
-            }
-          });
+    $('<span id="chatflair" class="label label-success pull-right pointer">Func</span>')
+      .insertAfter('#adminflair')
+      .on('click', () => {
+        if (!CHATFUNC) {
+          $('#sounds-dropdown').remove();
+          showChatFunctions();
+          CHATFUNC = false;
+        } else {
+          $('#chatfunc-dropdown').remove();
+          CHATFUNC = true;
+        }
+      });
 
   /**
    * Toggle additional chat functions.
@@ -5526,9 +6183,9 @@ var cydj = (function (exports) {
   // adding chat fonts button
   {
     $('<button id="fonts-btn" class="btn btn-sm btn-default" title="Display fonts panel" />')
-        .html('<i class="glyphicon glyphicon-font"></i>')
-        .appendTo(chatcontrols)
-        .on('click', () => toggleDiv(fontspanel));
+      .html('<i class="glyphicon glyphicon-font"></i>')
+      .appendTo(chatcontrols)
+      .on('click', () => toggleDiv(fontspanel));
   }
 
   // moving emote button attempt
@@ -5540,17 +6197,17 @@ var cydj = (function (exports) {
   // adding chat commands button
   {
     $('<button id="chathelp-btn" class="btn btn-sm btn-default" title="Show chat commands"/>')
-        .html('<i class="glyphicon glyphicon-question-sign"></i>')
-        .appendTo(chatcontrols)
-        .on('click', () => showChatHelp());
+      .html('<i class="glyphicon glyphicon-question-sign"></i>')
+      .appendTo(chatcontrols)
+      .on('click', () => showChatHelp());
   }
 
   // adding the stupid context button to show up
   {
     $('<button id="context-btn" class="btn btn-sm btn-default" title="Opens a menu with links" />')
-        .html('<i class="glyphicon glyphicon-align-center"></i>')
-        .appendTo(chatcontrols)
-        .on('click', () => showContextMenu());
+      .html('<i class="glyphicon glyphicon-align-center"></i>')
+      .appendTo(chatcontrols)
+      .on('click', () => showContextMenu());
   }
 
   /**
@@ -5559,16 +6216,16 @@ var cydj = (function (exports) {
   function showContextMenu() {
     createModal('Context Menu');
     $('<button class ="btn btn-default" type="button" data-dismiss="modal"/>')
-        .text('Close')
-        .appendTo(modalFooter);
+      .text('Close')
+      .appendTo(modalFooter);
     {
       modalBody.append('<strong>Useful links</strong><br /><br />');
       const html =
-          [
-            '<a href="https://docs.google.com/document/d/1X2TdR9hc2KK0WEBLjY06CZaY30QyKxsI_7CQ1qbSz0g/edit" target="_blank">Click here to open the guide</a>!',
-            '<a href="https://discord.com/invite/cMUXkDcX6C" target="_blank">Click here to join the Discord</a>!',
-          ].map((item) => `<li>${item}</li>`)
-              .join('');
+        [
+          '<a href="https://docs.google.com/document/d/1X2TdR9hc2KK0WEBLjY06CZaY30QyKxsI_7CQ1qbSz0g/edit" target="_blank">Click here to open the guide</a>!',
+          '<a href="https://discord.com/invite/cMUXkDcX6C" target="_blank">Click here to join the Discord</a>!',
+        ].map((item) => `<li>${item}</li>`)
+          .join('');
       $('<ul />').html(html).appendTo(modalBody);
     }
   }
@@ -5576,9 +6233,9 @@ var cydj = (function (exports) {
   // adding moderators panel button
   {
     modbtn = $('<button id="mod-btn" class="btn btn-sm btn-default" title="Show moderators panel" />')
-                 .html('<i class="glyphicon glyphicon-tasks"></i>')
-                 .appendTo(chatcontrols)
-                 .on('click', () => showModPanel());
+      .html('<i class="glyphicon glyphicon-tasks"></i>')
+      .appendTo(chatcontrols)
+      .on('click', () => showModPanel());
 
     socket.on('rank', toggleModPanel);
     toggleModPanel();
@@ -5587,52 +6244,52 @@ var cydj = (function (exports) {
   // adding hey nay thing
   {
     const transcontrols =
-        $('<div id="transcontrols" class="btn-group pull-right" />').appendTo('#videowrap');
+      $('<div id="transcontrols" class="btn-group pull-right" />').appendTo('#videowrap');
     $('<button id="hey-btn" class="btn btn-sm btn-default" title="Woot! (Cancels Voteskip)" />')
-        .html('<i class="glyphicon glyphicon-headphones"></i>')
-        .appendTo(transcontrols)
-        .on('click', () => {
-          socket.emit('chatMsg', {msg: '/afk'});
-          socket.emit('chatMsg', {msg: '[lime]Woot![/] PepePls'});
-          HEY.volume = 0.4;
-          HEY.play();
-          // votehey();
-        });
+      .html('<i class="glyphicon glyphicon-headphones"></i>')
+      .appendTo(transcontrols)
+      .on('click', () => {
+        socket.emit('chatMsg', {msg: '/afk'});
+        socket.emit('chatMsg', {msg: '[lime]Woot![/] PepePls'});
+        HEY.volume = 0.4;
+        HEY.play();
+        // votehey();
+      });
     $('<button id="nay-btn" class="btn btn-sm btn-default" title="Meh.. (Voteskip)" />')
-        .html('<i class="glyphicon glyphicon-thumbs-down"></i>')
-        .appendTo(transcontrols)
-        .on('click', () => {
-          socket.emit('chatMsg', {msg: '[red]Meh..[/] ResidentSleeper'});
-          socket.emit('voteskip');
-          NAY.volume = 0.4;
-          NAY.play();
-        });
+      .html('<i class="glyphicon glyphicon-thumbs-down"></i>')
+      .appendTo(transcontrols)
+      .on('click', () => {
+        socket.emit('chatMsg', {msg: '[red]Meh..[/] ResidentSleeper'});
+        socket.emit('voteskip');
+        NAY.volume = 0.4;
+        NAY.play();
+      });
   }
 
   // adding player control buttons
   {
     {
       $('<button id="switchdescr-btn" class="btn btn-sm btn-default" />')
-          .attr('title', 'Switch description')
-          .html('<span class="glyphicon glyphicon-info-sign"></span>')
-          .appendTo('#playercontrols')
-          .on('click', () => {
-            DEFDESCR = !DEFDESCR;
-            showInfo();
-          });
+        .attr('title', 'Switch description')
+        .html('<span class="glyphicon glyphicon-info-sign"></span>')
+        .appendTo('#playercontrols')
+        .on('click', () => {
+          DEFDESCR = !DEFDESCR;
+          showInfo();
+        });
     }
 
     hideplayerbtn =
-        $('<button id="hideplayer-btn" class="btn btn-sm btn-default" title="Hide player" />')
-            .html('<span class="glyphicon glyphicon-ban-circle"></span>')
-            .appendTo('#playercontrols')
-            .on('click', function() {
-              if ($(this).hasClass('btn-danger')) {
-                showPlayer();
-              } else {
-                coverPlayer();
-              }
-            });
+      $('<button id="hideplayer-btn" class="btn btn-sm btn-default" title="Hide player" />')
+        .html('<span class="glyphicon glyphicon-ban-circle"></span>')
+        .appendTo('#playercontrols')
+        .on('click', function() {
+          if ($(this).hasClass('btn-danger')) {
+            showPlayer();
+          } else {
+            coverPlayer();
+          }
+        });
   }
 
   // creating fonts and emotes main row
@@ -5673,10 +6330,10 @@ var cydj = (function (exports) {
 
     for (const [i, font] of FontsArray.entries()) {
       $(`<button id="cbtn${i}" onclick="cydj.insertText('[${font[1]}]')" />`)
-          .addClass('btn btn-primary')
-          .attr('style', font[0])
-          .text(font[2])
-          .appendTo(fontsbtnwrap);
+        .addClass('btn btn-primary')
+        .attr('style', font[0])
+        .text(font[2])
+        .appendTo(fontsbtnwrap);
       if (i % 13 === 12) {
         fontsbtnwrap.append('<br />');
       }
@@ -5685,10 +6342,10 @@ var cydj = (function (exports) {
 
   // adding layout configuration panel button
   const layoutbtn =
-      $('<button id="layout-btn" class="btn btn-sm btn-default btn-success pull-right" />')
-          .html('<span class="glyphicon glyphicon-cog"></span> Layout')
-          .prependTo('#leftpane')
-          .on('click', () => toggleConfigPanel());
+    $('<button id="layout-btn" class="btn btn-sm btn-default btn-success pull-right" />')
+      .html('<span class="glyphicon glyphicon-cog"></span> Layout')
+      .prependTo('#leftpane')
+      .on('click', () => toggleConfigPanel());
   $('#playlistmanagerwrap').show();
 
   let leftpanecontrols;
@@ -5696,25 +6353,25 @@ var cydj = (function (exports) {
   // adding media database and gallery wrap
   {
     leftpanecontrols =
-        $('<div id="leftpanecontrols" class="btn-group pull-left" />').insertAfter(layoutbtn);
+      $('<div id="leftpanecontrols" class="btn-group pull-left" />').insertAfter(layoutbtn);
   }
 
   // adding media database button
   {
     $('<button id="db-btn" class="btn btn-sm btn-default" title="Display submitted songs in categories" />')
-        .text('Public Playlists')
-        .appendTo(leftpanecontrols)
-        .on('click', () => {
-          toggleDiv(dbwrap);
-          if (!CHANDB) {
-            createDatabase();
-          }
-        });
+      .text('Public Playlists')
+      .appendTo(leftpanecontrols)
+      .on('click', () => {
+        toggleDiv(dbwrap);
+        if (!CHANDB) {
+          createDatabase();
+        }
+      });
   }
 
   // adding layout configuration well
   const configwrap =
-      $('<div id="configwrap" class="col-lg-12 col-md-12" />').appendTo('#leftpane-inner');
+    $('<div id="configwrap" class="col-lg-12 col-md-12" />').appendTo('#leftpane-inner');
   const configwell = $('<div id="config-well" class="well form-horizontal" />').appendTo(configwrap);
 
   if (!LAYOUTBOX) {
@@ -5727,25 +6384,25 @@ var cydj = (function (exports) {
   const configform = $('<div id="configform" class="form-group" />').appendTo(configwell);
   $('<div class="col-lg-5 col-md-5">Global layout</div>').appendTo(configform);
   const configbtnwrap =
-      $('<div id="configbtnwrap" class="col-lg-7 col-md-7" />').appendTo(configform);
+    $('<div id="configbtnwrap" class="col-lg-7 col-md-7" />').appendTo(configform);
 
   $('<button id="config-btn" class="btn btn-default">Click to configure</button>')
-      .appendTo(configbtnwrap)
-      .on('click', () => showConfig());
+    .appendTo(configbtnwrap)
+    .on('click', () => showConfig());
 
   configbtnwrap.append('<br />');
 
   const fluidlayout = $('<label class="checkbox-inline" />').appendTo(configbtnwrap);
   $('<input type="checkbox" id="fluid-layout" value="no" />')
-      .appendTo(fluidlayout)
-      .on('click', () => toggleFluidLayout())
-      .after(' Fluid');
+    .appendTo(fluidlayout)
+    .on('click', () => toggleFluidLayout())
+    .after(' Fluid');
 
   const minlayout = $('<label class="checkbox-inline" />').appendTo(configbtnwrap);
   $('<input type="checkbox" id="min-layout" value="no" />')
-      .appendTo(minlayout)
-      .on('click', () => toggleMinLayout())
-      .after(' Minimized');
+    .appendTo(minlayout)
+    .on('click', () => toggleMinLayout())
+    .after(' Minimized');
 
   let modesel;
 
@@ -5756,24 +6413,24 @@ var cydj = (function (exports) {
     const modewrap = $('<div id="modewrap" class="col-lg-7 col-md-7" />').appendTo(modeform);
 
     modesel = $('<select id="mode-sel" class="form-control" />')
-                  .append('<option value="syMode">synchtube mode</option>')
-                  .append('<option value="kMode">cinema mode</option>')
-                  .append('<option value="chMode">chatroom mode</option>')
-                  .append('<option value="rMode">radio mode</option>')
-                  .appendTo(modewrap)
-                  .on('change', function() {
-                    $('#config-btn, #configbtnwrap br').hide();
-                    $('#min-layout').parent().hide();
-                    $('#sounds-dropdown, #chatfunc-dropdown').remove();
-                    CHATFUNC = false;
-                    if (PLAYER.type === 'jw') {
-                      refreshPlayer();
-                    }
-                    setMode($(this).val());
-                    scrollQueue();
-                    scrollChat();
-                    showPlayer();
-                  });
+      .append('<option value="syMode">synchtube mode</option>')
+      .append('<option value="kMode">cinema mode</option>')
+      .append('<option value="chMode">chatroom mode</option>')
+      .append('<option value="rMode">radio mode</option>')
+      .appendTo(modewrap)
+      .on('change', function() {
+        $('#config-btn, #configbtnwrap br').hide();
+        $('#min-layout').parent().hide();
+        $('#sounds-dropdown, #chatfunc-dropdown').remove();
+        CHATFUNC = false;
+        if (PLAYER.type === 'jw') {
+          refreshPlayer();
+        }
+        setMode($(this).val());
+        scrollQueue();
+        scrollChat();
+        showPlayer();
+      });
 
     socket.on('changeMedia', setModeAfterVideoChange);
   }
@@ -5785,21 +6442,21 @@ var cydj = (function (exports) {
   const themewrap = $('<div id="themewrap" class="col-lg-7 col-md-7" />').appendTo(themeform);
 
   const themesel =
-      $('<select id="theme-sel" class="form-control" />')
-          .append('<option value="" class="theme-header" disabled>default themes</option>')
-          .append('<option value="/css/themes/light.css"># Light</option>')
-          .append('<option value="/css/themes/bootstrap-theme.min.css"># Bootstrap</option>')
-          .append('<option value="/css/themes/slate.css"># Slate</option>')
-          .append('<option value="/css/themes/cyborg.css"># Cyborg</option>')
-          .appendTo(themewrap)
-          .on('change', function() {
-            $('#sounds-dropdown, #chatfunc-dropdown').remove();
-            $('#playlistmanagerwrap').show();
-            CHATFUNC = false;
-            USERTHEME = $(this).val();
-            setUserCSS();
-            setOpt(CHANNEL.name + '_theme', USERTHEME);
-          });
+    $('<select id="theme-sel" class="form-control" />')
+      .append('<option value="" class="theme-header" disabled>default themes</option>')
+      .append('<option value="/css/themes/light.css"># Light</option>')
+      .append('<option value="/css/themes/bootstrap-theme.min.css"># Bootstrap</option>')
+      .append('<option value="/css/themes/slate.css"># Slate</option>')
+      .append('<option value="/css/themes/cyborg.css"># Cyborg</option>')
+      .appendTo(themewrap)
+      .on('change', function() {
+        $('#sounds-dropdown, #chatfunc-dropdown').remove();
+        $('#playlistmanagerwrap').show();
+        CHATFUNC = false;
+        USERTHEME = $(this).val();
+        setUserCSS();
+        setOpt(CHANNEL.name + '_theme', USERTHEME);
+      });
 
   if (ThemesCSS.length > 0) {
     themesel.append('<option value="" class="theme-header" disabled>additional themes</option>');
@@ -5818,65 +6475,65 @@ var cydj = (function (exports) {
 
   const hidemotd = $('<label class="checkbox-inline" />').appendTo(hidewrap);
   $('<input type="checkbox" id="hide-motd" value="no" >')
-      .appendTo(hidemotd)
-      .on('click', () => toggleDiv('#motdrow'))
-      .after(' MOTD');
+    .appendTo(hidemotd)
+    .on('click', () => toggleDiv('#motdrow'))
+    .after(' MOTD');
 
   const hideann = $('<label class="checkbox-inline" />').appendTo(hidewrap);
   $('<input type="checkbox" id="hide-ann" value="no" />')
-      .appendTo(hideann)
-      .on('click', () => toggleDiv('#announcements'))
-      .after(' Announcements');
+    .appendTo(hideann)
+    .on('click', () => toggleDiv('#announcements'))
+    .after(' Announcements');
 
   const hidetitle = $('<label class="checkbox-inline" />').appendTo(hidewrap);
   $('<input type="checkbox" id="hide-title" value="no" />')
-      .appendTo(hidetitle)
-      .on('click',
-          () => {
-            toggleDiv('#titlerow');
-            toggleDiv('#currenttitle');
-          })
-      .after(' Title');
+    .appendTo(hidetitle)
+    .on('click',
+      () => {
+        toggleDiv('#titlerow');
+        toggleDiv('#currenttitle');
+      })
+    .after(' Title');
 
   const hidepl = $('<label class="checkbox-inline" />').appendTo(hidewrap);
   $('<input type="checkbox" id="hide-pl" value="no" />')
-      .appendTo(hidepl)
-      .on('click',
-          () => {
-            toggleDiv('#queue');
-            toggleDiv('#plmeta');
-          })
-      .after(' Playlist');
+    .appendTo(hidepl)
+    .on('click',
+      () => {
+        toggleDiv('#queue');
+        toggleDiv('#plmeta');
+      })
+    .after(' Playlist');
 
   const hidehf = $('<label class="checkbox-inline" />').appendTo(hidewrap);
   $('<input type="checkbox" id="hide-hf" value="no" />')
-      .appendTo(hidehf)
-      .on('click',
-          () => {
-            if ($('nav').css('display') !== 'none') {
-              headerMode('fixed');
-            } else {
-              headerMode(USERCONFIG.header);
-            }
-            toggleDiv('nav');
-            toggleDiv('footer');
-          })
-      .after(' H&F');
+    .appendTo(hidehf)
+    .on('click',
+      () => {
+        if ($('nav').css('display') !== 'none') {
+          headerMode('fixed');
+        } else {
+          headerMode(USERCONFIG.header);
+        }
+        toggleDiv('nav');
+        toggleDiv('footer');
+      })
+    .after(' H&F');
 
   // adding embedding options
   {
     const embedform = $('<div id="embedform" class="form-group" />').appendTo(configwell);
     $('<div class="col-lg-5 col-md-5 conf-cap">Embeds <span id="embed-help">[?]</span></div>')
-        .appendTo(embedform);
+      .appendTo(embedform);
     const embedwrap = $('<div id="embedwrap" class="col-lg-7 col-md-7" />').appendTo(embedform);
 
     $('#embed-help').on('click', () => {
       let txt =
-          'This option lets you see images or videos directly on the chat, instead of links.\n' +
-          'Click on image or double click on video to open in the new tab.\n' +
-          'All videos are muted by default, if autoplay - click to unmute, else click to play.\n\n' +
-          'This channel supports following types of links (specified as CSS codes):\n' +
-          '■ Images - ';
+        'This option lets you see images or videos directly on the chat, instead of links.\n' +
+        'Click on image or double click on video to open in the new tab.\n' +
+        'All videos are muted by default, if autoplay - click to unmute, else click to play.\n\n' +
+        'This channel supports following types of links (specified as CSS codes):\n' +
+        '■ Images - ';
       {
         txt += EmbeddingMedia_Images;
       }
@@ -5890,13 +6547,13 @@ var cydj = (function (exports) {
     {
       const embedimg = $('<label class="checkbox-inline" />').appendTo(embedwrap);
       const cbox = $('<input type="checkbox" id="embed-img" checked>')
-                       .appendTo(embedimg)
-                       .on('click',
-                           () => {
-                             EMBEDIMG = !EMBEDIMG;
-                             setOpt(CHANNEL.name + '_embedimg', EMBEDIMG);
-                           })
-                       .after(' img');
+        .appendTo(embedimg)
+        .on('click',
+          () => {
+            EMBEDIMG = !EMBEDIMG;
+            setOpt(CHANNEL.name + '_embedimg', EMBEDIMG);
+          })
+        .after(' img');
       if (!EMBEDIMG) {
         cbox.removeAttr('checked');
       }
@@ -5905,31 +6562,31 @@ var cydj = (function (exports) {
     {
       const embedvid = $('<label class="checkbox-inline" />').appendTo(embedwrap);
       const cbox = $('<input type="checkbox" id="embed-webm" checked>')
-                       .appendTo(embedvid)
-                       .on('click',
-                           () => {
-                             EMBEDVID = !EMBEDVID;
-                             setOpt(CHANNEL.name + '_embedvid', EMBEDVID);
-                             if (EMBEDVID) {
-                               autovid.show();
-                             } else {
-                               autovid.hide();
-                             }
-                           })
-                       .after(' video');
+        .appendTo(embedvid)
+        .on('click',
+          () => {
+            EMBEDVID = !EMBEDVID;
+            setOpt(CHANNEL.name + '_embedvid', EMBEDVID);
+            if (EMBEDVID) {
+              autovid.show();
+            } else {
+              autovid.hide();
+            }
+          })
+        .after(' video');
       if (!EMBEDVID) {
         cbox.removeAttr('checked');
       }
 
       const autovid = $('<label class="checkbox-inline" />').appendTo(embedwrap);
       const cbox2 = $('<input type="checkbox" id="auto-webm" checked>')
-                        .appendTo(autovid)
-                        .on('click',
-                            () => {
-                              AUTOVID = !AUTOVID;
-                              setOpt(CHANNEL.name + '_autovid', AUTOVID);
-                            })
-                        .after(' autoplay');
+        .appendTo(autovid)
+        .on('click',
+          () => {
+            AUTOVID = !AUTOVID;
+            setOpt(CHANNEL.name + '_autovid', AUTOVID);
+          })
+        .after(' autoplay');
       if (!AUTOVID) {
         cbox2.removeAttr('checked');
       }
@@ -5976,15 +6633,15 @@ var cydj = (function (exports) {
 
     {
       clearbtn = $('<button id="clear-btn" class="btn btn-default btn-sm">/clear</button>')
-                     .appendTo(btnsgroup)
-                     .on('click', () => {
-                       if (confirm('Are you sure to clear the chat window?')) {
-                         socket.emit('chatMsg', {msg: '/clear'});
-                       }
-                     });
+        .appendTo(btnsgroup)
+        .on('click', () => {
+          if (confirm('Are you sure to clear the chat window?')) {
+            socket.emit('chatMsg', {msg: '/clear'});
+          }
+        });
       $('<button id="afk-btn" class="btn btn-default btn-sm">/afk</button>')
-          .appendTo(btnsgroup)
-          .on('click', () => socket.emit('chatMsg', {msg: '/afk'}));
+        .appendTo(btnsgroup)
+        .on('click', () => socket.emit('chatMsg', {msg: '/afk'}));
 
       socket.on('rank', toggleClearBtn);
       toggleClearBtn();
@@ -5992,17 +6649,17 @@ var cydj = (function (exports) {
 
     {
       voldownbtn = $('<button id="voldown-btn" class="btn btn-default btn-sm">vol -</button>')
-                       .appendTo(btnsgroup)
-                       .on('click', () => {
-                         a = PLAYER.player.getVolume();
-                         PLAYER.player.setVolume(a - 1);
-                       });
+        .appendTo(btnsgroup)
+        .on('click', () => {
+          a = PLAYER.player.getVolume();
+          PLAYER.player.setVolume(a - 1);
+        });
       volupbtn = $('<button id="volup-btn" class="btn btn-default btn-sm">vol +</button>')
-                     .appendTo(btnsgroup)
-                     .on('click', () => {
-                       a = PLAYER.player.getVolume();
-                       PLAYER.player.setVolume(a + 1);
-                     });
+        .appendTo(btnsgroup)
+        .on('click', () => {
+          a = PLAYER.player.getVolume();
+          PLAYER.player.setVolume(a + 1);
+        });
 
       socket.on('changeMedia', toggleVolBtn);
       toggleVolBtn();
@@ -6021,7 +6678,7 @@ var cydj = (function (exports) {
   // adding media database layout
   {
     dbwrap = $('<div id="dbwrap" class="col-lg-12 col-md-12" style="display:none" />')
-                 .insertBefore(configwrap);
+      .insertBefore(configwrap);
     dbwell = $('<div id="db-well" class="well" />').appendTo(dbwrap);
 
     if (CHANNEL_DATABASE$1.length < 1 || CHANNEL_DATABASE$1[0][0] !== '') {
@@ -6034,81 +6691,81 @@ var cydj = (function (exports) {
 
   // adding playlist options for moderators button
   const advplaylist =
-      $('<button id="advplaylist" class="btn btn-sm btn-default" title="Advanced options" />')
-          .append('<span class="glyphicon glyphicon-wrench" />')
-          .insertBefore('#qlockbtn')
-          .on('click', () => toggleDiv(advplcontrols));
+    $('<button id="advplaylist" class="btn btn-sm btn-default" title="Advanced options" />')
+      .append('<span class="glyphicon glyphicon-wrench" />')
+      .insertBefore('#qlockbtn')
+      .on('click', () => toggleDiv(advplcontrols));
 
   // adding advanced playlist options form
 
   const advplcontrol =
-      $('<div id="advplcontrol" class="col-lg-12 col-md-12" />').insertAfter('#playlistmanager');
+    $('<div id="advplcontrol" class="col-lg-12 col-md-12" />').insertAfter('#playlistmanager');
   const advplcontrols =
-      $('<div id="advplcontrols" class="btn-group" style="display:none" />').appendTo(advplcontrol);
+    $('<div id="advplcontrols" class="btn-group" style="display:none" />').appendTo(advplcontrol);
 
   // adding advanced playlist options buttons
 
   const playnextbtn = $('<button id="playnext-btn" class="btn btn-default">Play next</button>')
-                          .appendTo(advplcontrols)
-                          .on('click', () => socket.emit('playNext'));
+    .appendTo(advplcontrols)
+    .on('click', () => socket.emit('playNext'));
 
   const addrandombtn = $('<button id="addrandom-btn" class="btn btn-default">Add random</button>')
-                           .appendTo(advplcontrols)
-                           .on('click', () => addRandomItem());
+    .appendTo(advplcontrols)
+    .on('click', () => addRandomItem());
 
   const bumplastbtn = $('<button id="bumplast-btn" class="btn btn-default">Bump last</button>')
-                          .appendTo(advplcontrols)
-                          .on('click', () => {
-                            const len = $('#queue').children().length;
-                            const uid = $(`#queue .queue_entry:nth-child(${len})`).data('uid');
-                            socket.emit('moveMedia', {from: uid, after: PL_CURRENT});
-                          });
+    .appendTo(advplcontrols)
+    .on('click', () => {
+      const len = $('#queue').children().length;
+      const uid = $(`#queue .queue_entry:nth-child(${len})`).data('uid');
+      socket.emit('moveMedia', {from: uid, after: PL_CURRENT});
+    });
 
   const deletelastbtn = $('<button id="deletelast-btn" class="btn btn-default">Delete last</button>')
-                            .appendTo(advplcontrols)
-                            .on('click', () => {
-                              if (confirm('Are you sure to delete last item?')) {
-                                const len = $('#queue').children().length;
-                                const uid = $(`#queue .queue_entry:nth-child(${len})`).data('uid');
-                                socket.emit('delete', uid);
-                              }
-                            });
+    .appendTo(advplcontrols)
+    .on('click', () => {
+      if (confirm('Are you sure to delete last item?')) {
+        const len = $('#queue').children().length;
+        const uid = $(`#queue .queue_entry:nth-child(${len})`).data('uid');
+        socket.emit('delete', uid);
+      }
+    });
 
   toggleAdvancedPl();
 
   // adding playlist expanding button
   const expandbtn =
-      $('<button id="expand-btn" class="btn btn-sm btn-default" title="Expand playlist" />')
-          .append('<span class="glyphicon glyphicon-resize-full" />')
-          .prependTo('#videocontrols')
-          .on('click', () => expandQueue());
+    $('<button id="expand-btn" class="btn btn-sm btn-default" title="Expand playlist" />')
+      .append('<span class="glyphicon glyphicon-resize-full" />')
+      .prependTo('#videocontrols')
+      .on('click', () => expandQueue());
 
   // adding playlist scrolling button
   $('<button id="scroll-btn" class="btn btn-sm btn-default" title="Scroll playlist to current item" />')
-      .append('<span class="glyphicon glyphicon-hand-right" />')
-      .prependTo('#videocontrols')
-      .on('click', () => scrollQueue());
+    .append('<span class="glyphicon glyphicon-hand-right" />')
+    .prependTo('#videocontrols')
+    .on('click', () => scrollQueue());
 
   // adding contributors button
   $('<button id="contrib-btn" class="btn btn-sm btn-default" title="Contributors list" />')
-      .append('<span class="glyphicon glyphicon-user" />')
-      .prependTo('#videocontrols')
-      .on('click', () => showContributors());
+    .append('<span class="glyphicon glyphicon-user" />')
+    .prependTo('#videocontrols')
+    .on('click', () => showContributors());
 
   // adding pin-up button
   const pinupbtn =
-      $('<button id="pinup-btn" class="btn btn-sm btn-default" title="Pin playlist to player" />')
-          .append('<span class="glyphicon glyphicon-pushpin" />')
-          .prependTo('#videocontrols')
-          .on('click', () => {
-            if (!PINNED) {
-              pinUp();
-            } else {
-              unPin();
-            }
-            scrollQueue();
-            scrollChat();
-          });
+    $('<button id="pinup-btn" class="btn btn-sm btn-default" title="Pin playlist to player" />')
+      .append('<span class="glyphicon glyphicon-pushpin" />')
+      .prependTo('#videocontrols')
+      .on('click', () => {
+        if (!PINNED) {
+          pinUp();
+        } else {
+          unPin();
+        }
+        scrollQueue();
+        scrollChat();
+      });
 
   // extending 'Get URLs' function
   {
@@ -6117,35 +6774,35 @@ var cydj = (function (exports) {
 
   // Update alert first-time users see
   (function() {
-  const /** @type {HTMLDivElement} */ alertWrapper = document.getElementById('plonotification');
-  if (!alertWrapper) {
-    return;
-  }
+    const /** @type {HTMLDivElement} */ alertWrapper = document.getElementById('plonotification');
+    if (!alertWrapper) {
+      return;
+    }
 
-  const /** @type {HTMLDivElement} */ alertContainer = alertWrapper.firstChild;
-  alertContainer.innerHTML =
+    const /** @type {HTMLDivElement} */ alertContainer = alertWrapper.firstChild;
+    alertContainer.innerHTML =
       alertContainer.innerHTML
-          .replace('show them when you right click). ', 'show them when you right click).<br />')
-          .replace(
-              'the old style of playlist buttons.',
-              '"the old style" of playlist buttons (<b>recommended</b>) - ' +
-                  'more compact playlist with nice icons ' +
-                  `(see image <a href="https://dl.dropboxusercontent.com/s/4ya7i5vlyb3likk/oldpl.jpg" target="_blank">here</a>).`);
+        .replace('show them when you right click). ', 'show them when you right click).<br />')
+        .replace(
+          'the old style of playlist buttons.',
+          '"the old style" of playlist buttons (<b>recommended</b>) - ' +
+          'more compact playlist with nice icons ' +
+          `(see image <a href="https://dl.dropboxusercontent.com/s/4ya7i5vlyb3likk/oldpl.jpg" target="_blank">here</a>).`);
 
-  // Updating the innerHTML removes the event handler on the dismiss button, re-add it
-  const /** @type {HTMLButtonElement} */ dismissButton =
+    // Updating the innerHTML removes the event handler on the dismiss button, re-add it
+    const /** @type {HTMLButtonElement} */ dismissButton =
       Array.from(alertContainer.children)
-          .filter((elem) => elem.tagName.toLowerCase() === 'button')[0];
-  dismissButton.addEventListener('click', () => {
-    alertContainer.remove();
-    window.localStorage['first_visit'] = 'false';
-  });
+        .filter((elem) => elem.tagName.toLowerCase() === 'button')[0];
+    dismissButton.addEventListener('click', () => {
+      alertContainer.remove();
+      window.localStorage['first_visit'] = 'false';
+    });
   })();
 
   // rearranging footer
   $('.credit').append(
-      '<br />Built off CyTube Plus 4.5 · Copyright &copy; 2013-2014 Zimny Lech, Modified by CyDJ staff · ' +
-      'Free source on <a href="http://github.com/papertek/CyDJ" target="_blank">GitHub</a>');
+    '<br />Built off CyTube Plus 4.5 · Copyright &copy; 2013-2014 Zimny Lech, Modified by CyDJ staff · ' +
+    'Free source on <a href="http://github.com/papertek/CyDJ" target="_blank">GitHub</a>');
 
   let leftfooter;
   let onlinetime;
@@ -6163,10 +6820,10 @@ var cydj = (function (exports) {
     $('<span>My visits: </span>' +
       `<span class="badge footer-badge">${USERVISITS}</span>` +
       '<span> / </span>')
-        .appendTo(leftfooter);
+      .appendTo(leftfooter);
     $('<span>Current online time: </span>').appendTo(leftfooter);
     onlinetime =
-        $('<span id="onlinetime" class="badge footer-badge">0:00</span>').appendTo(leftfooter);
+      $('<span id="onlinetime" class="badge footer-badge">0:00</span>').appendTo(leftfooter);
 
     setInterval(() => onlineTime(), 60000);
   }
@@ -6275,9 +6932,9 @@ var cydj = (function (exports) {
         for (const emote of IndependentEmotes) {
           const filter = emote[0];
           const html = `<img src="${emote[1]}" title="${filter}" ` +
-              `style="width:${emote[2]}px; ` +
-              `height:${emote[3]}px; cursor:pointer" ` +
-              `onclick="cydj.insertText('${filter}')" />`;
+            `style="width:${emote[2]}px; ` +
+            `height:${emote[3]}px; cursor:pointer" ` +
+            `onclick="cydj.insertText('${filter}')" />`;
           _div = _div.replace(new RegExp(filter, 'g'), html);
         }
         div.html(_div);
@@ -6505,8 +7162,8 @@ var cydj = (function (exports) {
 
     const /** @type {HTMLElement} */ newestMessageRow = messageBuffer.lastChild;
     if (Array.from(newestMessageRow.classList)
-            .filter((className) => className.startsWith('chat-msg-'))
-            .length < 1) {
+      .filter((className) => className.startsWith('chat-msg-'))
+      .length < 1) {
       return;
     }
 
@@ -6610,7 +7267,7 @@ var cydj = (function (exports) {
     socket.on('chatMsg', (obj) => {
       const mb = document.getElementById('messagebuffer');
       if (mb && mb.lastChild && $(mb.lastChild).attr('class').startsWith('chat-msg-') &&
-          !obj.meta.shadow) {
+        !obj.meta.shadow) {
         mb.lastChild.classList.add(lastMessageOdd ? ODD_MESSAGE_CLASS : EVEN_MESSAGE_CLASS);
         lastMessageOdd = !lastMessageOdd;
       }
@@ -6622,8 +7279,8 @@ var cydj = (function (exports) {
       }, 250);
       emoteHoverAll();
       if (CLIENT.name && obj.username !== CLIENT.name &&
-          obj.msg.toLowerCase().includes(CLIENT.name.toLowerCase()) && !obj.meta.shadow &&
-          obj.username !== '[server]') {
+        obj.msg.toLowerCase().includes(CLIENT.name.toLowerCase()) && !obj.meta.shadow &&
+        obj.username !== '[server]') {
         audioFeedback();
       }
       if (obj.msg.startsWith('!poof') || obj.msg.includes('do poof')) {
@@ -6633,18 +7290,18 @@ var cydj = (function (exports) {
     socket.on('addUser', (obj) => {
       if (USERLIST_COLORS[obj.name]) {
         const userType = USERLIST_COLORS[obj.name].usertype ?
-            `.userlist_${USERLIST_COLORS[obj.name].usertype}` :
-            '';
+          `.userlist_${USERLIST_COLORS[obj.name].usertype}` :
+          '';
         $(`div.userlist_item span${userType}:contains("${obj.name}")`)
-            .css('cssText', USERLIST_COLORS[obj.name].css);
+          .css('cssText', USERLIST_COLORS[obj.name].css);
         /* not sure if DOM is guaranteed to be updated yet when emit occurs, so
          * try again in 0.25 seconds for good measure */
         setTimeout(() => {
           const userType = USERLIST_COLORS[obj.name].usertype ?
-              `.userlist_${USERLIST_COLORS[obj.name].usertype}` :
-              '';
+            `.userlist_${USERLIST_COLORS[obj.name].usertype}` :
+            '';
           $(`div.userlist_item span${userType}:contains("${obj.name}")`)
-              .css('cssText', USERLIST_COLORS[obj.name].css);
+            .css('cssText', USERLIST_COLORS[obj.name].css);
         }, 250);
       }
     });
@@ -6715,19 +7372,19 @@ var cydj = (function (exports) {
       return;
     }
     const usersWithCap = Array.prototype.slice.call($('#userlist').children())
-                             .map((elem) => elem.children[1].innerHTML);
+      .map((elem) => elem.children[1].innerHTML);
     if (currentWithCap === TabCompletion.last) {
       TabCompletion.last = current =
-          TabCompletion
-              .matches[(TabCompletion.matches.indexOf(currentWithCap) + 1) % TabCompletion.matches.length];
+        TabCompletion
+          .matches[(TabCompletion.matches.indexOf(currentWithCap) + 1) % TabCompletion.matches.length];
       current += ' ';
       words[words.length - 1] = current;
       $('#chatline').val(words.join(' '));
       return;
     }
     const matches = TabCompletionEmotes$1.filter((str) => str.toLowerCase().startsWith(current))
-                        .concat(usersWithCap.filter((str) => str.toLowerCase().startsWith(current))
-                                    .map((str) => words.length === 1 ? str + ':' : str));
+      .concat(usersWithCap.filter((str) => str.toLowerCase().startsWith(current))
+        .map((str) => words.length === 1 ? str + ':' : str));
     if (matches.length === 0) {
       return;
     }
@@ -6742,10 +7399,10 @@ var cydj = (function (exports) {
   const emoteHover = document.createElement('div');
   emoteHover.id = 'emote-hover';
   emoteHover.setAttribute(
-      'style',
-      'visibility: hidden; top: 0px;left: 0px;box-sizing: border-box;display: block;position: absolute;padding: 5px;margin: 0px;color: #D3D3D3;line-height: 60px;text-align: center;z-index: 9999;');
+    'style',
+    'visibility: hidden; top: 0px;left: 0px;box-sizing: border-box;display: block;position: absolute;padding: 5px;margin: 0px;color: #D3D3D3;line-height: 60px;text-align: center;z-index: 9999;');
   emoteHover.innerHTML =
-      '<div id="emote-hover-inner" style="box-sizing: border-box;background-color: #000;color: #fff;max-width: 200px;padding: 5px 8px 4px;margin: 0px;text-align: center;font-family: Helvetica Neue,Helvetica,sans-serif;font-size: 1.2rem;line-height: 2rem;"></div>';
+    '<div id="emote-hover-inner" style="box-sizing: border-box;background-color: #000;color: #fff;max-width: 200px;padding: 5px 8px 4px;margin: 0px;text-align: center;font-family: Helvetica Neue,Helvetica,sans-serif;font-size: 1.2rem;line-height: 2rem;"></div>';
   document.querySelector('body').appendChild(emoteHover);
   const emoteHoverInner = emoteHover.firstChild;
 
@@ -6788,22 +7445,22 @@ var cydj = (function (exports) {
   $('#emotelist > div.modal-dialog > div.modal-content').draggable();
 
   const togglesCSS_Compact =
-      '#queue .queue_entry{padding: 0px;line-height: 10px;}#queue .queue_entry .btn-group button {padding-top: 0px;padding-bottom: 0px;line-height: 14px;}#rightcontrols button {padding-top: 0px;padding-bottom: 0px;}#mediaurl {padding: 0px 3px;height: 20px;}#addfromurl .input-group button {padding-top: 0px;padding-bottom: 0px;}#rightcontrols{margin-top: 0px !important;}#playlistmanagerwrap{margin-top: 0px;}#videowrap{margin-bottom: 0px !important;}#queuefail .vertical-spacer{margin-top: 0px;}#addfromurl .vertical-spacer{margin-top: 0px;}#addfromurl .checkbox{margin: 0px;}#mainpage{padding-top: 25px !important;}';
+    '#queue .queue_entry{padding: 0px;line-height: 10px;}#queue .queue_entry .btn-group button {padding-top: 0px;padding-bottom: 0px;line-height: 14px;}#rightcontrols button {padding-top: 0px;padding-bottom: 0px;}#mediaurl {padding: 0px 3px;height: 20px;}#addfromurl .input-group button {padding-top: 0px;padding-bottom: 0px;}#rightcontrols{margin-top: 0px !important;}#playlistmanagerwrap{margin-top: 0px;}#videowrap{margin-bottom: 0px !important;}#queuefail .vertical-spacer{margin-top: 0px;}#addfromurl .vertical-spacer{margin-top: 0px;}#addfromurl .checkbox{margin: 0px;}#mainpage{padding-top: 25px !important;}';
   const togglesCSS_Title =
-      '#currenttitle{display: block !important; font-size: 16px !important; margin-top: -30px !important; margin-bottom: -5px;}#mainpage{/*padding-top: 45px !important;*/}';
+    '#currenttitle{display: block !important; font-size: 16px !important; margin-top: -30px !important; margin-bottom: -5px;}#mainpage{/*padding-top: 45px !important;*/}';
   const togglesCSS_Timestamp = '#messagebuffer>div>span.timestamp{display:none;}';
   const userlistToggle = document.querySelector('#userlisttoggle');
   let userlistSizeToggleInner;
   function userlistSizeToggleFn() {
     $('#userlist').toggleClass('userlist-large', !!cookie.userlistLarge);
     $('#messagebuffer')
-        .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
+      .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
     $('#chatline').toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
     $('#leftcontrols')
-        .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
+      .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
     $('#videowrap').toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
     $('#rightcontrols')
-        .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
+      .toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
     $('#rightpane').toggleClass('userlist-hidden', !!cookie.userlistHidden || !!cookie.userlistLarge);
     userlistSizeToggleInner.style.width = !!cookie.userlistLarge ? '100%' : '50%';
   }
@@ -6814,7 +7471,7 @@ var cydj = (function (exports) {
     if (regex && typeof regex !== null && regex[1] && regex[1] !== '') {
       try {
         cookieJSON = JSON.parse(regex[1]);
-      } catch (e) {
+      } catch {
       }
     }
     cookie = (cookieJSON && typeof cookieJSON === 'object') ? cookieJSON : {
@@ -6947,7 +7604,7 @@ var cydj = (function (exports) {
     userlistSizeToggle.setAttribute('title', 'Toggle Userlist Size');
     userlistSizeToggle.innerHTML = '<div id="userlistsizetoggle-inner"></div>';
     document.querySelector('#usercount')
-        .parentNode.insertBefore(userlistSizeToggle, document.querySelector('#usercount'));
+      .parentNode.insertBefore(userlistSizeToggle, document.querySelector('#usercount'));
     userlistSizeToggle.onclick = cookieUserlistSizeToggle;
     setHover(userlistSizeToggle);
     userlistSizeToggleInner = document.querySelector('#userlistsizetoggle-inner');
@@ -6957,7 +7614,7 @@ var cydj = (function (exports) {
     audioFeedbackToggleBtn.setAttribute('title', 'Toggle Audio Feedback');
     audioFeedbackToggleBtn.innerHTML = '\uD83D\uDCE2';
     document.querySelector('#usercount')
-        .parentNode.insertBefore(audioFeedbackToggleBtn, document.querySelector('#usercount'));
+      .parentNode.insertBefore(audioFeedbackToggleBtn, document.querySelector('#usercount'));
     audioFeedbackToggleBtn.onclick = audioFeedbackToggle;
     setHover(audioFeedbackToggleBtn);
     const playlistStyleToggleBtn = document.createElement('i');
@@ -6966,7 +7623,7 @@ var cydj = (function (exports) {
     playlistStyleToggleBtn.setAttribute('title', 'Toggle Playlist Style');
     playlistStyleToggleBtn.innerHTML = '';
     document.querySelector('#usercount')
-        .parentNode.insertBefore(playlistStyleToggleBtn, document.querySelector('#usercount'));
+      .parentNode.insertBefore(playlistStyleToggleBtn, document.querySelector('#usercount'));
     playlistStyleToggleBtn.onclick = playlistStyleToggle;
     setHover(playlistStyleToggleBtn);
     compactToggleBtn = document.createElement('i');
@@ -6975,7 +7632,7 @@ var cydj = (function (exports) {
     compactToggleBtn.setAttribute('title', 'Toggle Compact Layout');
     compactToggleBtn.innerHTML = 'C';
     document.querySelector('#usercount')
-        .parentNode.insertBefore(compactToggleBtn, document.querySelector('#usercount'));
+      .parentNode.insertBefore(compactToggleBtn, document.querySelector('#usercount'));
     compactToggleBtn.onclick = compactToggle;
     setHover(compactToggleBtn);
     titleToggleBtn = document.createElement('i');
@@ -6984,7 +7641,7 @@ var cydj = (function (exports) {
     titleToggleBtn.setAttribute('title', 'Toggle Video Title');
     titleToggleBtn.innerHTML = 'T';
     document.querySelector('#usercount')
-        .parentNode.insertBefore(titleToggleBtn, document.querySelector('#usercount'));
+      .parentNode.insertBefore(titleToggleBtn, document.querySelector('#usercount'));
     titleToggleBtn.onclick = titleToggle;
     setHover(titleToggleBtn);
     const timestampToggleBtn = document.createElement('i');
@@ -6993,7 +7650,7 @@ var cydj = (function (exports) {
     timestampToggleBtn.setAttribute('title', 'Toggle Timestamp');
     timestampToggleBtn.innerHTML = '\uD83D\uDD51';
     document.querySelector('#usercount')
-        .parentNode.insertBefore(timestampToggleBtn, document.querySelector('#usercount'));
+      .parentNode.insertBefore(timestampToggleBtn, document.querySelector('#usercount'));
     timestampToggleBtn.onclick = timestampToggle;
     setHover(timestampToggleBtn);
     compactToggleCss = document.createElement('style');
@@ -7019,7 +7676,7 @@ var cydj = (function (exports) {
   function deleteMsg(messageDiv) {
     const secondToLastChild = messageDiv.children.item(messageDiv.children.length - 2);
     if (!secondToLastChild.classList.contains('timestamp') &&
-        secondToLastChild.style.display === 'none') {
+      secondToLastChild.style.display === 'none') {
       // Message is already deleted.
       return;
     }
